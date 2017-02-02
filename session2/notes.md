@@ -210,7 +210,7 @@ def make_message(name, role):
     # name and role are local to the function
     return "{} is the {}".format(name, role)
 
-# Now all of the following are equivalent:
+# Now we can write this instead
 name = "Thomas"
 role = "secretary"
 message = make_message(name, role)
@@ -221,6 +221,9 @@ role = "president"
 message = make_message(name, role)
 print(message)
 
+# We don't need the message variable, we can just take the value from
+# make_message and give it to print
+
 name = "Thomas"
 role = "secretary"
 print(make_message(name, role))
@@ -229,9 +232,13 @@ name = "Matt"
 role = "president"
 print(make_message(name, role))
 
+# Furthermore, we don't even need the name and role variables
 print(make_message("Thomas", "secretary"))
 print(make_message("Matt", "president"))
 ```
+
+In this example we managed to make the overall program length a little shorter,
+but 
 
 ## Where next?
 
