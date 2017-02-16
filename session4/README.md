@@ -75,3 +75,72 @@ elements past `start`.
 If you don't understand this don't worry yet; just make sure you remember that
 we have to start at zero. Also recall that floor numbering in buildings (in the
 UK) works in exactly the same way.
+
+### Joining lists
+
+Just like strings, we can add two lists together:
+
+```python
+committee = ['matt', 'chris', 'thomas']
+volunteers = ['nick', 'sauyon', 'calin']
+helpers = committee + volunteers
+for person in helpers:
+    print(person)
+```
+
+### Appending to lists
+
+If we want to add a value to the end of a list we could do `list + [x]`, but
+this creates a new list; we might want to add to an existing list instead:
+
+```python
+committee = ['matt', 'chris']
+committee.append('thomas')
+for person in committee:
+    print(person)
+# Prints matt, chris, thomas
+```
+
+This doesn't create a new list, but adds an extra value into the existing list.
+
+### Inserting into lists
+
+We can also pick a specific index for a new element to be inserted at:
+
+```python
+committee = ['matt', 'thomas']
+committee.insert(1, 'chris')
+# committee now contains matt, chris, thomas
+```
+
+The way to remember this is that the insertion index is new index of the value,
+i.e. the number of values that will *precede* it in the list.
+
+### Other list operations
+
+Another core operation is finding the length of a list, because this doesn't
+have to be fixed. We do this with `len(list)`. At this point we need to make an
+important distinction between **functions** and **methods**. A method is a
+function that always takes at least one parameter, the `self` object. For
+example, the `insert` *method* on a list is effectively a `function` that takes
+a list *and* an element to insert. Somewhere, it will actually be defined like
+this:
+
+```python
+def insert(self, element):
+    # Insert element into the list self
+```
+
+Meanwhile, `len` is defined as a function because we can use it on types other
+than lists, e.g. strings and dictionaries - it isn't associated with one
+specific type (there is more to the reasoning here, we won't worry about it now).
+
+We will look at methods in far more detail next week.
+
+To get the last element in a list, we could do `list[len(list) - 1]` but Python
+provides some shorthand for this: `list[-1]`. I find the former a bit more
+explicit, but you may prefer the latter.
+
+### Exerise
+
+**TODO**
