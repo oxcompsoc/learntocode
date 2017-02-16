@@ -135,12 +135,56 @@ Meanwhile, `len` is defined as a function because we can use it on types other
 than lists, e.g. strings and dictionaries - it isn't associated with one
 specific type (there is more to the reasoning here, we won't worry about it now).
 
+Another common function is `sorted`, which takes a list and gives us back a new
+list in sorted order. Alternatively, we can sort a list without having to create
+a new list: `list.sort()
+
 We will look at methods in far more detail next week.
 
 To get the last element in a list, we could do `list[len(list) - 1]` but Python
 provides some shorthand for this: `list[-1]`. I find the former a bit more
 explicit, but you may prefer the latter.
 
-### Exerise
+### Exerise: Generating squares
+
+```python
+n = 0
+try:
+    n = int(input("Enter a number: "))
+catch:
+    print("You didn't enter a number")
+
+squares = []
+
+for x in range(0, n):
+    squares.append(x * x)
+
+for sq in squares:
+    print(sq)
+```
+
+### Exercise: Finding the median from a dataset
+
+```python
+numbers = []
+x = None
+while x != "done":
+    x = input("Enter a number or done: ")
+    try:
+        # int() will throw an exception if the number isn't a number
+        numbers.append(int(x))
+    except:
+        x = "done"
+
+# Sort the list
+numbers.sort()
+
+if len(numbers) % 2 == 0: # Even length
+    median = (numbers[len(numbers) // 2 - 1] + numbers[len(numbers) // 2]) / 2
+else:
+    median = numbers[len(numbers) // 2]
+
+print("Median = {}".format(median))
+```
 
 **TODO**
