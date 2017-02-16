@@ -187,4 +187,53 @@ else:
 print("Median = {}".format(median))
 ```
 
-**TODO**
+## Dictionaries
+
+We can view lists as a way of mapping between numbers and values of any type
+(mathematicians: a list is a function of `f: N -> U` where `N` is the set of
+natural numbers and `U` is the universe of all values representable in Python).
+Dictionaries are the same concept, except they allow us to lookup an **element**
+by a **key** of *any* type. For example:
+
+```python
+committee = { "president": "matt", "secretary": "thomas", "treasurer": "chris" }
+print(committee["president"]) # prints matt
+print(committee["secretary"]) # prints thomas
+```
+
+The analogy here is the OED: it maps strings (words) to strings (their
+definitions). We can easily add values to a dictionary, reassign existing keys,
+or remove keys from a dictionary:
+
+```python
+dict = {} # Creates an empty dictionary
+# Add a few elements to the dictionary:
+dict["catz"] = "St. Catherine's"
+dict["bnc"] = "Brasenose"
+dict["b"] = "Baliol"
+# Oops, spelt that wrong
+dict["b"] = "Balliol"
+# Delete an entry from a dictionary
+del dict["b"]
+print(dict) # Only outputs entries for catz and bnc
+```
+
+The `del` keyword is neither a function nor a method, it is an operator. We will
+not go into detail about why this is the case (yet).
+
+### Exercise: Word counting
+
+```python
+text = input("Enter some text: ")
+words = text.split(" ")
+counts = {}
+
+for word in words:
+    if word in counts:
+        counts[word] = counts[word] + 1
+    else:
+        counts[word] = 1
+
+for word in counts:
+    print("{}: {}".format(word, counts[word]))
+```
