@@ -206,16 +206,16 @@ definitions). We can easily add values to a dictionary, reassign existing keys,
 or remove keys from a dictionary:
 
 ```python
-dict = {} # Creates an empty dictionary
-# Add a few elements to the dictionary:
-dict["catz"] = "St. Catherine's"
-dict["bnc"] = "Brasenose"
-dict["b"] = "Baliol"
+college = {} # Creates an empty collegeionary
+# Add a few elements to the collegeionary:
+college["catz"] = "St. Catherine's"
+college["bnc"] = "Brasenose"
+college["b"] = "Baliol"
 # Oops, spelt that wrong
-dict["b"] = "Balliol"
-# Delete an entry from a dictionary
-del dict["b"]
-print(dict) # Only outputs entries for catz and bnc
+college["b"] = "Balliol"
+# Delete an entry from a collegeionary
+del college["b"]
+print(college) # Only outputs entries for catz and bnc
 ```
 
 The `del` keyword is neither a function nor a method, it is an operator. We will
