@@ -14,7 +14,7 @@ Begin by pasting the following into the prompt:
 ```python
 oxford_sisters = {
     "All Souls":            "Trinity Hall",
-    "Balliol":              "St John's"
+    "Balliol":              "St John's",
     "Brasenose":            "Gonville and Caius",
     "Christ Church":        "Trinity",
     "Corpus Christi":       "Corpus Christi",
