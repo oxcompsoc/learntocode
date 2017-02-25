@@ -124,12 +124,12 @@ update the age variable every year. Lets instead compute the age:
 ```python
 import datetime
 
-class College
-    def __init__(self, name, year);
+class College:
+    def __init__(self, name, year):
         self.name = name
         self.year = year
 
-    def age():
+    def age(self):
         return datetime.datetime.now().year - self.year
 
 # Usage:
