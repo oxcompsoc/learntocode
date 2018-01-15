@@ -56,7 +56,7 @@ Please come to Department of Computer Science, Parks Road, Oxford, OX1 3QD on
 7pm Thursday 2nd week HT2018 for the first session. We expect attendance to be
 high, so it will be worth arriving early!
 
-![Map](map.png)
+![Map](learntocodemap.png)
 
 The above map shows which entrance of the CS department you should use - there
 are plenty of CompSoc signs up guiding the way.
