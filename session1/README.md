@@ -3,16 +3,17 @@
 The first thing that you’ll need to do is install Python installed on your
 computer. You can find information on how to do that [here][install].
 
-[install]: https://docs.google.com/document/d/1x41akrGAgoxWeQ9h4UJlPrxX0KaOJgvKSa2r0pgAzgM/pub
+[install]: https://github.com/oxcompsoc/learntocode/tree/master/session0
 
 Throughout these documents note that text in a `monospaced font` is Python code.
 
 ## Information about CompSoc
 
-The [Oxford University Computer Society][compsoc] was founded in 1978, making it
-one of the oldest university computing societies in the country. Today we host
-regular talks from large companies, geek nights each Saturday, and Learn to Code
-each Hilary Term.
+The [Oxford University Computer Society][compsoc] was founded in 1978, making
+it one of the oldest university computing societies in the country. Today we
+host regular talks from large companies, geek nights each Saturday, and Learn
+to Code each Hilary Term. Later this term we'll be celebrating our 40th
+anniversary with a dinner welcoming back former members.
 
 [compsoc]: https://ox.compsoc.net
 
@@ -20,13 +21,51 @@ each Hilary Term.
 
 Once you have Python installed you’ll be able to launch a piece of software
 called IDLE. When you first launch it you will be greeted with a prompt where
-you can type in statements or expressions in Python. In the first session we saw
-that it is possible to enter simple arithmetic expressions and have them
-evaluated:
+you can type in statements or expressions in Python. In these sessions we will
+not be using the prompt, so instead create a new file (**File > New File**).
 
-![IDLE](idle.png)
+### Problems installing Python or using IDLE
 
-(Press enter after entering an expression).
+If you can't get Python installed on your computer, don't worry! Instead,
+please go to [this website][replit], which allows you to run Python programs
+online. All our examples (until the final session) should run fine in either
+the online version or IDLE.
+
+[replit]: repl.it/languages/python3
+
+## Hello, world
+
+The programs that we are going to be writing in this course will all be
+text-based, i.e. they can take text that you enter as input and produce text as
+output. Although this might seem limited in the age of animated, interactive
+apps they provide us with a strong foundation for programming.
+
+One of the most basic programs we can write is one that just outputs some text.
+In a new file in IDLE (or empty editor on `repl.it`) enter the following Python
+program:
+
+```python
+print("Hello, world!")
+```
+
+In IDLE, then click **Run > Run Module** (or F5) or click the run button on
+`repl.it`. IDLE will then run the program in the prompt window, and you should
+see the output `"Hello, world!"`.
+
+There are three elements to consider here:
+
+* `print` is the name of a **function**. Functions are pieces of code that do
+  something or calculate something. The `print` function outputs text
+  (historically, the some of the earliest computers used physical printers as
+  their primary form of output)
+* `( )` (parentheses) are used to indicate that we are **calling** the function
+  `print`, i.e. that we are telling Python to execute the `print` function
+* `"Hello, world!"` is the **argument** to the function `print`, i.e. the text
+  that we would like the code inside the `print` function to output. You'll
+  notice that when the text is printed the quote marks are missing &emdash;
+  this is because we have to indicate to Python that the argument is text,
+  rather than other symbols. We call text that appears in programs like this
+  **strings**
 
 ## Variables
 
