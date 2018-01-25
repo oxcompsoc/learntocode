@@ -31,7 +31,7 @@ please go to [this website][replit], which allows you to run Python programs
 online. All our examples (until the final session) should run fine in either
 the online version or IDLE.
 
-[replit]: repl.it/languages/python3
+[replit]: http://repl.it/languages/python3
 
 ## Hello, world
 
@@ -109,90 +109,68 @@ print(message)
 ## Functions
 
 A function is a piece of code that is available to your program that can be
-reused in different contexts. Functions are a little like sausage machines; you
-can put beef in and get a beef sausage, you can put pork in and get a pork
-sausage back, etc.
-
-Some functions require you to provide **arguments** as an input to the function,
-and some functions will also **return** a result back to you. We will see later
-in the course how to define your own functions, but in this session we only
-looked at the print and input functions. If we write `print("Hello, world!")`
-then the text `"Hello world!"` will be "printed" on the screen. Alternatively,
-if we write `name = input("What is your name?")` then we request show the user
-the prompt, they get the chance to input some text, and that text will be
-returned and assigned to the variable name.
-
-## Writing scripts
-
-In IDLE we can write script files, which contain a sequence of Python statements
-that we can run over and over, without the need to keep typing in what we want
-to do. To write a script, click File > New and enter a few statements:
+reused in different contexts. We've already seen the example of the `print`
+function, which outputs text to the user. Next, we're going to see the `input`
+function, which receives text from the user:
 
 ```python
-name = input("What is your name?")
-print("Hello, " + name)
+message = input("Enter a message: ")
+print("Your message was " + message)
 ```
 
-You then need to save the file somewhere sensible with the .py extension before
-you can run it (either Run > Run Module, or F5). The program’s output will be
-shown in the main Python window.
+The `input` function takes an argument that is output to the user, just like
+the `print` function. It then waits for the user to enter some text and press
+enter, and **returns** this value, which we then store in the variable called
+`message`, after which the program behaves similarly to before.
 
 ## If statements
 
-The programs we have seen so far do approximately the same thing, so if
-statements allow us to do different things based on whether certain conditions
-hold. For example:
+Our programs so far have done exactly the same thing each time we run them,
+unless we enter different text. However, we can easily get the program to
+behave differently each time we run it. In Python we can write statements that
+do
+
+> if "this condition is true" then "execute this code"
+
+We write the above as:
 
 ```python
-name = input("What is your name?")
-if name == "thomas":
-    print("hey, you’re the best")
+if condition_is_true:
+    execute_this_code
+```
+
+Notice that we write "then" as `:`. The most important thing to notice is that
+the code we want to execute *only* when the condition holds As a more concrete
+example, consider the following program:
+
+```python
+answer = input("What gets wetter the more it dries?")
+if answer == "towel":
+    print("You answered the riddle correctly")
+```
+
+We can write any number of statements inside the **body** of the `if`
+statement, i.e. statements that are intended (press `TAB`) will only be
+executed if they the condition of the `if` statement holds.
+
+We can also optionally include an `else` branch on the `if` statement that will only be executed if the condition doesn't hold:
+
+```python
+if condition_is_true:
+    execute_this_code
 else:
-    print("Shoo! Go away")
+    this_code_is_executed_otherwise
 ```
 
 There are several important concepts to note here:
 
  * If we want to compare two values (e.g. the value the user entered and a fixed
    string) we use `==` instead of `=`
- * All the code that is directly below the if statement and has been indented
-   right of it will be executed if the condition holds
- * We can add an else branch that is executed if the if statement didn’t hold
  * We can compare numbers and strings using the comparison operators `==`, `!=`,
    `<=`, `>=`, `<`, and `>`
  * If statements can be nested (we'll look at this more next week)
  * We will spend more time looking at what we can place in the condition of if
    statements next week
-
-## Loops
-
-**N.B.** Matt’s group had a slightly longer session this week, whereas Thomas'
-group didn't get onto these. Regardless of which group you are in we’ll be doing
-these next week.
-
-A horribly inefficient way to write a program that has to do the same thing a
-few times would be to copy and paste the code a few times. Instead we use loops
-to allow us to run a piece of code many, or infinite times.
-
-```python
-for x in range(1, 10):
-    print(x)
-```
-
-This program outputs:
-
-```
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-```
 
 ## Good resources to look at
 
@@ -236,8 +214,7 @@ print(x * 2)
  * **Number guessing game:** The program has a number, and the user has to guess
    what the number is. The program should respond whether either higher or lower
    as appropriate, or terminate if the user successfully guesses the number. Can
-   you generate a random number each time the game is played? You may want to
-   look up how to use random.random and while loops (covered next week)
+   you generate a random number each time the game is played?
  * **Computer number guessing game:** rather than have you guess the number,
    have the computer try and determine it instead. How can you ensure that the
    computer makes as few guesses as possible?
