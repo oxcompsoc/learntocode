@@ -55,7 +55,7 @@ see the output `"Hello, world!"`.
 There are three elements to consider here:
 
 * `print` is the name of a **function**. Functions are pieces of code that do
-  something or calculate something. The `print` function outputs text
+  something and/or calculate something. The `print` function outputs text
   (historically, the some of the earliest computers used physical printers as
   their primary form of output)
 * `( )` (parentheses) are used to indicate that we are **calling** the function
@@ -67,27 +67,44 @@ There are three elements to consider here:
   rather than other symbols. We call text that appears in programs like this
   **strings**
 
-## Variables
-
-Whilst it is useful to be able to compute expressions with values that don’t
-change, we frequently want to store a value for access later on. Variables act a
-little like "named boxes" where we can put a value. To assign a value to a
-variable we write something like `x = 10` into IDLE, where x is the name of the
-variable and 10 is the value. Then, when we want to recall the value of `x`
-later on, we simply write x in an expression, e.g. `x * 2`, `x + 10`, `x / 2`,
-etc.
-
 ## Strings
 
-In addition to being able to store numbers in variables, we are also able to
-pieces of text. To do this, we write `x = "hello"`. It is important to enclose
-the piece of text in either single or double quote marks, and you must make sure
-that they match at both ends of the text.
+We called `"Hello, world!"` a **string**, i.e. a piece of text that appears in
+our source code that we can either print or manipulate. One such example is
+that we can split this string in two:
 
-Strings can be concatenated together, e.g. if `x = "hello"` and `y = "thomas"`
-then `x + " " + y` is `"hello thomas"`.
+```python
+print("Hello, " + "world!")
+```
 
-We can also do multiplication over strings, e.g. `"hello" * 10`.
+Here Python will join (`+`) the two strings together to form one string that is
+then given to the `print` function.
+
+**Exercise:** there are many other ways to manipulate strings in Python.
+Investigate how to multiply a string or convert it to uppercase/lowercase.
+
+## Variables
+
+Python programs store data in **variables**. There are two analogies that we
+like to use:
+
+* A variable is a bit like a box that has a name, and inside the box we can
+  store values
+* Python maintains a *dictionary* of names that map to definitions
+
+For now, we can consider these equivalent.
+
+To assign a value to a variable we write `name = value` where `name` can be
+replaced with any piece of text that Python allows as a variable name
+(**Exercise:** investigate what Python does and doesn't allow) and `value` can
+be replaced with any Python value. Then, to get the value associated with a
+variable we just write its name &emdash; this is exactly the same as if we'd
+written the value in the first place. The following program functions in exactly the same way as the first program we wrote
+
+```python
+message = "Hello, world!"
+print(message)
+```
 
 ## Functions
 
