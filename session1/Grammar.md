@@ -18,13 +18,13 @@ Rules are written as `rule-name = different patterns separated by |` (i.e. read
 `|` as "or").
 
 ```
-expression  = number 
-            | arithmetic 
-            | string 
-            | function-call 
+expression  = number
+            | arithmetic
+            | string
+            | function-call
             | variable
             | comparison
-         
+
 number      = any integer or real number
 arithmetic  = expression using operators (+, -, *, /, etc)
 string      = "text between double quote marks"
@@ -77,7 +77,7 @@ statement         = function-call
                   | if-statement
                   | if-else-statement
                   | assignment
-          
+
 if-statement      = if conditional:
                         statement(s) indented by a tab
 
@@ -96,7 +96,8 @@ statement can contain an `if` statement, or another kind of statement.
 Examples:
 
 * `print("Hello, world!")` (function call)
-* 
+* If statement:
+
   ```python
   if x > 10:
       print("x > 10")
