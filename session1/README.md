@@ -62,7 +62,7 @@ There are three elements to consider here:
   `print`, i.e. that we are telling Python to execute the `print` function
 * `"Hello, world!"` is the **argument** to the function `print`, i.e. the text
   that we would like the code inside the `print` function to output. You'll
-  notice that when the text is printed the quote marks are missing &emdash;
+  notice that when the text is printed the quote marks are missing -
   this is because we have to indicate to Python that the argument is text,
   rather than other symbols. We call text that appears in programs like this
   **strings**
@@ -98,7 +98,7 @@ To assign a value to a variable we write `name = value` where `name` can be
 replaced with any piece of text that Python allows as a variable name
 (**Exercise:** investigate what Python does and doesn't allow) and `value` can
 be replaced with any Python value. Then, to get the value associated with a
-variable we just write its name &emdash; this is exactly the same as if we'd
+variable we just write its name - this is exactly the same as if we'd
 written the value in the first place. The following program functions in exactly the same way as the first program we wrote
 
 ```python
