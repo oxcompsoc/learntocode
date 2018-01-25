@@ -17,4 +17,4 @@ and their solutions.
 
 [compsoc]: https://ox.compsoc.net
 [python]: https://python.org
-[replit]: repl.it/languages/python3
+[replit]: http://repl.it/languages/python3
