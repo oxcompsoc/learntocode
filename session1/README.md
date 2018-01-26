@@ -7,6 +7,11 @@ computer. You can find information on how to do that [here][install].
 
 Throughout these documents note that text in a `monospaced font` is Python code.
 
+**If you missed this session or you want a recap, you can watch the screencast
+from this session [here][video].**
+
+[video]: https://youtu.be/yAzp_pRXVPg
+
 ## Information about CompSoc
 
 The [Oxford University Computer Society][compsoc] was founded in 1978, making
