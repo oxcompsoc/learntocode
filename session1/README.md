@@ -98,8 +98,9 @@ To assign a value to a variable we write `name = value` where `name` can be
 replaced with any piece of text that Python allows as a variable name
 (**Exercise:** investigate what Python does and doesn't allow) and `value` can
 be replaced with any Python value. Then, to get the value associated with a
-variable we just write its name - this is exactly the same as if we'd
-written the value in the first place. The following program functions in exactly the same way as the first program we wrote
+variable we just write its name - this is exactly the same as if we'd written
+the value in the first place. The following program functions in exactly the
+same way as the first program we wrote
 
 ```python
 message = "Hello, world!"
@@ -172,6 +173,64 @@ There are several important concepts to note here:
  * We will spend more time looking at what we can place in the condition of if
    statements next week
 
+We can also abbreviate the following:
+
+```python
+if condition_is_true:
+    execute_this_code
+else:
+    if this_other_condition_is_true:
+        execute_this_other_code
+    else:
+        do_this_if_no_conditions_hold
+```
+
+to
+
+```python
+if condition_is_true:
+    execute_this_code
+elif this_other_condition_is_true:
+    execute_this_other_code
+else:
+    do_this_if_no_conditions_hold
+```
+
+You can have as many `elif` branches as you like, but only one `if` branch and
+one `else` branch, which must appear at the beginning and end respectively.
+
+## For loops
+
+A for loop is a bit like a while loop, except that we can execute the body many
+times.
+
+```python
+for n in range(lower_bound, upper_bound):
+    print(str(n))
+```
+
+This program will print the numbers `lower_bound <= n < upper_bound`.
+
+## Guessing game
+
+In the Lecture Theatre A session we wrote the following code:
+
+```python
+import random
+
+for n in range(0, 10):
+    answer = random.randint(0, 1000)
+    guess = int(input("Guess: "))
+    if guess < answer:
+        print("Too low!")
+    elif guess == answer:
+        print("Correct, you got " + str(answer))
+        break
+    else:
+        print("Too high")
+```
+
+
 ## Good resources to look at
 
  * [Khanacademy][] - good for learning about computer science and computational
@@ -184,37 +243,14 @@ There are several important concepts to note here:
  * [Project Euler][euler] - programming challenges, probably a good place to
    practice after a couple of weeks
 
+ * [Learn Python the Hard Way](https://learnpythonthehardway.org/python3/)
+
 [khanacademy]: http://khanacademy.org
 [codecademy]: http://codecademy.com
 [euler]: http://projecteuler.net
 
-## Challenges
+## Exercise
 
-These challenges are entirely optional, and you are more than welcome to do as
-few or as many as you like. They are designed around the lecture material, but
-will hopefully give you the chance to extend your knowledge a little further.
-
- * **Mixing strings and numbers:** During the sessions we only concatenated
-   (i.e.  added) two strings together, but how do we add a number to a string?
-   You may want to look up the str function
- * **A simple quiz game:** multiple questions, possibly multiple choice
-   questions, keep track of the number of correct answers and output it at the
-   end
- * **Number doubling:** Consider the following program, and correct it so that
-   the number that is printed at the end is actually the number that the user
-   input. How could you deal with input that is not a number?
-
-
-```python
-# Run this program and see what it outputs
-x = input("Enter a number ")
-print(x * 2)
-```
-
- * **Number guessing game:** The program has a number, and the user has to guess
-   what the number is. The program should respond whether either higher or lower
-   as appropriate, or terminate if the user successfully guesses the number. Can
-   you generate a random number each time the game is played?
  * **Computer number guessing game:** rather than have you guess the number,
    have the computer try and determine it instead. How can you ensure that the
    computer makes as few guesses as possible?
