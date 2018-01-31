@@ -1,19 +1,15 @@
-# We'll cover what this does later on
-from random import randint
+# Imports the functions from the 'random' library so that we can access them
+import random
 
-number = randint(1, 1000)
-guess = None
-
-while guess != number:
-    # See the doubling exercise for why we use try and except
-    try:
-        guess = int(input("Enter a guess: "))
-        if guess < number:
-            print("You guessed too low")
-        elif guess > number:
-            print("You guessed too high")
-    except:
-        print("Only numeric entry is allowed")
-        exit()
-
-print("Correct!")
+# https://docs.python.org/3/library/random.html#random.randint
+answer = random.randint(0, 1000)
+    
+for n in range(0, 10):
+    guess = int(input("Guess: "))
+    if guess < answer:
+        print("Too low!")
+    elif guess == answer:
+        print("Correct, you got " + str(answer))
+        break
+    else:
+        print("Too high")

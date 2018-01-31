@@ -223,8 +223,9 @@ In the Lecture Theatre A session we wrote the following code:
 ```python
 import random
 
+answer = random.randint(0, 1000)
+
 for n in range(0, 10):
-    answer = random.randint(0, 1000)
     guess = int(input("Guess: "))
     if guess < answer:
         print("Too low!")
