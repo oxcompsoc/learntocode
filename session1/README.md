@@ -223,7 +223,7 @@ In the Lecture Theatre A session we wrote the following code:
 ```python
 import random
 
-answer = random.randint(0, 1000)
+answer = random.randint(0, 999)
 
 for n in range(0, 10):
     guess = int(input("Guess: "))
@@ -236,6 +236,14 @@ for n in range(0, 10):
         print("Too high")
 ```
 
+The [randint function is documented here][randint]. It takes two parameters,
+`a` and `b`, and returns a random integer `x` that is `a <= x <= b`. The range
+function, meanwhile, takes two parameters `a` and `b` and iterates through `a
+<= n < b`. We give the user 10 guesses in total because each time the user
+guesses they should be able to halve the range they know that `answer` occurs
+in, and we have to halve 1000 10 times in order to reach one number.
+
+[randint]: https://docs.python.org/3/library/random.html#random.randint
 
 ## Good resources to look at
 

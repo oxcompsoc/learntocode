@@ -2,7 +2,7 @@
 import random
 
 # https://docs.python.org/3/library/random.html#random.randint
-answer = random.randint(0, 1000)
+answer = random.randint(0, 999)
     
 for n in range(0, 10):
     guess = int(input("Guess: "))
