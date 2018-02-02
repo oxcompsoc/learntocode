@@ -5,6 +5,10 @@ week 3).
 
 [week1]: https://github.com/oxcompsoc/learntocode/tree/master/session1
 
+**You can watch a [screencast of this session here][video].**
+
+[video]: https://youtu.be/orWvOaR0p8E
+
 ## Recap
 
 We ended the last session with a simple guessing game where the computer picked
@@ -69,7 +73,7 @@ numberIsGeqTo = 0
 numberIsLtThan = 1000
 
 while numberIsGeqTo + 1 != numberIsLtThan:
-    # We need to right // instead of / for integer division
+    # We need to write // instead of / for integer division
     guess = (numberIsGeqTo + numberIsLtThan) // 2
     response = input("Is your number less than " + str(guess) + "? ")
     if response == "yes":
