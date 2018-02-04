@@ -18,3 +18,16 @@ and their solutions.
 [compsoc]: https://ox.compsoc.net
 [python]: https://python.org
 [replit]: http://repl.it/languages/python3
+
+## Table of Contents
+
+| Session 1 (wk. 2) | [Notes][s1notes] | [Slides][s1slides] | [Video][s1video] |
+| Session 2 (wk. 3) | [Notes][s2notes] | [Slides][s2slides] | [Video][s2video] |
+
+[s1notes]: https://github.com/oxcompsoc/learntocode/tree/master/session1
+[s1slides]: https://github.com/oxcompsoc/learntocode/blob/master/session1/Slides.pdf
+[s1video]: https://youtu.be/yAzp_pRXVPg
+
+[s2notes]: https://github.com/oxcompsoc/learntocode/tree/master/session2
+[s2slides]: https://github.com/oxcompsoc/learntocode/blob/master/session2/slides.pdf
+[s2video]: https://youtu.be/orWvOaR0p8E
