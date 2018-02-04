@@ -21,8 +21,10 @@ and their solutions.
 
 ## Table of Contents
 
-| Session 1 (wk. 2) | [Notes][s1notes] | [Slides][s1slides] | [Video][s1video] |
-| Session 2 (wk. 3) | [Notes][s2notes] | [Slides][s2slides] | [Video][s2video] |
+| Session           | Notes             | Slides                | Video |
+| ----------------- | ----------------- | --------------------- | ----- |
+| Session 1 (wk. 2) | [Notes][s1notes]  | [Slides][s1slides] | [Video][s1video] |
+| Session 2 (wk. 3) | [Notes][s2notes]  | [Slides][s2slides] | [Video][s2video] |
 
 [s1notes]: https://github.com/oxcompsoc/learntocode/tree/master/session1
 [s1slides]: https://github.com/oxcompsoc/learntocode/blob/master/session1/Slides.pdf
