@@ -119,5 +119,9 @@ the numbers in the list.
 
 ```python
 def sum(xs):
-    return # the sum of all the elements in the list xs
+    # return the sum of all the elements in the list xs
 ```
+
+[Download Test Cases][exercise1]
+
+[exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
