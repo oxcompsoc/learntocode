@@ -100,3 +100,24 @@ programming languages. In most programming languages [there is a
 difference][listvsarray] but it is not relevant to Python or this course.
 
 [listvsarray]: https://www.quora.com/What-is-the-difference-between-an-array-a-list-and-a-linked-list/answer/Gregory-Schoenmakers?share=ccf41042&srid=RsVE
+
+## Exercises
+
+For today's session we have a large number of different exercises that you can
+choose from. At the end of the session we'll go through solutions for a few of
+them (the remainder will be released as part of the screencast). They are
+roughly ordered by difficulty.
+
+Each exercise has some tests associated with it so you can test your solution.
+To run the tests, download the associated file, open it in IDLE, and edit the
+function at the top.
+
+### Exercise 1: Summing a list
+
+Write a function `sum` that takes a list of numbers and returns the sum of all
+the numbers in the list.
+
+```python
+def sum(xs):
+    return # the sum of all the elements in the list xs
+```
