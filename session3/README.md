@@ -138,7 +138,7 @@ def product(xs)
 
 **Exercise (not party of the tests):** what should the product of the empty list be?
 
-**Exercise:** can you optimise this if you find a zero in the list
+**Exercise:** can you optimise this if you find a zero in the list?
 
 ### Exercise 3: Mean of a list
 
@@ -150,6 +150,23 @@ def mean(xs):
 [Download Test Cases][exercise3]
 
 
+### Exercise 4: Flattening lists
+
+Lists can contain lists, so take a list `[ [ a, b, c, ... ], [ d, e, f, ... ],
+... ]` and flatten it to `[ a, b, c, ... , d, e, f, ... ]`.
+
+```python
+def flatten(xs):
+    # return a flatted copy of xs
+```
+
+**Hint:** The code for this is *almost* exactly the same as one of the earlier exercises.
+
+**Hint:*** The empty list is `[]`
+
+[Download Test Cases][exercise4]
+
 [exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
 [exercise2]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise2.py
 [exercise3]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise3.py
+[exercise4]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise4.py
