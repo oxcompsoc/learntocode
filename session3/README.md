@@ -124,4 +124,20 @@ def sum(xs):
 
 [Download Test Cases][exercise1]
 
+### Exercise 2: Product of a list
+
+Write a function `product` that takes a list of numbers and returns the product of all the numbers in the list.
+
+```python
+def product(xs)
+    # return the product of all the elements in the list xs
+```
+
+[Download Test Cases][exercise2]
+
+**Exercise (not party of the tests):** what should the product of the empty list be?
+
+**Exercise:** can you optimise this if you find a zero in the list
+
 [exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
+[exercise2]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise2.py
