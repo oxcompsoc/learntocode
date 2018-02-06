@@ -106,7 +106,8 @@ difference][listvsarray] but it is not relevant to Python or this course.
 For today's session we have a large number of different exercises that you can
 choose from. At the end of the session we'll go through solutions for a few of
 them (the remainder will be released as part of the screencast). They are
-roughly ordered by difficulty.
+roughly ordered by difficulty. If you find an exercise easy, consider skipping
+a few.
 
 Each exercise has some tests associated with it so you can test your solution.
 To run the tests, download the associated file, open it in IDLE, and edit the
@@ -139,5 +140,16 @@ def product(xs)
 
 **Exercise:** can you optimise this if you find a zero in the list
 
+### Exercise 3: Mean of a list
+
+```python
+def mean(xs):
+    # return the mean of all the elements in the list xs
+```
+
+[Download Test Cases][exercise3]
+
+
 [exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
 [exercise2]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise2.py
+[exercise3]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise3.py
