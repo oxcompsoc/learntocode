@@ -1,4 +1,4 @@
-# Session 2
+# Session 2: While loops, functions, recursion
 
 See [here][week1] for last week's content. Session 2 was on 1/2/18 (HT18 Thurs
 week 3).

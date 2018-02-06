@@ -1,4 +1,4 @@
-# Introduction to Python
+# Session 1: Introduction to Python
 
 The first thing that you’ll need to do is install Python installed on your
 computer. You can find information on how to do that [here][install].
