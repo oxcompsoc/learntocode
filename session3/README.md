@@ -1,157 +1,102 @@
-# While loops and functions
+# Session 3: Lists
 
-In the previous session we explored how to use `for` loops and `while` loops to
-repeat Python statements several, or even an infinite, number of times. In this
-session we are going to continue that theme by writing a simple guessing game,
-before defining our own functions.
+See [here][s2notes] for last week's content.
 
-## Guessing game
-
-```python
-number = 337
-guess = None
-
-while guess != number:
-    # See the doubling exercise for why we use try and except
-    try:
-        guess = int(input("Enter a guess: "))
-        if guess < number:
-            print("You guessed too low")
-        elif guess > number:
-            print("You guessed too high")
-    except:
-        print("Only numeric entry is allowed")
-        exit()
-
-print("Correct!")
-```
-
-## Guessing game: the other way
-
-```python
-print("Please think of a number between 1 and 1000 (inclusive)")
-print("When I guess, enter low, high, or right")
-
-low = 1
-high = 1000
-correct = False
-
-while not correct:
-    # We need to right // instead of / for integer division
-    guess = (low + high) // 2
-    response = input("I guess " + str(guess) + ": ")
-    if response == "right":
-        correct = True
-    elif response == "high":
-        high = guess - 1
-    elif response == "low":
-        low = guess + 1
-
-print("Yay!")
-```
-
-## String formatting
-
-So far when we have wanted to output a mix of strings, or numbers and strings,
-we have just concatenated them together with `+`. To make life easier, we can
-alternatively do this:
-
-```python
-name = "Thomas"
-age = 19
-
-message = name + " is " + str(age) + " years old"
-
-# Becomes
-message = "{} is {} years old".format(name, age)
-
-# We write {} for each substitution, and then list them
-```
-
-## Defining functions
-
-We've used a few functions so far, but we haven't made any of our own yet. We
-write functions so that we can encapsulate common ideas and avoid have to repeat
-ourselves.
-
-Consider the following code:
-
-```python
-name = "Thomas"
-role = "secretary"
-message = "{} is the {}".format(name, role)
-print(message)
-
-name = "Matt"
-role = "president"
-message = "{} is the {}".format(name, role)
-print(message)
-```
-
-Here we have repeated the process of making the message twice, which seems a bit
-wasteful. Lets define a function that does it instead:
-
-```python
-def make_message(name, role):
-    # name and role are local to the function
-    return "{} is the {}".format(name, role)
-
-# Now we can write this instead
-name = "Thomas"
-role = "secretary"
-message = make_message(name, role)
-print(message)
-
-name = "Matt"
-role = "president"
-message = make_message(name, role)
-print(message)
-
-# We don't need the message variable, we can just take the value from
-# make_message and give it to print
-
-name = "Thomas"
-role = "secretary"
-print(make_message(name, role))
-
-name = "Matt"
-role = "president"
-print(make_message(name, role))
-
-# Furthermore, we don't even need the name and role variables
-print(make_message("Thomas", "secretary"))
-print(make_message("Matt", "president"))
-```
-
-In this example we managed to make the overall program length a little shorter,
-but for more complex tasks we would find that defining functions enables us to
-write far more succinct programs.
+[s2notes]: https://github.com/oxcompsoc/learntocode/tree/master/session2
 
 ## Lists
 
-We've previously seen iteration through a list of numbers using `for` loops and
-`range`, but quite often we will want lists of other things. Therefore we
-introduce a new kind of variable: `list`.
+So far we've seen two different *types* of values: strings (pieces of text) and
+numbers. This week we're going to be looking at lists, which are lists of
+values. Python denotes lists as `[ x, y, z, ...]`:
 
 ```python
-empty_list = []
-list_with_some_numbers = [1, 2, 3]
-list_with_some_numbers.append(4)
-print(list_with_some_numbers)
-
-for x in list_with_some_numbers:
-    print(x)
+beatles = [ "John", "Paul", "George", "Ringo" ]
 ```
 
-**Challenge: adapt the guessing game to show a list of all the previous
-guesses**
+You must surround the list by square brackets and comma separate values.
 
-## Where next?
+The `len` function tells us the length of a list:
 
-Here we hit an interesting impasse: we've now shown you most of the basic
-compositional units of programs: variables, if statements, while loops, for
-loops, and functions. We won't introduce many more in the remaining four
-sessions.
+```python
+number_of_beatles = len(beatles) # number_of_beatles = 4
+```
 
-What we've seen so far is mostly just syntax, i.e. what we write. We haven't
-really looked at problem solving at all yet.
+We can access a particular element of a list using **subscript notation**:
+
+```python
+beatle = beatles[0] # beatle is now "John", Python lists start numbering at 0
+beatle = beatles[1] # beatle is now "Paul"
+
+beatles[3] = "Ringo Starr" # The list is now [ "John", "Paul", "George", "Ringo Starr" ]
+```
+
+We can add an element to a list:
+
+```python
+# Pete Best was the original drummer before Ringo
+beatles.append("Pete") # beatles is now [ "John", "Paul", "George", "Ringo Starr", "Pete"]
+```
+
+Or remove an element from the list:
+
+```python
+del beatles[4] # beatles is now [ "John", "Paul", "George", "Ringo Starr" ]
+```
+
+Alternatively, you can remove an element by value, so instead of the previous
+line we could have written:
+
+```python
+beatles.remove("Pete")
+```
+
+**Exercise:** Investigate which is more efficient
+
+You can also join two lists together:
+
+```python
+one_direction = ["Niall", "Liam", "Harry", "Louis"]
+names = beatles + one_direction
+```
+
+Finally, we can also loop over lists:
+
+```python
+for name in names:
+    print(name)
+```
+
+Which outputs the following:
+
+```
+John
+Paul
+George
+Ringo Starr
+Niall
+Liam
+Harry
+Louis
+```
+
+You can also get the index simultaneously:
+
+```python
+for index, name in enumerate(names): 
+    print(str(index) + ": " + name)
+```
+
+This outputs:
+
+```
+0: John
+1: Paul
+...
+```
+
+**Note:** you may have seen what Python calls lists called *arrays* in other
+programming languages. In most programming languages [there is a
+difference][listvsarray] but it is not relevant to Python or this course.
+
+[listvsarray]: https://www.quora.com/What-is-the-difference-between-an-array-a-list-and-a-linked-list/answer/Gregory-Schoenmakers?share=ccf41042&srid=RsVE
