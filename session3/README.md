@@ -162,7 +162,7 @@ def flatten(xs):
 
 **Hint:** The code for this is *almost* exactly the same as one of the earlier exercises.
 
-**Hint:*** The empty list is `[]`
+**Hint:** The empty list is `[]`
 
 [Download Test Cases][exercise4]
 
