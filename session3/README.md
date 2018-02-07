@@ -162,11 +162,23 @@ def flatten(xs):
 
 **Hint:** The code for this is *almost* exactly the same as one of the earlier exercises.
 
-**Hint:** The empty list is `[]`
+**Hint:*** The empty list is `[]`
 
 [Download Test Cases][exercise4]
+
+### Exercise 5: A new list that is the sum of two lists
+
+Given two lists `xs` and `ys`, return a new list `zs` where each element is the sum of the corresponding elements in `xs` and `ys`, i.e. `sum2([1, 2, 3], [10, 11, 12]) == [11, 13, 15]`. You may assume that the lists are the same length.
+
+```python
+def sum2(xs, ys):
+    # return a list pairwise summing the elements
+```
+
+[Download Test Cases][exercise5]
 
 [exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
 [exercise2]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise2.py
 [exercise3]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise3.py
 [exercise4]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise4.py
+[exercise5]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise5.py
