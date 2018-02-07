@@ -311,6 +311,42 @@ whilst keeping the list in sorted order).
 
 [Download Test Cases][exercise12]
 
+### Exercise 13: Merging lists
+
+Given two sorted lists, return a sorted list containing the contents of the two
+lists merged in order, i.e. `merge([0, 1, 1, 2, 3, 5, 8], [1, 2, 3, 4, 5, 6])
+== [0, 1, 1, 1, 2, 2, 3, 3, 4, 5, 6, 8]`. You should not assume that the lists
+are the same length.
+
+```python
+def merge(xs, ys):
+    # return a sorted list with the merged contents of the sorted lists xs and ys
+```
+
+[Download Test Cases][exercise13]
+
+### Exercise 14: Merge sort
+
+[Merge sort][mergesort] is a common sorting algorithm, and you can implement it
+using the merge function from the previous exercise. The result of this
+function should be the same as the result of the `sorted` function:
+
+```python
+def merge_sort(xs):
+    # A sorted copy of xs
+```
+
+[Download Test Cases][exercise14]
+
+**Hint:** In Python, if you want to split an array in two you can do:
+
+```python
+first_half = xs[:(len(xs) // 2)]
+second_half = xs[(len(xs) // 2):]
+```
+
+[mergesort]: https://en.wikipedia.org/wiki/Merge_sort
+
 [binsearch]: https://github.com/oxcompsoc/learntocode/tree/master/session2#binary-search-algorithm
 
 [exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
@@ -325,3 +361,5 @@ whilst keeping the list in sorted order).
 [exercise10]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise10.py
 [exercise11]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise11.py
 [exercise12]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise12.py
+[exercise13]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise13.py
+[exercise14]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise14.py

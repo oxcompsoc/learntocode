@@ -1,14 +1,5 @@
 def bin_search(xs, x):
     # return the least index of an element equal to x in the sorted list xs
-	low = 0
-	high = len(xs)
-	while low + 1 < high:
-		guess = (low + high) // 2
-		if x < xs[guess]:
-			high = guess
-		else:
-			low = guess
-	return low
 
 def test(test_case_xs, test_case_x, expected):
 	actual = bin_search(test_case_xs, test_case_x)
