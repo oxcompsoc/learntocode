@@ -179,8 +179,23 @@ def sum2(xs, ys):
 
 [Download Test Cases][exercise5]
 
+### Exercise 6: Pairwise sum
+
+This is exactly the same as the previous exercise, only you may not assume that
+the lists are of the same length. The list returned should be the length of the
+longer list, as if the remainder of the shorter list were zeroes. For example,
+`sum2([1, 2], [1, 2, 3, 4]) == [2, 4, 3, 4]`.
+
+```python
+def sum2(xs, ys):
+	# pairwise sum assuming that xs and ys aren't the same length
+```
+
+[Download Test Cases][exercise6]
+
 [exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
 [exercise2]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise2.py
 [exercise3]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise3.py
 [exercise4]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise4.py
 [exercise5]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise5.py
+[exercise6]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise6.py
