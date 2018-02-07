@@ -351,9 +351,8 @@ second_half = xs[(len(xs) // 2):]
 
 ## Mathematical exercises
 
-The remainder of the exercises are intended for maths students with a
-mathematical background or those that have studied maths at some point (A-Level
-Core Maths should be enough).
+The remainder of the exercises are intended for maths students or those that
+have studied maths at some point (A-Level Core Maths should be enough).
 
 ### Exercise 15: Representing polynomials
 
@@ -368,6 +367,24 @@ represented in this way and outputs the equivalent equation, as above.
 **Note:** This exercise doesn't come with a test case; the intention is that
 you write some code that you can use later for debugging. If you get stuck
 however, the solution is [here][exercise15].
+
+### Exercise 16: Adding polynomials
+
+Given two lists that represent a polynomial, return a new list that represents
+the polynomial that is the sum of those polynomial. For example, `poly_sum([1,
+2, 3], [4, 5, 6]) = [5, 7, 9]` because `(1 + 2x + 3x^2) + (4 + 5x + 6x^2) = 5 +
+7x + 9x^2`. Be careful to consider the result of adding two polynomials of
+different degrees.
+
+```python
+def poly_sum(xs, ys):
+    # return the list representing the sum of the polynomials represented by the
+    # lists xs and ys
+```
+
+[Download Test Cases][exercise16]
+
+**Hint:** This is *exactly* the same as one of the earlier exercises.
 
 [exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
 [exercise2]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise2.py
@@ -384,3 +401,4 @@ however, the solution is [here][exercise15].
 [exercise13]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise13.py
 [exercise14]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise14.py
 [exercise15]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise15.py
+[exercise16]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise16.py
