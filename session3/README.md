@@ -224,6 +224,23 @@ def filtered_even(xs):
 
 [Download Test Cases][exercise8]
 
+### Exercise 9: Filtering a list of strings
+
+Given a list of strings, return a copy of the list that only includes the strings that start with an lowercase letter.
+
+```python
+def filtered_text(xs):
+	# Return a copy of xs that only contains the strings that start with a
+	# lowercase letter
+```
+
+**Hint:** you can treat strings like lists, so to get the first character of a
+string you can do `s[0]` where `s` is a string variable.
+
+**Hint:** you can compare characters to other characters, e.g. `"a" <= "b"` is `True` but `"a" >= "z"` is `False`; you need to include the quote marks around the character still.
+
+[Download Test Cases][exercise9]
+
 [exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
 [exercise2]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise2.py
 [exercise3]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise3.py
@@ -232,3 +249,4 @@ def filtered_even(xs):
 [exercise6]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise6.py
 [exercise7]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise7.py
 [exercise8]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise8.py
+[exercise9]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise9.py
