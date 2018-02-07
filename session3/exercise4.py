@@ -1,8 +1,5 @@
 def flatten(xs):
-	flattened = []
-	for x in xs:
-		flattened += x
-	return flattened
+	# return a flattened copy of the list
 
 def test(test_case, expected):
 	actual = flatten(test_case)
