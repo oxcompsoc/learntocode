@@ -277,6 +277,40 @@ def uniques(xs):
 	# return a list of all the unique elements
 ```
 
+### Exercise 12: Binary search
+
+**Note:** This exercise is harder than the others.
+
+This exercise requires you to adapt the [binary search algorithm][binsearch]
+seen last week. Given a sorted list of strings, find the least index of an
+element with that value. One way we could do this is:
+
+```python
+def search(xs, x):
+    for i in range(0, len(xs)):
+        if xs[i] == x:
+            return i
+    return None
+```
+
+However, this isn't particularly efficient. The binary search reduces the
+number of comparisons we have to do from `len(xs)` to `log2(len(xs))` where
+`log2` is the base 2 logarithm.
+
+```python
+def bin_search(xs, x):
+    # return the least index of an element equal to x in the sorted list xs
+```
+
+**Note:** don't worry about what you return if the item isn't in the list.
+Often when implementing binary search it is useful to return the index that an
+element *would* be at, *were* it in the list (i.e. so it could be inserted
+whilst keeping the list in sorted order).
+
+[Download Test Cases][exercise12]
+
+[binsearch]: https://github.com/oxcompsoc/learntocode/tree/master/session2#binary-search-algorithm
+
 [Download Test Cases][exercise11]
 
 [exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
@@ -290,3 +324,4 @@ def uniques(xs):
 [exercise9]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise9.py
 [exercise10]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise10.py
 [exercise11]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise11.py
+[exercise12]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise12.py
