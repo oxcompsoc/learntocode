@@ -254,6 +254,31 @@ def rot(xs, n):
 
 [Download Test Cases][exercise10]
 
+## Sorting lists
+
+For the second set of the exercises you'll need to be able to sort a list into
+ascending order. To do this in Python you need to use the `sorted` function:
+
+```python
+beatles = [ "John", "Paul", "George", "Ringo" ]
+beatles2 = sorted(beatles) # == [ "George", "John", "Paul", "Ringo" ]
+
+nums = [13, 56, 26, 2, 12, 12, 2, 4]
+nums2 = sorted(nums) # == [2, 2, 4, 12, 12, 13, 26, 56]
+```
+
+### Exercise 11: Removing duplicates
+
+Given a list `xs`, return a new sorted list with all the duplicate elements
+removed.
+
+```python
+def uniques(xs):
+	# return a list of all the unique elements
+```
+
+[Download Test Cases][exercise11]
+
 [exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
 [exercise2]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise2.py
 [exercise3]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise3.py
@@ -264,3 +289,4 @@ def rot(xs, n):
 [exercise8]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise8.py
 [exercise9]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise9.py
 [exercise10]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise10.py
+[exercise11]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise11.py
