@@ -241,6 +241,19 @@ string you can do `s[0]` where `s` is a string variable.
 
 [Download Test Cases][exercise9]
 
+### Exercise 10: Rotating a list
+
+Given a list `xs` and an integer `n`, produce a list where each element is
+rotated around by `n`, i.e. `rot([1, 2, 3], 1) == [3, 1, 2]` and `rot([1, 2, 3,
+4, 5], 2) == [3, 4, 5, 1, 2]`.
+
+```python
+def rot(xs, n):
+	# return a list of xs rotated by n
+```
+
+[Download Test Cases][exercise10]
+
 [exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
 [exercise2]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise2.py
 [exercise3]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise3.py
@@ -250,3 +263,4 @@ string you can do `s[0]` where `s` is a string variable.
 [exercise7]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise7.py
 [exercise8]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise8.py
 [exercise9]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise9.py
+[exercise10]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise10.py
