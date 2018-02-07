@@ -364,6 +364,8 @@ example, the list `[1, 2, 3, 4]` represents the polynomial `1x^0 + 2x^2 + 3x^3
 In this exercise you should just write a function that takes a polynomial
 represented in this way and outputs the equivalent equation, as above.
 
+Can you make this nicer by not printing a term if the coefficient is zero?
+
 **Note:** This exercise doesn't come with a test case; the intention is that
 you write some code that you can use later for debugging. If you get stuck
 however, the solution is [here][exercise15].
@@ -386,6 +388,22 @@ def poly_sum(xs, ys):
 
 **Hint:** This is *exactly* the same as one of the earlier exercises.
 
+### Exercise 17: Multiplying polynomials
+
+Given two lists that represent a polynomial, return a new list representing the
+product of those two polynomials. For example, `(1 + x)(2 + x) = 2 + 3x + x^2`,
+so we want `poly_prod([1, 1], [2, 1]) == [2, 3, 1]`.
+
+```python
+def poly_prod(xs, ys):
+    # return the list representing the product of the polynomials represented by
+    # the lists xs and ys
+```
+
+[Download Test Cases][exercise17]
+
+**Hint:** you can create a list of `0`s of length `n` in Python with `[0] * n`.
+
 [exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
 [exercise2]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise2.py
 [exercise3]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise3.py
@@ -402,3 +420,4 @@ def poly_sum(xs, ys):
 [exercise14]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise14.py
 [exercise15]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise15.py
 [exercise16]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise16.py
+[exercise17]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise17.py

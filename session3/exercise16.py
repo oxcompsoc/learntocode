@@ -1,6 +1,6 @@
 def poly_sum(xs, ys):
-    # return the list representing the sum of the polynomials represented by the
-    # lists xs and ys
+	# return the list representing the sum of the polynomials represented by the
+	# lists xs and ys
 
 def test(test_case_xs, test_case_ys, expected):
 	actual = poly_sum(test_case_xs, test_case_ys)
