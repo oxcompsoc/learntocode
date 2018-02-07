@@ -212,6 +212,18 @@ def threes_or_fives(n):
 
 [Download Test Cases][exercise7]
 
+### Exercise 8: Filtering a list
+
+Given a list of numbers, return a copy of the list that only includes the even
+numbers.
+
+```python
+def filtered_even(xs):
+	# Return a copy of the list that only includes even numbers
+```
+
+[Download Test Cases][exercise8]
+
 [exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
 [exercise2]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise2.py
 [exercise3]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise3.py
@@ -219,3 +231,4 @@ def threes_or_fives(n):
 [exercise5]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise5.py
 [exercise6]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise6.py
 [exercise7]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise7.py
+[exercise8]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise8.py
