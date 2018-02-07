@@ -2,12 +2,12 @@ def bin_search(xs, x):
     # return the least index of an element equal to x in the sorted list xs
 
 def test(test_case_xs, test_case_x, expected):
-	actual = bin_search(test_case_xs, test_case_x)
-	if actual == expected:
-		print("Passed test for " + test_case_x)
-	else:
-		print("Didn't pass test for " + test_case_x)
-		print("The result was " + str(actual) + " but it should have been " + str(expected))
+    actual = bin_search(test_case_xs, test_case_x)
+    if actual == expected:
+        print("Passed test for " + test_case_x)
+    else:
+        print("Didn't pass test for " + test_case_x)
+        print("The result was " + str(actual) + " but it should have been " + str(expected))
 
 test([], "x", 0)
 test(["code", "learn", "to"], "code", 0)
@@ -19,4 +19,4 @@ sentence = "A brownish cloud descends every Friday, growing, hovering impressive
 words = sentence.lower().split(" ")
 
 for i in range(0, len(words)):
-	test(words, words[i], i)
+    test(words, words[i], i)

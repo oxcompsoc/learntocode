@@ -83,7 +83,7 @@ Louis
 You can also get the index simultaneously:
 
 ```python
-for index, name in enumerate(names): 
+for index, name in enumerate(names):
     print(str(index) + ": " + name)
 ```
 

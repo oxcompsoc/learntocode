@@ -1,17 +1,17 @@
 def print_polynomial_bad(coefs):
-	for i in range(0, len(coefs)):
-		print(str(coefs[i]) + "x^" + str(i), end = "")
-		if i != len(coefs) - 1:
-			print(" + ", end = "")
-	print("")
+    for i in range(0, len(coefs)):
+        print(str(coefs[i]) + "x^" + str(i), end = "")
+        if i != len(coefs) - 1:
+            print(" + ", end = "")
+    print("")
 
 # Use this version
 def print_polynomial(coefs):
-	strs = []
-	for i in range(0, len(coefs)):
-		if coefs[i] != 0:
-			strs.append(str(coefs[i]) + "x^" + str(i))
-	print(" + ".join(strs))
+    strs = []
+    for i in range(0, len(coefs)):
+        if coefs[i] != 0:
+            strs.append(str(coefs[i]) + "x^" + str(i))
+    print(" + ".join(strs))
 
 # Tests
 print_polynomial_bad([])
