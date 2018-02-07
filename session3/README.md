@@ -287,6 +287,8 @@ This exercise requires you to adapt the [binary search algorithm][binsearch]
 seen last week. Given a sorted list of strings, find the least index of an
 element with that value. One way we could do this is:
 
+[binsearch]: https://github.com/oxcompsoc/learntocode/tree/master/session2#binary-search-algorithm
+
 ```python
 def search(xs, x):
     for i in range(0, len(xs)):
@@ -347,7 +349,25 @@ second_half = xs[(len(xs) // 2):]
 
 [mergesort]: https://en.wikipedia.org/wiki/Merge_sort
 
-[binsearch]: https://github.com/oxcompsoc/learntocode/tree/master/session2#binary-search-algorithm
+## Mathematical exercises
+
+The remainder of the exercises are intended for maths students with a
+mathematical background or those that have studied maths at some point (A-Level
+Core Maths should be enough).
+
+### Exercise 15: Representing polynomials
+
+For the next few exercises we will represent polynomials with a list, where
+each element of the list represents the corresponding coefficient of `x`. For
+example, the list `[1, 2, 3, 4]` represents the polynomial `1x^0 + 2x^2 + 3x^3
++ 4x^4 = 1 + 2x^2 + 3x^3 + 4x^4`.
+
+In this exercise you should just write a function that takes a polynomial
+represented in this way and outputs the equivalent equation, as above.
+
+**Note:** This exercise doesn't come with a test case; the intention is that
+you write some code that you can use later for debugging. If you get stuck
+however, the solution is [here][exercise15].
 
 [exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
 [exercise2]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise2.py
@@ -363,3 +383,4 @@ second_half = xs[(len(xs) // 2):]
 [exercise12]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise12.py
 [exercise13]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise13.py
 [exercise14]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise14.py
+[exercise15]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise15.py
