@@ -277,6 +277,8 @@ def uniques(xs):
 	# return a list of all the unique elements
 ```
 
+[Download Test Cases][exercise11]
+
 ### Exercise 12: Binary search
 
 **Note:** This exercise is harder than the others.
@@ -310,8 +312,6 @@ whilst keeping the list in sorted order).
 [Download Test Cases][exercise12]
 
 [binsearch]: https://github.com/oxcompsoc/learntocode/tree/master/session2#binary-search-algorithm
-
-[Download Test Cases][exercise11]
 
 [exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
 [exercise2]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise2.py
