@@ -166,9 +166,11 @@ def flatten(xs):
 
 [Download Test Cases][exercise4]
 
-### Exercise 5: A new list that is the sum of two lists
+### Exercise 5: Pairwise sum
 
-Given two lists `xs` and `ys`, return a new list `zs` where each element is the sum of the corresponding elements in `xs` and `ys`, i.e. `sum2([1, 2, 3], [10, 11, 12]) == [11, 13, 15]`. You may assume that the lists are the same length.
+Given two lists `xs` and `ys`, return a new list `zs` where each element is the
+sum of the corresponding elements in `xs` and `ys`, i.e. `sum2([1, 2, 3], [10,
+11, 12]) == [11, 13, 15]`. You may assume that the lists are the same length.
 
 ```python
 def sum2(xs, ys):
