@@ -4,9 +4,10 @@ See [here][s2notes] for last week's content.
 
 [s2notes]: https://github.com/oxcompsoc/learntocode/tree/master/session2
 
-**You can find all the [solutions here][solutions]**
+**You can find all the [solutions here][solutions] and watch the [screencast here][video]**
 
 [solutions]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/solutions.py
+[video]: https://www.youtube.com/watch?v=TU1aisio7IU
 
 ## Lists
 
