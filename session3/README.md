@@ -80,11 +80,11 @@ Harry
 Louis
 ```
 
-You can also get the index simultaneously:
+You can also iterate over the indicies:
 
 ```python
-for index, name in enumerate(names):
-    print(str(index) + ": " + name)
+for i in range(0, len(names)):
+    print(str(i) + ": " + names[i])
 ```
 
 This outputs:
