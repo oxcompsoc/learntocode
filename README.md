@@ -26,7 +26,7 @@ and their solutions.
 | Session 0: Installing Python                                  | N/A  | [Notes][s0notes]  | N/A | N/A |
 | Session 1: Python syntax, variables, if statements, for loops | 2    | [Notes][s1notes]  | [Slides][s1slides] | [Video][s1video] |
 | Session 2: While loops, functions, recursion                  | 3    | [Notes][s2notes]  | [Slides][s2slides] | [Video][s2video] |
-| Session 3: Lists                                              | 4    | [Notes][s3notes]  | N/A | N/A |
+| Session 3: Lists                                              | 4    | [Notes][s3notes]  | [Slides][s3slides] | N/A |
 
 [s0notes]: https://github.com/oxcompsoc/learntocode/tree/master/session0
 
@@ -39,3 +39,4 @@ and their solutions.
 [s2video]: https://youtu.be/orWvOaR0p8E
 
 [s3notes]: https://github.com/oxcompsoc/learntocode/tree/master/session3
+[s3slides]: https://github.com/oxcompsoc/learntocode/blob/master/session3/slides.pdf
