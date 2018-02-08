@@ -4,6 +4,10 @@ See [here][s2notes] for last week's content.
 
 [s2notes]: https://github.com/oxcompsoc/learntocode/tree/master/session2
 
+**You can find all the [solutions here][solutions]**
+
+[solutions]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/solutions.py
+
 ## Lists
 
 So far we've seen two different *types* of values: strings (pieces of text) and
