@@ -12,7 +12,7 @@ def test(test_case, expected):
         print("Didn't pass test for " + str(test_case))
         print("The result was " + str(actual) + " but it should have been " + str(expected))
 
-test(0, [0])
+test(0, [])
 test(3, [0])
 test(5, [0, 3])
 test(6, [0, 3, 5])
