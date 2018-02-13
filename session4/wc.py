@@ -1,5 +1,5 @@
-text = input("Enter some text: ")
-words = text.split(" ")
+text = input("Please enter some text: ")
+words = text.lower().split(" ")
 counts = {}
 
 for word in words:

@@ -1,239 +1,164 @@
-# Data Structures
+# Session 4: Lists (cont.) and Dictionaries
 
-In the course so far we have looked at the *syntax* of Python, i.e. the text
-that constitutes a valid Python program, and the *semantics* of Python, i.e.
-what a valid program does. These are useful tools for building basic programs
-and solving simple problems, but in order to build more advanced programs we
-need to look at other ways of storing and using data in our programs.
-
-So far, we've seen that variables can store nothing, truth values, numbers, and
-strings:
+In [last week's session][s3notes] we took a look at *lists*, which are ordered
+collections of Python values. We saw that if we could create an empty list
+called `xs` (pronounced "exes", i.e. the plural of a single "x") with
 
 ```python
-empty = None
-truth = False
-number = 42
-text = "Hello, world"
+xs = []
 ```
 
-In this session, we'll look at lists and dictionaries, and how we can use them
-for basic problem solving.
-
-## Lists
-
-The syntax for creating lists in Python is intuitive:
+Alternatively, we could initialise `xs` to contain some values:
 
 ```python
-# We can't name a variable list, because list is a *reserved keyword* in Python
-my_list = [3, 7, 42]
-
-# Iterate through every item in the list
-for x in my_list:
-    print("One of my favourite numbers is {}".format(x))
+xs = [ "Anything", "Can", "Go", "Here" ]
 ```
 
-Lists can contain any number of values, and we can create lists that contain
-values of multiple types. Generally, we prefer to only have a list of numbers, a
-list of strings, or even a list of lists.
-
-Sometimes we want to access a specific value in a list. Take the previous
-example and run it:
+We also saw that we can access individual elements of a list with *subscription
+notation*, and that the first element of a list is indexed by `0`:
 
 ```python
-my_list = [3, 7, 42]
-print(my_list[1])
+#      0           1      2     3
+xs = [ "Anything", "Can", "Go", "Here" ]
+first_element = xs[0] # has value "Anything"
+last_element = xs[3] # has value "Here"
 ```
 
-You may have expected that this would print `3`, because that is the first value
-in the list. If we actually wanted to get the first element from the list we'd
-have to write `my_list[0]`, and if we wanted to access the third element we
-write `my_list[2]`. But why is this?
+[s3notes]: https://github.com/oxcompsoc/learntocode/tree/master/session3
 
-Firstly, for a lot of problems it turns out to be slightly more convenient to
-start at zero, otherwise we may find ourselves adding or subtracting 1 to get a
-value from the array.
+In today's session we are going to continue looking at lists by continuing with
+some of the exercises from last week's session (we deliberately wrote far too
+many for a single session). As we covered solutions to the first three
+exercises in last week's session, we'd like to encourage you to start at
+[exercise 4][s3e4].
 
-Secondly, we need to briefly consider how computer memory works. In the course
-so far we have used "boxes" to describe variables, and we can imagine a list as
-a "box of boxes". In this analogy, Python will store the memory locations for
-each side of the box where the list begins and ends:
+[s3e4]: https://github.com/oxcompsoc/learntocode/tree/master/session3#exercise-4-flattening-lists
 
-```
-    |----|----|----|
-    | 03 | 07 | 42 |
-    |----|----|----|
-    ^              ^
-    |              |
-  start           end
-```
+If you get stuck, as well as asking a volunteer for help, you can also look at
+[last week's solutions][s3solutions] and [last week's video][s3video].
 
-If we want to get the first value of from the list, we need to get the box that
-starts at `start`, whereas if we want to get the second element we need to go
-one box past `start`, and if we want to get the third element we have to go two
-elements past `start`.
-
-If you don't understand this don't worry yet; just make sure you remember that
-we have to start at zero. Also recall that floor numbering in buildings (in the
-UK) works in exactly the same way.
-
-### Joining lists
-
-Just like strings, we can add two lists together:
-
-```python
-committee = ['matt', 'chris', 'thomas']
-volunteers = ['nick', 'sauyon', 'calin']
-helpers = committee + volunteers
-for person in helpers:
-    print(person)
-```
-
-### Appending to lists
-
-If we want to add a value to the end of a list we could do `list + [x]`, but
-this creates a new list; we might want to add to an existing list instead:
-
-```python
-committee = ['matt', 'chris']
-committee.append('thomas')
-for person in committee:
-    print(person)
-# Prints matt, chris, thomas
-```
-
-This doesn't create a new list, but adds an extra value into the existing list.
-
-### Inserting into lists
-
-We can also pick a specific index for a new element to be inserted at:
-
-```python
-committee = ['matt', 'thomas']
-committee.insert(1, 'chris')
-# committee now contains matt, chris, thomas
-```
-
-The way to remember this is that the insertion index is new index of the value,
-i.e. the number of values that will *precede* it in the list.
-
-### Other list operations
-
-Another core operation is finding the length of a list, because this doesn't
-have to be fixed. We do this with `len(list)`. At this point we need to make an
-important distinction between **functions** and **methods**. A method is a
-function that always takes at least one parameter, the `self` object. For
-example, the `insert` *method* on a list is effectively a `function` that takes
-a list *and* an element to insert. Somewhere, it will actually be defined like
-this:
-
-```python
-def insert(self, element):
-    # Insert element into the list self
-```
-
-Meanwhile, `len` is defined as a function because we can use it on types other
-than lists, e.g. strings and dictionaries - it isn't associated with one
-specific type (there is more to the reasoning here, we won't worry about it now).
-
-Another common function is `sorted`, which takes a list and gives us back a new
-list in sorted order. Alternatively, we can sort a list without having to create
-a new list: `list.sort()
-
-We will look at methods in far more detail next week.
-
-To get the last element in a list, we could do `list[len(list) - 1]` but Python
-provides some shorthand for this: `list[-1]`. I find the former a bit more
-explicit, but you may prefer the latter.
-
-### Exerise: Generating squares
-
-```python
-n = 0
-try:
-    n = int(input("Enter a number: "))
-catch:
-    print("You didn't enter a number")
-
-squares = []
-
-for x in range(0, n):
-    squares.append(x * x)
-
-for sq in squares:
-    print(sq)
-```
-
-### Exercise: Finding the median from a dataset
-
-```python
-numbers = []
-x = None
-while x != "done":
-    x = input("Enter a number or done: ")
-    try:
-        # int() will throw an exception if the number isn't a number
-        numbers.append(int(x))
-    except:
-        x = "done"
-
-# Sort the list
-numbers.sort()
-
-if len(numbers) % 2 == 0: # Even length
-    median = (numbers[len(numbers) // 2 - 1] + numbers[len(numbers) // 2]) / 2
-else:
-    median = numbers[len(numbers) // 2]
-
-print("Median = {}".format(median))
-```
+[s3solutions]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/solutions.py
+[s3video]: https://www.youtube.com/watch?v=TU1aisio7IU
 
 ## Dictionaries
 
-We can view lists as a way of mapping between numbers and values of any type
-(mathematicians: a list is a function of `f: N -> U` where `N` is the set of
-natural numbers and `U` is the universe of all values representable in Python).
-Dictionaries are the same concept, except they allow us to lookup an **element**
-by a **key** of *any* type. For example:
+Once you're comfortable with the idea of lists, we're going to take a look at
+*dictionaries*. These are another fundamental data structure and they work
+pretty similarly to lists, only that instead of being indexed by integers they
+are indexed by *keys*, which can be any Python value that we've seen so far. We
+will say that a dictionary *maps keys to values*.
+
+We create an empty dictionary called `d` with the following
 
 ```python
-committee = { "president": "matt", "secretary": "thomas", "treasurer": "chris" }
-print(committee["president"]) # prints matt
-print(committee["secretary"]) # prints thomas
+d = {}
 ```
 
-The analogy here is the OED: it maps strings (words) to strings (their
-definitions). We can easily add values to a dictionary, reassign existing keys,
-or remove keys from a dictionary:
+Then, when we want the dictionary to map a *key* to a *value* we write
 
 ```python
-college = {} # Creates an empty collegeionary
-# Add a few elements to the collegeionary:
-college["catz"] = "St. Catherine's"
-college["bnc"] = "Brasenose"
-college["b"] = "Baliol"
-# Oops, spelt that wrong
-college["b"] = "Balliol"
-# Delete an entry from a collegeionary
-del college["b"]
-print(college) # Only outputs entries for catz and bnc
+d["some_key"] = "some_value"
 ```
 
-The `del` keyword is neither a function nor a method, it is an operator. We will
-not go into detail about why this is the case (yet).
-
-### Exercise: Word counting
+It's really important to note that we could have written *anything* that we've
+seen so far as the subscript index inside the square brackets but we'll
+continue to use strings. Please note that the above is equivalent to:
 
 ```python
-text = input("Enter some text: ")
-words = text.split(" ")
-counts = {}
-
-for word in words:
-    if word in counts:
-        counts[word] = counts[word] + 1
-    else:
-        counts[word] = 1
-
-for word in counts:
-    print("{}: {}".format(word, counts[word]))
+a = "some_key"
+b = "some_value"
+d[a] = b
 ```
+
+Just as with lists, we don't have to initialise a dictionary to the empty
+dictionary, and we could instead initialise it with some mappings:
+
+```python
+fav_nums = { "good": 3, "better": 7, "best": 37 }
+```
+
+To access an element of a dictionary we just write `d[k]` where `d` is the name
+of a dictionary variable, and `k` is a key.
+
+Dictionaries, like lists, are incredibly important data structures in Computer
+Science because we can use them to model relations between sets. For example,
+we can model a phone book with a dictionary:
+
+```python
+phone_book = { "+44 01865 ******": "Thomas", ... }
+name = input("Enter a phone number: ")
+print(phone_book[name])
+```
+
+If we then wanted to *iterate* through all the keys (i.e. phone numbers) and
+values (i.e. names) we can then do the following:
+
+```python
+for phone_number in phone_book:
+    person = phone_book[phone_number]
+    print(person + " has phone number " + phone_number)
+```
+
+**Exercise:** Why should we represent phone numbers with strings? Why shouldn't
+we use a list instead?
+
+Dictionaries are also often used to represent [graphs][].
+
+[graphs]: https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)
+
+Please note that in many other programming languages what Python calls a
+dictionary is instead called a [map][].
+
+[map]: https://en.wikipedia.org/wiki/Associative_array 
+
+### Dictionary exercise
+
+This exercise is designed to be bit more challenging than others we've seen so
+far, and therefore we've broken it down into smaller parts.
+
+The goal is to create a program that takes a piece of text from the user,
+splits it into separate words, and count the number of times each unique word
+occurs. For example, the execution might like look:
+
+```python
+Please enter some text: The Ten dollar, founding father without a father got a lot farther by working a lot harder by being a lot smarter by being a self-starter by fourteen, they placed him in charge of a trading charter
+---
+The: 1
+Ten: 1
+dollar,: 1
+founding: 1
+father: 2
+without: 1
+a: 6
+got: 1
+lot: 3
+farther: 1
+by: 4
+working: 1
+harder: 1
+being: 2
+smarter: 1
+self-starter: 1
+fourteen,: 1
+they: 1
+placed: 1
+him: 1
+in: 1
+charge: 1
+of: 1
+trading: 1
+charter: 1
+```
+
+Broadly, you can break the program down into a few different stages:
+
+* Getting input from the user
+* Separating the text entered by the user into separate words. **Hint:** you want to *split* the string on spaces - feel free to ask a volunteer
+* Count the number of occurrences of each word by using a dictionary to map from words to the number of times they occur
+* Output the result
+
+There are lots of extensions to this:
+
+* Should you consider `The` and `the` to be the same word? If so, how can you handle this?
+* Can you output the words in alphabetical order or ordered by the number of occurrences
+* Can you avoid including punctuation in words?
