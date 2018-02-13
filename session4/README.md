@@ -120,9 +120,9 @@ The goal is to create a program that takes a piece of text from the user,
 splits it into separate words, and count the number of times each unique word
 occurs. For example, the execution might like look:
 
-```python
+```
 Please enter some text: The Ten dollar, founding father without a father got a lot farther by working a lot harder by being a lot smarter by being a self-starter by fourteen, they placed him in charge of a trading charter
----
+
 The: 1
 Ten: 1
 dollar,: 1
