@@ -29,19 +29,19 @@ and their solutions.
 | Session 3: Lists                                              | 4    | [Notes][s3notes]  | [Slides][s3slides] | [Video][s3video] |
 | Session 4: Lists (cont.) and Dictionaries                     | 5    | [Notes][s4notes]  | [Slides][s4slides] | N/A |
 
-[s0notes]: https://github.com/oxcompsoc/learntocode/tree/master/session0
+[s0notes]: https://github.com/oxcompsoc/learntocode/tree/master/session0/README.md
 
-[s1notes]: https://github.com/oxcompsoc/learntocode/tree/master/session1
+[s1notes]: https://github.com/oxcompsoc/learntocode/tree/master/session1/README.md
 [s1slides]: https://github.com/oxcompsoc/learntocode/blob/master/session1/Slides.pdf
 [s1video]: https://youtu.be/yAzp_pRXVPg
 
-[s2notes]: https://github.com/oxcompsoc/learntocode/tree/master/session2
+[s2notes]: https://github.com/oxcompsoc/learntocode/tree/master/session2/README.md
 [s2slides]: https://github.com/oxcompsoc/learntocode/blob/master/session2/slides.pdf
 [s2video]: https://youtu.be/orWvOaR0p8E
 
-[s3notes]: https://github.com/oxcompsoc/learntocode/tree/master/session3
+[s3notes]: https://github.com/oxcompsoc/learntocode/tree/master/session3/README.md
 [s3slides]: https://github.com/oxcompsoc/learntocode/blob/master/session3/slides.pdf
 [s3video]: https://www.youtube.com/watch?v=TU1aisio7IU
 
-[s4notes]: https://github.com/oxcompsoc/learntocode/tree/master/session4
+[s4notes]: https://github.com/oxcompsoc/learntocode/tree/master/session4/README.md
 [s4slides]: https://github.com/oxcompsoc/learntocode/blob/master/session4/slides.pdf
