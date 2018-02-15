@@ -86,8 +86,8 @@ we can model a phone book with a dictionary:
 
 ```python
 phone_book = { "+44 01865 ******": "Thomas", ... }
-name = input("Enter a phone number: ")
-print(phone_book[name])
+num = input("Enter a phone number: ")
+print("Belongs to " + phone_book[num])
 ```
 
 If we then wanted to *iterate* through all the keys (i.e. phone numbers) and
