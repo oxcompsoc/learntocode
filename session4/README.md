@@ -1,5 +1,9 @@
 # Session 4: Lists (cont.) and Dictionaries
 
+**The video for this week's session is [here][video].**
+
+[video]: https://youtu.be/E-QXg8Gc-nU
+
 In [last week's session][s3notes] we took a look at *lists*, which are ordered
 collections of Python values. We saw that if we could create an empty list
 called `xs` (pronounced "exes", i.e. the plural of a single "x") with

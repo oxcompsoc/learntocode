@@ -27,7 +27,7 @@ and their solutions.
 | Session 1: Python syntax, variables, if statements, for loops | 2    | [Notes][s1notes]  | [Slides][s1slides] | [Video][s1video] |
 | Session 2: While loops, functions, recursion                  | 3    | [Notes][s2notes]  | [Slides][s2slides] | [Video][s2video] |
 | Session 3: Lists                                              | 4    | [Notes][s3notes]  | [Slides][s3slides] | [Video][s3video] |
-| Session 4: Lists (cont.) and Dictionaries                     | 5    | [Notes][s4notes]  | [Slides][s4slides] | N/A |
+| Session 4: Lists (cont.) and Dictionaries                     | 5    | [Notes][s4notes]  | [Slides][s4slides] | [Video][s4video] |
 
 [s0notes]: https://github.com/oxcompsoc/learntocode/tree/master/session0/README.md
 
@@ -45,3 +45,4 @@ and their solutions.
 
 [s4notes]: https://github.com/oxcompsoc/learntocode/tree/master/session4/README.md
 [s4slides]: https://github.com/oxcompsoc/learntocode/blob/master/session4/slides.pdf
+[s4video]: https://youtu.be/E-QXg8Gc-nU
