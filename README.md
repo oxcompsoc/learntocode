@@ -28,6 +28,7 @@ and their solutions.
 | Session 2: While loops, functions, recursion                  | 3    | [Notes][s2notes]  | [Slides][s2slides] | [Video][s2video] |
 | Session 3: Lists                                              | 4    | [Notes][s3notes]  | [Slides][s3slides] | [Video][s3video] |
 | Session 4: Lists (cont.) and Dictionaries                     | 5    | [Notes][s4notes]  | [Slides][s4slides] | [Video][s4video] |
+| Session 5: Dictionaries, stacks, and where to go next         | 6    | [Notes][s5notes]  | [Slides][s5slides] | N/A |
 
 [s0notes]: https://github.com/oxcompsoc/learntocode/tree/master/session0/README.md
 
@@ -46,3 +47,6 @@ and their solutions.
 [s4notes]: https://github.com/oxcompsoc/learntocode/tree/master/session4/README.md
 [s4slides]: https://github.com/oxcompsoc/learntocode/blob/master/session4/slides.pdf
 [s4video]: https://youtu.be/E-QXg8Gc-nU
+
+[s5notes]: https://github.com/oxcompsoc/learntocode/tree/master/session5/README.md
+[s5slides]: https://github.com/oxcompsoc/learntocode/blob/master/session5/slides.pdf
