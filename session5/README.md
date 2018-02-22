@@ -15,6 +15,10 @@ and image recognition.
 
 [s4notes]: https://github.com/oxcompsoc/learntocode/tree/master/session4/README.md
 
+**The screencast for this week is [here][s5video].**
+
+[s5video]: https://youtu.be/uDT3xMpaCKY
+
 ## Dictionaries
 
 We [introduced dictionaries in last week's session][dictS4]. The idea behind a
