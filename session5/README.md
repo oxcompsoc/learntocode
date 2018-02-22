@@ -154,7 +154,7 @@ top of the stack:
 x = stack.pop()
 ```
 
-`x` is now `20`, and `stack` is now `[]`.
+`x` is now `20`, and `stack` is now `[10]`.
 
 ## A stack machine
 
