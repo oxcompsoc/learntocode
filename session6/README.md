@@ -63,17 +63,17 @@ This is called double-bufferring which some of you might recognize from various 
 
 ![no double bufferring](https://images.gmanews.tv/v3/webpics/v3/2015/05/2015_05_19_16_42_59_0.png)
 
-####Task: Draw the fruit
+#### Task: Draw the fruit
 
 To draw the rest of the snake we need to iterate over all the positions where there's a block of it and draw every position one by one.
 
-####Task: Draw the rest of the snake
+#### Task: Draw the rest of the snake
 
 ## Losing condition
 
 What we have now is fun but it's not actually a game because we can't lose. The simplest way to do that would be to make the game close when the snake bites itself. To do that we need to set the global `running` variable to false which will cause the game to shutdown on the next iteration of the main loop. So in the beginning of the update function we'll need a `global running` to be able to edit the global variable instead of defining a local one. You can have a look at the completed code to get a sense of how it works.
 
-####Task: Shut down the game when the snake bites itself
+#### Task: Shut down the game when the snake bites itself
 
 And we're done! We have a functional simple implementation of snake in Python.
 
@@ -83,3 +83,88 @@ Here are some optional things you could try to add to make the game more fun:
  - Experiment with different grid sizes
  - Have more than one fruit available - for example start the game with 4 fruits and progressively spawn less of them over time.
  - Make a score counter. You could either output it in the console using `print` or have a look at how PyGame handles text [here](https://pythonprogramming.net/displaying-text-pygame-screen/).
+
+
+
+## Where to go next
+
+In this course we've only had the opportunity to scrape the surface of what you
+can do with Python. We've compiled a collection of other sites and resources
+that we think are useful as stepping stones.
+
+### Learning more Python
+
+* [Python documentation](https://docs.python.org/3/)
+* [Official Python tutorial](https://docs.python.org/3/tutorial/index.html)
+* [Learn Python the Hard Way](https://www.learnpythonthehardway.org)
+* [Codecademy](https://www.codecademy.com/catalog/language/python)
+
+### Programming challenges and exercises
+
+* [Project Euler](https://projecteuler.net) - tend to be a bit more mathematical
+* [HackerRank](https://www.hackerrank.com) - beginner to advanced exercises
+
+### Computer Science concepts
+
+* [Khan Academy Computer Science](https://www.khanacademy.org/computing/computer-science)
+* [MIT Open Courseware: Introduction to Computer Science and Programming in Python](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/index.htm)
+* [MIT Open Courseware: Introduction to Computational Thinking and Data Science](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/index.htm) - note that this is a successor to the above
+
+### Processing data and scientific problems
+
+* [Coursera/Nanjing University: Data Processing Using Python](https://www.coursera.org/learn/python-data-processing)
+* [Pandas (Python Data Analysis Library)](https://pandas.pydata.org)
+* [NumPy](http://www.numpy.org)
+* [SciPy](https://www.scipy.org)
+* [Python CSV processing](https://docs.python.org/3/library/csv.html)
+
+### Machine Learning
+
+Although we haven't (yet) covered machine learning in the Learn to Code course,
+but Python is widely popular in ML.
+
+You can probably implement straightforward problems like [linear
+regression][linreg] with the Python knowledge that you have so far (provided
+that you've seen some linear algebra before).
+
+[linreg]: https://en.wikipedia.org/wiki/Linear_regression 
+
+You might want to take a look at [Applied Machine Learning in
+Python](https://www.coursera.org/learn/python-machine-learning) on Coursera.
+
+One of the most popular machine libraries for neural networks,
+[TensorFlow](https://www.tensorflow.org), is written by Google and freely
+available. Alternatively, you might like to look at [Keras](https://keras.io),
+which avoids some of TensorFlow's complexity.
+
+### Image Recognition
+
+[OpenCV][] is the leader here. With a bit more time we might cover this in a
+future course.
+
+[OpenCV]: https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_tutorials.html
+
+### Other programming languages
+
+Python has a fairly simple syntax, and aside from its wide applicability in a
+broad range of fields, that is one of the main reasons we taught the course
+using it. The following are useful resources for a broad range of topics,
+including web development:
+
+* [Khan Academy (general)](https://www.khanacademy.org/computing/computer-programming)
+* [Codecademy (general)](https://www.codecademy.com)
+
+### CompSoc and other Oxford societies
+
+[CompSoc][] itself regularly hosts coding challenges, Geek Nights, and talks
+from leading industry partners that are working at the forefront of technology.
+Everyone is welcome at our events, and they are always a good opportunity to
+chat to people with experience across computer science.
+
+[CodeSoc][] also host a borad variety of introductory programming events, and
+[Oxford Women in Computer Science][oxwocs] host a number of technical talks and
+events.
+
+[CompSoc]: https://www.facebook.com/oxcompsoc/
+[CodeSoc]: https://www.facebook.com/groups/108792712905292/?ref=br_rs
+[oxwocs]: https://www.facebook.com/OxWoCS/
