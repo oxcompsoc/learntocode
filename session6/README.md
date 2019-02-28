@@ -4,9 +4,9 @@ You can find the resources for last week's session [here](https://github.com/oxc
 
 In this week's session we'll be coding the classic Snake game from the old Nokia phones in Python. For this we will need a bit of a setup:
 
-##IMPORTANT: Please try to install PyGame before or at the start of the lecture. The instructions to do so are [here](https://www.pygame.org/wiki/GettingStarted). If you have a Mac or Linux it shouldn't be a problem to install it with `pip`. If you're running Windows and have not added Python to PATH when installing it, please consult one of the helpers.
+## IMPORTANT: Please try to install PyGame before or at the start of the lecture. The instructions to do so are [here](https://www.pygame.org/wiki/GettingStarted). If you have a Mac or Linux it shouldn't be a problem to install it with `pip`. If you're running Windows and have not added Python to PATH when installing it, please consult one of the helpers.
 
-######If you can't install Pygame for whatever reason then you can use [this tool](https://trinket.io/features/pygame). Please understand that its code is running on a webserver so if too many people decide to use it it might not be able to keep up.
+###### If you can't install Pygame for whatever reason then you can use [this tool](https://trinket.io/features/pygame). Please understand that its code is running on a webserver so if too many people decide to use it it might not be able to keep up.
 
 Great, now that we have PyGame installed, feel free to download the base code from the GitHub repository. We will be using it as a starting point from which we can build up our game.
 
