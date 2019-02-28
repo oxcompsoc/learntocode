@@ -1,6 +1,6 @@
 # Session 6: Snake? SNAKE? SNAAAAAAAAAAAAAKE!
 
-You can find the resources for last week's session [here][s5notes].
+You can find the resources for last week's session [here](https://github.com/oxcompsoc/learntocode/tree/master/session5).
 
 In this week's session we'll be coding the classic Snake game from the old Nokia phones in Python. For this we will need a bit of a setup:
 
