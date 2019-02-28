@@ -35,7 +35,7 @@ Here is where we'll change direction of the snake. This means that we'll need to
 
 In the code directions are represented by the numbers 0, 1, 2, 3 for up, right, down and left respectively. When pressing the left arrow key you want the snake to look at the direction that's anticlockwise of wherever it's currently facing, i.e. right becomes up, up becomes left, left becomes down, down becomes right. The case for the right arrow key is similar.
 
-####Task: replace the `pass` lines of code with the correct behaviour for changing the direction of the snake.
+#### Task: replace the `pass` lines of code with the correct behaviour for changing the direction of the snake.
 
 ## Updating the game logic
 
