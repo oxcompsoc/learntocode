@@ -268,3 +268,5 @@ in, and we have to halve 1000 10 times in order to reach one number.
  * **Computer number guessing game:** rather than have you guess the number,
    have the computer try and determine it instead. How can you ensure that the
    computer makes as few guesses as possible?
+
+<!---2020 --->
