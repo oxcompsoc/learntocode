@@ -159,7 +159,8 @@ We can also use variables in the place of numbers, e.g.
 three = 3
 four = 4
 print(three + four)
-print(three - four)
+print(3 - four)
+print(three * 4)
 # ... etc.
 ```
 
