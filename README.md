@@ -2,12 +2,13 @@
 
 Each year [Oxford University CompSoc][compsoc] runs an introductory programming
 course in Python. This repositories contains all of the code samples used in the
-2018 course.
+2020 course.
 
-To run these code samples you will need [Python 3][python]. For the sessions we
-recommend using IDLE, a piece of software which comes pre-installed with
-Python. Alternatively you can run the samples in a terminal via `python3
-filename.py`.
+To run these code samples you will need [Python 3][python]. For these sessions we recommend using the text editor Visual Studio Code when writing programs and running them in a terminal via:
+
+`python3 filename.py`
+
+See the [Notes][s0notes] for Session 0 for instructions on setting this up. 
 
 If you can't get Python installed on your computer, we recommend using [this
 online environment][replit] instead.
