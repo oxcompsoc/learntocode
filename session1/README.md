@@ -331,10 +331,8 @@ This code will only print `number` if it is one of the numbers [0, 1, 2, 4, 5, 6
 [codecademy]: http://codecademy.com
 [euler]: http://projecteuler.net
 
-## Exercise
+## Excercise
 
- * **Computer number guessing game:** rather than have you guess the number,
-   have the computer try and determine it instead. How can you ensure that the
-   computer makes as few guesses as possible?
+* **Average of two numbers:** create a program, which takes as input two numbers and computes their average.
 
 <!---2020 --->
