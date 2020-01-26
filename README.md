@@ -21,15 +21,15 @@ and their solutions.
 
 ## Table of Contents
 
-| Session           | Week | Notes             | Slides                | Video |
-| ----------------- | ---- | ----------------- | --------------------- | ----- |
+| Session           | Week | Notes             | Slides                |
+| ----------------- | ---- | ----------------- | --------------------- |
 | Session 0: Installing Python                                  | N/A  | [Notes][s0notes]  | N/A | N/A |
-| Session 1: Python syntax, variables, if statements, for loops | 2    | [Notes][s1notes]  | [Slides][s1slides] | [Video][s1video] |
-| Session 2: While loops, functions, recursion                  | 3    | [Notes][s2notes]  | [Slides][s2slides] | [Video][s2video] |
-| Session 3: Lists                                              | 4    | [Notes][s3notes]  | [Slides][s3slides] | [Video][s3video] |
-| Session 4: Lists (cont.) and Dictionaries                     | 5    | [Notes][s4notes]  | [Slides][s4slides] | [Video][s4video] |
-| Session 5: Dictionaries, stacks, and where to go next         | 6    | [Notes][s5notes]  | [Slides][s5slides] | [Video][s5video] |
-
+| Session 1: Introduction: What can you do with Python? Python syntax, variables, if statements | 2    | [Notes][s1notes]  | [Slides][s1slides] |
+| Session 2: Functions, while loops                 | 3    | [Notes][s2notes]  | [Slides][s2slides] |
+| Session 3: For loops, Lists                                              | 4    | [Notes][s3notes]  | [Slides][s3slides] |
+| Session 4: Lists (cont.) and Dictionaries                     | 5    | [Notes][s4notes]  | [Slides][s4slides] |
+| Session 5: Object Oriented Programming         | 6    | TBA  | TBA |
+| Session 6: Intro to Data Science with Python   | 7    | TBA  | TBA |
 [s0notes]: https://github.com/oxcompsoc/learntocode/tree/master/session0/README.md
 
 [s1notes]: https://github.com/oxcompsoc/learntocode/tree/master/session1/README.md
