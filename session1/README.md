@@ -1,6 +1,6 @@
 # Session 1: Introduction to Python
 
-The first thing that you’ll need to do is install Python installed on your
+The first thing that you’ll need to do is make sure you have Python installed on your
 computer. You can find information on how to do that [here][install].
 
 [install]: https://github.com/oxcompsoc/learntocode/tree/master/session0
@@ -17,16 +17,19 @@ anniversary with a dinner welcoming back former members.
 
 [compsoc]: https://ox.compsoc.net
 
-## Visual Studio Code
+## IDLE
 
-If you have gone through Session 0, you should have a program called Visual Studio Code installed on your computer. We suggest creating a new folder somewhere on your computer to store all of the examples and code from the course (maybe call this folder `learn_to_code`). Once you create that folder open Visual Studio Code, then click **File > Open Folder** and navigate to your newly created folder. Once there, you can create new files by clicking **File > New File**. Then click **File > Save As...** to save your file. For now you should name all files using only letters, numbers, and underscores, and ending with `.py`, e.g. `program1.py`, `first_program.py`, etc. 
+Once you have Python installed you’ll be able to launch a piece of software
+called IDLE. When you first launch it you will be greeted with a prompt where
+you can type in statements or expressions in Python. In these sessions we will
+not be using the prompt, so instead create a new file (**File > New File**).
 
-**IMPORTANT: After making changes to a file, you must click File > Save before trying to run the program again, otherwise Python will not know about the changes!**
-### Problems installing Python
+### Problems installing Python or using IDLE
 
 If you can't get Python installed on your computer, don't worry! Instead,
 please go to [this website][replit], which allows you to run Python programs
-online. All our examples (until the final session) should run fine in the online version as well, though we strongly recommend installing Python on your own computer to get the most out of this course.
+online. All our examples (until the final session) should run fine in either
+the online version or IDLE.
 
 [replit]: http://repl.it/languages/python3
 
@@ -39,18 +42,17 @@ apps they provide us with a strong foundation for programming.
 
 One of the most basic programs we can write is one that just outputs some text.
 
-Now, create a new file in Visual Studio Code. Then type in this program in your file:
+One of the most basic programs we can write is one that just outputs some text.
+In a new file in IDLE (or empty editor on `repl.it`) enter the following Python
+program:
 
 ```python
 print("Hello, world!")
 ```
 
-Now, in Visual Studio Code, click **View > Terminal** to open up a terminal window. In that window, type in:
-```
-python hello_world.py
-```
-
-You should see ``Hello, world!`` printed out in the terminal.
+In IDLE, then click **Run > Run Module** (or F5) or click the run button on
+`repl.it`. IDLE will then run the program in the prompt window, and you should
+see the output `"Hello, world!"`.
 
 
 There are three elements to consider here:
@@ -86,7 +88,7 @@ Investigate how to multiply a string or convert it to uppercase/lowercase.
 
 ## Comments
 
-Thorughout the next examples, you will see some text written after a `#` symbol. These are called comments, and we will use them to explain and document our code. In Python, any text after a `#` on that line is not considered as part of the program. So we could have written our first program as:
+Throughout the next examples, you will see some text written after a `#` symbol. These are called comments, and we will use them to explain and document our code. In Python, any text after a `#` on that line is not considered as part of the program. So we could have written our first program as:
 
 ```python
 print("Hello, world!") # Prints Hello, world!
@@ -128,7 +130,7 @@ my_favourite_number = 4
 print(my_favourite_number) # Prints 4
 ```
 
-Variable names in Python begin with a letter or an undersocre, followed by a sequence of letters, numbers, or underscores. Letters should be restricted to the latin letters (a-z) and (A-Z), though Python will allow you to use letters such as щ, Æ, ß, and most other Unicode characters (but please don't). One important restriction is that variable names cannot be the same as any of the **reserved** words in Python (also known as **keywords**), which are the following 35 words: 
+Variable names in Python begin with a letter or an underscore, followed by a sequence of letters, numbers, or underscores. Letters should be restricted to the Latin letters (a-z) and (A-Z), though Python will allow you to use letters such as щ, Æ, ß, and most other Unicode characters (but please don't). One important restriction is that variable names cannot be the same as any of the **reserved** words in Python (also known as **keywords**), which are the following 35 words: 
 
 | | | | | |
 |-|-|-|-|-|
@@ -173,7 +175,7 @@ is the same as
 ((2 ** 2) * (3 ** 2)) + 4 ** 2
 ```
 
-However, you can always use peretheses if you are not sure about something.
+However, you can always use parentheses if you are not sure about something.
 
 ## Reading input
 
@@ -194,11 +196,11 @@ your_favourite_number = int(input("Please enter your favourite number: "))
 print("Your favourite number times two is: " + str(2 * your_favourite_number))
 ```
 
-**Excercise: try to remove the `int` from the last program and see what happens.**
+**Exercise: try to remove the `int` from the last program and see what happens.**
 
-**Excercise: now try to combine the last two programs, so that you print out the person's name, as well as their favourite number.**
+**Exercise: now try to combine the last two programs, so that you print out the person's name, as well as their favourite number.**
 
-Each variable in python has a certain type. Some of the most common types are **strings**, **integers** and **floating point numbers**. When the `input` function receives a value it treats is as if it were of type **string**. So in order to perform arithmetic operations on our value, we have to tell Python to **convert** it to the appropriate type - in this case **integer**. In general, we write `type_name(expression)` to ask Python to give us `expression` interpreted as the type `type_name`. So e.g.
+Each variable in python has a certain type. Some of the most common types are **strings**, **integers** and **floating point numbers**. When the `input` function receives a value it treats it like a **string**. So in order to perform arithmetic operations on our value, we have to tell Python to **convert** it to the appropriate type - in this case **integer**. In general, we write `type_name(expression)` to ask Python to give us `expression` interpreted as the type `type_name`. So e.g.
 
 ```python
 three = int("3") # Interpret "3" as an int (short for integer)
@@ -250,16 +252,14 @@ else:
 Notice that we write "then" as `:`. The most important thing to notice is that we execute the indented code *only* when the condition holds.
 
 We can write any number of statements inside the **body** of the `if`
-statement, i.e. statements that are intended (press `TAB`) will only be
-executed if they the condition of the `if` statement holds.
+statement, i.e. statements that are indented (press `TAB`) will only be
+executed if the condition of the `if` statement holds.
 
 There are several important concepts to note here:
 
- * If we want to compare two values (e.g. the value the user entered and a fixed
-   string) we use `==` instead of `=`
- * We can compare numbers and strings using the comparison operators `==`, `!=`,
-   `<=`, `>=`, `<`, and `>`
- * If statements can be nested
+ * If we want to compare two values (e.g. the value the user entered and a fixed string) we use `==` instead of `=` (remember, `=` means *becomes*)
+ * We can compare numbers and strings using the comparison operators `==`, `!=` (not equal), `<=` (less than or equal), `>=` (greater than or equal), `<` (less than), and `>` (greater than)
+ * `if` statements can be nested
 
 We can also abbreviate the following:
 
@@ -313,6 +313,10 @@ if ((1 <= number and number < 10)) or number == 42) and (not number == 3):
 This code will only print `number` if it is one of the numbers [0, 1, 2, 4, 5, 6, 7, 8, 9, 42].
 
 
+## Exercise
+
+* **Average of two numbers:** create a program, which takes as input two numbers and computes their average.
+
 ## Good resources to look at
 
  * [Khanacademy][] - good for learning about computer science and computational
@@ -330,9 +334,5 @@ This code will only print `number` if it is one of the numbers [0, 1, 2, 4, 5, 6
 [khanacademy]: http://khanacademy.org
 [codecademy]: http://codecademy.com
 [euler]: http://projecteuler.net
-
-## Excercise
-
-* **Average of two numbers:** create a program, which takes as input two numbers and computes their average.
 
 <!---2020 --->
