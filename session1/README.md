@@ -88,7 +88,7 @@ Investigate how to multiply a string or convert it to uppercase/lowercase.
 
 ## Comments
 
-Throughout the next examples, you will see some text written after a `#` symbol. These are called comments, and we will use them to explain and document our code. In Python, any text after a `#` on that line is not considered as part of the program. So we could have written our first program as:
+Throughout the next examples, you will see some text written after a `#` symbol. These are called **comments**, and we will use them to explain and document our code. In Python, any text after a `#` on that line is not considered as part of the program. So we could have written our first program as:
 
 ```python
 print("Hello, world!") # Prints Hello, world!
@@ -96,23 +96,28 @@ print("Hello, world!") # Prints Hello, world!
 
 ## Variables
 
-Python programs store data in **variables**. A variable is a bit like a box that has a name, and inside the box we can store values. In Python, we have to put some value in our box when we create it. Here are a few examples:
+Python programs store data in **variables**. A variable is a bit like a box that has a name, and inside the box we can store values. In Python, we have to put some value in our box when we create it. You can try:
 
 ```python
 greeting1 = "Hello!" # The box named 'greeting1' now contains the string "Hello!"
 my_favourite_number = 3 # The box named 'my_favourite_number' now contains the integer 3 
 pi = 3.14 # The box named 'pi' now contains the floating point number 3.14
 _underscore = "_" # The box named '_underscore' now contains the string "_"
+
+print(greeting1) # Prints 'Hello!'
+print(my_favourite_number) # Prints '3'
+print(pi) # Prints '3.14'
+print(_underscore) # Prints '_'
 ```
 
-This created four variables, called `greeting1`, `my_favourite_number`, `pi`, and `_underscore`. 
+This created four variables, called `greeting1`, `my_favourite_number`, `pi`, and `_underscore` and then printed the values they store.
 
 To assign a value to a variable we write `name = value` where `name` can be
 replaced with any piece of text that Python allows as a variable name and `value` can
 be replaced with any Python value. Then, to get the value associated with a
 variable we just write its name - this is exactly the same as if we'd written
 the value in the first place. The following program functions in exactly the
-same as the `hello_world.py` program we wrote:
+same as the Hello World program we wrote:
 
 ```python
 message = "Hello, world!"
@@ -311,6 +316,8 @@ if ((1 <= number and number < 10)) or number == 42) and (not number == 3):
 ```
 
 This code will only print `number` if it is one of the numbers [0, 1, 2, 4, 5, 6, 7, 8, 9, 42].
+
+Note: there is an order of operations on logical connectives as well (which you may wish to google); however, it is recommended that you insert parentheses if you are using multiple different connectives, like in the example above. 
 
 
 ## Exercise
