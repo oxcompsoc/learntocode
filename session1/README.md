@@ -41,8 +41,6 @@ output. Although this might seem limited in the age of animated, interactive
 apps they provide us with a strong foundation for programming.
 
 One of the most basic programs we can write is one that just outputs some text.
-
-One of the most basic programs we can write is one that just outputs some text.
 In a new file in IDLE (or empty editor on `repl.it`) enter the following Python
 program:
 
@@ -184,14 +182,14 @@ However, you can always use parentheses if you are not sure about something.
 
 ## Reading input
 
-We often want our programs to take some kind of input from the user. For example, lets create a program, which prints a personalised greeting. Create a new file, called `greeting.py` as before. Then, try the following program:
+We often want our programs to take some kind of input from the user. For example, lets create a program, which prints a personalised greeting. Create a new file and try the following program:
 
 ```python
 name = input("Please enter your name: ")
 print("Hi, " + name + "!")
 ```
 
-Try running this in the terminal, typing in your name, and pressing Enter. You should get a personalised greeting. Here is what is happening: when you call the `input` function, it will print the message you give it as an argument, and then wait for the user to enter some kind of input. Note that this input is treated as a **string**. In this case, we choose to store this input in the variable called `name`. 
+Try running this in IDLE, then typing in your name, and pressing Enter. You should get a personalised greeting. Here is what is happening: when you call the `input` function, it will print the message you give it as an argument, and then wait for the user to enter some kind of input. Note that this input is treated as a **string**. In this case, we choose to store this input in the variable called `name`. 
 After that, we just join the strings we received, and print the result.
 
 Now, lets create a program, which multiplies your favourite number by 2. This would look like:
@@ -203,9 +201,9 @@ print("Your favourite number times two is: " + str(2 * your_favourite_number))
 
 **Exercise: try to remove the `int` from the last program and see what happens.**
 
-**Exercise: now try to combine the last two programs, so that you print out the person's name, as well as their favourite number.**
+**Exercise: now try to combine the last two programs, so that you print out the person's name, as well as their favourite number multiplied by two.**
 
-Each variable in python has a certain type. Some of the most common types are **strings**, **integers** and **floating point numbers**. When the `input` function receives a value it treats it like a **string**. So in order to perform arithmetic operations on our value, we have to tell Python to **convert** it to the appropriate type - in this case **integer**. In general, we write `type_name(expression)` to ask Python to give us `expression` interpreted as the type `type_name`. So e.g.
+Each variable in Python has a certain type. Some of the most common types are **strings**, **integers** and **floating point numbers**. When the `input` function receives a value it treats it like a **string**. So in order to perform arithmetic operations on our value, we have to tell Python to **convert** it to the appropriate type - in this case **integer**. In general, we write `type_name(expression)` to ask Python to give us `expression` interpreted as the type `type_name`. So e.g.
 
 ```python
 three = int("3") # Interpret "3" as an int (short for integer)
@@ -271,12 +269,12 @@ We can also abbreviate the following:
 ```python
 number = int(input("Please enter a number: "))
 if number < 10:
-  print(number + " is a small number.")
+  print("This number is small.")
 else:
   if number >= 10 and number < 100:
-    print(number + " is not small, but not large either.")
+    print("This number is not small, but not large either.")
   else:
-    print(number + " is a large number.")
+    print("This number is large.")
 ```
 
 to
@@ -284,11 +282,11 @@ to
 ```python
 number = int(input("Please enter a number: "))
 if number < 10:
-  print(number + " is a small number.")
+  print("This number is small.")
 elif number >= 10 and number < 100:
-  print(number + " is not small, but not large either.")
+  print("This number is not small, but not large either.")
 else:
-  print(number + " is a large number.")
+  print("This number is large.")
 ```
 
 You can have as many `elif` branches as you like, but only one `if` branch and
@@ -310,9 +308,10 @@ if number == 3 or number == 4:
 If you are using multiple different connectives, you should include parentheses to make it clear how the expression should be interpreted. E.g.
 
 ```python
-number = input("Please enter a number: ")
-if ((1 <= number and number < 10)) or number == 42) and (not number == 3):
-  print("This was the number: " + number)
+number = int(input("Please enter a number: "))
+if ((1 <= number and number < 10) or number == 42) and (not number == 3):
+  print("This was the number: " + str(number))
+
 ```
 
 This code will only print `number` if it is one of the numbers [0, 1, 2, 4, 5, 6, 7, 8, 9, 42].
