@@ -32,13 +32,13 @@ higher you should be OK.
     * If you get stuck please Google "how to install Python on X" (where X is
       your operating system)
 
-    ![Python OS download](download1_new.png)
+    ![Python OS download](download1_new.PNG)
 
 ## !!! IMPORTANT FOR WINDOWS USERS !!!
 
 During the installation there is an option that we'll need that isn't enabled by default - **Add Python 3.8 to PATH** (as shown below). Make sure to leave this **CHECKED** otherwise you won't be able to install the modules we'll use in the following lectures.
 
-![Add Python to Path](install2_2020.png)
+![Add Python to Path](install2_2020.PNG)
 
 ## Using Python
 
