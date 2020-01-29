@@ -1,5 +1,7 @@
 # Session 1: Introduction to Python
 
+*For a very brief summary of the content covered in this session, click [here](##summary).*
+
 The first thing that you’ll need to do is make sure you have Python installed on your
 computer. You can find information on how to do that [here][install].
 
@@ -240,16 +242,16 @@ We can generalise the first example as:
 
 ```python
 if condition_is_true:
-    execute_this_code
+  execute_this_code
 ```
 
 And the second one as:
 
 ```python
 if condition_is_true:
-    execute_this_code
+  execute_this_code
 else:
-    this_code_is_executed_otherwise
+  this_code_is_executed_otherwise
 ```
 
 Notice that we write "then" as `:`. The most important thing to notice is that we execute the indented code *only* when the condition holds.
@@ -319,9 +321,38 @@ This code will only print `number` if it is one of the numbers [0, 1, 2, 4, 5, 6
 Note: there is an order of operations on logical connectives as well (which you may wish to google); however, it is recommended that you insert parentheses if you are using multiple different connectives, like in the example above. 
 
 
+## Summary
+Here is a short summary of all the Python concepts we learned in this session.
+```python
+# Any text after a '#' symbol on a line is a comment. It is not part of the code.
+
+print("Hello, world!") # This is how we print.
+
+message = "Hi!" # This is how we create variables.
+print("The value of the variable is: " + message) # This is how we join strings.
+
+name = input("Please enter you name: ") # This is how we ask for string inputs from our user.
+number = int(input("Please enter a number: ")) # This is how we ask for int inputs.
+# (Remember: ints are whole numbers [..., -2, -1, 0, 1, 2, ...])
+
+print("The number times two is: " + str(number * 2)) # This is how we join strings with numbers.
+
+# An if statement. Note the : and the == which is how we compare values for equality.
+if number == 0:
+  print("The number is zero.")
+elif number >= 0 and number <= 9:
+  print("The number is a positive single digit integer.")
+elif number < 0:
+  print("The number is negative.")
+else:
+  print("The number is larger than 10.")
+```
+
 ## Exercise
 
-* **Average of two numbers:** create a program, which takes as input two numbers and computes their average.
+* **One detector:** create a program, which takes as input an int and outputs "This number is 1" if the input was 1 and "This input was not 1" otherwise.
+
+* **Average of two numbers:** create a program which takes as input two numbers and computes their average. Can think of how you could extend this to compute the average of three numbers? How about the average of ten numbers?
 
 ## Good resources to look at
 
