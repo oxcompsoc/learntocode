@@ -58,7 +58,7 @@ notes][session1].
 ## Getting to the department
 
 Please come to Department of Computer Science, Parks Road, Oxford, OX1 3QD on
-7pm Thursday 2nd week HT2018 for the first session. We expect attendance to be
+7pm Thursday 2nd week HT2020 for the first session. We expect attendance to be
 high, so it will be worth arriving early!
 
 ![Map](learntocodemap.png)
