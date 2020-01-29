@@ -13,9 +13,8 @@ Throughout these documents note that text in a `monospaced font` is Python code.
 
 The [Oxford University Computer Society][compsoc] was founded in 1978, making
 it one of the oldest university computing societies in the country. Today we
-host regular talks from large companies, geek nights each Saturday, and Learn
-to Code each Hilary Term. Later this term we'll be celebrating our 40th
-anniversary with a dinner welcoming back former members.
+host regular talks from large companies, socials each Saturday, and Learn
+to Code each Hilary Term.
 
 [compsoc]: https://ox.compsoc.net
 
@@ -313,12 +312,49 @@ If you are using multiple different connectives, you should include parentheses 
 number = int(input("Please enter a number: "))
 if ((1 <= number and number < 10) or number == 42) and (not number == 3):
   print("This was the number: " + str(number))
-
 ```
 
 This code will only print `number` if it is one of the numbers [0, 1, 2, 4, 5, 6, 7, 8, 9, 42].
 
-Note: there is an order of operations on logical connectives as well (which you may wish to google); however, it is recommended that you insert parentheses if you are using multiple different connectives, like in the example above. 
+*Note: there is an order of operations on logical connectives as well (which you may wish to google); however, it is recommended that you insert parentheses if you are using multiple different connectives, like in the example above.*
+
+It's important to remember that an `else` statement (or an `elif`) statement is associated with the closest `if` statement above it, which has the same indentation (same number of `TAB`s before it). So consider the program:
+
+```python
+name = input("Please enter a name: ")
+if name == "Mark":
+  print("Oh, hi Mark.")
+if name == "Johnny":
+  print("Oh, hey Johnny, what's up?")
+else:
+  print("Who is this?")
+```
+
+You might think that if the name input is 'Mark' it will print 'Oh, hi Mark.' if it's Johnny, it will print 'Oh, hey Johnny, what's up?', and otherwise it will print 'Who is this?'. But actually, if the name is Mark, it will print both 'Oh, hi Mark' and 'Who is this?'. This is because the `else` statement is only associated with the `if` just above it. The first `if` is completely independent. You might find it helpful to think about the program split as so:
+```python
+name = input("Please enter a name: ")
+```
+```python
+if name == "Mark":
+  print("Oh, hi Mark.")
+```
+```python
+if name == "Johnny":
+  print("Oh, hey Johnny, what's up?")
+else:
+  print("Who is this?")
+```
+
+The correct way to write the above program is using an `elif`:
+```python
+name = input("Please enter a name: ")
+if name == "Mark":
+  print("Oh, hi Mark.")
+elif name == "Johnny":
+  print("Oh, hey Johnny, what's up?")
+else:
+  print("Who is this?")
+```
 
 
 ## Summary
