@@ -31,6 +31,7 @@ and their solutions.
 | Session 4: Lists (cont.) and Dictionaries                     | 5    | [Notes][s4notes]  | [Slides][s4slides] |
 | Session 5: Object Oriented Programming         | 6    | TBA  | TBA |
 | Session 6: Intro to Data Science with Python   | 7    | TBA  | TBA |
+
 [s0notes]: https://github.com/oxcompsoc/learntocode/tree/master/session0/README.md
 
 [s1notes]: https://github.com/oxcompsoc/learntocode/tree/master/session1/README.md
