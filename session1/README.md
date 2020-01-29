@@ -1,6 +1,6 @@
 # Session 1: Introduction to Python
 
-*For a very brief summary of the content covered in this session, click [here](##summary).*
+*For a very brief summary of the content covered in this session, click [here](#summary).*
 
 The first thing that you’ll need to do is make sure you have Python installed on your
 computer. You can find information on how to do that [here][install].
