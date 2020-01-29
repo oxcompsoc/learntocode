@@ -16,6 +16,7 @@ it one of the oldest university computing societies in the country. Today we
 host regular talks from large companies, socials each Saturday, and Learn
 to Code each Hilary Term.
 
+
 [compsoc]: https://ox.compsoc.net
 
 ## IDLE
