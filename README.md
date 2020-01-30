@@ -60,4 +60,4 @@ You are more than welcome to use these materials to run your own version of Lear
 
 Please refer to [COPYING][copying] for more details on the license.
 
-[copying]: https://github.com/oxcompsoc/learntocode/tree/master/session3/README.md
+[copying]: https://github.com/oxcompsoc/learntocode/tree/master/COPYING
