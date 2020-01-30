@@ -53,3 +53,7 @@ and their solutions.
 [s5notes]: https://github.com/oxcompsoc/learntocode/tree/master/session5/README.md
 [s5slides]: https://github.com/oxcompsoc/learntocode/blob/master/session5/slides.pdf
 [s5video]: https://youtu.be/uDT3xMpaCKY
+
+## Running your own Learn to Code
+
+You are more than welcome to use these materials to run your own version of Learn to Code! We would ask that you adhere to the spirit of Learn to Code, meaning in particular that any course run is as free and as open as possible. In particular, please note that these materials are offered under the GPL license. This means that if you use these materials as any part of your own course then you **must** freely publish **all** the materials for that course under the same GPL license.
