@@ -1,6 +1,9 @@
 # Session 2: While loops, functions, recursion
 
-See [here][week1] for last week's content.
+See [here][week1] for last week's content. 
+
+*For a very brief summary of the content covered in this session, click [here](#summary).*
+
 
 [week1]: https://github.com/oxcompsoc/learntocode/tree/master/session1
 
@@ -50,7 +53,7 @@ def say_hi(name):
 name_of_person = input("Please enter your name: ")
 say_hi(name_of_person)
 ```
-If we run this program, we will see that it does exatly the same thing as before. However, instead of writing out the whole print statement each time, we could now do:
+If we run this program, we will see that it does exactly the same thing as before. However, instead of writing out the whole print statement each time, we could now do:
 
 ```python
 say_hi("Mark")
@@ -66,7 +69,7 @@ def hi_sequence():
 
 hi_sequence()
 ```
-Again, this is exatly the same as the first program. Hoever, now we can ask for a name multiple times by *calling* the `hi_sequence` function again and again.
+Again, this is exactly the same as the first program. However, now we can ask for a name multiple times by *calling* the `hi_sequence` function again and again.
 
 So a **function** is a kind of like a mini-program, which we can execute as many time as we like within our big program. Each time we execute this mini-program, we say that we **call** the function.
 
@@ -141,7 +144,7 @@ def say_hi(name):
 name = input("Please enter your name: ")
 say_hi(name)
 ```
-When we do this, we should always keep in mind that the local variable `name` inside the `say_hi` function is completely different from the variable `name` inside our main program. To emphasise this we can also have this example:
+When we do this, we should always keep in mind that the local variable `name` inside the `say_hi` function is completely different from the variable `name` inside our main program. To emphasize this we can also have this example:
 
 ```python
 def change_name(name):
@@ -193,7 +196,7 @@ When executed, this is what the code will do:
 
 Again, each function call creates its own scope. So the local variable `x` inside `double` is different from the local variable `x` inside `multiply`.
 
-## Excercises:
+## Exercises:
 
 ### Easy:
 * 1: Create a function, called `my_function`, which prints "This is my first function!".
@@ -209,7 +212,7 @@ These questions explore the concept of *recursion*. You might find it helpful to
 
 * 6: Write a function that takes as input a number n and returns the product of all numbers up to n; that is 1 * 2 * 3 * ... * n.
 
-* 7: (Math) The Fibonnaci numbers are defined as follows: F(0) = 0, F(1) = 1, F(n+1) = F(n) + F(n-1) for n >= 1. Write a program that calculates the n-th Fibonnaci number.
+* 7: (Math) The Fibonacci numbers are defined as follows: F(0) = 0, F(1) = 1, F(n+1) = F(n) + F(n-1) for n >= 1. Write a program that calculates the n-th Fibonacci number.
 
 ## Short aside: incrementing
 
@@ -328,7 +331,7 @@ while i <= n:
 print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 ```
 
-A common pitfall is to forget to increment. Here is how we **don't** calculate the sum of the first n natrual numbers:
+A common pitfall is to forget to increment. Here is how we **don't** calculate the sum of the first n natural numbers:
 
 ```python
 n = int(input("Please enter a number: "))
@@ -343,7 +346,7 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 
 If that looks like the same code to you, don't worry; even experienced programmers often make this simple mistake. The issue is that we don't increment `i` within the body of the loop. So every time we pass through the loop, `i` remains `1`. If `n` is more than `2`, then this loop will go on forever.
 
-## Excercises:
+## Exercises:
 
 ### Easy:
 * 8: Create a program that asks the user to input a number `n`, and then prints the first `n` natural numbers in reverse order. E.g. if `n` is 4, your program should print: '4 3 2 1', each number being on a newline.
@@ -373,7 +376,7 @@ If that looks like the same code to you, don't worry; even experienced programme
 
 ### Very hard:
 
-* 12: (Math) Three numbers $a, b, c$ are called a *Pythagorian triple* if $a^2 + b^2 = c^2$. Write a program, which takes as input an integer $n$, and prints as output $n$ different Pythagorian triples.
+* 12: (Math) Three numbers a, b, c are called a *Pythagorean triple* if a^2 + b^2 = c^2. Write a program, which takes as input an integer n, and prints as output n different Pythagorean triples.
 
 ## Summary
 ```python
