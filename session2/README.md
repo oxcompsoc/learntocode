@@ -1,4 +1,4 @@
-# Session 2: Functions, while loops
+# Session 2: While loops, lists
 
 See [here][week1] for last week's content. 
 
