@@ -26,9 +26,9 @@ and their solutions.
 | ----------------- | ---- | ----------------- | --------------------- |
 | Session 0: Installing Python                                  | N/A  | [Notes][s0notes]  | N/A | N/A |
 | Session 1: Introduction: What can you do with Python? Python syntax, variables, if statements | 2    | [Notes][s1notes]  | [Slides][s1slides] |
-| Session 2: Functions, while loops                 | 3    | [Notes][s2notes]  | [Slides][s2slides] |
-| Session 3: For loops, Lists                                              | 4    | [Notes][s3notes]  | [Slides][s3slides] |
-| Session 4: Lists (cont.) and Dictionaries                     | 5    | [Notes][s4notes]  | [Slides][s4slides] |
+| Session 2: While loops, Lists                | 3    | [Notes][s2notes]  | [Slides][s2slides] |
+| Session 3: For loops, More Lists, Dictionaries                                            | 4    | [Notes][s3notes]  | [Slides][s3slides] |
+| Session 4: Functions                | 5    | [Notes][s4notes]  | [Slides][s4slides] |
 | Session 5: Object Oriented Programming         | 6    | TBA  | TBA |
 | Session 6: Intro to Data Science with Python   | 7    | TBA  | TBA |
 
