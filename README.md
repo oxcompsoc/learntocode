@@ -4,7 +4,7 @@ Each year [Oxford University CompSoc][compsoc] runs an introductory programming
 course in Python. This repositories contains all of the code samples used in the
 2020 course.
 
-To run these code samples you will need [Python 3][python]. For these sessions we recommend using the text editor Visual Studio Code when writing programs and running them in a terminal via:
+To run these code samples you will need [Python 3][python]. For the sessions we recommend using IDLE, a piece of software which comes pre-installed with Python. Alternatively you can run the samples in a terminal via:
 
 `python3 filename.py`
 
@@ -32,7 +32,6 @@ and their solutions.
 | Session 5: Object Oriented Programming         | 6    | TBA  | TBA |
 | Session 6: Intro to Data Science with Python   | 7    | TBA  | TBA |
 
-
 [s0notes]: https://github.com/oxcompsoc/learntocode/tree/master/session0/README.md
 
 [s1notes]: https://github.com/oxcompsoc/learntocode/tree/master/session1/README.md
@@ -54,3 +53,11 @@ and their solutions.
 [s5notes]: https://github.com/oxcompsoc/learntocode/tree/master/session5/README.md
 [s5slides]: https://github.com/oxcompsoc/learntocode/blob/master/session5/slides.pdf
 [s5video]: https://youtu.be/uDT3xMpaCKY
+
+## Running your own Learn to Code
+
+You are more than welcome to use these materials to run your own version of Learn to Code! We would ask that you adhere to the spirit of Learn to Code, meaning in particular that any course run is as free and as open as possible. In particular, please note that these materials are offered under the GPL license. This means that if you use these materials as any part of your own course then you **must** freely publish **all** the materials for that course under the same GPL license.
+
+Please refer to [COPYING][copying] for more details on the license.
+
+[copying]: https://github.com/oxcompsoc/learntocode/tree/master/COPYING
