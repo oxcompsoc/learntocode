@@ -37,10 +37,10 @@ else:
 
 ## While loops
 
-Imagine we wanted to create a simple security function, which asks our user for a password, until they enter the correct one. One way to do this is:
+Imagine we wanted to create a simple security program, which asks our user for a password, until they enter the correct one. One way to do this is:
 
 ```python
-SECRET_PASSWORD = "pass123"
+SECRET_PASSWORD = "hunter2"
 
 user_input = input("Please enter a password: ")
 
@@ -52,10 +52,10 @@ while user_input != SECRET_PASSWORD:
 print("Access granted.")
 ```
 
-This program will continue prompting the user for a password until they input the correct password, which is "pass123". One way to think about the above code is like this **(Note: this is NOT actual Python code)**:
+This program will continue prompting the user for a password until they input the correct password, which is "hunter2". One way to think about the above code is like this **(Note: this is NOT actual Python code)**:
 
 ```python
-SECRET_PASSWORD = "pass123"
+SECRET_PASSWORD = "hunter2"
 
 user_input = input("Please enter a password: ")
 
@@ -69,7 +69,7 @@ if user_input != SECRET_PASSWORD:
 print("Access granted.")
 ```
 
-Here, `<START OF WHILE LOOP>` is just there to label that line. Then the GOTO says that the program should start executing that line again.
+Here, `<START OF WHILE LOOP>` is just there to label that line. Then the `GOTO` says that the program should start executing that line again.
 
 So back to the actual code. The idea with the while loop is very simple: the code in the body of the loop will be executed repeatedly, while the condition remains true; otherwise said: until the condition becomes false. In this case, while the user keeps entering the wrong password, the program will keep prompting them for a new one.
 
@@ -113,7 +113,7 @@ number += 1
 print(number)
 ```
 
-Here, the `+=` operator is used as a shorthand for writing `number = number + 1`. There are analogous operators: `-=`, `*=`, `/=`, etc.
+Here, the `+=` operator is used as a shorthand for writing `number = number + 1`. These kinds of shorthands are usually referred to as _syntactic sugar_ in programming - it's shorter so it's "sweeter" for people to read and write. There are analogous operators: `-=`, `*=`, `/=`, etc.
 ```python
 number = 1
 number += 2
@@ -209,7 +209,7 @@ If that looks like the same code to you, don't worry; even experienced programme
   Please enter a number: 5
   The average was: 3.0
   ```
-### Very hard:
+### Expert:
 * 6: Create a program, which takes as input a number `n` and then prints the following:
 
     1
@@ -253,7 +253,7 @@ print(shopping_list[2]) # Prints 'cherry tomatoes'
 print(shopping_list[3]) # Prints 'cream cheese'
 ```
 
-As we can see, a list is an numbered collection of items. We say that the first item is *at* **index** 0, the second item is at index 1, etc. We access the item at index `i` (where `i` is an integer) by writing `shopping_list[i]` - the name of the list, and then the index in square brackets. 
+As we can see, a list is an numbered collection of items. An important thing to remember is that in Python **indexing starts at 0**. What that means is that the first item is *at* **index** 0, the second item is at index 1, etc. We access the item at index `i` (where `i` is an integer) by writing `shopping_list[i]` - the name of the list, and then the index in square brackets. 
 
 Now what would happen if we try to access the item at index 4 of our shopping list? Let's try:
 
@@ -312,6 +312,35 @@ Note that the `len` function returns an `int`, so we need to convert that to a `
   smoked salmon
   cherry tomatoes
   cream cheese
+  ```
+
+### Expert:
+* 10: Make your own shopping list program! Begin by prompting a user to enter the number of things they want on their list and then ask them for each separate item. The program should output the items on the list in the same order, each on a separate line, after the user's done with their input.
+
+  Here's a sample run:
+  ```
+  Welcome to the shopping list app!
+  Please enter the size of your shopping list: 3
+  Please enter item number 1: bread
+  Please enter item number 2: smoked salmon
+  Please enter item number 3: cherry tomatoes
+  Your shopping list is:
+  bread
+  smoked salmon
+  cherry tomatoes
+  ```
+* 11: Do you really need to enter the number n in the beginning? Wouldn't it be more convenient for a user to tell when the shopping list _ends_ instead? Make a program that does just that. Here's a sample run:
+
+  ```
+  Welcome to the shopping list app!
+  Please enter item number 1: bread
+  Please enter item number 2: smoked salmon
+  Please enter item number 3: cherry tomatoes
+  Please enter item number 4: end
+  Your shopping list is:
+  bread
+  smoked salmon
+  cherry tomatoes
   ```
 <!---
 ## Functions
@@ -538,6 +567,8 @@ print(shopping_list[1]) # Prints 'smoked salmon'
 print("Length of shopping list: " + str(len(shopping_list))) # Length of the list
 ```
 
+
+<!---
 ## Recap from Session 1
 
 In the previous session we used these concepts:
@@ -565,3 +596,4 @@ elif number < 0:
 else:
   print("The number is larger than 10.")
 ```
+--->
