@@ -40,7 +40,7 @@ else:
 Imagine we wanted to create a simple security program, which asks our user for a password, until they enter the correct one. One way to do this is:
 
 ```python
-SECRET_PASSWORD = "hunter2"
+SECRET_PASSWORD = "pass123"
 
 user_input = input("Please enter a password: ")
 
@@ -52,10 +52,10 @@ while user_input != SECRET_PASSWORD:
 print("Access granted.")
 ```
 
-This program will continue prompting the user for a password until they input the correct password, which is "hunter2". One way to think about the above code is like this **(Note: this is NOT actual Python code)**:
+This program will continue prompting the user for a password until they input the correct password, which is "pass123". One way to think about the above code is like this **(Note: this is NOT actual Python code)**:
 
 ```python
-SECRET_PASSWORD = "hunter2"
+SECRET_PASSWORD = "pass123"
 
 user_input = input("Please enter a password: ")
 
