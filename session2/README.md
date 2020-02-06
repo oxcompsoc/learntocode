@@ -329,6 +329,15 @@ Note that the `len` function returns an `int`, so we need to convert that to a `
   smoked salmon
   cherry tomatoes
   ```
+  *Hint: the next few lines might be helpful:*
+
+  ```python
+  my_list = [] # This is how we create an empty list. I.e. a list with no items
+  my_list.append("item1") # This is how we append to the back of our list
+  my_list.append("item2") # And again
+  print(my_list) # Prints '["item1", "item2"]'
+  print(len(my_list)) # Prints '2'
+  ```
 * 11: Do you really need to enter the number n in the beginning? Wouldn't it be more convenient for a user to tell when the shopping list _ends_ instead? Make a program that does just that. Here's a sample run:
 
   ```
