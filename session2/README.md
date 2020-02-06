@@ -35,57 +35,6 @@ else:
   print("The number is larger than 10.")
 ```
 
-## Incrementing numbers
-
-We've seen before that we can do:
-```python
-number = 1
-print(number + 1) # Prints '2'
-print(number) # Prints '1'
-```
-
-But what if we want to actually increase the values of `number`? We might be tempted to do:
-```python
-number = 1
-number + 1
-print(number) # Still prints '1'
-```
-But that doesn't change `number` at all: it just asks Python to evaluate what `number + 1` is. The way to actually increment `number` is:
-
-```python
-number = 1
-number = number + 1
-print(number) # Prints 2
-```
-This might seem a bit confusing at first, since `number` appears both on the left and on the right of the `=`. The rule in Python is that stuff on the right side of and `=` are evaluated before stuff on the left side. You can think about the above code like it was shorthand for this:
-
-```python
-number = 1
-temp = number + 1
-number = temp
-print(number)
-```
-
-Another way to do this exact same thing is:
-```python
-number = 1
-number += 1
-print(number)
-```
-
-Here, the `+=` operator is used as a shorthand for writing `number = number + 1`. There are analogous operators: `-=`, `*=`, `/=`, etc.
-```python
-number = 1
-number += 2
-number -= 3
-number *= 4
-number /= 5
-# ...
-```
-If unsure, just use the first form: `number = number + 1`. 
-
-In the specific case when we have `number += 1` (i.e. we have `1` on the right-hand side) we say that we **increment** `number`. When we do `number -= 1` we say that we **decrement** `number`.
-
 ## While loops
 
 Imagine we wanted to create a simple security function, which asks our user for a password, until they enter the correct one. One way to do this is:
@@ -126,6 +75,58 @@ So back to the actual code. The idea with the while loop is very simple: the cod
 
 Now, if the user enters the correct password on their first try, the body of the loop will not be executed.
 
+## Short aside: incrementing numbers
+
+We've seen before that we can do:
+```python
+number = 1
+print(number + 1) # Prints '2'
+print(number) # Prints '1'
+```
+
+But what if we want to actually increase the values of `number`? We might be tempted to do:
+```python
+number = 1
+number + 1
+print(number) # Still prints '1'
+```
+But that doesn't change `number` at all: it just asks Python to evaluate what `number + 1` is. The way to actually increment `number` is:
+
+```python
+number = 1
+number = number + 1
+print(number) # Prints '2'
+```
+This might seem a bit confusing at first, since `number` appears both on the left and on the right of the `=`. The rule in Python is that stuff on the right side of and `=` are evaluated before stuff on the left side. You can think about the above code like it was shorthand for this:
+
+```python
+number = 1
+temp = number + 1
+number = temp
+print(number)
+```
+
+Another way to do this exact same thing is:
+```python
+number = 1
+number += 1
+print(number)
+```
+
+Here, the `+=` operator is used as a shorthand for writing `number = number + 1`. There are analogous operators: `-=`, `*=`, `/=`, etc.
+```python
+number = 1
+number += 2
+number -= 3
+number *= 4
+number /= 5
+# ...
+```
+If unsure, just use the first form: `number = number + 1`. 
+
+In the specific case when we have `number += 1` (i.e. we have `1` on the right-hand side) we say that we **increment** `number`. When we do `number -= 1` we say that we **decrement** `number`.
+
+## Back to while loops
 
 Let's see some more examples. Here is how we print the first n natural numbers:
 ```python
@@ -165,21 +166,41 @@ while i <= n:
 print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 ```
 
-If that looks like the same code to you, don't worry; even experienced programmers often make this simple mistake. The issue is that we don't increment `i` within the body of the loop. So every time we pass through the loop, `i` remains `1`. If `n` is more than `2`, then this loop will go on forever.
+If that looks like the same code to you, don't worry; even experienced programmers often make this simple mistake. The issue is that we don't increment `i` within the body of the loop. So every time we pass through the loop, `i` remains `1`. If `n` is more than `2`, then this loop will go on forever. **This is a very common mistake. Always keep this in mind if your program seems to "hang".**
 
 ## Exercises:
 
-### Easy:
-* 7: Create a program that asks the user to input a number `n`, and then prints the first `n` natural numbers in reverse order. E.g. if `n` is 4, your program should print: '4 3 2 1', each number being on a newline.
-* 8: Create a program, which asks the user to input a number `n` and then prints the product of the first `n` natural numbers. E.g. if the input is 4, your program should calculate 1 * 2 * 3 * 4 and print the result.
+*When attempting these exercises, I suggest you type out the code by hand, rather than copy-pasting it. Pay attention to all of the symbols you are typing and see if you can recall why they are there.*
 
+### Easy:
+* 1: Create a program that asks the user to input a number `n`, and then prints the first `n` natural numbers in reverse order. E.g. if `n` is 4, your program should print: '4 3 2 1', each number being on a new line. (*Hint: model your program after one of the programs we already wrote.*)
+* 2: Complete the program below, which asks the user to input a number `n` and then prints the product of the first `n` natural numbers. E.g. if the input is 4, your program should calculate 1 * 2 * 3 * 4 and print the result.
+  ```python
+  n = int(input("Please enter a number: "))
+
+  product = 1
+  i = 1
+  while # Complete the rest.
+    # ...
+  
+  print(product)
+  ```
 
 ### Medium:
-* 9: Create a program, which continuously prompts the user to input a first name and a last name, until the names they enter match yours.
+* 3: Create a program, which repeatedly asks the user to input a number, until their number is greater than 9. A run of your program might look like:
+  ```
+  Please enter a number: 5
+  That number is too small!
+  Please enter a number: 9
+  That number is too small!
+  Please enter a number: 10
+  That's a good number!
+  ``` 
+* 4: Create a program, which continuously prompts the user to input a first name and a last name, until the names they enter match yours.
 
 ### Hard:
 
-* 10: (Math) Write a program, which asks the user for an input `n` and then for `n` numbers. Then, it prints out the average of those `n` numbers. A run of your program might look something like this:
+* 5: (Math) Write a program, which asks the user for an input `n` and then for `n` numbers. Then, it prints out the average of those `n` numbers. A run of your program might look something like this:
 
   ```
   How many numbers: 3
@@ -189,7 +210,7 @@ If that looks like the same code to you, don't worry; even experienced programme
   The average was: 3.0
   ```
 ### Very hard:
-* 11: Create a program, which takes as input a number `n` and then prints the following:
+* 6: Create a program, which takes as input a number `n` and then prints the following:
 
     1
 
@@ -207,6 +228,92 @@ If that looks like the same code to you, don't worry; even experienced programme
   print(number, end=" ") # This will print " " after number.
   ```
 
+## Lists
+
+Suppose we wanted to create a shopping list app. We would like to be able to store our user's shopping list and retrieve the items from it on demand. This is where Python lists come in. Here is how we create a list:
+
+```python
+shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
+```
+
+In Python, we can also `print` the whole list, to view all the items:
+
+```python
+shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
+print(shopping_list)
+```
+
+Or we can access the items one by one:
+
+```python
+shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
+print(shopping_list[0]) # Prints 'bread'
+print(shopping_list[1]) # Prints 'smoked salmon'
+print(shopping_list[2]) # Prints 'cherry tomatoes'
+print(shopping_list[3]) # Prints 'cream cheese'
+```
+
+As we can see, a list is an numbered collection of items. We say that the first item is *at* **index** 0, the second item is at index 1, etc. We access the item at index `i` (where `i` is an integer) by writing `shopping_list[i]` - the name of the list, and then the index in square brackets. 
+
+Now what would happen if we try to access the item at index 4 of our shopping list? Let's try:
+
+```python
+shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
+print(shopping_list[4]) # ERROR: list index out of range 
+```
+
+If you run this code, you would get something called an index error. This is because there is no item at index 4. Note now, that the list has 4 items, but the highest index is 3. In general, a list with `n` items will have a highest index of `n-1`. 
+
+We can get the *length* of the list (i.e. the number of items in it), by calling the `len` function:
+
+```python
+shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
+length = len(shopping_list)
+print("The length of the list is: " + str(length))
+```
+
+Note that the `len` function returns an `int`, so we need to convert that to a `str` before printing.
+
+
+## Exercises
+
+### Easy:
+* 7: Create a list of 3 cities you want to visit. Print the whole list on one line. Print the list item by item. Print the length of the list.
+
+### Medium:
+
+* 8: Complete the program so that it prints the contents of the shopping list:
+
+  ```python
+  shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
+
+  i = 0
+  length = len(shopping_list)
+  while i < length:
+    # Complete this code
+  ```
+
+### Hard:
+* 9: Complete the program so that it prompts the user to input a number `n`, then prints `shopping_list`, item by item, `n` times in a row:
+  
+  ```python
+  shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
+  n = # Complete the rest of the program
+  # ...
+  ```
+  A run of your program might look like:
+  ```
+  Please enter a number: 2
+  bread
+  smoked salmon
+  cherry tomatoes
+  cream cheese
+  bread
+  smoked salmon
+  cherry tomatoes
+  cream cheese
+  ```
+<!---
 ## Functions
 
 Last time we saw this example:
@@ -409,24 +516,10 @@ Again, each function call creates its own scope. So the local variable `x` insid
 ### Hard:
 * 4: Create a function `perform_operation`, which takes three arguments: two numbers, `number1` and `number2`, and one string, `operation`. If `operation` is one of "add", "subtract", "multiply", "divide", your program should return the result of performing that operation on `number1` and `number2` (e.g. if it is "subtract", return `number1` - `number2`). If it is neither, it should print "Unknown operation." and return 0.
 * 4.1: Now write a program to test your function. Try printing the results of calling your function with some arguments, e.g. `perform_operation(1, 2, "add")`.
+--->
 
 ## Summary
 ```python
-# A few examples of functions:
-
-def multiply(number1, number2):
-  return number1 * number2
-
-def double(number):
-  return multiply(number, 2)
-
-def print_whatever():
-  print("Whatever.")
-
-my_number = 10
-print(double(my_number)) # Prints 20
-print(multiply(my_number, 3)) # Prints 30
-
 number = 10
 number += 1 # Incrementing a number.
 number -= 1 # Decrementing a number.
@@ -437,6 +530,12 @@ i = 1
 while i <= n:
   print(i)
   i += 1 # Increment i (i becomes bigger by 1).
+
+# Lists:
+shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
+print(shopping_list[0]) # Prints 'bread'
+print(shopping_list[1]) # Prints 'smoked salmon'
+print("Length of shopping list: " + str(len(shopping_list))) # Length of the list
 ```
 
 ## Recap from Session 1
