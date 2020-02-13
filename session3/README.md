@@ -1,122 +1,247 @@
-# Session 3: Lists
+# Session 3: Lists(cont), for loops and intro to functions
 
 See [here][s2notes] for last week's content.
 
 [s2notes]: https://github.com/oxcompsoc/learntocode/tree/master/session2
 
-**You can find all the [solutions here][solutions] and watch the [screencast here][video]**
+**You can find all the [solutions here][solutions].**
 
 [solutions]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/solutions.py
-[video]: https://www.youtube.com/watch?v=TU1aisio7IU
 
-## Lists
+## Recap
 
-So far we've seen two different *types* of values: strings (pieces of text) and
-numbers. This week we're going to be looking at lists, which are lists of
-values. Python denotes lists as `[ x, y, z, ...]`:
+In the previous session we covered the following concepts:
 
 ```python
-beatles = [ "John", "Paul", "George", "Ringo" ]
+# Any text after a '#' symbol on a line is a comment. It is not part of the code.
+
+# Password checker using while loops:
+SECRET_PASSWORD = "pass123"
+user_input = input("Please enter a password: ")
+
+while user_input != SECRET_PASSWORD:
+  print("Access denied: wrong password.")
+  print() # Print a newline. This is just here to make things look nicer.
+  user_input = input("Please enter the password: ")
+
+print("Access granted.")
+
+
+# Incrementing and other syntactic sugar. The shorthands for the following:
+number = number + 1
+number = number - 1
+number = number * 2
+number = number / 3
+
+# are respectively:
+
+number += 1     # Equivalent to saying "increase number by 1", i.e. increment it
+number -= 1     # Equivalent to saying "decrement number by 1", i.e. decrement it
+number *= 2     # Equivalent to saying "number becomes itself times 2"
+number /= 3     # Equivalent to saying "number becomes itself divided by 3"
+
+
+# Counting using while loops:
+
+n = int(input("Please enter a number: "))
+i = 1
+while i <= n:
+  print(i)
+  i += 1 # Increment i (i becomes bigger by 1).
+
+# Finding the sum of the first n natural numbers:
+n = int(input("Please enter a number: "))
+i = 1
+sum = 0
+while i <= n:
+  sum += i
+  i += 1
+
+print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
+
 ```
 
-You must surround the list by square brackets and comma separate values.
+## Lists revisited and continued
+
+Let's have a quick revisit of lists. Here's the example list we had last time:
+
+```python
+shopping_list = [ "bread", "smoked salmon", "cherry tomatoes", "cream cheese" ]
+```
 
 The `len` function tells us the length of a list:
 
 ```python
-number_of_beatles = len(beatles) # number_of_beatles = 4
+number_of_items = len(shopping_list) # number_of_items = 4
 ```
 
 We can access a particular element of a list using **subscript notation**:
 
 ```python
-beatle = beatles[0] # beatle is now "John", Python lists start numbering at 0
-beatle = beatles[1] # beatle is now "Paul"
+item = shopping_list[0] # item is now "bread", Python lists start indexing at 0
+item = shopping_list[1] # item is now "smoked salmon"
 
-beatles[3] = "Ringo Starr" # The list is now [ "John", "Paul", "George", "Ringo Starr" ]
+# We decided to get cheddar instead of cream chese so we can change the list like so:
+shopping_list[3] = "cheddar" # The list is now [ "bread", "smoked salmon", "cherry tomatoes", "cheddar" ]
 ```
 
-We can add an element to a list:
+We can append an element to a list - basically adding it to the end:
 
 ```python
-# Pete Best was the original drummer before Ringo
-beatles.append("Pete") # beatles is now [ "John", "Paul", "George", "Ringo Starr", "Pete"]
+# We forgot to add mayo to the list so we can add it later like so:
+shopping_list.append("mayo") # shopping_list is now [ "bread", "smoked salmon", "cherry tomatoes", "cheddar", "mayo" ]
 ```
 
 Or remove an element from the list:
 
 ```python
-del beatles[4] # beatles is now [ "John", "Paul", "George", "Ringo Starr" ]
+del shopping_list[4] # shopping_list is now [ "bread", "smoked salmon", "cherry tomatoes", "cheddar" ]
 ```
 
 Alternatively, you can remove an element by value, so instead of the previous
 line we could have written:
 
 ```python
-beatles.remove("Pete")
+shopping_list.remove("mayo")
 ```
 
-**Exercise:** Investigate which is more efficient
+Do note that this is more computationally expensive because the computer needs to go through the entire list to find the mayo, similarly to how you would go down a list from the start to find it.
 
 You can also join two lists together:
 
 ```python
-one_direction = ["Niall", "Liam", "Harry", "Louis"]
-names = beatles + one_direction
+shopping_page1 = ["bread", "smoked salmon", "cherry tomatoes"]
+shopping_page2 = ["cheddar", "mayo" ]
+shopping_list = shopping_page1 + shopping_page2 # shopping_list is now [ "bread", "smoked salmon", "cherry tomatoes", "cheddar", "mayo" ]
 ```
 
-Finally, we can also loop over lists:
-
-```python
-for name in names:
-    print(name)
-```
-
-Which outputs the following:
-
-```
-John
-Paul
-George
-Ringo Starr
-Niall
-Liam
-Harry
-Louis
-```
-
-You can also iterate over the indicies:
-
-```python
-for i in range(0, len(names)):
-    print(str(i) + ": " + names[i])
-```
-
-This outputs:
-
-```
-0: John
-1: Paul
-...
-```
-
-**Note:** you may have seen what Python calls lists called *arrays* in other
-programming languages. In most programming languages [there is a
-difference][listvsarray] but it is not relevant to Python or this course.
+**Note:** you may have seen what Python calls lists called *arrays* in other programming languages. In most programming languages [there is a difference][listvsarray] but it is not relevant to Python or this course.
 
 [listvsarray]: https://www.quora.com/What-is-the-difference-between-an-array-a-list-and-a-linked-list/answer/Gregory-Schoenmakers?share=ccf41042&srid=RsVE
+
+## For loops
+
+We've already covered `while` loops but there is another type of loop that lets us execute a piece of code multiple times. Remember the example for counting using `while` loops:
+
+```python
+n = int(input("Please enter a number: "))
+i = 1
+while i < n:
+    print(i)
+    i += 1 # Increment i (i becomes bigger by 1).
+```
+
+Here's the same program written using a `for` loop:
+
+```python
+n = int(input("Please enter a number: "))
+for i in range(1, n):
+    print(i)
+```
+
+In general you write a `for` loop like so:
+```python
+for i in range(a, b):
+    # block of code - this block will repeat (b - a) times and you will
+    # have access to the number of the current "repeat" with i
+```
+
+As you can see `for` loops take care of a lot of things for us - you don't have to define your own `i` and increment it yourself. On the other hand, that makes `for` loops less flexible - there are some cases where you might not want to have a counter or you might want to decrement it.
+
+What `for` loops are really useful for is *iterating* over lists. Here's an example:
+
+```python
+shopping_list = [ "bread", "smoked salmon", "cherry tomatoes", "cream cheese" ]
+for item in shopping_list:
+    print("I need to buy " + item)
+
+# This will print out:
+# I need to buy bread
+# I need to buy smoked salmon
+# I need to buy cherry tomatoes
+# I need to buy cream cheese
+```
+
+We can write an equivalent program with `range` too:
+
+```python
+shopping_list = [ "bread", "smoked salmon", "cherry tomatoes", "cream cheese" ]
+for i in range(0, len(shopping_list)):
+    print("I need to buy " + shopping_list[i])
+
+# This will print out:
+# I need to buy bread
+# I need to buy smoked salmon
+# I need to buy cherry tomatoes
+# I need to buy cream cheese
+```
+
+This gives us an insight as to what `range(a, b)` does - it's a function (we'll get to what that means later) that is equivalent to writing `[a, a + 1, a + 2, ..., b - 2, b - 1]` so we were iterating over lists all along.
+
+## Exercises
+
+What we'll do next is finish up the exercises from last session. You can find them [here](https://github.com/oxcompsoc/learntocode/tree/master/session2#Exercises-1). If you've already completed the exercises then try to replace your uses of `while` with equivalent `for` loops. There are some exercises where that is impossible which will give you a good idea of the limitations of `for`.
+
+## Functions
+
+Until now we've been putting our code all in one place. This is fine for small toy programs but if we want to write something bigger it becomes incredibly difficult to follow. This is where the idea of functions comes in - they're basically mini programs that you can run or *call* in your *main* one that provide us with various advantages. In order to understand them we must first see how functions work in practice. Here's a few examples:
+
+```python
+def myNameRet():
+    return "My name is Anton"
+print(myNameRet())     # Will print "My name is Anton"
+
+def myNameNoRet():
+    print("My name is Anton")
+myNameNoRet()       # Will also print "My name is Anton"
+
+def square(x):
+    return x * x
+
+print(square(5))    # Will print "25"
+print(square(10))   # Will print "100"
+
+def rectArea(width, height):
+    return width * height
+print(rectArea(3, 4))   # Will print 12
+```
+
+ 1. We *define* a function with `def`.
+ 2. We follow that with the function *name*.
+ 3. Next we have a pair of parentheses in which we list the *arguments* to the function - these are equivalent to the *x* and *y* you might be familiar with from functions in Maths. We can have as many arguments as we want and inside the function they're treated as variables with some value already stored in them.
+ 4. After the parentheses we have a colon signifying that what follows is an indented block, similar to what we have for loops.
+ 5. That block is where we write our "mini-program", also known as the *body* of our function. Inside the body we may have the `return` keyword - this signifies the end of a function and whatever is right of `return` will be the *return statement* of the function - think of it as the thing that replaces the function at the place where it was called. A function that doesn't end up calling `return` automatically returns `None` which is a special value with type `NoneType`.
+
+**Note:** You could have multiple return statements in a function - consider using an `if`/`else` to return different values depending on some condition. You should try to keep the type of all return statements in a function the same because otherwise you might get type errors. Consider the example:
+
+```python
+
+def getShapeArea(shape_name, x, y):
+    if shape_name == "rectangle":
+        return x * y
+    elif shape_name == "triangle":
+        return x * y / 2
+
+if getShapeArea("rectangle", 5, 10) > getShapeArea("tringle", 5, 10): # typo intentional
+    print("The rectangle has a larger area")
+```
+
+Here a typo in the name of the shape can result in `getShapeArea` not returning anything which has type `NoneType` and you can't compare `NoneType` with `int`, causing an error.
+
+Back to the usefulness of functions - they let us do 4 useful things:
+ - We can split our code into multiple chunks that are easier to reason about. Otherwise big programs would become one big chunk of code that would be incredibly difficult to understand.
+ - A useful property of functions is that they can also call functions. They can even call themselves. This is known as recursion and, sadly, it is outside of the scope of this course but is so useful that some other programming languages have completely removed loops in favour of recursion.
+ - On a similar note, when getting errors Python gives us a very convenient *call stack* - basically a list of all the functions that were called but haven't ended when we get the error. This makes tracking down bugs far easier.
+ - We can reuse functions as many times as we want, reducing code repetition
+
+A good rule of thumb is to keep functions below 200 lines of code. This includes the *main* function (i.e. the non-indented code). Anything larger should be split up into multiple functions.
 
 ## Exercises
 
 For today's session we have a large number of different exercises that you can
-choose from. At the end of the session we'll go through solutions for a few of
-them (the remainder will be released as part of the screencast). They are
-roughly ordered by difficulty. If you find an exercise easy, consider skipping
-a few.
+choose from. They are roughly ordered by difficulty. If you find an exercise easy, consider skipping a few. It is somewhat difficult to finish most of them by the end of the session so we'll begin the next session with some exercise time as well after the recap. We would also encourage doing some of the exercises at home. In that case you could check the `solutions.py` file and the recordings from a previous run of the course [here](https://www.youtube.com/watch?v=TU1aisio7IU).
 
-Each exercise has some tests associated with it so you can test your solution.
-To run the tests, download the associated file, open it in IDLE, and edit the
-function at the top.
+Each exercise has some tests associated with it so you can test your solution. To run the tests, download the associated file, open it in IDLE, and edit the function at the top. An example of how to do exercise 1 will be shown during the lecture.
 
 ### Exercise 1: Summing a list
 
@@ -141,7 +266,7 @@ def product(xs)
 
 [Download Test Cases][exercise2]
 
-**Exercise (not party of the tests):** what should the product of the empty list be?
+**Exercise (not part of the tests):** what should the product of the empty list be?
 
 **Exercise:** can you optimise this if you find a zero in the list?
 
