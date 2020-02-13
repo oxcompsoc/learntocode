@@ -104,3 +104,43 @@ while i < n:
         print(shopping_list[j])
         j += 1
     i += 1
+
+
+# Ex. 10
+
+print('Welcome to the shopping list app!')
+n = int(input('Please enter the size of your shopping list: '))
+i = 0
+shopping_list = [0] * n
+while i < n:
+    shopping_list[i] = input('Please enter item number ' + str(i))
+    i += 1
+
+print('Your shopping list is:')
+# From Ex 8
+i = 0
+length = len(shopping_list)
+while i < length:
+    print(shopping_list[i])
+    i += 1
+
+# Ex. 11
+
+print('Welcome to the shopping list app!')
+i = 0
+shopping_list = []
+last_item = ""
+while last_item != "end":
+    last_item = input('Please enter item number ' + str(i))
+    shopping_list.append(last_item)
+    i += 1
+
+shopping_list.remove("end")
+
+print('Your shopping list is:')
+# From Ex 8
+i = 0
+length = len(shopping_list)
+while i < length:
+    print(shopping_list[i])
+    i += 1
