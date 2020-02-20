@@ -374,7 +374,7 @@ string you can do `s[0]` where `s` is a string variable.
 ### Exercise 10: Rotating a list
 
 Given a list `xs` and an integer `n`, produce a list where each element is
-rotated around by `n`, i.e. `rot([1, 2, 3], 1) == [3, 1, 2]` and `rot([1, 2, 3,
+rotated around by `n`, i.e. `rot([1, 2, 3], 1) == [2, 3, 1]` and `rot([1, 2, 3,
 4, 5], 2) == [3, 4, 5, 1, 2]`.
 
 ```python
