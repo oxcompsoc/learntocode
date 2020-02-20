@@ -121,7 +121,7 @@ will say that a dictionary *maps keys to values*.
 We create an empty dictionary called `d` with the following
 
 ```python
-d = {}
+d = {}      # This makes an empty dictionary called d
 ```
 
 Then, when we want the dictionary to map a *key* to a *value* we write
