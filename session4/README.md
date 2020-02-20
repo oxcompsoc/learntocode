@@ -1,45 +1,111 @@
 # Session 4: Lists (cont.) and Dictionaries
 
-**The video for this week's session is [here][video].**
+## Recap
 
-[video]: https://youtu.be/E-QXg8Gc-nU
-
-In [last week's session][s3notes] we took a look at *lists*, which are ordered
-collections of Python values. We saw that if we could create an empty list
-called `xs` (pronounced "exes", i.e. the plural of a single "x") with
+In [the previous few sessions][s3notes] we took a look at *lists*, which are ordered collections of Python values. Here's an overview of all the concepts so far:
 
 ```python
-xs = []
-```
+# Any text after a '#' symbol on a line is a comment. It is not part of the code.
 
-Alternatively, we could initialise `xs` to contain some values:
+# Defining a list
+shopping_list = [ "bread", "smoked salmon", "cherry tomatoes", "cream cheese" ]
 
-```python
-xs = [ "Anything", "Can", "Go", "Here" ]
-```
+# Getting the "len"gth of a list
+number_of_items = len(shopping_list) # number_of_items = 4
 
-We also saw that we can access individual elements of a list with *subscription
-notation*, and that the first element of a list is indexed by `0`:
+# indexing (starts at 0)
+item = shopping_list[0] # item is now "bread", Python lists start indexing at 0
+item = shopping_list[1] # item is now "smoked salmon"
 
-```python
-#      0           1      2     3
-xs = [ "Anything", "Can", "Go", "Here" ]
-first_element = xs[0] # has value "Anything"
-last_element = xs[3] # has value "Here"
+# We decided to get cheddar instead of cream chese so we can change the list like so:
+shopping_list[3] = "cheddar" # The list is now [ "bread", "smoked salmon", "cherry tomatoes", "cheddar" ]
+
+# Adding something to the end of a list
+shopping_list.append("mayo") # shopping_list is now [ "bread", "smoked salmon", "cherry tomatoes", "cheddar", "mayo" ]
+
+# Deleting an element (remember, indexing starts at 0)
+del shopping_list[4] # shopping_list is now [ "bread", "smoked salmon", "cherry tomatoes", "cheddar" ]
+
+# Remove a specific value
+shopping_list.remove("mayo")
+
+# Appending(i.e. "adding") 2 lists together
+shopping_page1 = ["bread", "smoked salmon", "cherry tomatoes"]
+shopping_page2 = ["cheddar", "mayo" ]
+shopping_list = shopping_page1 + shopping_page2 # shopping_list is now [ "bread", "smoked salmon", "cherry tomatoes", "cheddar", "mayo" ]
+
+# For loop printing the numbers from 1 to n (excl.)
+n = int(input("Please enter a number: "))
+for i in range(1, n):
+    print(i)
+
+# General Python for loop structure
+for i in range(a, b):
+    # block of code - this block will repeat (b - a) times and you will
+    # have access to the number of the current "repeat" with i
+
+# Iterating over a list
+shopping_list = [ "bread", "smoked salmon", "cherry tomatoes", "cream cheese" ]
+for item in shopping_list:
+    print("I need to buy " + item)
+
+# This will print out:
+# I need to buy bread
+# I need to buy smoked salmon
+# I need to buy cherry tomatoes
+# I need to buy cream cheese
+
+
+# Printing a list using range
+shopping_list = [ "bread", "smoked salmon", "cherry tomatoes", "cream cheese" ]
+for i in range(0, len(shopping_list)):
+    print("I need to buy " + shopping_list[i])
+
+# This will print out:
+# I need to buy bread
+# I need to buy smoked salmon
+# I need to buy cherry tomatoes
+# I need to buy cream cheese
+
+# Function examples:
+def myNameRet():
+    return "My name is Anton"
+print(myNameRet())     # Will print "My name is Anton"
+
+def myNameNoRet():
+    print("My name is Anton")
+myNameNoRet()       # Will also print "My name is Anton"
+
+def square(x):
+    return x * x
+
+print(square(5))    # Will print "25"
+print(square(10))   # Will print "100"
+
+def rectArea(width, height):
+    return width * height
+print(rectArea(3, 4))   # Will print 12
+
+
+# Example of None
+def getShapeArea(shape_name, x, y):
+    if shape_name == "rectangle":
+        return x * y
+    elif shape_name == "triangle":
+        return x * y / 2
+
+if getShapeArea("rectangle", 5, 10) > getShapeArea("tringle", 5, 10): # typo intentional
+    print("The rectangle has a larger area")
+
 ```
 
 [s3notes]: https://github.com/oxcompsoc/learntocode/tree/master/session3
 
-In today's session we are going to continue looking at lists by continuing with
-some of the exercises from last week's session (we deliberately wrote far too
-many for a single session). As we covered solutions to the first three
-exercises in last week's session, we'd like to encourage you to start at
-[exercise 4][s3e4].
+## Exercises
 
-[s3e4]: https://github.com/oxcompsoc/learntocode/tree/master/session3#exercise-4-flattening-lists
+In today's session we are going to keep on looking at lists by continuing with some of the exercises from last week's session (we deliberately wrote far too many for a single session). Here's a [link to the exercises](https://github.com/oxcompsoc/learntocode/blob/master/session3/README.md#Exercises-1).
 
-If you get stuck, as well as asking a volunteer for help, you can also look at
-[last week's solutions][s3solutions] and [last week's video][s3video].
+If you get stuck, as well as asking a volunteer for help, you can also look at [last week's solutions][s3solutions] and [the video of this session from a previous year][s3video].
 
 [s3solutions]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/solutions.py
 [s3video]: https://www.youtube.com/watch?v=TU1aisio7IU
@@ -55,7 +121,7 @@ will say that a dictionary *maps keys to values*.
 We create an empty dictionary called `d` with the following
 
 ```python
-d = {}
+d = {}      # This makes an empty dictionary called d
 ```
 
 Then, when we want the dictionary to map a *key* to a *value* we write
@@ -82,14 +148,36 @@ fav_nums = { "good": 3, "better": 7, "best": 37 }
 ```
 
 To access an element of a dictionary we just write `d[k]` where `d` is the name
-of a dictionary variable, and `k` is a key.
+of a dictionary variable, and `k` is a key. So in this case:
+
+```python
+fav_nums = { "good": 3, "better": 7, "best": 37 }
+print(fav_nums["better"])   # prints 7
+print(fav_nums["good"])     # prints 3
+print(fav_nums["best"])     # prints 37
+```
+
+While dictionaries are most often used with strings as keys you can use anything you want as a key. So the following is also valid:
+
+```python
+numStrings = {}
+numStrings[12] = "twelve"
+numStrings[8] = "eight"
+print(numStrings[1])        # Question: What will this print?
+
+constants = {}
+constants[3.14] = "pi"
+constants[2.72] = "e"
+```
+
+**Question:** What's the difference between a dictionary with integer keys and a list?
 
 Dictionaries, like lists, are incredibly important data structures in Computer
 Science because we can use them to model relations between sets. For example,
 we can model a phone book with a dictionary:
 
 ```python
-phone_book = { "+44 01865 ******": "Thomas", ... }
+phone_book = { "+44 01337 ******": "Jeff", ... }
 num = input("Enter a phone number: ")
 print("Belongs to " + phone_book[num])
 ```
@@ -103,7 +191,7 @@ for phone_number in phone_book:
     print(person + " has phone number " + phone_number)
 ```
 
-**Exercise:** Why should we represent phone numbers with strings? Why shouldn't
+**Question:** Why should we represent phone numbers with strings? Why shouldn't
 we use a list instead?
 
 Dictionaries are also often used to represent [graphs][].
