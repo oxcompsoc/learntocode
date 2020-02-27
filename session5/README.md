@@ -2,22 +2,9 @@
 
 You can find the resources for last week's session [here][s4notes].
 
-In this week's session we are going to continue looking at dictionaries, a
-common Python data structure introduced at the end of last week's session. Once
-we've spent a little more time working through an exercise with dictionaries
-we'll move on to seeing how we can use a list as a stack, which are useful
-tools in a broad variety of problems. Stacks are oen of the most important data
-structures in the execution of any programming language.
-
-Finally, we'll take a look at other places that the knowledge that you've
-gained from Python can be applied, such as data processing, machine learning,
-and image recognition.
+In this week's session we are going to continue looking at dictionaries, a common Python data structure introduced at the end of last week's session. Once we've spent a little more time working through an exercise with dictionaries we'll move on to talking about *Object-Oriented Programming* or *OOP* - a way to structure data which is very useful when dealing with various when dealing with Python modules, i.e. the tools that you would use to do more practical things like data analysis and machine learning.
 
 [s4notes]: https://github.com/oxcompsoc/learntocode/tree/master/session4/README.md
-
-**The screencast for this week is [here][s5video].**
-
-[s5video]: https://youtu.be/uDT3xMpaCKY
 
 ## Dictionaries
 
@@ -96,125 +83,165 @@ appear in a piece of text. You can find the [solution here][s4solution].
 [s4exercise]: https://github.com/oxcompsoc/learntocode/tree/master/session4#dictionary-exercise
 [s4solution]: https://github.com/oxcompsoc/learntocode/blob/master/session4/wc.py
 
-We can use dictionaries to represent **graphs**. A graph is a collection of
-**vertices** (also called **nodes**) connected by **edges** (i.e. arrows
-between the vertices). For example, suppose we had the following graph:
+## Object-Oriented Programming
 
-![Graph](graph.png)
-
-We can then use a dictionary to represent the arrows between nodes; the keys can be the names of nodes whilst the values they are associated with a list of nodes that the arrows point to:
+We talked about types a bit in the first few lectures - think `int` (for *int*egers), `str`(for *str*ings or non-code text), `float`(for *float*ing point numbers or non-whole numbers). It turns out that `list` and `dict` (for *dict*ionary) are also types. You can see that by running:
 
 ```python
-g = {
-    "a": ["b", "d"],
-    "b": ["c"],
-    "c": ["f"],
-    "d": ["e"],
-    "e": ["b","f"],
-    "f": []
-}
+my_list = ['a', 'b', 'c']
+print(type(my_list))            # Prints out <class 'list'>
+
+my_dictionary = {'A': 10, 'B': 42, 'C': 1337}
+print (type(my_dictionary))     # Prints out <class 'dict'>
 ```
 
-**Exercise:** do we need to explicitly say that `"f"` maps to `[]`, i.e. that
-it has no arrows coming out of it? Could we represent it another way?
-
-**Exercise:** Implement a function that takes a graph and the names of two
-nodes and determines if there is an edge from the first node to the second.
-
-**Exercise:** Implement a function that determines if there is a path between
-two nodes in a graph.
-
-**Exercise:** Implement a function that determines the shortest path through a
-graph (assuming each edge is the same length). For example, in the above we can
-get from `"a"` to `"f"` via `["a", "b", "c", "f"]` or `["a", "d", "e", "b",
-"c", "f"]`.
-
-## Stacks
-
-The third, and final, data structure that we are going to look at in this
-course is actually one that we've seen before! A stack is just a literally a
-list with two operations: *push*, which pushes an element on to the *top* of
-the stack, and *pop* which removes the top element from the stack and returns
-it. The analogy here is just a stack of plates.
-
-For example, we declare an empty stack in exactly the same way that we declare
-an empty list:
+It makes sense for those to be their own types because you can do the same things with a variable that contains an `int` as opposed to one that contains a `list` - the former can handle division while the latter has `.append(x)`. While having these types is very convenient and perfectly sufficient to write any program we want (see [Turing-Completeness](https://simple.wikipedia.org/wiki/Turing_complete) if you feel like reading a lot of theory), Python lets us define our own custom types and here's how we do it:
 
 ```python
-stack = []
+class Person:
+    def __init__(self, name, age, birthday):
+        self.name = name
+        self.age = age
+        self.birthday = birthday
+        self.friends = []
+        self.likes_marmite = False
+    
+    def addFriend(self, friendName):
+        self.friends.append(friendName)
+
+    def printInfo(self):
+        print(self.name + ' was born on ' + str(self.birthday) + \
+            ' and is ' + str(self.age) + ' years old.')
+        if self.likes_marmite:
+            print('They like Marmite', end='')
+        else:
+            print('They don\'t like Marmite', end='')
+            
+        if len(self.friends) == 0:
+            print(' and they don\'t have friends')
+        else:
+            print(' and their friends are:')
+            for friend in self.friends:
+                print(friend)
+        print()         # A couple of newlines for clarity
+        print()
+
+me = Person('Ilia', 21, '15/09')
+me.addFriend('Ivan')
+me.printInfo()
+me.addFriend('Ben')
+me.addFriend('Kate')
+me.printInfo()
+
+print('My name is ' + me.name)
+
+print(type(me))
+
+ben = Person('Ben', 21, '5/12')
+ben.addFriend('Ilia')
+ben.addFriend('Kate')
+ben.printInfo()
+
+
+#This prints out the following:
+'''
+Ilia was born on 15/09 and is 21 years old.
+They don't like Marmite and their friends are:
+Ivan
+
+
+Ilia was born on 15/09 and is 21 years old.
+They don't like Marmite and their friends are:
+Ivan
+Ben
+Kate
+
+
+My name is Ilia
+<class '__main__.Person'>
+Ben was born on 5/12 and is 21 years old.
+They don't like Marmite and their friends are:
+Ilia
+Kate
+
+
+'''
 ```
 
-To push onto a stack, we just append to the end of the stack:
+That was a lot of code so here's some explanation:
+ - `class Person:` defines a "class" which means a custom type
+ - `def __init__(self, ...):` is called a *constructor* - it's a function that defines an *instance* of our class. This is what gets called when you write `Person(...)`.
+ - `self` is a reference to the *instance* of the current object. So basically in `__init__` we're trying to say that when we create a person, make their name equal to the parameter `name`, their age equal to the parameter `age` and their birthday equal to the parameter `birthday`. All variables that are accessed through `self` are commonly known as *member variables*.
+ - `def addFriend(self, ...):` and `def printInfo(self, ...)` are functions that you can call from an instance of `Person` using `.`. `me.addFriend("Ben")` and `me.printInfo()` are examples of that. Question: Which function that we've seen until now looks like that?
+  Notice how `self` is an argument to those functions but we never provide it. That is because `self` is a reserved word in Python and Python will always infer that it's the current instance of the class. In general, don't forget to add `self` as the first argument to any function that you have in Python - there are far more functions that need it than there are that don't.
+ - `me = Person('Ilia', 21, '15/09')` is very similar to how we define lists and other variables. Here we define a variable of type `Person` called `me` with the respective `constructor arguments`. In Python you can be explicit about the names of these arguments if you are unsure like so: `me = Person(age = 21, name = 'Ilia', birthday = '15/09')`. If you do this you don't necessarily have to have the arguments in the same order.
+
+It turns out that you can model pretty much anything using simpler values. Let's model a few more things as exercises:
+
+### Exercise: Make a class that represents a room
+
+Make a class that represents a regular room. It needs to have a width, height and depth, a kind among `lecture theatre`, `kitchen`, `living room`, `hallway` and a list of items in them. Also add functions that add and remove items from the rooms, a function that calculates the floor area and one that calculates the volume. Try to make instances of a few rooms that you know like the lecture theatre or your home's living room.
+
+### Exercise: Model a floor
+
+Now that you have a floor, next up make another class in the same file that models a floor of a building - give it no constructor arguments and have it only hold a list of rooms. Add the following functions:
+ - `add_room` adds an instance of a room to the list only if the height of the room is the same as that of the other rooms in the list. Question: What should you do when there are no rooms in the list
+ - `get_items` returns all the items that are in the rooms on the floor
+ - `get_floor_area` returns the overall floor area of every room on the floor
+ - `get_floor_volume` returns the overall volume of every room on the floor
+
+### Exercise: Now let's do an entire building
+
+And last but not least we want to make another class in the same file that models an entire building. Similarly to the floors have it accept no constructor arguments and have it only hold a list of floors. We want the building to be stable stable so we want successive floors to have strictly less and less area. THe class should have the following functions: `add_floor`, `get_items`, `get_area` and `get_volume`.
+
+
+## Polymorphism
+
+Now that we've had a quick intro to classes, next we'll eat some fruit. First let's model an apple:
 
 ```python
-stack.append(10)
-stack.append(20)
+class Apple:
+    fruit_name = 'apple'
+
+    def __init__(self, nutrition, color):
+        self.taste = nutrition
+        self.color = color
+    
+    def rot():
+        self.nutrition -= 10
 ```
 
-The top of the stack is now `20`, which we can retrieve via popping it from the
-top of the stack:
+and let's do an orange:
 
 ```python
-x = stack.pop()
+class Orange:
+    fruit_name = 'orange'
+
+    def __init__(self, nutrition, color):
+        self.nutrition = nutrition
+        self.color = color
+    
+    def rot():
+        self.nutrition -= 5
 ```
 
-`x` is now `20`, and `stack` is now `[10]`.
-
-## A stack machine
-
-Stacks are useful in a broad variety of algorithms, but Python uses them
-internally too. We are going to explore how to use stacks to implement a very
-simple programming language that does basic calculations.
-
-Suppose we are given the instruction sequence `[10, 20, "+"]`. We will
-interpret this as:
-
-* Push 10 onto a stack
-* Push 20 onto a stack
-* Pop the top two values from the stack, add them together, and then push the result back to the stack
-
-It is reasonably easy to see that the end state of the stack is `[30]`.
-Alternatively, suppose we are given a list of instructions `[1, 2, 3, "+",
-"+"]`:
-
-* Push 1 to the stack
-* Push 2 to the stack
-* Push 3 to the stack
-* Pop the top two values (3, 2) and push the result (5) to the stack
-* Pop the top two values (5, 1) and push the result (6) to the stack
-
-The end result here is `[6]`.
-
-Here's a simple implementation:
+now that we have both we can let take the `Person` class that we defined earlier in the lecture and teach them how to eat like so:
 
 ```python
-instructions = [ 1, 2, 3, "+", "+" ]
-stack = []
+# I'm using ... to represent code that's the same
+class Person:
 
-for instruction in instructions:
-    if instruction == "+":
-        x = stack.pop()
-        y = stack.pop()
-        stack.append(x + y) # Push the result
-    else:
-        stack.append(instruction) # This is just a number
-        
-print(stack)
+    def __init__(self, ...):
+        ...
+        self.hunger = 100
+
+    ...
+
+    def eat_fruit(self, fruit):
+        print(self.name + ' ate a ' + fruit.color + ' ' + fruit.fruit_name)
+        self.hunger -= fruit.nutrition
 ```
 
-**Exercise:** add support for other mathematical operations, such as
-subtraction, multiplication, division, and powers.
+This is an example of polymorphism - what this basically means is that a fruit can be of either type Apple or Orange and we can have a single definition for eat that is capable of handling both of them.
 
-Our instructions are written in [Reverse Polish Notation][rpn], which can
-represent any expression that we would normally write using infix notation. For
-example, the infix expression `d - ((a + b) * c)` is equivalently written as
-the RPN expression `d a b + c * -`.
-
-**Exercise:** how you can convert an expression written in infix notation into
-one written in Reverse Polish Notation.
-
-[rpn]: https://en.wikipedia.org/wiki/Reverse_Polish_notation
-
-Internally Python takes *exactly* the same approach for computing expressions.
-It also uses a stack for remembering the values of local variables inside
-functions when you call another function.
+The reason we covered classes today is because they are used everywhere when dealing with modules - the things that most people rely on to do their daily work with Python. Next time we'll cover a few of those with a focus on the ones that are useful for data science.
