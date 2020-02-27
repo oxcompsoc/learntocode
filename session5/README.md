@@ -1,4 +1,4 @@
-# Session 5: Dictionaries, stacks, and where to go next
+# Session 5: Dictionaries(cont.) and Object-Oriented Programming
 
 You can find the resources for last week's session [here][s4notes].
 
