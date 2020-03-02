@@ -99,7 +99,7 @@ Here, I've navigated to my `learn_to_code` folder. To create a new notebook, sim
 
 You should now get a window that looks something like this: ![jupyter3]
 
-For the rest of the tutorial, open up the `notebook.ipynb` on this page. Don't worry about memorizing or even fully understanding everything on that page, it is meant as more of a tour of the powerful tools that exist for Python. Also, please don't treat this as a tutorial for *actually* doing data science. This is more a tour of the functionality available to you, should you want to try. If you want to learn more about this area in particular, I encourage you to look up more resources, which will explain the theory in detail.
+For the rest of the tutorial, open up the `notebook.ipynb` file on this page. Don't worry about memorizing or even fully understanding everything on that page, it is meant as more of a tour of the powerful tools that exist for Python. Also, please don't treat this as a tutorial for *actually* doing data science. This is more a tour of the functionality available to you, should you want to try. If you want to learn more about this area in particular, I encourage you to look up more resources, which will explain the theory in detail.
 
 ## Closing remarks
 
