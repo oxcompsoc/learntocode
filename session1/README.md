@@ -301,15 +301,15 @@ print(str(c) + " Celsius = " + str(f) + " Fahrenheit")
 ```
 
 ## Exercises
-1) Now try to combine the last two programs, so that you print out the person's name, as well as their favourite number multiplied by two.
+1)  Now try to combine the last two programs, so that you print out the person's name, as well as their favourite number multiplied by two.
 
 
-2) Try to write a similar program that converts Fahrenheit to Celsius
+2)  Try to write a similar program that converts Fahrenheit to Celsius
 
-(°F − 32) × 5/9 = °C
+    (°F − 32) × 5/9 = °C
 
 
-3) **Average of two numbers:** create a program which takes as input two numbers and computes their average. Can think of how you could extend this to compute the average of three numbers? How about the average of ten numbers?
+3)  **Average of two numbers:** create a program which takes as input two numbers and computes their average. Can think of how you could extend this to compute the average of three numbers? How about the average of ten numbers?
 
 
 <!-- !: END OF FIRST SESSION IN 2022 -->
