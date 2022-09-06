@@ -169,16 +169,16 @@ If unsure, just use the first form: `number = number + 1`.
 
 In the specific case when we have `number += 1` (i.e. we have `1` on the right-hand side) we say that we **increment** `number`. When we do `number -= 1` we say that we **decrement** `number`.
 ### Worked example: summing from 1 to `n`
-The following example sums numbers from 1 to `n`, including `n`. 
+The following example sums the first `n` natural numbers, including `n`. 
 
 ```python
-n = int(input("Input a number: "))
+n = int(input("Please enter a number: "))
 
 sum = 0
 for i in range(1,n+1):
     sum += i
 
-print(sum)
+print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 ```
 
 ### Exercises
@@ -308,7 +308,20 @@ print(sum)
 
 ## While loops
 
-Imagine we wanted to create a simple security program, which asks our user for a password, until they enter the correct one. One way to do this is:
+Let's look at another way to print the square:
+
+```python
+print("**********")
+i = 0
+while i<8:
+    print("*        *")
+    i+=1
+print("**********")
+```
+
+The idea with the while loop is very simple: the code in the body of the loop will be executed repeatedly, while the condition remains true; otherwise said: until the condition becomes false. In each iteration, i got incremented by 1, until it reaches 8 and the loop quits. Hence the loop is run 8 times.
+
+We can use while loops to do more things. Imagine we wanted to create a simple security program, which asks our user for a password, until they enter the correct one. One way to do this is:
 
 ```python
 SECRET_PASSWORD = "pass123"
@@ -323,81 +336,11 @@ while user_input != SECRET_PASSWORD:
 print("Access granted.")
 ```
 
-This program will continue prompting the user for a password until they input the correct password, which is "pass123". One way to think about the above code is like this **(Note: this is NOT actual Python code)**:
-
-```python
-SECRET_PASSWORD = "pass123"
-
-user_input = input("Please enter a password: ")
-
-<START OF WHILE LOOP>
-if user_input != SECRET_PASSWORD:
-  print("Access denied: wrong password.")
-  print() # Print a newline. This is just here to make things look nicer.
-  user_input = input("Please enter the password: ")
-  GOTO: <START OF WHILE LOOP>
-
-print("Access granted.")
-```
-
-Here, `<START OF WHILE LOOP>` is just there to label that line. Then the `GOTO` says that the program should start executing that line again.
-
-So back to the actual code. The idea with the while loop is very simple: the code in the body of the loop will be executed repeatedly, while the condition remains true; otherwise said: until the condition becomes false. In this case, while the user keeps entering the wrong password, the program will keep prompting them for a new one.
+In this case, while the user keeps entering the wrong password, the program will keep prompting them for a new one.
 
 Now, if the user enters the correct password on their first try, the body of the loop will not be executed.
 
-## Short aside: incrementing numbers
-
-We've seen before that we can do:
-```python
-number = 1
-print(number + 1) # Prints '2'
-print(number) # Prints '1'
-```
-
-But what if we want to actually increase the values of `number`? We might be tempted to do:
-```python
-number = 1
-number + 1
-print(number) # Still prints '1'
-```
-But that doesn't change `number` at all: it just asks Python to evaluate what `number + 1` is. The way to actually increment `number` is:
-
-```python
-number = 1
-number = number + 1
-print(number) # Prints '2'
-```
-This might seem a bit confusing at first, since `number` appears both on the left and on the right of the `=`. The rule in Python is that stuff on the right side of and `=` are evaluated before stuff on the left side. You can think about the above code like it was shorthand for this:
-
-```python
-number = 1
-temp = number + 1
-number = temp
-print(number)
-```
-
-Another way to do this exact same thing is:
-```python
-number = 1
-number += 1
-print(number)
-```
-
-Here, the `+=` operator is used as a shorthand for writing `number = number + 1`. These kinds of shorthands are usually referred to as _syntactic sugar_ in programming - it's shorter so it's "sweeter" for people to read and write. There are analogous operators: `-=`, `*=`, `/=`, etc.
-```python
-number = 1
-number += 2
-number -= 3
-number *= 4
-number /= 5
-# ...
-```
-If unsure, just use the first form: `number = number + 1`. 
-
-In the specific case when we have `number += 1` (i.e. we have `1` on the right-hand side) we say that we **increment** `number`. When we do `number -= 1` we say that we **decrement** `number`.
-
-## Back to while loops
+### Worked examples
 
 Let's see some more examples. Here is how we print the first n natural numbers:
 ```python
@@ -409,7 +352,7 @@ while i <= n:
   i += 1 # Increment i (i becomes bigger by 1).
 ```
 
-This is a very common paradigm in all of programming. It is called **iterating** over a range. This is because, within the while loop, the variable `i` consecutively takes all values from 1 to n. It is almost ubiquitous to use variable names like `i`, `j`, `k` for iteration.
+Again, the variable `i` consecutively takes all values from 0 to n-1, it helps us to keep track of our progress while looping, the following example uses the value `i` to print out the first `n` non-negative even numbers. It is common to use variable names like `i`, `j`, `k` for iteration.
 
 Here is how we calculate the sum of the first n natural numbers:
 ```python
@@ -439,12 +382,19 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 
 If that looks like the same code to you, don't worry; even experienced programmers often make this simple mistake. The issue is that we don't increment `i` within the body of the loop. So every time we pass through the loop, `i` remains `1`. If `n` is more than `2`, then this loop will go on forever. **This is a very common mistake. Always keep this in mind if your program seems to "hang".**
 
-## Exercises:
+### For loops and while loops
 
-*When attempting these exercises, I suggest you type out the code by hand, rather than copy-pasting it. Pay attention to all of the symbols you are typing and see if you can recall why they are there.*
+Yes we can do everything we can do with for loops using while loops. But for loops are useful because `for` loops take care of a lot of things for us - you don't have to define your own `i` and increment it yourself. On the other hand, `for` loops less flexible - there are some cases where you might not want to have a counter or you might want to decrement it, hence there are some cases that only `while` loops can be used.
 
-### Easy:
+It is up to you which kind of loop you are going to use based on the situation, sometimes you can only use `while` loops.
+
+**Exercise: Implement some of the exercises you have done in the for loops section using while loops.**
+
+### Exercises:
+#### Easy:
+
 1)  What are the outputs of the following program segments?
+
     ```python
     # a)
     i = 5
@@ -501,8 +451,14 @@ If that looks like the same code to you, don't worry; even experienced programme
         i+=4
         print(i)
     ```
+
+
+*When attempting these exercises, I suggest you type out the code by hand, rather than copy-pasting it. Pay attention to all of the symbols you are typing and see if you can recall why they are there.*
+
 2)  Create a program that asks the user to input a number `n`, and then prints the first `n` natural numbers in reverse order. E.g. if `n` is 4, your program should print: '4 3 2 1', each number being on a new line. (*Hint: model your program after one of the programs we already wrote.*)
+
 3)  Complete the program below, which asks the user to input a number `n` and then prints the product of the first `n` natural numbers. E.g. if the input is 4, your program should calculate 1 * 2 * 3 * 4 and print the result.
+
     ```python
     n = int(input("Please enter a number: "))
 
@@ -513,6 +469,7 @@ If that looks like the same code to you, don't worry; even experienced programme
 
     print(product)
     ```
+
 4)  Complete the program below, which asks the user to input a number `max` and then prints all square numbers until `max`. E.g. if the input is 100, you should print 1,4,9,16,25,36,49,64,81,100
     ```python
     n = int(input("Please enter a number: "))
@@ -522,18 +479,10 @@ If that looks like the same code to you, don't worry; even experienced programme
         print #...
         base #...
     ```
-5)  Complete the program below, which prints a square of *s of size 8.
-    ```python
-    print("********")
-    i = #...
-    while #...
-        print("*      *")
-        #...
-    print("********")
 
-    ```
-### Medium:
-4)  Create a program, which repeatedly asks the user to input a number, until their number is greater than 9. A run of your program might look like:
+#### Medium:
+
+5)  Create a program, which repeatedly asks the user to input a number, until their number is greater than 9. A run of your program might look like:
     ```
     Please enter a number: 5
     That number is too small!
@@ -542,52 +491,22 @@ If that looks like the same code to you, don't worry; even experienced programme
     Please enter a number: 10
     That's a good number!
     ``` 
-5)  Create a program, which continuously prompts the user to input a first name and a last name, until the names they enter match yours.
+6)  Create a program, which continuously prompts the user to input a first name and a last name, until the names they enter match yours.
 
-### Hard:
+#### Hard:
 
-5)  (Math) Write a program, which asks the user for an input `n` and then for `n` numbers. Then, it prints out the average of those `n` numbers. A run of your program might look something like this:
+7)  (Math) Write a program, which calculates the average of numbers. The program terminates when -1 is inputted.
 
   ```
-  How many numbers: 3
   Please enter a number: 1
   Please enter a number: 3
   Please enter a number: 5
+  Please enter a number: -1
   The average was: 3.0
   ```
-### Expert:
-6)  Create a program, which takes as input a number `n` and then prints the following:
+  <!-- TODO: nested while and for loop exercises  -->
+#### Expert:
 
-    1
-
-    1 2
-
-    1 2 3
-
-    .............
-
-    1 2 3 4 ... n
-  
-  *Hint: If you want to print something without a newline at the end, the way to to that is:*
-  ```python
-  number = 10
-  print(number, end=" ") # This will print " " after number.
-  ```
-
-5)  Create a program, which prints a square of *s of size `n` based on input. As a generalisation of a previous question. 
-    ```Sample:
-    Input side length of the square: 10
-    **********
-    *        *
-    *        *
-    *        *
-    *        *
-    *        *
-    *        *
-    *        *
-    *        *
-    **********
-    ```
 
 ## Lists
 
