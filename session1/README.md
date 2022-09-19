@@ -181,7 +181,7 @@ Integer | Number without decimal places | `1`,`5`, `15`, `15404505`, `-455`, `0`
 Float | Number with decimal places | `1.5`, `40.4550590`, `1.0`, `53.4`, `-0.588`, `-458.5` |
 String | Piece of text | `"a"`, `"boy"`, `"I am a boy!"`, `"I like basketball"`, `"Hello world"`, `"Test"`|
 
-### Integers VS Floats
+### Integers and Floats
 
 We can change constants from an integer to a float by appending `.0` at the end. 
 
@@ -218,6 +218,8 @@ However, this is not the case. Floats cannot store numbers exactly and will resu
 ```python
 30000000000000000000000001-30000000000000000000000000 # 1
 30000000000000000000000001.0-30000000000000000000000000.0 #0.0
+
+int(30000000000000000000000001.0) #30000000000000000570425344
 ```
 
 ### Strings
@@ -296,7 +298,7 @@ print("Your favourite number times two is: " + str(2 * your_favourite_number))
 
 ```python
 c = float(input("Input temperature in Celsius: "))
-f = 9 / 5.0 * c + 32 # Replace 5.0 with 5 and see what happens, why?
+f = 9 / 5.0 * c + 32
 print(str(c) + " Celsius = " + str(f) + " Fahrenheit")
 ```
 
