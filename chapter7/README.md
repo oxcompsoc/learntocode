@@ -1,4 +1,4 @@
-# Session 5: Coding some games 
+# Chapter 7: Coding some games 
 
 In this session we will code some games, to consolidate what we have learnt in the previous sessions.
 

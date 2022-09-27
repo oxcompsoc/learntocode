@@ -1,4 +1,4 @@
-# Session 6: A tour of data science with Python
+# Chapter 8: A tour of data science with Python
 
 ## Introduction
 

@@ -1,9 +1,9 @@
-# Session 1: Introduction to Python
+# Chapter 1: Introduction to Python
 
 The first thing that you’ll need to do is make sure you have Python installed on your
 computer. You can find information on how to do that [here][install].
 
-[install]: https://github.com/oxcompsoc/learntocode/tree/master/session0
+[install]: https://github.com/oxcompsoc/learntocode/tree/master/chapter0
 
 Throughout these documents note that text in a `monospaced font` is Python code.
 
@@ -307,3 +307,21 @@ print(str(c) + " Celsius = " + str(f) + " Fahrenheit")
 
 
 3)  **Average of two numbers:** create a program which takes as input two numbers and computes their average. Can think of how you could extend this to compute the average of three numbers? How about the average of ten numbers?
+
+## Good resources to look at
+
+ * [Khanacademy][] - good for learning about computer science and computational
+   thinking
+
+ * [Codecademy][] - excellent introductory courses in different programming
+   languages. Note that they currently use Python 2.x, whereas we are using
+   Python 3.x
+
+ * [Project Euler][euler] - programming challenges, probably a good place to
+   practice after a couple of weeks
+
+ * [Learn Python the Hard Way](https://learnpythonthehardway.org/python3/)
+
+[khanacademy]: http://khanacademy.org
+[codecademy]: http://codecademy.com
+[euler]: http://projecteuler.net
