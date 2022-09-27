@@ -1,8 +1,5 @@
 # Session 1: Introduction to Python
 
-<!-- Not necessary in my opinion -->
-<!-- *For a very brief summary of the content covered in this session, click [here](#summary).* -->
-
 The first thing that you’ll need to do is make sure you have Python installed on your
 computer. You can find information on how to do that [here][install].
 
@@ -11,7 +8,7 @@ computer. You can find information on how to do that [here][install].
 Throughout these documents note that text in a `monospaced font` is Python code.
 
 ## Information about CompSoc
-<!-- TODO: needs update -->
+<!-- TODO: Needs updating -->
 The [Oxford University Computer Society][compsoc] was founded in 1978, making
 it one of the oldest university computing societies in the country. Today we
 host regular talks from large companies, socials each Saturday, and Learn
@@ -21,12 +18,15 @@ to Code each Hilary Term.
 [compsoc]: https://ox.compsoc.net
 
 ## IDLE
-<!-- TODO: decide whether we use the prompt or the file, explain clearly the difference between the two, specifying that not every programming language has sth similar to the IDLE, and using the file allowing you to learn more? -->
+
 Once you have Python installed you’ll be able to launch a piece of software
 called IDLE. When you first launch it you will be greeted with a prompt where
-you can type in statements or expressions in Python. In these sessions we will
-not be using the prompt, so instead create a new file (**File > New File**).
+you can type in statements or expressions in Python.
+The IDLE is used for learning and experimenting purposes.
 
+## Text Editor
+
+The IDLE is not suitable for writing actual large programs. Instead, we would use the text editor method. We can create a new file by clicking **File > New File** at the top menu bar of the IDLE.
 ### Problems installing Python or using IDLE
 
 If you can't get Python installed on your computer, don't worry! Instead,
@@ -57,7 +57,6 @@ see the output `"Hello, world!"`.
 
 
 There are three elements to consider here:
-<!-- TODO: This is probably too difficult and unecessary for understanding? -->
 * `print` is the name of a **function**. Functions are pieces of code that do
   something and/or calculate something. The `print` function outputs text
   (historically, the some of the earliest computers used physical printers as
@@ -237,10 +236,6 @@ print("Hello, " + "world!")
 
 Here Python will join (`+`) the two strings together to form one string that is
 then given to the `print` function.
-
-<!-- TODO: Not necessary in my opinion -->
-<!-- **Exercise:** there are many other ways to manipulate strings in Python. -->
-<!-- Investigate how to multiply a string or convert it to uppercase/lowercase. -->
 
 You could convert strings to integers and floats using the `int` and `float` functions respectively. You could also convert integers and floats to strings using the function `str`.
 
