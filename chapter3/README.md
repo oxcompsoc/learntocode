@@ -1,10 +1,6 @@
 # Chapter 3: For loops and while loops
 
-See [here][s2notes] for last week's content.
-
-[s2notes]: https://github.com/oxcompsoc/learntocode/tree/master/session2
-
-## The need of looping
+## The need for looping
 Imagine you have to print a square of *s using Python.
 
 ```
@@ -151,6 +147,7 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 ```
 
 ### Exercises
+<!-- Will do Q1, 4, 5, 6 in lesson -->
 #### Easy
 
 1)  What are the outputs of the following program segments?
@@ -209,14 +206,13 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 4)  Write a program, which asks the user for an input `n` and then for `n` numbers. Then, it prints out the average of those `n` numbers. A run of your program might look something like this:
 
     ```
-    How many numbers: 3
+    How many numbers? 3
     Please enter a number: 1
     Please enter a number: 3
     Please enter a number: 5
     The average was: 3.0
     ```
 
-#### Hard
 5)  Complete the program below, which outputs the first `n` fibonacci numbers. (Each number is the sum of the two preceding ones, starting with 0,1.)
 
     ```python
@@ -224,8 +220,10 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
     a = 0
     b = 1
     for ______ in range(t):
-        a = ________________________
-        b = ________________________
+        c = a + b # calculate new term
+        #shift the terms by 1
+        a = ____
+        b = ____
     print("Term " + str(i) + " is " + _____________)
     ```
     ```
@@ -240,7 +238,7 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
     ...
     Term 14 is 377 (just for checking)
     ```
-#### Expert
+#### Hard
 6)  Create a program, which takes as input a number `n` and then prints the following:
 
     1
@@ -260,7 +258,7 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
     print(number, end=" ") # This will print " " after number.
     ```
 
-7)  Create a program, which prints a square of *s of size `n` based on input. As a generalisation of the example. 
+7)  a)  Create a program, which prints a square of *s of size `n` based on input. As a generalisation of the example. 
     ```Sample:
     Input side length of the square: 10
     **********
@@ -274,6 +272,10 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
     *        *
     **********
     ```
+
+    b)  Try not to use string "multiplication" and string "addition".
+
+    c)  Try modify your program so that it only outputs 1 star when n is 1, and no stars when n <= 0
 
 ## While loops
 
@@ -311,7 +313,7 @@ Now, if the user enters the correct password on their first try, the body of the
 
 ### Worked examples
 
-Let's see some more examples. Here is how we print the first n natural numbers:
+Let's see some more examples. Here is how we print the first `n` positive integers:
 ```python
 n = int(input("Please enter a number: "))
 
@@ -362,7 +364,7 @@ It is up to you which kind of loop you are going to use based on the situation, 
 ### Exercises:
 #### Easy:
 
-1)  What are the outputs of the following program segments?
+8)  What are the outputs of the following program segments?
 
     ```python
     # a)
@@ -424,12 +426,20 @@ It is up to you which kind of loop you are going to use based on the situation, 
 
 *When attempting these exercises, I suggest you type out the code by hand, rather than copy-pasting it. Pay attention to all of the symbols you are typing and see if you can recall why they are there.*
 
-2)  Create a program that asks the user to input a number `n`, and then prints the first `n` natural numbers in reverse order. E.g. if `n` is 4, your program should print: '4 3 2 1', each number being on a new line. (*Hint: model your program after one of the programs we already wrote.*)
+9)  Create a program that asks the user to input a number `n`, and then prints the first `n` positive integers in reverse order. E.g. if `n` is 4, your program should print: '4 3 2 1', each number being on a new line. (*Hint: model your program after one of the programs we already wrote.*)
 
-3)  Complete the program below, which asks the user to input a number `n` and then prints the product of the first `n` natural numbers. E.g. if the input is 4, your program should calculate 1 * 2 * 3 * 4 and print the result.
+    ```
+    Sample:
+    Please enter a number: 4
+    4
+    3
+    2
+    1
+    ```
+10)  Complete the program below, which asks the user to input a number `n` and then prints the product of the first `n` natural numbers. 
 
     ```python
-    n = int(input("Please enter a number: "))
+    n = int(input("Please enter a non-negative integer: "))
 
     product = 1
     i = 1
@@ -439,7 +449,14 @@ It is up to you which kind of loop you are going to use based on the situation, 
     print(product)
     ```
 
-4)  Complete the program below, which asks the user to input a number `max` and then prints all square numbers until `max`. E.g. if the input is 100, you should print 1,4,9,16,25,36,49,64,81,100
+    ```
+    Sample:
+    Please enter a non-negative integer: 4
+    24
+    ```
+
+11)  Complete the program below, which asks the user to input a number `max` and then prints all square numbers until `max`.
+    
     ```python
     n = int(input("Please enter a number: "))
 
@@ -449,9 +466,24 @@ It is up to you which kind of loop you are going to use based on the situation, 
         base #...
     ```
 
+    ```
+    Sample:
+    Please enter a number: 100
+    1
+    4
+    9
+    16
+    25
+    36
+    49
+    64
+    81
+    100
+    ```
+
 #### Medium:
 
-5)  Create a program, which repeatedly asks the user to input a number, until their number is greater than 9. A run of your program might look like:
+12)  Create a program, which repeatedly asks the user to input a number, until their number is greater than 9. A run of your program might look like:
     ```
     Please enter a number: 5
     That number is too small!
@@ -460,11 +492,22 @@ It is up to you which kind of loop you are going to use based on the situation, 
     Please enter a number: 10
     That's a good number!
     ``` 
-6)  Create a program, which continuously prompts the user to input a first name and a last name, until the names they enter match yours.
+13)  Create a program, which continuously prompts the user to input a first name and a last name, until the names they enter match yours.
 
+14) Modify the code you wrote for question 10, give an error message if user inputs a negative number, and asks the user to input again.
+
+    ```
+    Sample:
+    Please enter a non-negative integer: -99
+    Invalid number! Please enter again.
+    Please enter a non-negative integer: -3
+    Invalid number! Please enter again.
+    Please enter a non-negative integer: 4
+    24
+    ```
 #### Hard:
 
-7)  (Math) Write a program, which calculates the average of numbers. The program terminates when -1 is inputted.
+15)  (Math) Write a program, which calculates the average of numbers. The program terminates when -1 is inputted.
 
   ```
   Please enter a number: 1
@@ -473,11 +516,11 @@ It is up to you which kind of loop you are going to use based on the situation, 
   Please enter a number: -1
   The average was: 3.0
   ```
-  <!-- TODO: nested while and for loop exercises  -->
-#### Expert:
+  <!-- No nested while and for loop exercises, maybe add some after we have introduced lists.  -->
+<!-- #### Expert: -->
 
 **You can find all the [solutions here][solutions].**
 
-[solutions]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/solutions.py
+[solutions]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/chapter3
 
 

@@ -298,6 +298,9 @@ print(str(c) + " Celsius = " + str(f) + " Fahrenheit")
 ```
 
 ## Exercises
+
+*When attempting these exercises, I suggest you type out the code by hand, rather than copy-pasting it. Pay attention to all of the symbols you are typing and see if you can recall why they are there.*
+
 1)  Now try to combine the last two programs, so that you print out the person's name, as well as their favourite number multiplied by two.
 
 
