@@ -148,12 +148,52 @@ else:
 
 ## Exercise
 
-* **One detector:** create a program, which takes as input an int and outputs "This number is 1" if the input was 1 and "This input was not 1" otherwise.
+### Easy
+1)  **One detector:** create a program, which takes an input (an int) and outputs "This number is 1" if the input was 1 and "This input was not 1" otherwise.
 
-* **Average of two numbers:** create a program which takes as input two numbers and computes their average. Can think of how you could extend this to compute the average of three numbers? How about the average of ten numbers?
+2) **Subtraction:** create a program, which takes two integers, and outputs the result of the larger number subtracting the smaller number.
 
+  ```python
+  first = ________(input("Input first number: "))
+  second = ________(input("Input second number: "))
+  if ________ < ________:
+      #swap the two numbers
+  answer = first - second
+  print("The answer of "+str(first)+"-"+str(second)+" is " + str(answer))
+  ```
+  ```
+  Samples:
+  Input first number: 4
+  Input second number: 3
+  The answer of 4-3 is 1
 
+  Input first number: 3
+  Input second number: 4
+  The answer of 4-3 is 1
+  ```
+### Hard
 
+3) **Leap Year:** a. create a program, which determines whether a year is a leap year.
 
+  ![How to check for leap years](leap_year.png)
+
+  (*You will need to use the operator %. a % b gives the remainder when a is divided by b*)
+
+  ```
+  Samples:
+  Enter year: 2022
+  2022 is not a leap year
+
+  Enter year: 2020
+  2020 is a leap year
+
+  Enter year: 2000
+  2000 is a leap year
+
+  Enter year: 1900
+  1900 is not a leap year
+  ```
+
+  b. Try to achieve the same result by only using one if else block.
 
 
