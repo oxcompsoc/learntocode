@@ -299,6 +299,28 @@ f = 9 / 5 * c + 32
 print(str(c) + " Celsius = " + str(f) + " Fahrenheit")
 ```
 
+## Sneak Peak - If Statements
+
+We often want our programs to adapt their behaviour based on the input they receive. For instance, lets say we want to create a program, which tells our user if the number they input is small (e.g. less than 10). This is what the next program does:
+
+```python
+number = int(input("Please enter a number: "))
+if number < 10:
+  print(number + " is a small number.")
+```
+
+We could also have our program say something if the number is large as well:
+
+```python
+number = int(input("Please enter a number: "))
+if number < 10:
+  print(number + " is a small number.")
+else:
+  print(number + " is a large number.")
+```
+
+We will discuss more on if statements in the next session.
+
 ## Exercises
 
 *When attempting these exercises, I suggest you type out the code by hand, rather than copy-pasting it. Pay attention to all of the symbols you are typing and see if you can recall why they are there.*
