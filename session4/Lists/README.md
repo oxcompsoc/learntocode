@@ -1,4 +1,4 @@
-# Chapter 4: Lists
+# Session 4: Lists
 
 Suppose we wanted to create a shopping list app. We would like to be able to store our user's shopping list and retrieve the items from it on demand. This is where Python lists come in. Here is how we create a list:
 

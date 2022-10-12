@@ -1,8 +1,8 @@
-# Chapter 2: If statements
+# Session 2: If statements
 
 See [here][week1] for last week's content. 
 
-[week1]: https://github.com/oxcompsoc/learntocode/tree/master/chapter1
+[week1]: https://github.com/oxcompsoc/learntocode/tree/master/session1
 
 We often want our programs to adapt their behaviour based on the input they receive. For instance, lets say we want to create a program, which tells our user if the number they input is small (e.g. less than 10). This is what the next program does:
 

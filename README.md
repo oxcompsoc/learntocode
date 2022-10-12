@@ -1,8 +1,8 @@
 # Learn to Code
 
 Each year [Oxford University CompSoc][compsoc] runs an introductory programming
-course in Python. This repositories contains all of the code samples used in the
-2020 course.
+course in Python. This repositories contains all of the notes and code samples used in the
+2022 course.
 
 To run these code samples you will need [Python 3][python]. For the sessions we recommend using IDLE, a piece of software which comes pre-installed with Python. Alternatively you can run the samples in a terminal via:
 
@@ -25,12 +25,12 @@ and their solutions.
 | Session           | Week | Notes             | Slides                |
 | ----------------- | ---- | ----------------- | --------------------- |
 | Session 0: Installing Python                                  | N/A  | [Notes][s0notes]  | N/A | N/A |
-| Session 1: Introduction: What can you do with Python? Python syntax, variables, if statements | 2    | [Notes][s1notes]  | [Slides][s1slides] |
-| Session 2: While loops, Lists                | 3    | [Notes][s2notes]  | [Slides][s2slides] |
-| Session 3: For loops, More Lists, Dictionaries                                            | 4    | [Notes][s3notes]  | [Slides][s3slides] |
-| Session 4: Functions                | 5    | [Notes][s4notes]  | [Slides][s4slides] |
-| Session 5: Object Oriented Programming         | 6    | TBA  | TBA |
-| Session 6: Intro to Data Science with Python   | 7    | TBA  | TBA |
+| Session 1: Introduction: What can you do with Python? Python syntax, variables | 2    | [Notes][s1notes]  | [Slides][s1slides] |
+| Session 2: If statements                | 3    | [Notes][s2notes]  | N/A |
+| Session 3: For loops, While loops *(Tentative)*                                         | 4    | [Notes][s3notes]  | N/A |
+| Session 4: Lists *(Tentative)*                | 5    | Work in progress  | N/A |
+| Session 5: Functions, Dictionaries *(Tentative)*         | 6    | Work in progress  | N/A |
+| Session 6: Creating a snake game   | 7    | Work in progress  | N/A |
 
 [s0notes]: https://github.com/oxcompsoc/learntocode/tree/master/session0/README.md
 
@@ -53,6 +53,9 @@ and their solutions.
 [s5notes]: https://github.com/oxcompsoc/learntocode/tree/master/session5/README.md
 [s5slides]: https://github.com/oxcompsoc/learntocode/blob/master/session5/slides.pdf
 [s5video]: https://youtu.be/uDT3xMpaCKY
+
+[s6notes]: https://github.com/oxcompsoc/learntocode/tree/master/session6/README.md
+[s6slides]: https://github.com/oxcompsoc/learntocode/blob/master/session6/slides.pdf
 
 ## Running your own Learn to Code
 

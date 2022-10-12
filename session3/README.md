@@ -1,4 +1,4 @@
-# Chapter 3: For loops and while loops
+# Session 3: For loops and while loops
 
 ## The need for looping
 Imagine you have to print a square of *s using Python.
@@ -521,6 +521,6 @@ It is up to you which kind of loop you are going to use based on the situation, 
 
 **You can find all the [solutions here][solutions].**
 
-[solutions]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/chapter3
+[solutions]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3
 
 

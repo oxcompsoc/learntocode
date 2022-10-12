@@ -1,18 +1,20 @@
-# Chapter 1: Introduction to Python
+# Session 1: Introduction to Python
 
 The first thing that you’ll need to do is make sure you have Python installed on your
 computer. You can find information on how to do that [here][install].
 
-[install]: https://github.com/oxcompsoc/learntocode/tree/master/chapter0
+[install]: https://github.com/oxcompsoc/learntocode/tree/master/session0
 
 Throughout these documents note that text in a `monospaced font` is Python code.
 
 ## Information about CompSoc
 <!-- TODO: Needs updating -->
 The [Oxford University Computer Society][compsoc] was founded in 1978, making
-it one of the oldest university computing societies in the country. Today we
-host regular talks from large companies, socials each Saturday, and Learn
-to Code each Hilary Term.
+it one of the oldest university computing societies in the country. 
+
+This year, we will be holding Thursday Talks from both academics and sponsor / Workshops on Thursdays. Learn to code and socials on Saturdays.
+
+[Refer to our website for more and latest details of all events.][compsoc]
 
 
 [compsoc]: https://ox.compsoc.net

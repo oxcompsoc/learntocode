@@ -1,10 +1,10 @@
-# Chapter 0: Installing Python
+# Session 0: Installing Python
 
-In the [first session][chapter1] we'll be studying the basics of **Python**, so
+In the [first session][session1] we'll be studying the basics of **Python**, so
 it would be great if you could get it installed before the session starts. Learn
 to Code sessions are all interactive, so please bring your laptop!
 
-[chapter1]: https://github.com/oxcompsoc/learntocode/tree/master/chapter1
+[session1]: https://github.com/oxcompsoc/learntocode/tree/master/session1
 
 ## What is Python?
 
@@ -52,7 +52,7 @@ programs. To launch IDLE
   &#8984; + space and type `IDLE`
 
 That's all you need to do before the first session! If you're interested in
-looking ahead to what we'll be studying, feel free to look at [notes for the first session][chapter1].
+looking ahead to what we'll be studying, feel free to look at [notes for the first session][session1].
 
 ## Getting to the department
 
