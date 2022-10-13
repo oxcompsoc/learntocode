@@ -8,11 +8,10 @@ computer. You can find information on how to do that [here][install].
 Throughout these documents note that text in a `monospaced font` is Python code.
 
 ## Information about CompSoc
-<!-- TODO: Needs updating -->
 The [Oxford University Computer Society][compsoc] was founded in 1978, making
 it one of the oldest university computing societies in the country. 
 
-This year, we will be holding Thursday Talks from both academics and sponsor / Workshops on Thursdays. Learn to code and socials on Saturdays.
+This year, we will be holding Thursday Talks from both academics and sponsor / Workshops on Thursdays (Weeks 2-8 5-6pm). Learn to code and socials on Saturdays (Weeks 1-7 7pm).
 
 [Refer to our website for more and latest details of all events.][compsoc]
 
@@ -333,7 +332,7 @@ We will discuss more on if statements in the next session.
     (°F − 32) × 5/9 = °C
 
 
-3)  **Average of two numbers:** create a program which takes as input two numbers and computes their average. Can think of how you could extend this to compute the average of three numbers? How about the average of ten numbers?
+3)  **Average of two numbers:** create a program which takes as input two numbers and computes their average. We will generalise the program to calculate the average of more than two numbers in the next few sessions.
 
 ## Good resources to look at
 
