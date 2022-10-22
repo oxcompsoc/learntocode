@@ -198,7 +198,7 @@ For other arithmetic operators mentioned above, they give floats when any of the
 
 ```python
 print(4+4) # 8 (an integer)
-print(8.0-4) # 8.0 (a float)
+print(8.0-4) # 4.0 (a float)
 print(3.8*4) # 15.2 (a float)
 print(8**4) # 4096 (an integer)
 print(16**0.5) # 4.0 (a float)
