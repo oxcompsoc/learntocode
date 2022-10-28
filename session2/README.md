@@ -4,6 +4,20 @@ See [here][week1] for last week's content.
 
 [week1]: https://github.com/oxcompsoc/learntocode/tree/master/session1
 
+## Clarifications from last session
+
+In the last session we introduced two ways of printing strings and variables using `+` and `,` respectively
+
+```python
+average = 3.0
+print("The average is "+str(average)) # The average is 3.0
+print("The average is", average) # The average is 3.0
+```
+
+Both works perfectly fine but to prevent confusion, we would use `+` from now on.
+
+## If statements
+
 We often want our programs to adapt their behaviour based on the input they receive. For instance, lets say we want to create a program, which tells our user if the number they input is small (e.g. less than 10). This is what the next program does:
 
 ```python
@@ -54,6 +68,8 @@ There are several important concepts to note here:
  * We can compare numbers and strings using the comparison operators `==`, `!=` (not equal), `<=` (less than or equal), `>=` (greater than or equal), `<` (less than), and `>` (greater than)
  * `if` statements can be nested
 
+## `elif`
+
 We can also abbreviate the following:
 
 ```python
@@ -81,6 +97,8 @@ else:
 
 You can have as many `elif` branches as you like, but only one `if` branch and
 one `else` branch, which must appear at the beginning and end respectively.
+
+## `and` `or` `not`
 
 Here we used the keyword `and` to mean that we want both `number >= 10` and `number < 100` to be true for that branch to be executed. You could use `or` and `not` in expressions, e.g.
 
