@@ -189,9 +189,32 @@ else:
   Input second number: 4
   The answer of 4-3 is 1
   ```
+
+### Medium
+
+3)  **Award**: Students can only get an award if they get a score of 60 or more and get an "A" for conduct. Create a program, which takes one integer (a score) and one string (a conduct grade), and tell whether the student could get an award.
+
+  ```
+  Samples:
+  Enter score: 88
+  Enter conduct grade: A
+  Congratulations! You get an award.
+
+  Enter score: 88
+  Enter conduct grade: B
+  Your conduct grade is not A.
+
+  Enter score: 40
+  Enter conduct grade: A
+  Your score is not high enough.
+
+  Enter score: 40
+  Enter conduct grade: C
+  Your score is not high enough and your conduct grade is not A.
+  ```
 ### Hard
 
-3) **Leap Year:** a. create a program, which determines whether a year is a leap year.
+4) **Leap Year:** a. create a program, which determines whether a year is a leap year.
 
   ![How to check for leap years](leap_year.png)
 
