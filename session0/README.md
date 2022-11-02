@@ -60,24 +60,23 @@ Once you opened the IDLE, you will be greeted with the interactive version of Py
 
 Instead, what we would usually do is to open a new file by clicking on `File` on the top-left corner, then click `New File`.
 
-![Interactive](TODO.png)
+![New File](newfile.png)
 
 A new empty file is then created and now we can write our code in there.
 
-![Interactive](TODO.png)
+![Code Text Version](codetextversion.png)
 
 After you have written your code, you can run it by clicking on `Run` on the top-left corner, then click `Run Module`. 
 
-![Interactive](TODO.png)
+![Run Module](runmodule.png)
 
-It might ask you to save your code, just click yes.
+It might ask you to save your code, just click yes. You can save the Python code wherever you want on the computer.
 
-![Interactive](TODO.png)
-
+![Save](save.png)
 
 Then, your code will be run in the IDLE window. 
 
-![Interactive](TODO.png)
+![Result](result.png)
 
 Note that you need to click `Run Module` everytime if you would like to run the program several more times.
 
