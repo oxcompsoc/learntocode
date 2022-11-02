@@ -277,6 +277,8 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 
     c)  Try modify your program so that it only outputs 1 star when n is 1, and no stars when n <= 0
 
+**You can find all the [solutions here][solutions].**
+
 ## While loops
 
 Let's look at another way to print the square:
@@ -521,6 +523,6 @@ It is up to you which kind of loop you are going to use based on the situation, 
 
 **You can find all the [solutions here][solutions].**
 
-[solutions]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3
+[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session3
 
 
