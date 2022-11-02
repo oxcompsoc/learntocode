@@ -27,9 +27,9 @@ and their solutions.
 | Session 0: Installing Python                                  | N/A  | [Notes][s0notes]  | [PDF][s0pdf] | N/A |
 | Session 1: Introduction: What can you do with Python? Python syntax, variables | 2    | [Notes][s1notes]  | [PDF][s1pdf]| [Slides][s1slides] |
 | Session 2: If statements                | 3    | [Notes][s2notes]  | [PDF][s2pdf] | N/A |
-| Session 3: For loops, While loops *(Tentative)*                                         | 4    | [Notes][s3notes]  | [PDF][s3pdf]| N/A |
-| Session 4: Lists *(Tentative)*                | 5    | Work in progress  | Work in progress | N/A |
-| Session 5: Functions, Dictionaries *(Tentative)*         | 6    | Work in progress  | Work in progress | N/A |
+| Session 3: For loops, While loops                                          | 4    | [Notes][s3notes]  | [PDF][s3pdf]| N/A |
+| Session 4: Lists                 | 5    | [Notes][s3notes]  | [PDF][s3pdf] | N/A |
+| Session 5: Functions         | 6    | Work in progress  | Work in progress | N/A |
 | Session 6: Creating a snake game   | 7    | Work in progress  | Work in progress | N/A |
 
 [s0notes]: https://github.com/oxcompsoc/learntocode/tree/master/session0/README.md

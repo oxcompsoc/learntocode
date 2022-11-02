@@ -350,20 +350,20 @@ def poly_prod(xs, ys):
 
 **Hint:** you can create a list of `0`s of length `n` in Python with `[0] * n`.
 
-[exercise1]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise1.py
-[exercise2]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise2.py
-[exercise3]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise3.py
-[exercise4]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise4.py
-[exercise5]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise5.py
-[exercise6]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise6.py
-[exercise7]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise7.py
-[exercise8]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise8.py
-[exercise9]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise9.py
-[exercise10]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise10.py
-[exercise11]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise11.py
-[exercise12]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise12.py
-[exercise13]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise13.py
-[exercise14]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise14.py
-[exercise15]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise15.py
-[exercise16]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise16.py
-[exercise17]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/exercise17.py
+[exercise1]: https://github.com/oxcompsoc/learntocode/master/session5/exercise1.py
+[exercise2]: https://github.com/oxcompsoc/learntocode/master/session5/exercise2.py
+[exercise3]: https://github.com/oxcompsoc/learntocode/master/session5/exercise3.py
+[exercise4]: https://github.com/oxcompsoc/learntocode/master/session5/exercise4.py
+[exercise5]: https://github.com/oxcompsoc/learntocode/master/session5/exercise5.py
+[exercise6]: https://github.com/oxcompsoc/learntocode/master/session5/exercise6.py
+[exercise7]: https://github.com/oxcompsoc/learntocode/master/session5/exercise7.py
+[exercise8]: https://github.com/oxcompsoc/learntocode/master/session5/exercise8.py
+[exercise9]: https://github.com/oxcompsoc/learntocode/master/session5/exercise9.py
+[exercise10]: https://github.com/oxcompsoc/learntocode/master/session5/exercise10.py
+[exercise11]: https://github.com/oxcompsoc/learntocode/master/session5/exercise11.py
+[exercise12]: https://github.com/oxcompsoc/learntocode/master/session5/exercise12.py
+[exercise13]: https://github.com/oxcompsoc/learntocode/master/session5/exercise13.py
+[exercise14]: https://github.com/oxcompsoc/learntocode/master/session5/exercise14.py
+[exercise15]: https://github.com/oxcompsoc/learntocode/master/session5/exercise15.py
+[exercise16]: https://github.com/oxcompsoc/learntocode/master/session5/exercise16.py
+[exercise17]: https://github.com/oxcompsoc/learntocode/master/session5/exercise17.py

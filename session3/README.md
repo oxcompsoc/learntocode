@@ -1,5 +1,15 @@
 # Session 3: For loops and while loops
 
+## Updates
+
+The PDF version of the notes are now on our GitHub, together with other materials. [https://github.com/oxcompsoc/learntocode/][github]
+
+[github]: https://github.com/oxcompsoc/learntocode/
+
+We also updated [Notes on session 0][session0] to remind you the procedures of starting Python, creating a new Python file and running the code. 
+
+[session0]: https://github.com/oxcompsoc/learntocode/tree/master/session0
+
 ## The need for looping
 Imagine you have to print a square of *s using Python.
 
