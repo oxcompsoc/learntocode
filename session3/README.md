@@ -1,5 +1,15 @@
 # Session 3: For loops and while loops
 
+## Updates
+
+The PDF version of the notes are now on our GitHub, together with other materials. [https://github.com/oxcompsoc/learntocode/][github]
+
+[github]: https://github.com/oxcompsoc/learntocode/
+
+We also updated [Notes on session 0][session0] to remind you the procedures of starting Python, creating a new Python file and running the code. 
+
+[session0]: https://github.com/oxcompsoc/learntocode/tree/master/session0
+
 ## The need for looping
 Imagine you have to print a square of *s using Python.
 
@@ -277,6 +287,8 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 
     c)  Try modify your program so that it only outputs 1 star when n is 1, and no stars when n <= 0
 
+**You can find all the [solutions here][solutions].**
+
 ## While loops
 
 Let's look at another way to print the square:
@@ -521,6 +533,6 @@ It is up to you which kind of loop you are going to use based on the situation, 
 
 **You can find all the [solutions here][solutions].**
 
-[solutions]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3
+[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session3
 
 

@@ -43,13 +43,45 @@ During the installation there is an option that we'll need that isn't enabled by
 ## Using Python
 
 After installing Python all the tools you need to run Python programs will be on
-your computer. We're going to use **IDLE** for writing and running Python
+your computer. There are multiple things installed for you by Python. But we are only going to use **IDLE** for writing and running Python
 programs. To launch IDLE
 
 * On Windows: Start &rarr; All programs &rarr; Python 3.10 &rarr; IDLE *or*
   Start &rarr; type `IDLE`
 * On Mac: open Finder &rarr; Applications &rarr; Python 3.10 &rarr; IDLE *or*
   &#8984; + space and type `IDLE`
+
+### Interactive Version
+Once you opened the IDLE, you will be greeted with the interactive version of Python. This is where Python will execute your code and give you the results line by line. It can be used for experimenting tiny bits of code but not generally useful for writing large programs.
+
+![Interactive](interactiveversion.png)
+
+### Text editor version
+
+Instead, what we would usually do is to open a new file by clicking on `File` on the top-left corner, then click `New File`.
+
+![New File](newfile.png)
+
+A new empty file is then created and now we can write our code in there.
+
+![Code Text Version](codetextversion.png)
+
+After you have written your code, you can run it by clicking on `Run` on the top-left corner, then click `Run Module`. 
+
+![Run Module](runmodule.png)
+
+It might ask you to save your code, just click yes. You can save the Python code wherever you want on the computer.
+
+![Save](save.png)
+
+Then, your code will be run in the IDLE window. 
+
+![Result](result.png)
+
+Note that you need to click `Run Module` everytime if you would like to run the program several more times.
+
+
+
 
 That's all you need to do before the first session! If you're interested in
 looking ahead to what we'll be studying, feel free to look at [notes for the first session][session1].
