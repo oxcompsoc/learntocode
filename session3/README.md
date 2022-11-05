@@ -285,7 +285,7 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 
     b)  Try not to use string "multiplication" and string "addition".
 
-    c)  Try modify your program so that it only outputs 1 star when n is 1, and no stars when n <= 0
+    c)  Try modifying your program so that it only outputs 1 star when n is 1, and no stars when n <= 0
 
 **You can find all the [solutions here][solutions].**
 
