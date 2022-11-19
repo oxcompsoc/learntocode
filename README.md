@@ -29,7 +29,7 @@ and their solutions.
 | Session 2: If statements                | 3    | [Notes][s2notes]  | [PDF][s2pdf] | N/A |
 | Session 3: For loops, While loops                                          | 4    | [Notes][s3notes]  | [PDF][s3pdf]| N/A |
 | Session 4: Lists                 | 5    | [Notes][s4notes]  | [PDF][s4pdf] | N/A |
-| Session 5: Functions         | 6    | Work in progress  | Work in progress | N/A |
+| Session 5: Functions         | 6    | [Notes][s5notes]  | [Notes][s5pdf] | N/A |
 | Session 6: Creating a snake game   | 7    | Work in progress  | Work in progress | N/A |
 
 [s0notes]: https://github.com/oxcompsoc/learntocode/tree/master/session0/README.md
