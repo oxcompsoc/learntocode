@@ -12,7 +12,7 @@ If all of the functions are implemented, the code will open a window to a fully 
 
 ## Answers
 
-Here is a link to the source of the snake game:
+Here is a link to the source of the snake game code created by rajatdiptabiswas.
 
 https://github.com/rajatdiptabiswas/snake-pygame
 
