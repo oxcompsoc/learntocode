@@ -1,8 +1,11 @@
 # Session 1: Introduction to Python
 
+*Watch videos 1, 2, 3, 7 of this Python tutorial playlist if you missed this session: [link][bucky]*
+
 The first thing that you’ll need to do is make sure you have Python installed on your
 computer. You can find information on how to do that [here][install].
 
+[bucky]: https://www.youtube.com/watch?v=HBxCHonP6Ro&list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_&index=1
 [install]: https://github.com/oxcompsoc/learntocode/tree/master/session0
 
 Throughout these documents note that text in a `monospaced font` is Python code.
@@ -11,10 +14,9 @@ Throughout these documents note that text in a `monospaced font` is Python code.
 The [Oxford University Computer Society][compsoc] was founded in 1978, making
 it one of the oldest university computing societies in the country. 
 
-This year, we will be holding Thursday Talks from both academics and sponsor / Workshops on Thursdays (Weeks 2-8 5-6pm). Learn to code and socials on Saturdays (Weeks 1-7 7pm).
+This year, we will be holding Thursday Talks from both academics and sponsors / Workshops on Thursdays. Learn to code and socials on Saturdays (Weeks 1-7 7pm).
 
 [Refer to our website for more and latest details of all events.][compsoc]
-
 
 [compsoc]: https://ox.compsoc.net
 
@@ -181,7 +183,7 @@ Integer | Number without decimal places | `1`,`5`, `15`, `15404505`, `-455`, `0`
 Float | Number with decimal places | `1.5`, `40.4550590`, `1.0`, `53.4`, `-0.588`, `-458.5` |
 String | Piece of text | `"a"`, `"boy"`, `"I am a boy!"`, `"I like basketball"`, `"Hello world"`, `"Test"`|
 
-### Integers and Floats
+<!-- ### Integers and Floats
 
 We can change constants from an integer to a float by appending `.0` at the end. 
 
@@ -219,7 +221,7 @@ However, this is not the case. Floats cannot store numbers exactly and will resu
 30000000000000000000000001-30000000000000000000000000 # 1
 30000000000000000000000001.0-30000000000000000000000000.0 #0.0
 
-int(30000000000000000000000001.0) #30000000000000000570425344
+int(30000000000000000000000001.0) #30000000000000000570425344 -->
 ```
 
 ### Strings
@@ -320,21 +322,49 @@ else:
 
 We will discuss more on if statements in the next session.
 
-## Exercises
+## Exercise
 
 *When attempting these exercises, I suggest you type out the code by hand, rather than copy-pasting it. Pay attention to all of the symbols you are typing and see if you can recall why they are there.*
 
-1)  Now try to combine the last two programs, so that you print out the person's name, as well as their favourite number multiplied by two.
-
-
-2)  Try to write a similar program that converts Fahrenheit to Celsius
+1) Try to write a similar program that converts Fahrenheit to Celsius
 
     (°F − 32) × 5/9 = °C
 
+2)  **One detector:** create a program, which takes an input (an int) and outputs "This number is 1" if the input was 1 and "This input was not 1" otherwise.
 
-3)  **Average of two numbers:** create a program which takes as input two numbers and computes their average. We will generalise the program to calculate the average of more than two numbers in the next few sessions.
+3) **Subtraction:** create a program, which takes two integers, and outputs the result of the larger number subtracting the smaller number.
 
-## Good resources to look at
+  ```python
+  first = ________(input("Input first number: "))
+  second = ________(input("Input second number: "))
+  if ________ < ________:
+      #swap the two numbers
+  answer = first - second
+  print("The answer of "+str(first)+"-"+str(second)+" is " + str(answer))
+  ```
+  ```
+  Samples:
+  Input first number: 4
+  Input second number: 3
+  The answer of 4-3 is 1
+
+  Input first number: 3
+  Input second number: 4
+  The answer of 4-3 is 1
+  ```
+
+## More exercises
+
+4)  Now try to combine the two programs mentioned, so that you print out the person's name, as well as their favourite number multiplied by two.
+
+5)  **Average of two numbers:** create a program which takes as input two numbers and computes their average. We will generalise the program to calculate the average of more than two numbers in the next few sessions.
+
+6) **Odd detector:** create a program, which takes an input (an int) and outputs "This number is odd" if the input was 1 and "This input was not odd" otherwise. (*You will need to use the operator %. a % b gives the remainder when a is divided by b*)
+## Want more?
+
+Check out [this Python tutorial playlist][bucky]! We covered videos 1,2,3,7 this session but feel free to watch and learn more and learn. In fact that is how I learnt Python.
+
+ <!-- ## Good resources to look at
 
  * [Khanacademy][] - good for learning about computer science and computational
    thinking
@@ -350,4 +380,4 @@ We will discuss more on if statements in the next session.
 
 [khanacademy]: http://khanacademy.org
 [codecademy]: http://codecademy.com
-[euler]: http://projecteuler.net
+[euler]: http://projecteuler.net -->
