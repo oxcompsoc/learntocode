@@ -2,7 +2,7 @@
 
 Each year [Oxford University CompSoc][compsoc] runs an introductory programming
 course in Python. This repositories contains all of the notes and code samples used in the
-2022 course.
+2023 course.
 
 To run these code samples you will need [Python 3][python]. For the sessions we recommend using IDLE, a piece of software which comes pre-installed with Python. Alternatively you can run the samples in a terminal via:
 
@@ -22,15 +22,15 @@ and their solutions.
 
 ## Table of Contents
 
-| Session           | Week | Notes (online)            |  Notes (PDF)            | Slides                |
-| ----------------- | ---- | ----------------- | --------------------- | --------------------- |
-| Session 0: Installing Python                                  | N/A  | [Notes][s0notes]  | [PDF][s0pdf] | N/A |
-| Session 1: Introduction: What can you do with Python? Python syntax, variables | 2    | [Notes][s1notes]  | [PDF][s1pdf]| [Slides][s1slides] |
-| Session 2: If statements                | 3    | [Notes][s2notes]  | [PDF][s2pdf] | N/A |
-| Session 3: For loops, While loops                                          | 4    | [Notes][s3notes]  | [PDF][s3pdf]| N/A |
-| Session 4: Lists                 | 5    | [Notes][s4notes]  | [PDF][s4pdf] | N/A |
-| Session 5: Functions         | 6    | [Notes][s5notes]  | [Notes][s5pdf] | N/A |
-| Session 6: Creating a snake game   | 7    | Work in progress  | Work in progress | N/A |
+| Session           | Week | Date | Notes (online)            |  Notes (PDF)            | Slides                |
+| ----------------- | ---- | ---- | ----------------- | --------------------- | --------------------- |
+| Session 0: Installing Python                                  | N/A  | N/A  | [Notes][s0notes]  | [PDF][s0pdf] | N/A |
+| Session 1: Introduction: What can you do with Python? Python syntax, variables, if statements | 1    | 14/10  | [Notes][s1notes]  | [PDF][s1pdf]| [Slides][s1slides] |
+| Session 2: If statements, For loops                | 3    | 28/10  | Coming Soon | N/A | N/A | <!-- | [Notes][s2notes]  | [PDF][s2pdf] | N/A | -->
+| Session 3: While loops, Lists                                          | 5   | 11/11  | Coming Soon | N/A | N/A | <!--| [Notes][s3notes]  | [PDF][s3pdf]| N/A | -->
+| Session 4: Lists, Functions                 | 7   | 25/11  | Coming Soon | N/A | N/A | <!--| [Notes][s4notes]  | [PDF][s4pdf] | N/A | -->
+<!-- | Session 5: Functions         | 6    | [Notes][s5notes]  | [Notes][s5pdf] | N/A | -->
+<!-- | Session 6: Creating a snake game   | 7    | Work in progress  | Work in progress | N/A | --> 
 
 [s0notes]: https://github.com/oxcompsoc/learntocode/tree/master/session0/README.md
 [s0pdf]: https://github.com/oxcompsoc/learntocode/tree/master/session0/Notes.pdf

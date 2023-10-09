@@ -25,7 +25,7 @@ higher you should be OK.
 
     ![Python downloads](download1.png)
 
-3. Download **Python 3.10.7** for the operating system you're using (Windows shown below)
+3. Download **Python 3.11.5** for the operating system you're using (Windows shown below)
     * Windows users might need to have administrative rights
     * Linux users should already have Python installed, but please ensure that
       you have Python 3 installed
@@ -86,7 +86,7 @@ Note that you need to click `Run Module` everytime if you would like to run the 
 That's all you need to do before the first session! If you're interested in
 looking ahead to what we'll be studying, feel free to look at [notes for the first session][session1].
 
-## Getting to the department
+<!-- ## Getting to the department
 
 Please come to Department of Computer Science, Parks Road, Oxford, OX1 3QD on
 7pm Thursday 2nd week HT2020 for the first session. We expect attendance to be
@@ -95,6 +95,6 @@ high, so it will be worth arriving early!
 ![Map](learntocodemap.png)
 
 The above map shows which entrance of the CS department you should use - there
-are plenty of CompSoc signs up guiding the way.
+are plenty of CompSoc signs up guiding the way. -->
 
 [python]: https://python.org
