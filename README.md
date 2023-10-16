@@ -64,6 +64,22 @@ and their solutions.
 [s6pdf]: https://github.com/oxcompsoc/learntocode/tree/master/session6/Notes.pdf
 [s6slides]: https://github.com/oxcompsoc/learntocode/blob/master/session6/slides.pdf
 
+## Next steps
+
+Now that you have learnt the basics of Python, there are quite a lot you can do with it. You can go ahead to make your own application and unleash your creativity. However, if you are not too sure what to do yet, here are a few extra materials that might help you get started. Note that there is no order in which you have to do these, feel free to choose the one you like the most.
+
+1. [Here][guessnotes] is a tutorial for building a number guessing game in Python. (Difficulty: 2/5)
+
+[guessnotes]: https://github.com/oxcompsoc/learntocode/tree/master/guessthenumber
+
+2. [Here][guessnotes] is a tutorial for building a snake game in Python using PyGame. (Difficulty: 4/5)
+
+[snakenotes]: https://github.com/oxcompsoc/learntocode/tree/master/snake_game
+
+3. [Here][mlnotes] is a tutorial for basic machine learning in Python. (with thanks to previous committee members in 2020) (Difficulty: 4/5)
+
+[mlnotes]: https://github.com/oxcompsoc/learntocode/tree/master/machine_learning
+
 ## Running your own Learn to Code
 
 You are more than welcome to use these materials to run your own version of Learn to Code! We would ask that you adhere to the spirit of Learn to Code, meaning in particular that any course run is as free and as open as possible. In particular, please note that these materials are offered under the GPL license. This means that if you use these materials as any part of your own course then you **must** freely publish **all** the materials for that course under the same GPL license.
