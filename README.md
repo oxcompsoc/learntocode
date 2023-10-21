@@ -26,7 +26,7 @@ and their solutions.
 | ----------------- | ---- | ---- | ----------------- | --------------------- | --------------------- |
 | Session 0: Installing Python                                  | N/A  | N/A  | [Notes][s0notes]  | [PDF][s0pdf] | N/A |
 | Session 1: Introduction: What can you do with Python? Python syntax, variables, if statements | 1    | 14/10  | [Notes][s1notes]  | [PDF][s1pdf]| [Slides][s1slides] |
-| Session 2: If statements, For loops                | 3    | 28/10  | Coming Soon | N/A | N/A | <!-- | [Notes][s2notes]  | [PDF][s2pdf] | N/A | -->
+| Session 2: If statements, For loops                | 3    | 28/10  | [Notes][s2notes]  | [PDF][s2pdf] | N/A |
 | Session 3: While loops, Lists                                          | 5   | 11/11  | Coming Soon | N/A | N/A | <!--| [Notes][s3notes]  | [PDF][s3pdf]| N/A | -->
 | Session 4: Lists, Functions                 | 7   | 25/11  | Coming Soon | N/A | N/A | <!--| [Notes][s4notes]  | [PDF][s4pdf] | N/A | -->
 <!-- | Session 5: Functions         | 6    | [Notes][s5notes]  | [Notes][s5pdf] | N/A | -->
@@ -63,6 +63,22 @@ and their solutions.
 [s6notes]: https://github.com/oxcompsoc/learntocode/tree/master/session6/README.md
 [s6pdf]: https://github.com/oxcompsoc/learntocode/tree/master/session6/Notes.pdf
 [s6slides]: https://github.com/oxcompsoc/learntocode/blob/master/session6/slides.pdf
+
+## Next steps
+
+Now that you have learnt the basics of Python, there are quite a lot you can do with it. You can go ahead to make your own application and unleash your creativity. However, if you are not too sure what to do yet, here are a few extra materials that might help you get started. Note that there is no order in which you have to do these, feel free to choose the one you like the most.
+
+1. [Here][guessnotes] is a tutorial for building a number guessing game in Python. (Difficulty: 2/5)
+
+[guessnotes]: https://github.com/oxcompsoc/learntocode/tree/master/guessthenumber
+
+2. [Here][guessnotes] is a tutorial for building a snake game in Python using PyGame. (Difficulty: 4/5)
+
+[snakenotes]: https://github.com/oxcompsoc/learntocode/tree/master/snake_game
+
+3. [Here][mlnotes] is a tutorial for basic machine learning in Python. (with thanks to previous committee members in 2020) (Difficulty: 4/5)
+
+[mlnotes]: https://github.com/oxcompsoc/learntocode/tree/master/machine_learning
 
 ## Running your own Learn to Code
 
