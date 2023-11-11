@@ -1,5 +1,8 @@
 # Session 2: If statements and For loops
 
+*Watch videos 7 and 9 of this Python tutorial playlist if you missed this session: [link][bucky]*
+
+[bucky]: https://www.youtube.com/watch?v=HBxCHonP6Ro&list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_&index=7
 See [here][week1] for last week's content. 
 
 [week1]: https://github.com/oxcompsoc/learntocode/tree/master/session1

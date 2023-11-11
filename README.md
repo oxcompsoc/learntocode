@@ -27,8 +27,8 @@ and their solutions.
 | Session 0: Installing Python                                  | N/A  | N/A  | [Notes][s0notes]  | [PDF][s0pdf] | N/A |
 | Session 1: Introduction: What can you do with Python? Python syntax, variables, if statements | 1    | 14/10  | [Notes][s1notes]  | [PDF][s1pdf]| [Slides][s1slides] |
 | Session 2: If statements, For loops                | 3    | 28/10  | [Notes][s2notes]  | [PDF][s2pdf] | N/A |
-| Session 3: While loops, Lists                                          | 5   | 11/11  | Coming Soon | N/A | N/A | <!--| [Notes][s3notes]  | [PDF][s3pdf]| N/A | -->
-| Session 4: Lists, Functions                 | 7   | 25/11  | Coming Soon | N/A | N/A | <!--| [Notes][s4notes]  | [PDF][s4pdf] | N/A | -->
+| Session 3: While loops, Lists                                          | 5   | 11/11  | [Notes][s3notes]  | [PDF][s3pdf]| N/A |
+| Session 4: Lists, Functions                 | 7   | 25/11 | [Notes][s4notes]  | [PDF][s4pdf] | N/A |
 <!-- | Session 5: Functions         | 6    | [Notes][s5notes]  | [Notes][s5pdf] | N/A | -->
 <!-- | Session 6: Creating a snake game   | 7    | Work in progress  | Work in progress | N/A | --> 
 
