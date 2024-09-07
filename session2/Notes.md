@@ -207,7 +207,7 @@ else:
 
 4) **Leap Year:** a. create a program, which determines whether a year is a leap year.
 
-  ![How to check for leap years](leap_year.png)
+  ![How to check for leap years](assets/leap_year.png)
 
   (*You will need to use the operator %. a % b gives the remainder when a is divided by b*)
 

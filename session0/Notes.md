@@ -23,7 +23,7 @@ higher you should be OK.
 1. Go to [**https://python.org**][python]
 2. On the menu at the top, click **Downloads**
 
-    ![Python downloads](download1.png)
+    ![Python downloads](assets/download1.png)
 
 3. Download **Python 3.11.5** for the operating system you're using (Windows shown below)
     * Windows users might need to have administrative rights
@@ -32,13 +32,13 @@ higher you should be OK.
     * If you get stuck please Google "how to install Python on X" (where X is
       your operating system)
 
-    ![Python OS download](download1_new.PNG)
+    ![Python OS download](assets/download1_new.PNG)
 
 ## !!! IMPORTANT FOR WINDOWS USERS !!!
 
 During the installation there is an option that we'll need that isn't enabled by default - **Add Python 3.10 to PATH** (as shown below). Make sure to leave this **CHECKED** otherwise you won't be able to install the modules we'll use in the following lectures.
 
-![Add Python to Path](install2_2020.PNG)
+![Add Python to Path](assets/install2_2020.PNG)
 
 ## Using Python
 
@@ -54,29 +54,29 @@ programs. To launch IDLE
 ### Interactive Version
 Once you opened the IDLE, you will be greeted with the interactive version of Python. This is where Python will execute your code and give you the results line by line. It can be used for experimenting tiny bits of code but not generally useful for writing large programs.
 
-![Interactive](interactiveversion.png)
+![Interactive](assets/interactiveversion.png)
 
 ### Text editor version
 
 Instead, what we would usually do is to open a new file by clicking on `File` on the top-left corner, then click `New File`.
 
-![New File](newfile.png)
+![New File](assets/newfile.png)
 
 A new empty file is then created and now we can write our code in there.
 
-![Code Text Version](codetextversion.png)
+![Code Text Version](assets/codetextversion.png)
 
 After you have written your code, you can run it by clicking on `Run` on the top-left corner, then click `Run Module`. 
 
-![Run Module](runmodule.png)
+![Run Module](assets/runmodule.png)
 
 It might ask you to save your code, just click yes. You can save the Python code wherever you want on the computer.
 
-![Save](save.png)
+![Save](assets/save.png)
 
 Then, your code will be run in the IDLE window. 
 
-![Result](result.png)
+![Result](assets/result.png)
 
 Note that you need to click `Run Module` everytime if you would like to run the program several more times.
 
