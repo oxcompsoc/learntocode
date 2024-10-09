@@ -14,7 +14,7 @@ Throughout these documents note that text in a `monospaced font` is Python code.
 The [Oxford University Computer Society][compsoc] was founded in 1978, making
 it one of the oldest university computing societies in the country. 
 
-This year, we will be holding Thursday Talks from both academics and sponsors / Workshops on Thursdays. Learn to code and socials on Saturdays (Weeks 2-7 7pm).
+This year, we will be holding talks from academics and sponsors / workshops on Thursdays. Learn to code and socials on Saturdays (Weeks 2-7 5:30 to 6:30 PM).
 
 [Refer to our website for more and latest details of all events.][compsoc]
 
