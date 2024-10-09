@@ -411,7 +411,7 @@ while (user_integer == None)
     Option 2 selected!
     ```
 
-#### Hard
+<!-- #### Hard
 6. Create a program that accepts two user inputs and makes sure that exactly one of them is an integer.
     ```
     The first input: 4
@@ -435,4 +435,4 @@ while (user_integer == None)
     Input: 3
     You have inputted the maximum allowed number of integers. Goodbye!
     ```
-    (What will happen if the user inputs a negative number? or zero?)
+    (What will happen if the user inputs a negative number? or zero?) -->
