@@ -50,48 +50,6 @@ print("The length of the list is: " + str(length))
 
 Note that the `len` function returns an `int`, so we need to convert that to a `str` before printing.
 
-
-## Exercises
-
-### Easy:
-* 1: Create a list of 3 cities you want to visit. Print the whole list on one line. Print the list item by item. Print the length of the list.
-
-### Medium:
-
-* 2: Complete the program so that it prints the contents of the shopping list:
-
-  ```python
-  shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
-
-  i = 0
-  length = len(shopping_list)
-  while i < length:
-    # Complete this code
-  ```
-
-### Hard:
-* 3: Complete the program so that it prompts the user to input a number `n`, then prints `shopping_list`, item by item, `n` times in a row:
-  
-  ```python
-  shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
-  n = # Complete the rest of the program
-  # ...
-  ```
-  A run of your program might look like:
-  ```
-  Please enter a number: 2
-  bread
-  smoked salmon
-  cherry tomatoes
-  cream cheese
-  bread
-  smoked salmon
-  cherry tomatoes
-  cream cheese
-  ```
-
-**You can find all the [solutions here][solutions].**
-
 ## The need for lists
 
 We will discuss why we need lists in this section.
@@ -157,65 +115,6 @@ shopping_list = shopping_page1 + shopping_page2 # shopping_list is now [ "bread"
 **Note:** you may have seen what Python calls lists called *arrays* in other programming languages. In most programming languages [there is a difference][listvsarray] but it is not relevant to Python or this course.
 
 [listvsarray]: https://www.quora.com/What-is-the-difference-between-an-array-a-list-and-a-linked-list/answer/Gregory-Schoenmakers?share=ccf41042&srid=RsVE
-
-## Exercises:
-
-### Expert 
-* 4: Make your own shopping list program! Begin by prompting a user to enter the number of things they want on their list and then ask them for each separate item. The program should output the items on the list in the same order, each on a separate line, after the user's done with their input.
-
-  Here's a sample run:
-  ```
-  Welcome to the shopping list app!
-  Please enter the size of your shopping list: 3
-  Please enter item number 0: bread
-  Please enter item number 1: smoked salmon
-  Please enter item number 2: cherry tomatoes
-  Your shopping list is:
-  bread
-  smoked salmon
-  cherry tomatoes
-  ```
-  *Hint: the next few lines might be helpful:*
-
-  ```python
-  my_list = [] # This is how we create an empty list. I.e. a list with no items
-  my_list.append("item1") # This is how we append to the back of our list
-  my_list.append("item2") # And again
-  print(my_list) # Prints '["item1", "item2"]'
-  print(len(my_list)) # Prints '2'
-  ```
-
-* 5: Modify your program for slightly so that it displays the item number starting from 1 instead of 0.
-
-  ```
-  Welcome to the shopping list app!
-  Please enter the size of your shopping list: 3
-  Please enter item number 1: bread
-  Please enter item number 2: smoked salmon
-  Please enter item number 3: cherry tomatoes
-  Your shopping list is:
-  bread
-  smoked salmon
-  cherry tomatoes
-  ```
-
-* 6: Do you really need to enter the number n in the beginning? Wouldn't it be more convenient for a user to tell when the shopping list _ends_ instead? Make a program that does just that. Here's a sample run:
-
-  ```
-  Welcome to the shopping list app!
-  Please enter item number 1: bread
-  Please enter item number 2: smoked salmon
-  Please enter item number 3: cherry tomatoes
-  Please enter item number 4: end
-  Your shopping list is:
-  bread
-  smoked salmon
-  cherry tomatoes
-  ```
-
-**You can find all the [solutions here][solutions].**
-
-[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session4/solutions.py
 
 ## Recap on loops
 
@@ -302,32 +201,96 @@ for item in shopping_list:
 
 ## Exercises
 
-We will do the exercises listed in the `session5` folder. We have not covered functions yet, but you can still do the exercises. For example, if you would like to do exercise 1, you can copy the code in `session5/exercise1.py` to your local machine. Then write your code in the `def` clause. 
+### Easy:
+* 1: Create a list of 3 cities you want to visit. Print the whole list on one line. Print the list item by item. Print the length of the list.
 
-For example,
+### Medium:
 
-```python
-def sum(xs):
-    # return the sum of all the elements in the list xs
-    # remove the following line
-    print("Write your code here!!!!!!!")
-    return 0
+* 2: Complete the program so that it prints the contents of the shopping list:
 
-def test(test_case, expected):
-    actual = sum(test_case)
-    if actual == expected:
-        print("Passed test for " + str(test_case))
-    else:
-        print("Didn't pass test for " + str(test_case))
-        print("The result was " + str(actual) + " but it should have been " + str(expected))
+  ```python
+  shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
 
-test([], 0)
-test([1, 2], 3)
-test(range(10), 45)
-```
+  i = 0
+  length = len(shopping_list)
+  while i < length:
+    # Complete this code
+  ```
 
-Then when you run your code using Python, it will run some tests on your code automatically, and tell you whether your code is correct.
+### Hard:
+* 3: Complete the program so that it prompts the user to input a number `n`, then prints `shopping_list`, item by item, `n` times in a row:
+  
+  ```python
+  shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
+  n = # Complete the rest of the program
+  # ...
+  ```
+  A run of your program might look like:
+  ```
+  Please enter a number: 2
+  bread
+  smoked salmon
+  cherry tomatoes
+  cream cheese
+  bread
+  smoked salmon
+  cherry tomatoes
+  cream cheese
+  ```
+  
+### Expert 
+* 4: Make your own shopping list program! Begin by prompting a user to enter the number of things they want on their list and then ask them for each separate item. The program should output the items on the list in the same order, each on a separate line, after the user's done with their input.
 
-<!-- What we'll do next is finish up the exercises from last session. You can find them [here](https://github.com/oxcompsoc/learntocode/tree/master/session2#Exercises-1). If you've already completed the exercises then try to replace your uses of `while` with equivalent `for` loops. There are some exercises where that is impossible which will give you a good idea of the limitations of `for`. -->
+  Here's a sample run:
+  ```
+  Welcome to the shopping list app!
+  Please enter the size of your shopping list: 3
+  Please enter item number 0: bread
+  Please enter item number 1: smoked salmon
+  Please enter item number 2: cherry tomatoes
+  Your shopping list is:
+  bread
+  smoked salmon
+  cherry tomatoes
+  ```
+  *Hint: the next few lines might be helpful:*
 
+  ```python
+  my_list = [] # This is how we create an empty list. I.e. a list with no items
+  my_list.append("item1") # This is how we append to the back of our list
+  my_list.append("item2") # And again
+  print(my_list) # Prints '["item1", "item2"]'
+  print(len(my_list)) # Prints '2'
+  ```
 
+* 5: Modify your program for slightly so that it displays the item number starting from 1 instead of 0.
+
+  ```
+  Welcome to the shopping list app!
+  Please enter the size of your shopping list: 3
+  Please enter item number 1: bread
+  Please enter item number 2: smoked salmon
+  Please enter item number 3: cherry tomatoes
+  Your shopping list is:
+  bread
+  smoked salmon
+  cherry tomatoes
+  ```
+
+* 6: Do you really need to enter the number n in the beginning? Wouldn't it be more convenient for a user to tell when the shopping list _ends_ instead? Make a program that does just that. Here's a sample run:
+
+  ```
+  Welcome to the shopping list app!
+  Please enter item number 1: bread
+  Please enter item number 2: smoked salmon
+  Please enter item number 3: cherry tomatoes
+  Please enter item number 4: end
+  Your shopping list is:
+  bread
+  smoked salmon
+  cherry tomatoes
+  ```
+
+**You can find all the [solutions here][solutions].**
+
+[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session4/solutions.py
