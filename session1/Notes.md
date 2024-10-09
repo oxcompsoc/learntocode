@@ -36,7 +36,7 @@ Compiling and interpreting are the two different ways that programming languages
 
 ### Why Python?
 
-Python is a highly readable interpreted language that can be used for virtually anything because of its extensive library of packages. It finds use across virtually every single branch of computer science, and it's a go-to for when you need to make a quick proof-of-concept or prototype a new idea.
+Python is a highly readable language that can be used for virtually anything because of its extensive library of packages. It finds use across pretty much every single branch of computer science, and it's a go-to for when you need to make a quick proof-of-concept or prototype a new idea.
 <!-- Because it's an interpreted language, you can make small adjustments to your code and see the changes in the resultant output faster than if it were a compiled language -->
 
 ## Our first program - Hello, world!
@@ -62,7 +62,7 @@ There are three elements to consider here:
 * `print` is the name of a **function**. Functions are pieces of code that do
   something and/or calculate something. The `print` function outputs text.
   (Historically, some of the earliest computers used physical printers as
-  their primary form of output)
+  their primary form of output.)
 * `( )` (parentheses) are used to indicate that we are **calling** the function
   `print`, i.e. that we are telling Python to execute the `print` function
 * `"Hello, world!"` is the **argument** to the function `print`, i.e. the text
@@ -70,7 +70,7 @@ There are three elements to consider here:
   notice that when the text is printed the quote marks are missing -
   this is because we have to indicate to Python that the argument is text,
   rather than other symbols. We call text that appears in programs like this
-  **strings**
+  **strings**.
 
 ## Comments
 
@@ -80,9 +80,15 @@ Throughout the next examples, you will see some text written after a `#` symbol.
 # this is the first comment
 spam = 1  # and this is the second comment
           # ... and now a third!
-text = "# This is not a comment because it's inside quotes."
 print("Hello, world!") # Prints Hello, world!
 ```
+
+<!-- ### Stretch
+How will the following block of code behave?
+```python
+print("# Comment")
+print(# "Comment")
+``` -->
 
 ## Variables
 
@@ -220,8 +226,8 @@ However, this is not the case. Floats cannot store numbers exactly and will resu
 30000000000000000000000001-30000000000000000000000000 # 1
 30000000000000000000000001.0-30000000000000000000000000.0 #0.0
 
-int(30000000000000000000000001.0) #30000000000000000570425344 -->
-```
+int(30000000000000000000000001.0) #30000000000000000570425344 
+```-->
 
 ### Strings
 
@@ -358,7 +364,7 @@ We will discuss more on if statements in the next session.
 
 5)  **Average of two numbers:** create a program which takes as input two numbers and computes their average. We will generalise the program to calculate the average of more than two numbers in the next few sessions.
 
-6) **Odd detector:** create a program, which takes an input (an int) and outputs "This number is odd" if the input was 1 and "This input was not odd" otherwise. (*You will need to use the operator %. a % b gives the remainder when a is divided by b*)
+6) **Odd detector:** create a program, which takes an input (an int) and outputs "This number is odd" if the input was 1 and "This input was not odd" otherwise. (*You may want to use the operator %. a % b gives the remainder when a is divided by b.*)
 ## Want more?
 
 Check out [this Python tutorial playlist][bucky]! We covered videos 1,2,3,7 this session but feel free to watch and learn more and learn. In fact that is how I learnt Python.
