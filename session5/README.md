@@ -1,14 +1,16 @@
-## Functions
+# Session 5: Functions
 
 Until now we've been putting our code all in one place. This is fine for small toy programs but if we want to write something bigger it becomes incredibly difficult to follow. This is where the idea of functions comes in - they're basically mini programs that you can run or *call* in your *main* one that provide us with various advantages. In order to understand them we must first see how functions work in practice. Here's a few examples:
 
 ```python
 def myNameRet():
     return "My name is Anton"
+    
 print(myNameRet())     # Will print "My name is Anton"
 
 def myNameNoRet():
     print("My name is Anton")
+    
 myNameNoRet()       # Will also print "My name is Anton"
 
 def square(x):
