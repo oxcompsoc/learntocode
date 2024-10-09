@@ -54,10 +54,13 @@ A good rule of thumb is to keep functions below 200 lines of code. This includes
 
 ## Exercises
 
-For today's session we have a large number of different exercises that you can
-choose from. They are roughly ordered by difficulty. If you find an exercise easy, consider skipping a few. It is somewhat difficult to finish most of them by the end of the session so we'll begin the next session with some exercise time as well after the recap. We would also encourage doing some of the exercises at home. In that case you could check the `solutions.py` file and the recordings from a previous run of the course [here](https://www.youtube.com/watch?v=TU1aisio7IU).
+For today's session we have a large number of different exercises that you can choose from. These exercises are roughly ordered by difficulty. If you find an exercise easy, consider skipping a few. It is somewhat difficult to finish most of them by the end of the session so we'll begin the next session with some exercise time as well after the recap. 
+
+We would also encourage doing some of the exercises at home. In that case you could check the `solutions.py` file and the recordings from a previous run of the course [here](https://www.youtube.com/watch?v=TU1aisio7IU).
 
 Each exercise has some tests associated with it so you can test your solution. To run the tests, download the associated file, open it in IDLE, and edit the function at the top. An example of how to do exercise 1 will be shown during the lecture.
+
+These sort of questions that programmers might see in their job interviews (albeit a bit on the easy side). Clear them all, and you might see success in the Competitive Programming events we hold!
 
 ### Exercise 1: Summing a list
 
