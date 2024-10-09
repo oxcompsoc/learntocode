@@ -367,7 +367,7 @@ We will discuss more on if statements in the next session.
 6) **Odd detector:** create a program, which takes an input (an int) and outputs "This number is odd" if the input was 1 and "This input was not odd" otherwise. (*You may want to use the operator %. a % b gives the remainder when a is divided by b.*)
 ## Want more?
 
-Check out [this Python tutorial playlist][bucky]! We covered videos 1,2,3,7 this session but feel free to watch and learn more and learn. In fact that is how I learnt Python.
+Check out [this Python tutorial playlist][bucky]! We covered videos 1,2,3,7 this session but feel free to watch and learn more and learn. 
 
  <!-- ## Good resources to look at
 
