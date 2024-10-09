@@ -350,6 +350,36 @@ def poly_prod(xs, ys):
 
 **Hint:** you can create a list of `0`s of length `n` in Python with `[0] * n`.
 
+### Exercise 18: Enforce choice, revisited
+This exercise will give you an idea of what real, professional programmers do. Think back to this block of code from session 3:
+
+```python
+user_integer = None
+user_input = input("Please input an integer.")
+
+while (user_integer == None)
+    try:
+        user_integer = int(user_input)
+    except:
+        user_input = input("That was not an integer. Please try again.")
+```
+Complete the following code to turn the above code into a function that fits the given description.
+
+```python
+def enforce_option_input(options, prompt, error_prompt) -> str:
+    """ 
+    The enforce_option_input function shows the user a list of strings and then forces the user to choose an option from the list, unless the list is empty, in which case the function immediately returns an empty string ("").
+
+    :param options: the list of strings that the user can pick from.
+    :param prompt: the prompt the user is shown
+    :param prompt: the error prompt the user is shown after giving an input that is not in the options list
+    """
+    # ... your code goes here
+```
+(P.S. You will see that the function has some built-in protection so that a silly programmer doesn't put their users in an infinite loop by asking them to choose an option from an empty list. 
+
+Real-world programmers not only have to silly-proof their code from silly users trying to run their code wrong, they have to also silly-proof their code from silly programmers trying to use their code wrong as well!)
+
 [exercise1]: https://github.com/oxcompsoc/learntocode/master/session5/exercise1.py
 [exercise2]: https://github.com/oxcompsoc/learntocode/master/session5/exercise2.py
 [exercise3]: https://github.com/oxcompsoc/learntocode/master/session5/exercise3.py

@@ -1,293 +1,4 @@
-# Session 3: For loops and while loops
-
-## Updates
-
-The PDF version of the notes are now on our GitHub, together with other materials. [https://github.com/oxcompsoc/learntocode/][github]
-
-[github]: https://github.com/oxcompsoc/learntocode/
-
-We also updated [Notes on session 0][session0] to remind you the procedures of starting Python, creating a new Python file and running the code. 
-
-[session0]: https://github.com/oxcompsoc/learntocode/tree/master/session0
-
-## The need for looping
-Imagine you have to print a square of *s using Python.
-
-```
-**********
-*        *
-*        *
-*        *
-*        *
-*        *
-*        *
-*        *
-*        *
-**********
-```
-
-One solution is to do this:
-
-```python
-print("**********")
-print("*        *")
-print("*        *")
-print("*        *")
-print("*        *")
-print("*        *")
-print("*        *")
-print("*        *")
-print("*        *")
-print("**********")
-```
-
-But don't you think it is too repetitive? This is when loops come in handy. They allow you to repeatedly run the same piece of code multiple times. There are two types of loops, for and while loo;s.
-
-## For loops
-
-Runs the body a specified number of times.
-
-For example, to print the same square as the one above, we can do:
-
-```python
-print("**********")
-for i in range(8):
-    print("*        *")
-print("**********")
-```
-
-`range(8)` means that the statements indented will be run 8 times, in other words, 8 **iterations**. Indentation is important to specify which statements are in the for loop and which ones are not.
-
-### What is i?
-
-Let's try to print the value i in every iteration.
-
-```python
-for i in range(5):
-    print(i)
-
-# 0
-# 1
-# 2
-# 3
-# 4
-```
-
-The variable `i` consecutively takes all values from 0 to n-1, it helps us to keep track of our progress while looping, the following example uses the value `i` to print out the first `n` non-negative even numbers.
-
-```python
-n = int(input("Input a number: "))
-
-for i in range(n):
-    print(i*2)
-```
-
-It is common to use variable names like `i`, `j`, `k` for iteration.
-
-It is also common for us to be wanting to iterate from 1 to n instead of from 0 to n-1. In this case, we can use `range(1,n+1)`, meaning that it will loop from 1 to n+1, including 1 but excluding n+1. That means looping from 1 to n inclusive. The following code prints out the first `n` positive even numbers. (excluding 0)
-
-```python
-n = int(input("Input a number: "))
-
-for i in range(1,n+1):
-    print(i*2)
-```
-
-### Short aside: incrementing numbers
-
-We've seen before that we can do:
-```python
-number = 1
-print(number + 1) # Prints '2'
-print(number) # Prints '1'
-```
-
-But what if we want to actually increase the values of `number`? We might be tempted to do:
-```python
-number = 1
-number + 1
-print(number) # Still prints '1'
-```
-But that doesn't change `number` at all: it just asks Python to evaluate what `number + 1` is. The way to actually increment `number` is:
-
-```python
-number = 1
-number = number + 1
-print(number) # Prints '2'
-```
-This might seem a bit confusing at first, since `number` appears both on the left and on the right of the `=`. The rule in Python is that stuff on the right side of and `=` are evaluated before stuff on the left side. You can think about the above code like it was shorthand for this:
-
-```python
-number = 1
-temp = number + 1
-number = temp
-print(number)
-```
-
-Another way to do this exact same thing is:
-```python
-number = 1
-number += 1
-print(number)
-```
-
-Here, the `+=` operator is used as a shorthand for writing `number = number + 1`. These kinds of shorthands are usually referred to as _syntactic sugar_ in programming - it's shorter so it's "sweeter" for people to read and write. There are analogous operators: `-=`, `*=`, `/=`, etc.
-```python
-number = 1
-number += 2
-number -= 3
-number *= 4
-number /= 5
-# ...
-```
-If unsure, just use the first form: `number = number + 1`. 
-
-In the specific case when we have `number += 1` (i.e. we have `1` on the right-hand side) we say that we **increment** `number`. When we do `number -= 1` we say that we **decrement** `number`.
-### Worked example: summing from 1 to `n`
-The following example sums the first `n` natural numbers, including `n`. 
-
-```python
-n = int(input("Please enter a number: "))
-
-sum = 0
-for i in range(1,n+1):
-    sum += i
-
-print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
-```
-
-### Exercises
-<!-- Will do Q1, 4, 5, 6 in lesson -->
-#### Easy
-
-1)  What are the outputs of the following program segments?
-
-    ```python
-    # a)
-    for i in range(5):
-	    print(i)
-    ```
-    ```python
-    # b)
-    for i in range(4,10):
-	    print(i)
-    ```
-    ```python
-    # c)
-    for i in range(5):
-	    print("Hello")
-    ```
-    ```python
-    # d)
-    for i in range(4,10):
-	    print("Hello")
-    ```
-
-*When attempting these exercises, I suggest you type out the code by hand, rather than copy-pasting it. Pay attention to all of the symbols you are typing and see if you can recall why they are there.*
-
-2)  Complete the program below, which outputs the first `n` powers of 2. 
-
-    ```python
-    n = ___(input("Input a number: "))
-    number = 1
-    for i in range(_____):
-        number____________
-        print(number)
-    ```
-
-    ```
-    Sample: 
-    Input a number: 5
-    2
-    4
-    8
-    16
-    32
-    ```
-
-3)  Write a similar program, which outputs the `n`th power of 2. (should work for all n >= 0)
-    ```
-    Sample: 
-    Input a number: 5
-    2 to the power 5 is 32.
-    ```
-
-#### Medium
-4)  Write a program, which asks the user for an input `n` and then for `n` numbers. Then, it prints out the average of those `n` numbers. A run of your program might look something like this:
-
-    ```
-    How many numbers? 3
-    Please enter a number: 1
-    Please enter a number: 3
-    Please enter a number: 5
-    The average was: 3.0
-    ```
-
-5)  Complete the program below, which outputs the first `n` fibonacci numbers. (Each number is the sum of the two preceding ones, starting with 0,1.)
-
-    ```python
-    t = ______(input("Input a number: "))
-    a = 0
-    b = 1
-    for ______ in range(t):
-        c = a + b # calculate new term
-        #shift the terms by 1
-        a = ____
-        b = ____
-    print("Term " + str(i) + " is " + _____________)
-    ```
-    ```
-    Sample: 
-    Input a number: 5
-    Term 0 is 0
-    Term 1 is 1
-    Term 2 is 1
-    Term 3 is 2
-    Term 4 is 3
-    Term 5 is 5
-    ...
-    Term 14 is 377 (just for checking)
-    ```
-#### Hard
-6)  Create a program, which takes as input a number `n` and then prints the following:
-
-    1
-
-    1 2
-
-    1 2 3
-
-    .............
-
-    1 2 3 4 ... n
-  
-    *Hint: If you want to print something without a newline at the end, the way to to that is:*
-
-    ```python
-    number = 10
-    print(number, end=" ") # This will print " " after number.
-    ```
-
-7)  a)  Create a program, which prints a square of *s of size `n` based on input. As a generalisation of the example. 
-    ```Sample:
-    Input side length of the square: 10
-    **********
-    *        *
-    *        *
-    *        *
-    *        *
-    *        *
-    *        *
-    *        *
-    *        *
-    **********
-    ```
-
-    b)  Try not to use string "multiplication" and string "addition".
-
-    c)  Try modifying your program so that it only outputs 1 star when n is 1, and no stars when n <= 0
-
-**You can find all the [solutions here][solutions].**
+# Session 3: While loops and Try
 
 ## While loops
 
@@ -322,6 +33,8 @@ print("Access granted.")
 In this case, while the user keeps entering the wrong password, the program will keep prompting them for a new one.
 
 Now, if the user enters the correct password on their first try, the body of the loop will not be executed.
+
+So, while loops tend to be more useful if the body of the loop has to loop an unknown number of times.
 
 ### Worked examples
 
@@ -376,7 +89,7 @@ It is up to you which kind of loop you are going to use based on the situation, 
 ### Exercises:
 #### Easy:
 
-8)  What are the outputs of the following program segments?
+1)  What are the outputs of the following program segments?
 
     ```python
     # a)
@@ -438,7 +151,7 @@ It is up to you which kind of loop you are going to use based on the situation, 
 
 *When attempting these exercises, I suggest you type out the code by hand, rather than copy-pasting it. Pay attention to all of the symbols you are typing and see if you can recall why they are there.*
 
-9)  Create a program that asks the user to input a number `n`, and then prints the first `n` positive integers in reverse order. E.g. if `n` is 4, your program should print: '4 3 2 1', each number being on a new line. (*Hint: model your program after one of the programs we already wrote.*)
+2)  Create a program that asks the user to input a number `n`, and then prints the first `n` positive integers in reverse order. E.g. if `n` is 4, your program should print: '4 3 2 1', each number being on a new line. (*Hint: model your program after one of the programs we already wrote.*)
 
     ```
     Sample:
@@ -448,7 +161,7 @@ It is up to you which kind of loop you are going to use based on the situation, 
     2
     1
     ```
-10)  Complete the program below, which asks the user to input a number `n` and then prints the product of the first `n` natural numbers. 
+3)  Complete the program below, which asks the user to input a number `n` and then prints the product of the first `n` natural numbers. 
 
     ```python
     n = int(input("Please enter a non-negative integer: "))
@@ -467,7 +180,7 @@ It is up to you which kind of loop you are going to use based on the situation, 
     24
     ```
 
-11)  Complete the program below, which asks the user to input a number `max` and then prints all square numbers until `max`.
+4)  Complete the program below, which asks the user to input a number `max` and then prints all square numbers until `max`.
     
     ```python
     n = int(input("Please enter a number: "))
@@ -495,7 +208,7 @@ It is up to you which kind of loop you are going to use based on the situation, 
 
 #### Medium:
 
-12)  Create a program, which repeatedly asks the user to input a number, until their number is greater than 9. A run of your program might look like:
+5)  Create a program, which repeatedly asks the user to input a number, until their number is greater than 9. A run of your program might look like:
     ```
     Please enter a number: 5
     That number is too small!
@@ -504,9 +217,9 @@ It is up to you which kind of loop you are going to use based on the situation, 
     Please enter a number: 10
     That's a good number!
     ``` 
-13)  Create a program, which continuously prompts the user to input a first name and a last name, until the names they enter match yours.
+6)  Create a program, which continuously prompts the user to input a first name and a last name, until the names they enter match yours.
 
-14) Modify the code you wrote for question 10, give an error message if user inputs a negative number, and asks the user to input again.
+7) Modify the code you wrote for question 3, give an error message if user inputs a negative number, and asks the user to input again.
 
     ```
     Sample:
@@ -519,7 +232,7 @@ It is up to you which kind of loop you are going to use based on the situation, 
     ```
 #### Hard:
 
-15)  (Math) Write a program, which calculates the average of numbers. The program terminates when -1 is inputted.
+8)  (Math) Write a program, which calculates the average of numbers. The program terminates when -1 is inputted.
 
   ```
   Please enter a number: 1
@@ -536,3 +249,190 @@ It is up to you which kind of loop you are going to use based on the situation, 
 [solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session3
 
 
+## Try
+
+(New section added this year)
+
+In the password checking loop at the top of this section, we saw how a program could protect itself from incorrect input, to some extent. But the program still breaks if the user does something wildly incorrect such as
+
+```python
+favorite_number = int(input("Please enter your favorite number."))
+# User enters the word "Puppy"
+# Program crashes!
+# ValueError: invalid literal for int() with base 10: 'Puppy'
+```
+
+The try keyword is a stronger way of protecting a program against incorrect input.
+Programmers tend to worry a lot about making sure nonsensical user input can't mess up their precious programs ([but for all that worrying, they get it wrong anyway](https://www.youtube.com/watch?v=3uPIFItnrcg))
+
+For example, here's some code that makes sure that checks if the user inputted an integer.
+
+```python
+user_input = input("Please input an integer.")
+
+try:
+    user_input = int(user_input)
+    print("That was an integer.")
+except:
+    print("That was not an integer.")
+```
+
+Inside the `try` block, Python *tries* to convert the user's input into an integer. If it suceeds, the rest of the code in the `try` block can run, which means Python prints "That was an integer." But if the conversion fails, Python panics.
+
+Usually, when Python panics, you get an error message on your screen. This is called **throwing an exception**. But because the error happened inside a `try` block, Python understands that this error was accounted for, and calmly moves on to the `except` block, where it prints "That was not an integer."
+
+### Worked Example
+
+Here's how we can use `try` to wait until the user inputs an integer.
+
+We start with the code from before.
+
+```python
+user_input = input("Please input an integer.")
+
+try:
+    user_input = int(user_input)
+    print("That was an integer.")
+except:
+    print("That was not an integer.")
+```
+
+Now, in the except block, we want to ask the user for another input, and keep asking them until they get it right. In other words:
+
+```python
+user_input = input("Please input an integer.")
+
+try:
+    user_input = int(user_input)
+    print("That was an integer.")
+except:
+    # while... the user's input is wrong
+    #   input... ask them for an input
+    #   try... converting the input
+    #   except...
+```
+
+It's hard to tell how to check that "the user's input is wrong" here. We could set a variable inside the `except` block:
+
+```python
+user_input = input("Please input an integer.")
+
+try:
+    user_input = int(user_input)
+    print("That was an integer.")
+except:
+    user_input_is_wrong = True
+    while (user_input_is_wrong):
+        user_input_is_wrong = False
+        # input... ask them for an input
+        try
+            # convert the input
+            user_input_is_wrong = False
+        except
+            user_input_is_wrong = True
+```
+But then we run into the question of "How do we get the converted input value out of the try/except block?"
+
+The answer is to create a new variable outside the try/except block that we can write to at any time:
+
+```python
+user_integer = None
+user_input = input("Please input an integer.")
+
+try:
+    user_integer = int(user_input) # This line also changed!
+except:
+    user_input_is_wrong = True
+    while (user_input_is_wrong):
+        user_input_is_wrong = False
+        user_input = input("That was not an integer. Please try again.")
+        try
+            user_integer = int(user_input)
+            user_input_is_wrong = False
+        except
+            user_input_is_wrong = True
+```
+
+Actually, if the `user_integer` is definitely not going to be `None` if it gets correctly converted, we can use `while (user_integer == None)` in our while loop, which removes the need for the `user_input_is_wrong` variable as well!
+
+```python
+user_integer = None
+user_input = input("Please input an integer.")
+
+try:
+    user_integer = int(user_input) # This line also changed!
+except:
+    while (user_integer == None):
+        user_input = input("That was not an integer. Please try again.")
+        try
+            user_integer = int(user_input)
+        except
+            pass # Python complains if this block is empty, so we use the "pass" keyword, which means "do nothing".
+```
+
+Actually, we can remove the outer `try`/`except` block as well !!!
+
+```python
+user_integer = None
+user_input = input("Please input an integer.")
+
+while (user_integer == None)
+    try:
+        user_integer = int(user_input)
+    except:
+        user_input = input("That was not an integer. Please try again.")
+```
+
+(This exchanged a redundant line of code for a redundant check when the code runs, since `user_integer` is definitely going to be `None` when we first enter the `while` loop.)
+
+### Exercises
+#### Easy
+1. (Open Ended) Find out what the `else` keyword does when used alongside a `try`/`except` block. (Put it at the end!) Use this information to enhance the "enforce integer input" code above in any way you like.
+
+2. Add a counter to the "enforce integer input" code to show the user how many times their input has been incorrect.
+
+#### Medium
+3. (Open Ended) Find out what the `finally` keyword does when used alongside a `try`/`except` block. Try to think of a situation where the `finally` keyword might be useful.
+
+4. Create a program that accepts user inputs until the user has inputted two integers.
+    ```
+    Input: 4
+    Input: score
+    Input: and
+    Input: 7
+    You have inputted the maximum allowed number of integers. Goodbye!
+    ```
+
+5. Create a "pick from a list" block of code that only accepts an input from 1 to some number.
+    ```
+    Please choose an option: 9
+    That is not an option. Please try again: wow
+    That is not an option. Please try again: 2
+    Option 2 selected!
+    ```
+
+#### Hard
+6. Create a program that accepts two user inputs and makes sure that exactly one of them is an integer.
+    ```
+    The first input: 4
+    The second input: 6
+    That is too many integers. Please try again.
+    The first input: spoon
+    The second input: fork
+    That is too few integers. Please try again.
+    The first input: 42
+    The second input: life
+    Exactly one of these is an integer!
+    ```
+
+7. Edit your program from question 4 so that it can accept user inputs until the user has inputted a number of integers that they input.
+    ```
+    Number of integers to be inputted: spoon
+    That is not an integer. Please try again: 3
+    Input: 1
+    Input: 2
+    Input: buckle my shoe
+    Input: 3
+    You have inputted the maximum allowed number of integers. Goodbye!
+    ```
+    (What will happen if the user inputs a negative number? or zero?)

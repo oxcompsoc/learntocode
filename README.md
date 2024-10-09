@@ -25,8 +25,8 @@ and their solutions.
 | ----------------- | ---- | ---- | ----------------- | --------------------- |
 | Session 0: Installing Python | | | [Notes][s0notes] | [PDF][s0pdf] |
 | Session 1: Syntax and Variables | 2 | 26/10 | [Notes][s1notes] | [PDF][s1pdf]| 
-| Session 2: If statements | 3 | 2/11 | [Notes][s2notes] | [PDF][s2pdf] |
-| Session 3: For loops and While loops | 4 | 9/11 | [Notes][s3notes] | [PDF][s3pdf]|
+| Session 2: If statements, For loops | 3 | 2/11 | [Notes][s2notes] | [PDF][s2pdf] |
+| Session 3: While loops, Try | 4 | 9/11 | [Notes][s3notes] | [PDF][s3pdf]|
 | Session 4: Lists | 5 | 16/11 | [Notes][s4notes] | [PDF][s4pdf] | 
 | Session 5: Functions | 6 | 23/11 | [Notes][s5notes] | [PDF][s5pdf] | 
 | Session 6: Turtle Graphics | 7 | 30/11 | Work in progress | Work in progress | 
