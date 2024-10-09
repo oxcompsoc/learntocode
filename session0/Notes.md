@@ -56,6 +56,8 @@ but gives us an answer in Colab:
 
 ![Colab example](assets/colab-example.png)
 
+Why this is will be explained in the first session.
+
 
 
 
