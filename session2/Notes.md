@@ -112,7 +112,7 @@ if ((1 <= number and number < 10) or number == 42) and (not number == 3):
   print("This was the number: " + str(number))
 ```
 
-This code will only print `number` if it is one of the numbers [0, 1, 2, 4, 5, 6, 7, 8, 9, 42].
+This code will only print `number` if it is one of the numbers [1, 2, 4, 5, 6, 7, 8, 9, 42].
 
 *Note: there is an order of operations on logical connectives as well (which you may wish to google); however, it is recommended that you insert parentheses if you are using multiple different connectives, like in the example above.*
 
@@ -123,7 +123,7 @@ name = input("Please enter a name: ")
 if name == "Mark":
   print("Oh, hi Mark.")
 if name == "Johnny":
-  print("Oh, hey Johnny, what's up?")
+  print("Oh, hi Johnny.")
 else:
   print("Who is this?")
 ```
@@ -207,7 +207,7 @@ else:
 
 4) **Leap Year:** a. create a program, which determines whether a year is a leap year.
 
-  ![How to check for leap years](leap_year.png)
+  ![How to check for leap years](assets/leap_year.png)
 
   (*You will need to use the operator %. a % b gives the remainder when a is divided by b*)
 
@@ -261,7 +261,7 @@ print("*        *")
 print("**********")
 ```
 
-But don't you think it is too repetitive? This is when loops come in handy. They allow you to repeatedly run the same piece of code multiple times. There are two types of loops, for and while loo;s.
+But don't you think it is too repetitive? This is when loops come in handy. They allow you to repeatedly run the same piece of code multiple times. There are two types of loops, for and while loops.
 
 ## For loops
 

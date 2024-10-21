@@ -1,14 +1,16 @@
-## Functions
+# Session 5: Functions
 
 Until now we've been putting our code all in one place. This is fine for small toy programs but if we want to write something bigger it becomes incredibly difficult to follow. This is where the idea of functions comes in - they're basically mini programs that you can run or *call* in your *main* one that provide us with various advantages. In order to understand them we must first see how functions work in practice. Here's a few examples:
 
 ```python
 def myNameRet():
     return "My name is Anton"
+    
 print(myNameRet())     # Will print "My name is Anton"
 
 def myNameNoRet():
     print("My name is Anton")
+
 myNameNoRet()       # Will also print "My name is Anton"
 
 def square(x):
@@ -52,12 +54,34 @@ Back to the usefulness of functions - they let us do 4 useful things:
 
 A good rule of thumb is to keep functions below 200 lines of code. This includes the *main* function (i.e. the non-indented code). Anything larger should be split up into multiple functions.
 
+## A very funny joke
+Before we continue on to the exercises (there are a lot), here's a very funny joke that just about every Python programmer will enjoy.
+
+`chr sum range ord min str not`
+
+A classic. Let's break it down!
+
+All of these words are the names of **builtin functions**. In other words, these are very common functions that Python helpfully defines for us by default. For instance, `not` is defined so that `not(True) == False` and `not(False) == True`. Similarly, `min([2,1,3])` is `1` and `sum([2,1,3])` is `6`, exactly as you'd expect.
+
+So when we chain all of these functions together, calling `chr(sum(range(ord(min(str(not()))))))`, here's what happens:
+
+`not()`: What's not nothing? Python interprets nothing as `False`, which means that `not()` is `True`.\
+`str`: `True` as a string is `"True"`.\
+`min`: This treats `"True"` like a list of letters (`["T", "r", "u", "e"])` and takes the minimum letter. What's the minimum letter? The letter with the smallest [Unicode code](https://symbl.cc/en/unicode-table/). This turns out to be `"T"`.\
+`ord`: This translates `"T"` into its Unicode code, which is `84`. (If the entry in the table looks like 54, that's because it's in base 16. 54 in base 16 is equal to 84 in base 10.)\
+`range`: This creates a `range` object that represents the numbers from 0 inclusive to 84 exclusive.\
+`sum`: This sums up the numbers from 0 to 83, yielding `3486`.\
+`chr`: Finally, this gives us the Unicode character with code `3486`. What character is that? Well, you'll have to `print(chr(sum(range(ord(min(str(not())))))))` to find out (or look it up at that website up there. Hint: 3486 in base 10 is equal to 0D9E in base 16) ;)
+
 ## Exercises
 
-For today's session we have a large number of different exercises that you can
-choose from. They are roughly ordered by difficulty. If you find an exercise easy, consider skipping a few. It is somewhat difficult to finish most of them by the end of the session so we'll begin the next session with some exercise time as well after the recap. We would also encourage doing some of the exercises at home. In that case you could check the `solutions.py` file and the recordings from a previous run of the course [here](https://www.youtube.com/watch?v=TU1aisio7IU).
+For today's session we have a large number of different exercises that you can choose from. These exercises are roughly ordered by difficulty. If you find an exercise easy, consider skipping a few. It is somewhat difficult to finish most of them by the end of the session so we'll begin the next session with some exercise time as well after the recap. 
+
+We would also encourage doing some of the exercises at home. In that case you could check the `solutions.py` file and the recordings from a previous run of the course [here](https://www.youtube.com/watch?v=TU1aisio7IU).
 
 Each exercise has some tests associated with it so you can test your solution. To run the tests, download the associated file, open it in IDLE, and edit the function at the top. An example of how to do exercise 1 will be shown during the lecture.
+
+These sort of questions that programmers might see in their job interviews (albeit a bit on the easy side). Clear them all, and you might see success in the Competitive Programming events we hold!
 
 ### Exercise 1: Summing a list
 
@@ -349,6 +373,36 @@ def poly_prod(xs, ys):
 [Download Test Cases][exercise17]
 
 **Hint:** you can create a list of `0`s of length `n` in Python with `[0] * n`.
+
+### Exercise 18: Enforce choice, revisited
+This exercise will give you an idea of what real, professional programmers do. Think back to this block of code from session 3:
+
+```python
+user_integer = None
+user_input = input("Please input an integer.")
+
+while (user_integer == None)
+    try:
+        user_integer = int(user_input)
+    except:
+        user_input = input("That was not an integer. Please try again.")
+```
+Complete the following code to turn the above code into a function that fits the given description.
+
+```python
+def enforce_option_input(options, prompt, error_prompt) -> str:
+    """ 
+    The enforce_option_input function shows the user a list of strings and then forces the user to choose an option from the list, unless the list is empty, in which case the function immediately returns an empty string ("").
+
+    :param options: the list of strings that the user can pick from.
+    :param prompt: the prompt the user is shown
+    :param prompt: the error prompt the user is shown after giving an input that is not in the options list
+    """
+    # ... your code goes here
+```
+(P.S. You will see that the function has some built-in protection so that a silly programmer doesn't put their users in an infinite loop by asking them to choose an option from an empty list. 
+
+Real-world programmers not only have to silly-proof their code from silly users trying to run their code wrong, they have to also silly-proof their code from silly programmers trying to use their code wrong as well!)
 
 [exercise1]: https://github.com/oxcompsoc/learntocode/master/session5/exercise1.py
 [exercise2]: https://github.com/oxcompsoc/learntocode/master/session5/exercise2.py

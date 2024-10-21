@@ -41,8 +41,6 @@ while i < n:
     shopping_list.append(last_item)
     i += 1
 
-shopping_list.remove("end")
-
 print('Your shopping list is:')
 # From Ex 2
 i = 0
@@ -61,8 +59,6 @@ while i < n:
     last_item = input('Please enter item number ' + str(i+1) + ' ')
     shopping_list.append(last_item)
     i += 1
-
-shopping_list.remove("end")
 
 print('Your shopping list is:')
 # From Ex 2

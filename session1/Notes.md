@@ -14,30 +14,30 @@ Throughout these documents note that text in a `monospaced font` is Python code.
 The [Oxford University Computer Society][compsoc] was founded in 1978, making
 it one of the oldest university computing societies in the country. 
 
-This year, we will be holding Thursday Talks from both academics and sponsors / Workshops on Thursdays. Learn to code and socials on Saturdays (Weeks 1-7 7pm).
+This year, we will be holding talks from academics and sponsors / workshops on Thursdays. Learn to code and socials on Saturdays (Weeks 2-7 5:30 to 6:30 PM).
 
 [Refer to our website for more and latest details of all events.][compsoc]
 
 [compsoc]: https://ox.compsoc.net
 
-## IDLE
+## Background
 
-Once you have Python installed you’ll be able to launch a piece of software
-called IDLE. When you first launch it you will be greeted with a prompt where
-you can type in statements or expressions in Python.
-The IDLE is used for learning and experimenting purposes.
+### What is a programming language?
 
-## Text Editor
+A programming language is a way for humans to tell computers what sort of computation they want done. Up until quite recently - and arguably even still - computers have not been able to interpret natural language i.e. plain English instructions perfectly. So the programmer translates plain language directions into a programming language.
 
-The IDLE is not suitable for writing actual large programs. Instead, we would use the text editor method. We can create a new file by clicking **File > New File** at the top menu bar of the IDLE.
-### Problems installing Python or using IDLE
+"Show me the words 'Hello, world!'" -> `print("Hello, world!")`
 
-If you can't get Python installed on your computer, don't worry! Instead,
-please go to [this website][replit], which allows you to run Python programs
-online. All our examples (until the final session) should run fine in either
-the online version or IDLE.
+<!-- Of course, computers "think" in electrical signals, not in words. So the programming language needs to be translated again, into machine language: pure ones and zeroes.  -->
+<!-- This is the job of the **compiler** or **interpreter**.
 
-[replit]: http://repl.it/languages/python3
+Compiling and interpreting are the two different ways that programming languages are translate into machine code.  -->
+<!-- Giving your code to a compiler is like giving a translator a manuscript and asking them to give you a fully translated version, whereas giving your code to an interpreter is like asking the translator to read the manuscript line-by-line. -->
+
+### Why Python?
+
+Python is a highly readable language that can be used for virtually anything because of its extensive library of packages. It finds use across pretty much every single branch of computer science, and it's a go-to for when you need to make a quick proof-of-concept or prototype a new idea.
+<!-- Because it's an interpreted language, you can make small adjustments to your code and see the changes in the resultant output faster than if it were a compiled language -->
 
 ## Our first program - Hello, world!
 
@@ -47,8 +47,7 @@ output. Although this might seem limited in the age of animated, interactive
 apps they provide us with a strong foundation for programming.
 
 One of the most basic programs we can write is one that just outputs some text.
-In a new file in IDLE (or empty editor on `repl.it`) enter the following Python
-program:
+In a new file in IDLE (or empty editor on `repl.it`) enter the Python program from the above section:
 
 ```python
 print("Hello, world!")
@@ -61,9 +60,9 @@ see the output `"Hello, world!"`.
 
 There are three elements to consider here:
 * `print` is the name of a **function**. Functions are pieces of code that do
-  something and/or calculate something. The `print` function outputs text
-  (historically, the some of the earliest computers used physical printers as
-  their primary form of output)
+  something and/or calculate something. The `print` function outputs text.
+  (Historically, some of the earliest computers used physical printers as
+  their primary form of output.)
 * `( )` (parentheses) are used to indicate that we are **calling** the function
   `print`, i.e. that we are telling Python to execute the `print` function
 * `"Hello, world!"` is the **argument** to the function `print`, i.e. the text
@@ -71,7 +70,7 @@ There are three elements to consider here:
   notice that when the text is printed the quote marks are missing -
   this is because we have to indicate to Python that the argument is text,
   rather than other symbols. We call text that appears in programs like this
-  **strings**
+  **strings**.
 
 ## Comments
 
@@ -81,9 +80,15 @@ Throughout the next examples, you will see some text written after a `#` symbol.
 # this is the first comment
 spam = 1  # and this is the second comment
           # ... and now a third!
-text = "# This is not a comment because it's inside quotes."
 print("Hello, world!") # Prints Hello, world!
 ```
+
+<!-- ### Stretch
+How will the following block of code behave?
+```python
+print("# Comment")
+print(# "Comment")
+``` -->
 
 ## Variables
 
@@ -221,8 +226,8 @@ However, this is not the case. Floats cannot store numbers exactly and will resu
 30000000000000000000000001-30000000000000000000000000 # 1
 30000000000000000000000001.0-30000000000000000000000000.0 #0.0
 
-int(30000000000000000000000001.0) #30000000000000000570425344 -->
-```
+int(30000000000000000000000001.0) #30000000000000000570425344 
+```-->
 
 ### Strings
 
@@ -359,10 +364,10 @@ We will discuss more on if statements in the next session.
 
 5)  **Average of two numbers:** create a program which takes as input two numbers and computes their average. We will generalise the program to calculate the average of more than two numbers in the next few sessions.
 
-6) **Odd detector:** create a program, which takes an input (an int) and outputs "This number is odd" if the input was 1 and "This input was not odd" otherwise. (*You will need to use the operator %. a % b gives the remainder when a is divided by b*)
+6) **Odd detector:** create a program, which takes an input (an int) and outputs "This number is odd" if the input was 1 and "This input was not odd" otherwise. (*You may want to use the operator %. a % b gives the remainder when a is divided by b.*)
 ## Want more?
 
-Check out [this Python tutorial playlist][bucky]! We covered videos 1,2,3,7 this session but feel free to watch and learn more and learn. In fact that is how I learnt Python.
+Check out [this Python tutorial playlist][bucky]! We covered videos 1,2,3,7 this session but feel free to watch and learn more and learn. 
 
  <!-- ## Good resources to look at
 

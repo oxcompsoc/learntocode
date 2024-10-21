@@ -1,36 +1,36 @@
 # Learn to Code
 
+Welcome to LTC!
+
 Each year [Oxford University CompSoc][compsoc] runs an introductory programming
 course in Python. This repositories contains all of the notes and code samples used in the
-2023 course.
+2024 course.
 
 To run these code samples you will need [Python 3][python]. For the sessions we recommend using IDLE, a piece of software which comes pre-installed with Python. Alternatively you can run the samples in a terminal via:
 
 `python3 filename.py`
 
-See the [Notes][s0notes] for Session 0 for instructions on setting this up. 
+See the [Notes][s0notes] for Session 0 for instructions on getting set up with Python. 
 
-If you can't get Python installed on your computer, we recommend using [this
-online environment][replit] instead.
 
 Each folder contains some notes on what we did during the session, exercises,
 and their solutions.
 
 [compsoc]: https://ox.compsoc.net
 [python]: https://python.org
-[replit]: http://repl.it/languages/python3
 
 ## Table of Contents
 
-| Session           | Week | Date | Notes (online)            |  Notes (PDF)            | Slides                |
-| ----------------- | ---- | ---- | ----------------- | --------------------- | --------------------- |
-| Session 0: Installing Python                                  | N/A  | N/A  | [Notes][s0notes]  | [PDF][s0pdf] | N/A |
-| Session 1: Introduction: What can you do with Python? Python syntax, variables, if statements | 1    | 14/10  | [Notes][s1notes]  | [PDF][s1pdf]| [Slides][s1slides] |
-| Session 2: If statements, For loops                | 3    | 28/10  | [Notes][s2notes]  | [PDF][s2pdf] | N/A |
-| Session 3: While loops, Lists                                          | 5   | 11/11  | [Notes][s3notes]  | [PDF][s3pdf]| N/A |
-| Session 4: Lists, Functions                 | 7   | 25/11 | [Notes][s4notes]  | [PDF][s4pdf] | N/A |
-<!-- | Session 5: Functions         | 6    | [Notes][s5notes]  | [Notes][s5pdf] | N/A | -->
-<!-- | Session 6: Creating a snake game   | 7    | Work in progress  | Work in progress | N/A | --> 
+| Session           | Week | Date | Notes (online)    |  Notes (PDF)          | 
+| ----------------- | ---- | ---- | ----------------- | --------------------- |
+| Session 0: Installing Python | | | [Notes][s0notes] | [PDF][s0pdf] |
+| Session 1: Syntax and Variables | 2 | 26/10 | [Notes][s1notes] | [PDF][s1pdf]| 
+| Session 2: If statements, For loops | 3 | 2/11 | [Notes][s2notes] | [PDF][s2pdf] |
+| Session 3: While loops, Try | 4 | 9/11 | [Notes][s3notes] | [PDF][s3pdf]|
+| Session 4: Lists | 5 | 16/11 | [Notes][s4notes] | [PDF][s4pdf] | 
+| Session 5: Functions | 6 | 23/11 | [Notes][s5notes] | [PDF][s5pdf] | 
+| Session 6: Turtle Graphics | 7 | 30/11 | Work in progress | Work in progress | 
+
 
 [s0notes]: https://github.com/oxcompsoc/learntocode/tree/master/session0/README.md
 [s0pdf]: https://github.com/oxcompsoc/learntocode/tree/master/session0/Notes.pdf
