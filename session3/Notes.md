@@ -376,7 +376,7 @@ Actually, we can remove the outer `try`/`except` block as well !!!
 user_integer = None
 user_input = input("Please input an integer.")
 
-while (user_integer == None)
+while (user_integer == None):
     try:
         user_integer = int(user_input)
     except:
