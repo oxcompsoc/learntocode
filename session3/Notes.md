@@ -325,10 +325,10 @@ except:
     while (user_input_is_wrong):
         user_input_is_wrong = False
         # input... ask them for an input
-        try
+        try:
             # convert the input
             user_input_is_wrong = False
-        except
+        except:
             user_input_is_wrong = True
 ```
 But then we run into the question of "How do we get the converted input value out of the try/except block?"
@@ -346,10 +346,10 @@ except:
     while (user_input_is_wrong):
         user_input_is_wrong = False
         user_input = input("That was not an integer. Please try again.")
-        try
+        try:
             user_integer = int(user_input)
             user_input_is_wrong = False
-        except
+        except:
             user_input_is_wrong = True
 ```
 
@@ -364,9 +364,9 @@ try:
 except:
     while (user_integer == None):
         user_input = input("That was not an integer. Please try again.")
-        try
+        try:
             user_integer = int(user_input)
-        except
+        except:
             pass # Python complains if this block is empty, so we use the "pass" keyword, which means "do nothing".
 ```
 
@@ -376,7 +376,7 @@ Actually, we can remove the outer `try`/`except` block as well !!!
 user_integer = None
 user_input = input("Please input an integer.")
 
-while (user_integer == None)
+while (user_integer == None):
     try:
         user_integer = int(user_input)
     except:
