@@ -293,4 +293,4 @@ for item in shopping_list:
 
 **You can find all the [solutions here][solutions].**
 
-[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session4/solutions.py
+[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session4/src/solutions.py

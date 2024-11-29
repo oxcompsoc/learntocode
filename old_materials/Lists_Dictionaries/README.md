@@ -107,7 +107,7 @@ In today's session we are going to keep on looking at lists by continuing with s
 
 If you get stuck, as well as asking a volunteer for help, you can also look at [last week's solutions][s3solutions] and [the video of this session from a previous year][s3video].
 
-[s3solutions]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/solutions.py
+[s3solutions]: https://raw.githubusercontent.com/oxcompsoc/learntocode/master/session3/src
 [s3video]: https://www.youtube.com/watch?v=TU1aisio7IU
 
 ## Dictionaries

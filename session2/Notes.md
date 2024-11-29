@@ -513,4 +513,4 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 
 **You can find all the [solutions here][solutions].**
 
-[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session2
+[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session2/src
