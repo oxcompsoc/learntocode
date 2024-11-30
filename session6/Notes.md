@@ -139,3 +139,8 @@ Write out the pseudocode for a game of Connect Four. This is fairly open-ended, 
 (This image is so perfect for this session and also so unlicensed)
 
 The rest of the session will be spent finishing the code in [tictactoe.py](tictactoe.py). Good luck!
+
+## Where to go next
+Previous years had session 6 covering [pygame](https://www.pygame.org/wiki/GettingStarted), which is a Python library designed for making proper WASD/mouse type games, like platformers and Snake.
+
+If you want to use Python professionally, you might look into [matplotlib](https://matplotlib.org/), which creates graphs, charts, and other visualizations, or [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/), which crawls the Internet and gathers data from webpages (and maybe can help you automatically fill out job application forms?), or [open](https://docs.python.org/3/library/functions.html#open), which is how you give Python files on your computer for processing.
