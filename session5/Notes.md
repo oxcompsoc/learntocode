@@ -381,7 +381,7 @@ This exercise will give you an idea of what real, professional programmers do. T
 user_integer = None
 user_input = input("Please input an integer.")
 
-while (user_integer == None)
+while (user_integer == None):
     try:
         user_integer = int(user_input)
     except:
