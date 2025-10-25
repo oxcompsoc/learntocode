@@ -305,66 +305,80 @@ f = 9 / 5 * c + 32
 print(str(c) + " Celsius = " + str(f) + " Fahrenheit")
 ```
 
-## Sneak Peak - If Statements
-
-We often want our programs to adapt their behaviour based on the input they receive. For instance, lets say we want to create a program, which tells our user if the number they input is small (e.g. less than 10). This is what the next program does:
-
-```python
-number = int(input("Please enter a number: "))
-if number < 10:
-  print(number + " is a small number.")
-```
-
-We could also have our program say something if the number is large as well:
-
-```python
-number = int(input("Please enter a number: "))
-if number < 10:
-  print(number + " is a small number.")
-else:
-  print(number + " is a large number.")
-```
-
-We will discuss more on if statements in the next session.
-
-## Exercise
+## Exercises
 
 *When attempting these exercises, I suggest you type out the code by hand, rather than copy-pasting it. Pay attention to all of the symbols you are typing and see if you can recall why they are there.*
 
-1) Try to write a similar program that converts Fahrenheit to Celsius
+### Exercise 1. (Free Response)
+
+Which of these questions is the hardest for a computer to answer? Explain your choice.
+
+- How many seconds have passed since midnight?
+- Is there a bird in this picture?
+- What is the weather like in Istanbul?
+- In which direction should I look to see the Moon?
+- What would this picture look like in black and white?
+
+### Exercise 2. 
+
+Write a sandwich-echo function. 
+Your function should accept three inputs, 
+and then print them back out in reverse order. A run of this program might look like this:
+```
+Input 1: in the outskirts
+Input 2: is nobody
+Input 3: there
+there
+is nobody
+in the outskirts
+```
+
+### Exercise 3.
+
+Write a program that prints the average of two numbers.
+For top marks, include the two numbers in the final print statement.
+```
+First number: 8
+Second number: 15
+The average of 8 and 15 is 11.5
+```
+
+### Exercise 4.
+
+Write a program that converts Fahrenheit to Celsius. The following equation might be helpful:
 
     (°F − 32) × 5/9 = °C
 
-2)  **One detector:** create a program, which takes an input (an int) and outputs "This number is 1" if the input was 1 and "This input was not 1" otherwise.
+You can format the output however you like. Or not at all. :)
 
-3) **Subtraction:** create a program, which takes two integers, and outputs the result of the larger number subtracting the smaller number.
+### Exercise 5. (Free Response)
+This question can be skipped if you've read through the notes.
 
-  ```python
-  first = ________(input("Input first number: "))
-  second = ________(input("Input second number: "))
-  if ________ < ________:
-      #swap the two numbers
-  answer = first - second
-  print("The answer of "+str(first)+"-"+str(second)+" is " + str(answer))
-  ```
-  ```
-  Samples:
-  Input first number: 4
-  Input second number: 3
-  The answer of 4-3 is 1
+Read the following code and predict its result.
 
-  Input first number: 3
-  Input second number: 4
-  The answer of 4-3 is 1
-  ```
+```python
+  print(5 * “5”)
+```
 
-## More exercises
+Now run the code. What happens? Is this what you expected? 
+Do you think this is a reasonable behaviour for Python to have? 
+Why or why not?
 
-4)  Now try to combine the two programs mentioned, so that you print out the person's name, as well as their favourite number multiplied by two.
+### Exercise 6. (Hard) (Free Response)
 
-5)  **Average of two numbers:** create a program which takes as input two numbers and computes their average. We will generalise the program to calculate the average of more than two numbers in the next few sessions.
+Read the following code and predict its result.
 
-6) **Odd detector:** create a program, which takes an input (an int) and outputs "This number is odd" if the input was 1 and "This input was not odd" otherwise. (*You may want to use the operator %. a % b gives the remainder when a is divided by b.*)
+```python
+  input = print
+  print = 6
+  input(print)
+```
+
+Now run the code. What happens? Is this what you expected? 
+Do you think this is a reasonable behaviour for Python to have? 
+Why or why not?
+
+
 ## Want more?
 
 Check out [this Python tutorial playlist][bucky]! We covered videos 1,2,3,7 this session but feel free to watch and learn more and learn. 
