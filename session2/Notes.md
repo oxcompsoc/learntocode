@@ -365,28 +365,30 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 ### Exercise 5.
 Read the following code blocks and predict their results.
 
-  ```python
-  for i in range(4,10):
-    print(i)
-  ```
+    ```python
+    # a)
+    for i in range(5):
+	    print(i)
+    ```
+    ```python
+    # b)
+    for i in range(4,10):
+	    print(i)
+    ```
+    ```python
+    # c)
+    for i in range(5):
+	    print("Hello")
+    ```
+    ```python
+    # d)
+    for i in range(4,10):
+	    print("Hello")
+    ```
 
-  ```python
-  for i in range(0,10,2):
-    print(i)
-  ```
+*When attempting these exercises, I suggest you type out the code by hand, rather than copy-pasting it. Pay attention to all of the symbols you are typing and see if you can recall why they are there.*
 
-  ```python
-  for i in range(5, 0)
-    print("Backwards: " + str(i))
-  for i in range(5)
-    print("Subtraction: " + str(5 - i))
-  ```
-
-Now run the code. What happens? Is this what you expected? 
-
-### Exercise 6. **Powers**
-Complete the program below, which outputs the first `n` powers of 2. 
-(You are not allowed to use the exponentiation operator `**`.)
+6)  Complete the program below, which outputs the first `n` powers of 2. 
 
   ```python
   n = ___(input("Input a number: "))
