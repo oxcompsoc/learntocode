@@ -11,4 +11,3 @@ if number == "1":
     print("The number is 1.")
 else:
     print("The number is not 1.")
-# of course, this second approach is cheating. :)
