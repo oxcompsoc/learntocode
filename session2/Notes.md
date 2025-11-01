@@ -190,12 +190,12 @@ Students can only get an award if they get a score of 60 or more and get an "A" 
   Your score is not high enough and your conduct grade is not A.
   ```
 
-### Exercise 4.**Leap Year:** 
+### Exercise 4. **Leap Year:** 
 Create a program that determines whether a year is a leap year.
 
   ![How to check for leap years](assets/leap_year.png)
 
-  (*You will need to use the operator %: a % b gives the remainder when a is divided by b*)
+  (*Recall: a % b gives the remainder when a is divided by b*)
 
   ```
   Enter year: 2022
@@ -366,28 +366,22 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 Read the following code blocks and predict their results.
 
   ```python
-  # a)
-  for i in range(5):
-    print(i)
-  ```
-
-  ```python
-  # b)
   for i in range(4,10):
     print(i)
   ```
 
   ```python
-  # c)
-  for i in range(5):
-    print("Hello")
+  for i in range(0,10,2):
+    print(i)
   ```
-  
+
   ```python
-  # d)
-  for i in range(4,10):
-    print("Hello")
+  for i in range(5, 0)
+    print("Backwards: " + str(i))
+  for i in range(5)
+    print("Subtraction: " + str(5 - i))
   ```
+
 Now run the code. What happens? Is this what you expected? 
 
 ### Exercise 6. **Powers**
@@ -499,7 +493,7 @@ Create a program which prints a square of *s of size `n` based on input. As a ge
   **********
   ```
 
-Once you've done this with only loops, consider: is there a good place to use string "multiplication" and string "addition"?
+Once you've done this with loops, consider: is there a good place to use string "multiplication" and string "addition"?
 It may be useful to read the following code and predict its result:
 
 ```python
