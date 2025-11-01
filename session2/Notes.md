@@ -154,24 +154,12 @@ else:
   print("Who is this?")
 ```
 
+### Exercise 1. **One detector** 
+Create a program, which takes an input (an int) and outputs "The number is 1" if the input was 1 and "The number is not 1" otherwise.
 
-## Exercise
-
-### Easy
-1)  **One detector:** create a program, which takes an input (an int) and outputs "This number is 1" if the input was 1 and "This input was not 1" otherwise.
-
-2) **Subtraction:** create a program, which takes two integers, and outputs the result of the larger number subtracting the smaller number.
-
-  ```python
-  first = ________(input("Input first number: "))
-  second = ________(input("Input second number: "))
-  if ________ < ________:
-      #swap the two numbers
-  answer = first - second
-  print("The answer of "+str(first)+"-"+str(second)+" is " + str(answer))
+### Exercise 2. **Subtraction** 
+Create a program, which takes two integers, and outputs the result of the larger number subtracting the smaller number.
   ```
-  ```
-  Samples:
   Input first number: 4
   Input second number: 3
   The answer of 4-3 is 1
@@ -181,12 +169,10 @@ else:
   The answer of 4-3 is 1
   ```
 
-### Medium
-
-3)  **Award**: Students can only get an award if they get a score of 60 or more and get an "A" for conduct. Create a program, which takes one integer (a score) and one string (a conduct grade), and tell whether the student could get an award.
+### Exercise 3. **Award**
+Students can only get an award if they get a score of 60 or more and get an "A" for conduct. Create a program, which takes one integer (a score) and one string (a conduct grade), and tell whether the student could get an award.
 
   ```
-  Samples:
   Enter score: 88
   Enter conduct grade: A
   Congratulations! You get an award.
@@ -203,16 +189,15 @@ else:
   Enter conduct grade: C
   Your score is not high enough and your conduct grade is not A.
   ```
-### Hard
 
-4) **Leap Year:** a. create a program, which determines whether a year is a leap year.
+### Exercise 4. **Leap Year:** 
+Create a program that determines whether a year is a leap year.
 
   ![How to check for leap years](assets/leap_year.png)
 
-  (*You will need to use the operator %. a % b gives the remainder when a is divided by b*)
+  (*Recall: a % b gives the remainder when a is divided by b*)
 
   ```
-  Samples:
   Enter year: 2022
   2022 is not a leap year
 
@@ -226,7 +211,7 @@ else:
   1900 is not a leap year
   ```
 
-  b. Try to achieve the same result by only using one if else block.
+For highest marks, achieve the same result by only using one `if`, one `else`, and no `elif`s. (Remember, you can use `and`, `or`, and `not` to build complex conditions.)
 
 **You can find all the [solutions here][solutions].**
 
@@ -376,100 +361,107 @@ for i in range(1,n+1):
 print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 ```
 
-### Exercises
 <!-- Will do Q1, 4, 5, 6 in lesson -->
-#### Easy
+### Exercise 5.
+Read the following code blocks and predict their results.
 
-5)  What are the outputs of the following program segments?
+  ```python
+  for i in range(4,10):
+    print(i)
+  ```
 
-    ```python
-    # a)
-    for i in range(5):
-	    print(i)
-    ```
-    ```python
-    # b)
-    for i in range(4,10):
-	    print(i)
-    ```
-    ```python
-    # c)
-    for i in range(5):
-	    print("Hello")
-    ```
-    ```python
-    # d)
-    for i in range(4,10):
-	    print("Hello")
-    ```
+  ```python
+  for i in range(0,10,2):
+    print(i)
+  ```
 
-*When attempting these exercises, I suggest you type out the code by hand, rather than copy-pasting it. Pay attention to all of the symbols you are typing and see if you can recall why they are there.*
+  ```python
+  for i in range(5, 0)
+    print("Backwards: " + str(i))
+  for i in range(5)
+    print("Subtraction: " + str(5 - i))
+  ```
 
-6)  Complete the program below, which outputs the first `n` powers of 2. 
+Now run the code. What happens? Is this what you expected? 
 
-    ```python
-    n = ___(input("Input a number: "))
-    number = 1
-    for i in range(_____):
-        number____________
-        print(number)
-    ```
+### Exercise 6. **Powers**
+Complete the program below, which outputs the first `n` powers of 2. 
+(You are not allowed to use the exponentiation operator `**`.)
 
-    ```
-    Sample: 
-    Input a number: 5
-    2
-    4
-    8
-    16
-    32
-    ```
+  ```python
+  n = ___(input("Input a number: "))
+  number = 1
+  for i in range(_____):
+      number____________
+      print(number)
+  ```
 
-7)  Write a similar program, which outputs the `n`th power of 2. (should work for all n >= 0)
-    ```
-    Sample: 
-    Input a number: 5
-    2 to the power 5 is 32.
-    ```
+  ```
+  Input a number: 5
+  2
+  4
+  8
+  16
+  32
+  ```
 
-#### Medium
-8)  Write a program, which asks the user for an input `n` and then for `n` numbers. Then, it prints out the average of those `n` numbers. A run of your program might look something like this:
+### Exercise 7.
+Write a program which asks the user for an input `n`, and then prompts them for `n` numbers. Then, it prints out the average of those `n` numbers. A run of your program might look something like this:
 
     ```
     How many numbers? 3
     Please enter a number: 1
-    Please enter a number: 3
-    Please enter a number: 5
-    The average was: 3.0
+    Please enter a number: 2.5
+    Please enter a number: 7
+    The average was: 3.5
     ```
+  
+Note that this program accepts decimal inputs, so you should cast to `float` instead of `int`.
+```python
+# Reminder: casting to float preserves decimals
+float("5.5") # will be 5.5
+int("5.5") # will be 5
+```
 
-9)  Complete the program below, which outputs the first `n` fibonacci numbers. (Each number is the sum of the two preceding ones, starting with 0,1.)
+### Exercise 8. **Fibonacci**
+Complete the program below, which outputs the first `n` fibonacci numbers. (Each number is the sum of the two preceding ones, starting with 0,1.)
 
-    ```python
-    t = ______(input("Input a number: "))
-    a = 0
-    b = 1
-    for ______ in range(t):
-        c = a + b # calculate new term
-        #shift the terms by 1
-        a = ____
-        b = ____
-    print("Term " + str(i) + " is " + _____________)
-    ```
-    ```
-    Sample: 
-    Input a number: 5
-    Term 0 is 0
-    Term 1 is 1
-    Term 2 is 1
-    Term 3 is 2
-    Term 4 is 3
-    Term 5 is 5
-    ...
-    Term 14 is 377 (just for checking)
-    ```
-#### Hard
-10)  Create a program, which takes as input a number `n` and then prints the following:
+  ```python
+  t = ______(input("Input a number: "))
+  a = 0
+  b = 1
+  for ______ in range(t):
+      c = a + b # calculate new term
+      #shift the terms by 1
+      a = ____
+      b = ____
+  print("Term " + str(i) + " is " + _____________)
+  ```
+  ```
+  Input a number: 5
+  Term 0 is 0
+  Term 1 is 1
+  Term 2 is 1
+  Term 3 is 2
+  Term 4 is 3
+  Term 5 is 5
+  ```
+
+Information for testing purposes: the 14th term in the Fibonacci sequence is 377.
+
+### Exercise 9. **Pyramid**
+
+Read the following code and predict its result.
+
+```python
+  print("rock", end=", ")
+  print("paper", end=", ")
+  print("scissors", end="! ")
+  print()
+  print("play again?")
+```
+
+Based on that, create a program which takes as input a number `n` and then prints the following:
 
   ```
   1
@@ -482,19 +474,13 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 
   1 2 3 4 ... n
   ```
-  *Hint: If you want to print something without a newline at the end, the way to to that is:*
 
-  ```python
-  number = 10
-  print(number, end=" ") # This will print " " after number.
-  ```
+### Exercise 10. **Square**
 
-11)  a)  Create a program, which prints a square of *s of size `n` based on input. As a generalisation of the example. 
+Create a program which prints a square of *s of size `n` based on input. As a generalisation of the example. 
   
-  Sample:
-
   ```
-  Input side length of the square: 10
+  Side length of the square: 10
   **********
   *        *
   *        *
@@ -507,9 +493,14 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
   **********
   ```
 
-  b)  Try not to use string "multiplication" and string "addition".
+Once you've done this with loops, consider: is there a good place to use string "multiplication" and string "addition"?
+It may be useful to read the following code and predict its result:
 
-  c)  Try modifying your program so that it only outputs 1 star when n is 1, and no stars when n <= 0
+```python
+  print("rock\npaper\nscissors!")
+```
+
+For highest marks, your program should output 1 star when n is 1, and no stars when n <= 0.
 
 **You can find all the [solutions here][solutions].**
 

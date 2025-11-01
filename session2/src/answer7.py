@@ -1,5 +1,7 @@
-n = int(input("Input a number: "))
-number = 1
+n = int(input("How many numbers? "))
+sum = 0
 for i in range(n):
-    number*=2
-print("2 to the power "+str(n) + " is " + str(number))
+    num = float(input("Please enter a number: "))
+    sum += num
+avg = sum/n
+print("The average was "+str(avg))

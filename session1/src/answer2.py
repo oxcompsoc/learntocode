@@ -1,0 +1,6 @@
+input1 = input("Input 1: ")
+input2 = input("Input 2: ")
+input3 = input("Input 3: ")
+print(input3)
+print(input2)
+print(input1)
