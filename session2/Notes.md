@@ -363,7 +363,7 @@ print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
 
 <!-- Will do Q1, 4, 5, 6 in lesson -->
 ### Exercise 5.
-What are the outputs of the following program segments?
+Read the following code blocks and predict their results.
 
   ```python
   # a)
@@ -388,10 +388,7 @@ What are the outputs of the following program segments?
   for i in range(4,10):
     print("Hello")
   ```
-
-(No answers provided for this one because the answers are gotten by running the code.)
-
-*When attempting these exercises, I suggest you type out the code by hand, rather than copy-pasting it. Pay attention to all of the symbols you are typing and see if you can recall why they are there.*
+Now run the code. What happens? Is this what you expected? 
 
 ### Exercise 6. **Powers**
 Complete the program below, which outputs the first `n` powers of 2. 
