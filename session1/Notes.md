@@ -345,9 +345,9 @@ The average of 8 and 15 is 11.5
 
 ### Exercise 4.
 
-Write a program that converts Fahrenheit to Celsius. The following equation might be helpful:
+Write a program that converts Celsius to Fahrenheit. The following equation might be helpful:
 
-    (°F − 32) × 5/9 = °C
+    °F = 32 + °C × 9/5
 
 You can format the output however you like. Or not at all. :)
 
