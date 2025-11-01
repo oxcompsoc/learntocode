@@ -1,11 +1,11 @@
-t = int(input("Input a number: "))
-a = 0
-b = 1
-for i in range(t):
-    c = a + b # calculate new term
-    #shift the terms by 1
-    a = b
-    b = c
-    # Alternatively:
-    # a,b = b,a+b
-print("Term " + str(i) + " is " + str(a))
+# The key here is print(j, end=" "),
+# which prints each number on the same row.
+# Then, to advance a row,
+# we use print().
+
+n = int(input("Input a number: "))
+
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(j, end=" ")
+    print() # next line
