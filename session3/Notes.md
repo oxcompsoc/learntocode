@@ -109,53 +109,56 @@ we can't simply assign `shopping_list_item_x = input(...)`.
 
 ## More list operations
 
-We can append an element to a list, adding it to the end:
+We can append an element to a list, adding it to the end,
+or pop an element from the list, taking it off the end:
 
 ```python
 # We forgot to add mayo to the list so we can add it later like so:
-shopping_list.append("mayo") # shopping_list is now [ "bread", "smoked salmon", "cherry tomatoes", "cheddar", "mayo" ]
+shopping_list.append("mayo") 
+print(shopping_list) # [ "bread", "smoked salmon", "cherry tomatoes", "cheddar", "mayo" ]
+
+# It turns out we didn't need the mayo after all
+shopping_list.pop() 
+print(shopping_list) # [ "bread", "smoked salmon", "cherry tomatoes", "cheddar" ]
 ```
 
-Or remove an element from the list:
+By specifying an index within the list,
+we can also insert or pop items from anywhere in the list:
 
 ```python
-del shopping_list[4] # shopping_list is now [ "bread", "smoked salmon", "cherry tomatoes", "cheddar" ]
+# We urgently need toilet paper
+shopping_list.insert("toilet paper", 0) 
+print(shopping_list) # [ "toilet paper", "bread", "smoked salmon", "cherry tomatoes", "cheddar" ]
+
+# It turns out we didn't need the toilet paper after all
+shopping_list.pop(0) 
+print(shopping_list) # [ "bread", "smoked salmon", "cherry tomatoes", "cheddar" ]
 ```
 
-Alternatively, you can remove an element by value, so instead of the previous
-line we could have written:
+Alternatively, you can remove an element by value:
 
 ```python
 shopping_list.remove("mayo")
 ```
 
-Do note that this is more computationally expensive because the computer needs to go through the entire list to find the mayo, similarly to how you would go down a list from the start to find it.
+... though this is less common, and also more computationally expensive because the computer needs to go through the entire list to find the mayo, similarly to how you would go down a list from the start to find it.
 
 You can also join two lists together:
 
 ```python
 shopping_page1 = ["bread", "smoked salmon", "cherry tomatoes"]
-shopping_page2 = ["cheddar", "mayo" ]
-shopping_list = shopping_page1 + shopping_page2 # shopping_list is now [ "bread", "smoked salmon", "cherry tomatoes", "cheddar", "mayo" ]
+shopping_page2 = ["cheddar", "mayo"]
+shopping_list = shopping_page1 + shopping_page2 
+# shopping_list is now [ "bread", "smoked salmon", "cherry tomatoes", "cheddar", "mayo" ]
 ```
 
 **Note:** you may have seen what Python calls lists called *arrays* in other programming languages. In most programming languages [there is a difference][listvsarray] but it is not relevant to Python or this course.
 
 [listvsarray]: https://www.quora.com/What-is-the-difference-between-an-array-a-list-and-a-linked-list/answer/Gregory-Schoenmakers?share=ccf41042&srid=RsVE
 
-## Recap on loops
+## Loops with lists
 
-While loops
-
-```python
-n = int(input("Please enter a number: "))
-i = 1
-while i < n:
-    print(i)
-    i += 1 # Increment i (i becomes bigger by 1).
-```
-
-For loops
+Recall the `for` loops from last week:
 
 ```python
 n = int(input("Please enter a number: "))
@@ -163,21 +166,9 @@ for i in range(1, n): # including 1 excluding n
     print(i)
 ```
 
-In general you write a `for` loop like so:
-```python
-for i in range(a, b):
-    # including a excluding b
-    # this block will repeat (b - a) times 
-    # you will have access to the number of the current "repeat" with i
-```
+Loops are exceeding useful for *iterating* over lists. 
 
-As you can see `for` loops take care of a lot of things for us - you don't have to define your own `i` and increment it yourself. On the other hand, that makes `for` loops less flexible - there are some cases where you might not want to have a counter or you might want to decrement it.
-
-## Loops with lists
-
-What loops are really useful for is *iterating* over lists. 
-
-While loops
+<!-- While loops
 ```python
 shopping_list = [ "bread", "smoked salmon", "cherry tomatoes", "cream cheese" ]
 n = len(shopping_list)
@@ -191,7 +182,7 @@ while i < n:
 # I need to buy smoked salmon
 # I need to buy cherry tomatoes
 # I need to buy cream cheese
-```
+``` -->
 
 For loops
 
@@ -208,9 +199,8 @@ for i in range(0, n):
 # I need to buy cream cheese
 ```
 
-## A further simplication
-
-In fact, we can further simplify that `for` loop, so that we don't need the variables `n` and `i` anymore.
+In fact, we can further simplify that `for` loop, so that we don't need the variables `n` and `i` anymore. 
+In most languages, this is a **for-in** loop:
 
 ```python
 shopping_list = [ "bread", "smoked salmon", "cherry tomatoes", "cream cheese" ]
@@ -224,7 +214,12 @@ for item in shopping_list:
 # I need to buy cream cheese
 ```
 
-<!-- This gives us an insight as to what `range(a, b)` does - it's a function (we'll get to what that means later) that is equivalent to writing `[a, a + 1, a + 2, ..., b - 2, b - 1]` so we were iterating over lists all along. -->
+Although, if you look back at the original `for` loop with the `range` in it,
+the word `in` is present there as well.
+
+This gives us an insight as to what `range(a, b)` is doing. 
+It's a function that takes two arguments (a,b)<!-- (we'll get to what that means later)  -->
+and gives us something like a list `[a, a + 1, a + 2, ..., b - 2, b - 1]` so we were iterating over lists all along.
 
 ## Exercises
 
