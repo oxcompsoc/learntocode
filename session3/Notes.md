@@ -1,4 +1,4 @@
-# Session 4: Lists
+# Session 3: Lists
 
 Lists are an important part of a program. We would like to store a bunch of items in one variable. This lets us
 - avoid having to define a new variable for every value we want to store
@@ -420,7 +420,16 @@ for item in items:
 For full marks, if the first element of the list appears 1 time,
 your program should print "appears 1 time" instead of "appears 1 times".
 
-### Exercise 7. Look-And-Say (Extremely Hard)
+### Exercise 7. Adding 1
+Given a number represented by its digits,
+write a program that adds 1 to that number.
+```python
+number = [1,5,6,9,9] # representing the number 15699
+# add 1 to number here...
+print(number) # you should get [1,5,7,0,0]
+```
+
+### Exercise 8. Look-And-Say (Extremely Hard)
 The look-and-say sequence starts with the number 1.
 Then, you say exactly what you see: "one one", so the next number is 11.
 The number after that is "two ones", 21, followed by "one two and one one", 1211.

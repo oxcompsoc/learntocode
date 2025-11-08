@@ -1,4 +1,4 @@
-# Session 3: While loops and Try
+# Session 4: While loops and Try
 
 ## While loops
 
