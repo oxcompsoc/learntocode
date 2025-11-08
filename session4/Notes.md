@@ -244,6 +244,27 @@ It is up to you which kind of loop you are going to use based on the situation, 
   <!-- No nested while and for loop exercises, maybe add some after we have introduced lists.  -->
 <!-- #### Expert: -->
 
+
+<!-- ### Exercise 7. Adding 1 (Hard)
+(a) Given a number represented by its digits,
+write a program that adds 1 to that number.
+```python
+number = [9,5,8,9,9] # representing the number 95899
+# add 1 to number here...
+print(number) # you should get [9,5,9,0,0]
+```
+
+*The algorithm itself is not difficult to code, 
+but it is a bit harder to see what the algorithm should be.* 
+
+(b) Given a number represented by its digits,
+write a program that adds 1 to **every digit of** that number.
+```python
+number = [9,5,8,9,9] # representing the number 95899
+# add 1 to every digit here...
+print(number) # you should get [1,0,7,1,1,0]
+-->
+
 **You can find all the [solutions here][solutions].**
 
 [solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session3
