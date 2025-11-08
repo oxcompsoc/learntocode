@@ -454,10 +454,11 @@ Information for testing purposes: the 14th term in the Fibonacci sequence is 377
 Read the following code and predict its result.
 
 ```python
+  print("rock paper scissors:")
+  print()
   print("rock", end=", ")
   print("paper", end=", ")
   print("scissors", end="! ")
-  print()
   print("play again?")
 ```
 

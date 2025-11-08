@@ -251,8 +251,6 @@ It is up to you which kind of loop you are going to use based on the situation, 
 
 ## Try
 
-(New section added this year)
-
 In the password checking loop at the top of this section, we saw how a program could protect itself from incorrect input, to some extent. But the program still breaks if the user does something wildly incorrect such as
 
 ```python
@@ -403,8 +401,9 @@ while (user_integer == None):
     You have inputted the maximum allowed number of integers. Goodbye!
     ```
 
-5. Create a "pick from a list" block of code that only accepts an input from 1 to some number.
-    ```
+5. Create a "pick from a list" block of code that only accepts an input from 1 to some number. (You can pick the number.)
+    ```bash
+    # Here the code is set to accept inputs from 1 to 5.
     Please choose an option: 9
     That is not an option. Please try again: wow
     That is not an option. Please try again: 2
