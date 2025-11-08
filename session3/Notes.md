@@ -425,6 +425,8 @@ The look-and-say sequence starts with the number 1.
 Then, you say exactly what you see: "one one", so the next number is 11.
 The number after that is "two ones", 21, followed by "one two and one one", 1211.
 
+After that is 111221.
+
 The code we're starting off with is:
 
 ```python
@@ -432,7 +434,7 @@ current_sequence = [1]
 
 next_sequence = [] # Store the next sequence
 currently_looking_at = current_sequence[0] # Start looking at the first digit
-digit_chain_length = 1 # The first digit starts a chain
+digit_chain_length = 0 # The first digit starts a chain
 for digit in current_sequence:
   # Construct the next sequence here
   pass
