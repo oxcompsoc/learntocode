@@ -257,7 +257,7 @@ But, once again with the pattern of "stopping just short", the right index is th
 ### Exercise 1. (Free Response)
 Create a list of a few countries or cities you want to visit. 
 Print the whole list on one line. 
-Print the list item by item. 
+Print the second item of the list. 
 Print the length of the list.
 
 ### Exercise 2. Backwards
@@ -356,7 +356,7 @@ Let's keep developing the shopping list program.
   print(len(my_list)) # Prints '2'
   ``` -->
 
-(b). Modify your program for slightly so that it displays the item number starting from 1 instead of 0.
+(b). Modify your program slightly so that it displays the item number starting from 1 instead of 0.
 
   ```
   Welcome to the shopping list app!
@@ -383,8 +383,10 @@ that splits a list in a place where the user specifies:
 ```python
 items = [] # fill this list with any items you like
 n = int(input("Split the list where: "))
+
 take = # the first n elements of the list
 drop = # the rest of the list without the first n elements
+
 print("List has been split: ")
 print(take)
 print(drop)
@@ -465,6 +467,8 @@ Look-and-say depth: 6
 111221
 312211
 ```
+
+You will want to use what you learned in session 2, exercise 9.
 
 **You can find all the [solutions here][solutions].**
 
