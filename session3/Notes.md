@@ -228,13 +228,61 @@ This gives us an insight as to what `range(a, b)` is doing.
 It's a function that takes two arguments (a,b)<!-- (we'll get to what that means later)  -->
 and gives us something like a list `[a, a + 1, a + 2, ..., b - 2, b - 1]` so we were iterating over lists all along.
 
+## Slicing
+Sometimes you want to operate on, or separate out, 
+a section of elements from a list.
+
+For example, 
+maybe your toddler has put 700 toys in your shopping cart, 
+and you want to buy only the first four.
+
+As another example, _merge sort_ is a program that sorts a list by 
+splitting it into two halves, 
+sorting each half, 
+and recombining the two sorted half-lists into one sorted list.
+
+```python
+shopping_list = [ "bread", "smoked salmon", "cherry tomatoes", "cream cheese", "stuffed bear", "stuffed bear", "stuffed bear", "stuffed bear", "stuffed bear" ]
+grocery_list = shopping_list[0:4]
+print(grocery_list) # [ "bread", "smoked salmon", "cherry tomatoes", "cheddar" ]
+```
+
+List slicing allows you to extract a segment of a list by specifying two indices: left and right.
+
+The left index is the starting index: the item at `your_list[l]` appears in the slice `your_list[l:r]`.
+But, once again with the pattern of "stopping just short", the right index is the index that you stop just short of: the item at `your_list[r]` does NOT appear in the slice `your_list[l:r]`.
+
+## Exercises
+
 ### Exercise 1. (Free Response)
 Create a list of a few countries or cities you want to visit. 
 Print the whole list on one line. 
 Print the list item by item. 
 Print the length of the list.
 
-### Exercise 2. Call In
+### Exercise 2. Backwards
+
+(a). Recall Exercise 5 from last week: 
+  ```python
+  for i in range(5, 0):
+    print("Backwards: " + str(i))
+  for i in range(5):
+    print("Subtraction: " + str(5 - i))
+  ```
+
+Using this, write a program that prints the elements of a list in reverse order.
+
+(b). Read the following code block and predict its result.
+```python
+items = ["foo","bar","foobar"]
+backwards = items.reverse()
+print("Items: " + str(items))
+print("Backwards: " + str(backwards))
+```
+
+Now run the code. What happens? Is this what you expected? 
+
+### Exercise 3. Call In
 When a call center gets a phone call, 
 if there is no operator available to take the call,
 the caller's phone number is added to a queue.
@@ -283,7 +331,7 @@ Handled a call. Queue: []
   ``` -->
   
 
-### Exercise 3. Shopping List
+### Exercise 4. Shopping List
 Let's keep developing the shopping list program. 
 
 (a). Begin by prompting a user to enter the number of things they want on their list and then ask them for each separate item. The program should output the items on the list in the same order, each on a separate line, after the user's done with their input.
@@ -324,7 +372,53 @@ Let's keep developing the shopping list program.
 
 We'll come back to the shopping list program next week, so make sure you save your progress!
 
-### Exercise 5. Look-And-Say (Very Hard)
+### Exercise 5. Take
+Haskell is a programming language that
+doesn't provide the builtin functions of `range` and `len`.
+But it does provide the builtin functions of `take` and `drop`,
+which Python lacks.
+
+Using list slicing, complete the following code 
+that splits a list in a place where the user specifies:
+```python
+items = [] # fill this list with any items you like
+n = int(input("Split the list where: "))
+take = # the first n elements of the list
+drop = # the rest of the list without the first n elements
+print("List has been split: ")
+print(take)
+print(drop)
+```
+
+We'll complete our implementation of `take` and `drop` in week 5.
+
+### Exercise 6. Counting Duplicates
+Write a program that takes the first element of a list,
+and checks how many times that element is duplicated in the list.
+
+For instance, the list [1,5,3,2,5,1,6,2,7,3,1,6,1,9,6,3,7]
+starts with a 1 and contains four 1s, so your program should output:
+```
+The first element of this list (1) appears 4 times in the list
+```
+
+If we remove the first 1 from the list, your program should instead output
+```
+The first element of this list (5) appears 2 times in the list
+```
+
+It might help to maintain a running "tally" variable:
+```python
+tally = 0
+for item in items:
+  # ... complete the code
+  # sometimes, or under some conditions, write tally = tally + 1
+```
+
+For full marks, if the first element of the list appears 1 time,
+your program should print "appears 1 time" instead of "appears 1 times".
+
+### Exercise 7. Look-And-Say (Extremely Hard)
 The look-and-say sequence starts with the number 1.
 Then, you say exactly what you see: "one one", so the next number is 11.
 The number after that is "two ones", 21, followed by "one two and one one", 1211.
@@ -334,23 +428,43 @@ The code we're starting off with is:
 ```python
 current_sequence = [1]
 
-looking_at_digit = None
-digit_chain_length = 0
-next_sequence = []
+next_sequence = [] # Store the next sequence
+currently_looking_at = current_sequence[0] # Start looking at the first digit
+digit_chain_length = 1 # The first digit starts a chain
 for digit in current_sequence:
-  # construct the next sequence here
+  # Construct the next sequence here
   pass
 
-# set the current sequence to the next sequence
+# Set the current sequence to the next sequence
 current_sequence = next_sequence
 ```
 
-Plan out your program carefully before you write it.
+(a). Complete the code that, when given a number in the look-and-say-sequence (represented by a list), 
+computes the next number in the look-and-say sequence.
 
-Your program should have different behaviours 
-depending on whether the next digit in the list 
-is the same as or different from the sequence you're currently looking at.
-In other words, you probably want an `if` block that checks for equality.
+Here's some observations that might help:
+
+- Your program should have different behaviours depending on 
+whether the next digit in the list is the same as or different from 
+the digit you're `currently_looking_at`.
+- Would it be useful to add 1 to a tally variable every time you see a digit that's the same as the one you're `currently_looking_at`? 
+- What do you need to add to the `next_sequence` every time you see a digit that's not the same as the one before it? What variables will you have to update / reset?
+
+(b). Wrap your code in a `for` loop to allow this program to
+calculate the next `n` numbers in the look-and-say sequence,
+where `n` is a number the user specifies.
+Print that many numbers in the sequence one by one, starting with 1.
+(Be careful of off-by-one errors!)
+
+```
+Look-and-say depth: 6
+1
+11
+21
+1211
+111221
+312211
+```
 
 **You can find all the [solutions here][solutions].**
 
