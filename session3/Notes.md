@@ -1,12 +1,15 @@
 # Session 4: Lists
 
-Lists are an important part of a program. We would like to store a bunch of items in one variable.
+Lists are an important part of a program. We would like to store a bunch of items in one variable. This lets us
+- avoid having to define a new variable for every value we want to store
+- process collections that we don't know the size of when writing the code (like a list of email addresses or a list of scraped websites)
+- process entire collections simply and efficiently
 
 ## Basics
 
 Suppose we wanted to create a shopping list app. We would like to be able to store our user's shopping list and retrieve the items from it on demand. 
 
-This is where Python lists come in. Here is how we create a list:
+Here is how that list might look:
 
 ```python
 shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
@@ -29,7 +32,14 @@ print(shopping_list[2]) # Prints 'cherry tomatoes'
 print(shopping_list[3]) # Prints 'cream cheese'
 ```
 
-As we can see, a list is an numbered collection of items. An important thing to remember is that in Python **indexing starts at 0**. What that means is that the first item is *at* **index** 0, the second item is at index 1, etc. We access the item at index `i` (where `i` is an integer) by writing `shopping_list[i]` - the name of the list, and then the index in square brackets. 
+As we can see, a list is an numbered collection of items. Getting an item out of a list by its number is called **indexing**. 
+
+In previous sessions, we've seen how `range(x)` starts counting from 0. 
+Similarly, in Python,  **list indexing starts at 0**. 
+What that means is that the first item is *at* **index** 0, 
+the second item is at index 1, etc. 
+We access the item at index `i` (where `i` is an integer) by writing `shopping_list[i]` - 
+the name of the list, and then the index in square brackets. 
 
 Now what would happen if we try to access the item at index 4 of our shopping list? Let's try:
 
@@ -38,7 +48,9 @@ shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
 print(shopping_list[4]) # ERROR: list index out of range 
 ```
 
-If you run this code, you would get something called an index error. This is because there is no item at index 4. Note now, that the list has 4 items, but the highest index is 3. In general, a list with `n` items will have a highest index of `n-1`. 
+We get an index error. This is because there is no item at index 4. 
+Make note of how the list has 4 items, but the highest index is 3. 
+In general, a list with `n` items will have a highest index of `n-1`. 
 
 We can get the *length* of the list (i.e. the number of items in it), by calling the `len` function:
 
@@ -50,11 +62,10 @@ print("The length of the list is: " + str(length))
 
 Note that the `len` function returns an `int`, so we need to convert that to a `str` before printing.
 
-## The need for lists
+## The utility of lists
 
-We will discuss why we need lists in this section.
-
-Imagine a world without lists. Then we have to use a different variable for each item in the shopping list, like this:
+Imagine trying to manage your shopping list without a list. 
+We'd have to use a different variable for each item in the shopping list, like this:
 
 ```python
 shopping_list_item_1 = "bread"
@@ -63,7 +74,9 @@ shopping_list_item_3 = "cherry tomatoes"
 shopping_list_item_4 = "cream cheese"
 ```
 
-This is certainly annoying, what's more is that there is no effective way to manipulate all items using loops. For example, if we would like to print everything in the shopping list, this is the only thing we can do...
+This is certainly annoying, 
+but what's even more so is that there is no effective way to manipulate all items using loops. 
+For example, if we would like to print everything in the shopping list, this is the only thing we can do:
 
 ```python
 print(shopping_list_item_1)
@@ -78,11 +91,25 @@ However, with lists, we can store all items in one single variable in one single
 shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
 ```
 
-And we can print the whole list at once using `print(shopping_list)`. List is certainly a good thing to have in our programming language.
+And we can print the whole list at once using `print(shopping_list)`. 
+
+Okay, but that's just for avoiding annoyances.
+Here's an example of something you definitely can't do without lists.
+This code allows the user to edit their shopping list:
+
+```python
+index = int(input("Edit item at which index: "))
+value_initial = shopping_list[index]
+value_final = input("Replace item "+ value_initial + " with: ")
+shopping_list[index] = value_final
+```
+
+Since we don't know ahead of time which item the user wants to edit, 
+we can't simply assign `shopping_list_item_x = input(...)`.
 
 ## More list operations
 
-We can append an element to a list - basically adding it to the end:
+We can append an element to a list, adding it to the end:
 
 ```python
 # We forgot to add mayo to the list so we can add it later like so:
