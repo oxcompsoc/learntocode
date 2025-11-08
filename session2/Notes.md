@@ -376,9 +376,9 @@ Read the following code blocks and predict their results.
   ```
 
   ```python
-  for i in range(5, 0)
+  for i in range(5, 0):
     print("Backwards: " + str(i))
-  for i in range(5)
+  for i in range(5):
     print("Subtraction: " + str(5 - i))
   ```
 
