@@ -172,8 +172,6 @@ that are `0 <= x < n`. For example, `three_or_five(10) == [0, 3, 5, 6, 9]`.
 def threes_or_fives(n):
 	# return a list of all the integers greater than or equal to zero that are
 	# divisible by three or five and less than n
-	# You might want to look up the modulus (%) operator, which computes the
-	# remainder of division
 ```
 
 **Exercise:** See if you can combine this function with your solution to exercise 1 for solving the [first Project Euler problem][euler1].

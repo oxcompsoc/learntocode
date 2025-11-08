@@ -376,9 +376,9 @@ Read the following code blocks and predict their results.
   ```
 
   ```python
-  for i in range(5, 0)
+  for i in range(5, 0):
     print("Backwards: " + str(i))
-  for i in range(5)
+  for i in range(5):
     print("Subtraction: " + str(5 - i))
   ```
 
@@ -454,10 +454,11 @@ Information for testing purposes: the 14th term in the Fibonacci sequence is 377
 Read the following code and predict its result.
 
 ```python
+  print("rock paper scissors:")
+  print()
   print("rock", end=", ")
   print("paper", end=", ")
   print("scissors", end="! ")
-  print()
   print("play again?")
 ```
 
