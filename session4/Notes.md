@@ -410,6 +410,23 @@ while (user_integer == None):
     Option 2 selected!
     ```
 
+
+(c). Do you really need to enter the number n in the beginning? Wouldn't it be more convenient for a user to tell when the shopping list _ends_ instead? 
+
+Make a program that does just that. Here's a sample run:
+
+  ```
+  Welcome to the shopping list app!
+  Please enter item number 1: bread
+  Please enter item number 2: smoked salmon
+  Please enter item number 3: cherry tomatoes
+  Please enter item number 4: end
+  Your shopping list is:
+  bread
+  smoked salmon
+  cherry tomatoes
+  ```
+
 <!-- #### Hard
 6. Create a program that accepts two user inputs and makes sure that exactly one of them is an integer.
     ```

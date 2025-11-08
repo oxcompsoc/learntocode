@@ -62,6 +62,13 @@ print("The length of the list is: " + str(length))
 
 Note that the `len` function returns an `int`, so we need to convert that to a `str` before printing.
 
+As a final important note, the empty list (list with 0 items) is `[]`.
+Thus, if you want to create a list that you fill later:
+
+```python
+my_list = []
+```
+
 ## The utility of lists
 
 Imagine trying to manage your shopping list without a list. 
@@ -190,7 +197,7 @@ For loops
 shopping_list = [ "bread", "smoked salmon", "cherry tomatoes", "cream cheese" ]
 n = len(shopping_list)
 for i in range(0, n):
-    print("I need to buy " + shopping_list[i])
+  print("I need to buy " + shopping_list[i])
 
 # This will print out:
 # I need to buy bread
@@ -205,7 +212,7 @@ In most languages, this is a **for-in** loop:
 ```python
 shopping_list = [ "bread", "smoked salmon", "cherry tomatoes", "cream cheese" ]
 for item in shopping_list:
-    print("I need to buy " + item)
+  print("I need to buy " + item)
 
 # This will print out:
 # I need to buy bread
@@ -221,26 +228,41 @@ This gives us an insight as to what `range(a, b)` is doing.
 It's a function that takes two arguments (a,b)<!-- (we'll get to what that means later)  -->
 and gives us something like a list `[a, a + 1, a + 2, ..., b - 2, b - 1]` so we were iterating over lists all along.
 
-## Exercises
+### Exercise 1. (Free Response)
+Create a list of a few countries or cities you want to visit. 
+Print the whole list on one line. 
+Print the list item by item. 
+Print the length of the list.
 
-### Easy:
-* 1: Create a list of 3 cities you want to visit. Print the whole list on one line. Print the list item by item. Print the length of the list.
+### Exercise 2. Call In
+When a call center gets a phone call, 
+if there is no operator available to take the call,
+the caller's phone number is added to a queue.
 
-### Medium:
+We'll start with the following line of code:
 
-* 2: Complete the program so that it prints the contents of the shopping list:
+```python
+queue = [] # the caller queue starts empty
+```
 
-  ```python
-  shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
+(a). Write code that prompts the user to enter a string, then adds that string to the list. (You do not have to check that the string forms a valid phone number.) Repeat this four times, then print the list.
 
-  i = 0
-  length = len(shopping_list)
-  while i < length:
-    # Complete this code
-  ```
+(b). Phone calls should be handled in the order they arrive in. Write code that removes a phone number from the list and prints what remains in the list. Repeat this four times.
 
-### Hard:
-* 3: Complete the program so that it prompts the user to input a number `n`, then prints `shopping_list`, item by item, `n` times in a row:
+Your output should look something like:
+```
+Incoming call from: 23300000
+Incoming call from: 07777111111
+Incoming call from: (866) 965-3590
+Incoming call from: unknown
+The queue is: ['23300000', '0777111111', '(866) 965-3590', 'unknown']
+Handled a call. Queue: ['0777111111', '(866) 965-3590', 'unknown']
+Handled a call. Queue: ['(866) 965-3590', 'unknown']
+Handled a call. Queue: ['unknown']
+Handled a call. Queue: []
+```
+ 
+<!-- Complete the program so that it prompts the user to input a number `n`, then prints `shopping_list`, item by item, `n` times in a row:
   
   ```python
   shopping_list = ["bread", "smoked salmon", "cherry tomatoes", "cream cheese"]
@@ -258,14 +280,15 @@ and gives us something like a list `[a, a + 1, a + 2, ..., b - 2, b - 1]` so we 
   smoked salmon
   cherry tomatoes
   cream cheese
-  ```
+  ``` -->
   
-### Expert 
-* 4: Make your own shopping list program! Begin by prompting a user to enter the number of things they want on their list and then ask them for each separate item. The program should output the items on the list in the same order, each on a separate line, after the user's done with their input.
 
-  Here's a sample run:
+### Exercise 3. Shopping List
+Let's keep developing the shopping list program. 
+
+(a). Begin by prompting a user to enter the number of things they want on their list and then ask them for each separate item. The program should output the items on the list in the same order, each on a separate line, after the user's done with their input.
+
   ```
-  Welcome to the shopping list app!
   Please enter the size of your shopping list: 3
   Please enter item number 0: bread
   Please enter item number 1: smoked salmon
@@ -275,7 +298,7 @@ and gives us something like a list `[a, a + 1, a + 2, ..., b - 2, b - 1]` so we 
   smoked salmon
   cherry tomatoes
   ```
-  *Hint: the next few lines might be helpful:*
+  <!-- *Hint: the next few lines might be helpful:*
 
   ```python
   my_list = [] # This is how we create an empty list. I.e. a list with no items
@@ -283,9 +306,9 @@ and gives us something like a list `[a, a + 1, a + 2, ..., b - 2, b - 1]` so we 
   my_list.append("item2") # And again
   print(my_list) # Prints '["item1", "item2"]'
   print(len(my_list)) # Prints '2'
-  ```
+  ``` -->
 
-* 5: Modify your program for slightly so that it displays the item number starting from 1 instead of 0.
+(b). Modify your program for slightly so that it displays the item number starting from 1 instead of 0.
 
   ```
   Welcome to the shopping list app!
@@ -299,19 +322,35 @@ and gives us something like a list `[a, a + 1, a + 2, ..., b - 2, b - 1]` so we 
   cherry tomatoes
   ```
 
-* 6: Do you really need to enter the number n in the beginning? Wouldn't it be more convenient for a user to tell when the shopping list _ends_ instead? Make a program that does just that. Here's a sample run:
+We'll come back to the shopping list program next week, so make sure you save your progress!
 
-  ```
-  Welcome to the shopping list app!
-  Please enter item number 1: bread
-  Please enter item number 2: smoked salmon
-  Please enter item number 3: cherry tomatoes
-  Please enter item number 4: end
-  Your shopping list is:
-  bread
-  smoked salmon
-  cherry tomatoes
-  ```
+### Exercise 5. Look-And-Say (Very Hard)
+The look-and-say sequence starts with the number 1.
+Then, you say exactly what you see: "one one", so the next number is 11.
+The number after that is "two ones", 21, followed by "one two and one one", 1211.
+
+The code we're starting off with is:
+
+```python
+current_sequence = [1]
+
+looking_at_digit = None
+digit_chain_length = 0
+next_sequence = []
+for digit in current_sequence:
+  # construct the next sequence here
+  pass
+
+# set the current sequence to the next sequence
+current_sequence = next_sequence
+```
+
+Plan out your program carefully before you write it.
+
+Your program should have different behaviours 
+depending on whether the next digit in the list 
+is the same as or different from the sequence you're currently looking at.
+In other words, you probably want an `if` block that checks for equality.
 
 **You can find all the [solutions here][solutions].**
 
