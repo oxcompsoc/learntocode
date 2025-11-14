@@ -450,7 +450,7 @@ print(number)
 
 **You can find all the [solutions here][solutions].**
 
-[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session3
+[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session4/src
 
 
 ## Try
