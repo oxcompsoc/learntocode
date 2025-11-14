@@ -474,4 +474,4 @@ You will want to use what you learned in session 2, exercise 9.
 
 **You can find all the [solutions here][solutions].**
 
-[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session4/src/solutions.py
+[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session3/src/

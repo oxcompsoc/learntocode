@@ -1,6 +1,18 @@
-n = int(input("Input a number: "))
+# Initial code
+words = ['slightly', 'greatly', 'passionately', 'madly', 'not', 'cookies', 'cream']
 
-for i in range(1,n+1):
-    for j in range(1,i+1):
-        print(j, end=" ")
-    print("") # next line
+slice_index = 0
+while words[slice_index] != "not":
+  slice_index += 1
+
+words = words[0:slice_index]
+
+
+# Adjustment if the list does not contain "not"
+words = ['doe', 'ray', 'me', 'far', 'sew']
+
+slice_index = 0
+while slice_index < len(words) and words[slice_index] != "not":
+  slice_index += 1
+
+words = words[0:slice_index]
