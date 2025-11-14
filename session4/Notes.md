@@ -13,7 +13,9 @@ while i<8:
 print("**********")
 ```
 
-The idea with the while loop is very simple: the code in the body of the loop will be executed repeatedly, while the condition remains true - in other words, until the condition becomes false. In each iteration, i gets incremented by 1, until it reaches 8 and we exit the loop. Hence the loop is run 8 times.
+The idea with the while loop is very simple: the code in the body of the loop will be executed repeatedly, while the condition remains true - in other words, until the condition becomes false. In each iteration, i gets incremented by 1, until it reaches 8 and we exit the loop. 
+
+As a result, the loop is run 8 times: for `i=0`, `i=1`, etc. up until `i=7`. On the 8th run, at the start of which `i=7`, `i` will be incremented to 8 in the body of the loop, which makes the condition false. 
 
 We can use while loops to do more things. Imagine we wanted to create a simple security program that asks our user for a password until they enter the correct one. One way to do this is:
 
@@ -36,217 +38,347 @@ Now, if the user enters the correct password on their first try, the body of the
 
 In conclusion, while loops are used when the body of the loop has to loop an unknown number of times.
 
-### Worked examples
-
-Let's see some more examples. Here is how we print the first `n` positive integers:
-```python
-n = int(input("Please enter a number: "))
-
-i = 1
-while i <= n:
-  print(i)
-  i += 1 # Increment i (i becomes bigger by 1).
-```
-
-Again, the variable `i` consecutively takes all values from 0 to n-1, it helps us to keep track of our progress while looping, the following example uses the value `i` to print out the first `n` non-negative even numbers. It is common to use variable names like `i`, `j`, `k` for iteration.
-
-Here is how we calculate the sum of the first n natural numbers:
-```python
-n = int(input("Please enter a number: "))
-
-i = 1
-sum = 0
-while i <= n:
-  sum += i
-  i += 1
-
-print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
-```
-
-A common pitfall is to forget to increment. Here is how we **don't** calculate the sum of the first n natural numbers:
-
-```python
-n = int(input("Please enter a number: "))
-
-i = 1
-sum = 0
-while i <= n:
-  sum += i
-
-print("The sum of the first " + str(n) + " natural numbers is " + str(sum))
-```
-
-If that looks like the same code to you, don't worry; even experienced programmers often make this simple mistake. The issue is that we don't increment `i` within the body of the loop. So every time we pass through the loop, `i` remains `1`. If `n` is more than `2`, then this loop will go on forever. **This is a very common mistake. Always keep this in mind if your program seems to "hang".**
-
 ### For loops and while loops
 
-Yes we can do everything we can do with for loops using while loops. But for loops are useful because `for` loops take care of a lot of things for us - you don't have to define your own `i` and increment it yourself. On the other hand, `for` loops less flexible - there are some cases where you might not want to have a counter or you might want to decrement it, hence there are some cases that only `while` loops can be used.
+This for loop that calculates 1 + 2 + ... + n
 
-It is up to you which kind of loop you are going to use based on the situation, sometimes you can only use `while` loops.
+```python
+sum = 0
+for i in range(1, n + 1):
+  sum += i
+```
 
-**Exercise: Implement some of the exercises you have done in the for loops section using while loops.**
+can be turned into a while loop:
 
-### Exercises:
-#### Easy:
+```python
+sum = 0
+i = 1
+while i < n + 1:
+  sum += i
+  i += 1
+```
+In the for loop, the loop variable `i` would be automatically increased
+with each pass through the loop.
+But with a while loop, we have to do that ourselves, 
+writing at the start `i = 1`
+and in the middle `i += 1`.
+So the while loop looks a bit more cumbersome.
 
-1)  What are the outputs of the following program segments?
+On the other hand, 
+there are many things that for loops are just not built for (pun intended).
+Recall this code that prints the items in a list backwards:
 
-    ```python
-    # a)
-    i = 5
-    while(i>0):
-        print(i)
-        i-=1
-    ```
-    ```python
-    # b)
-    i = 5
-    while(i>=0):
-        print(i)
-        i-=1
-    ```
-    ```python
-    # c)
-    i = 5
-    while(i>0):
-        i-=1
-        print(i)
-    ```
-    ```python
-    # d)
-    i = 5
-    while(i>=0):
-        i-=1
-        print(i)
-    ```
-    ```python
-    # e)
-    i = 10
-    while(i>0):
-        print(i)
-        i-=3
-    ```
-    ```python
-    # f)
-    i = 5
-    while(i>0):
-        i-=1
-        print("Hello")
-    ```
-    ```python
-    # g)
-    i = 10
-    while(i>=0):
-        print(i)
-        i-=2
-    ```
-    ```python
-    # h)
-    i = 0
-    while(i<20):
-        i+=4
-        print(i)
-    ```
+```python
+items = ["first", "second", "third"]
 
+n = len(items)
+for i in range(n):
+    print(items[n - 1 - i]) 
+```
 
-*When attempting these exercises, I suggest you type out the code by hand, rather than copy-pasting it. Pay attention to all of the symbols you are typing and see if you can recall why they are there.*
+Using a while loop, this becomes quite a lot simpler,
+because instead of fiddling around with subtracting stuff in the list index,
+we can just iterate backwards.
 
-2)  Create a program that asks the user to input a number `n`, and then prints the first `n` positive integers in reverse order. E.g. if `n` is 4, your program should print: '4 3 2 1', each number being on a new line. (*Hint: model your program after one of the programs we already wrote.*)
+```python
+items = ["first", "second", "third"]
 
-    ```
-    Sample:
-    Please enter a number: 4
-    4
-    3
-    2
-    1
-    ```
-3)  Complete the program below, which asks the user to input a number `n` and then prints the product of the first `n` natural numbers. 
+n = len(items)
+i = n - 1
+while i >= 0:
+    print(items[i]) 
+    i -= 1
+```
 
-    ```python
-    n = int(input("Please enter a non-negative integer: "))
+Here are some more examples of for loops and while loops:
 
-    product = 1
-    i = 1
-    while # Complete the rest.
-        # ...
+| For loops | While loops |
+|-----------|-------------|
+| Adding 3 teaspoons | Adding to taste |
+| Doing 10 reps | Training to failure |
+| Watering plants | Picking a basketful of apples |
+| Looking at every item in a list | Looking for a specific item in a list | 
 
-    print(product)
-    ```
+### How not to brick your device
 
-    ```
-    Sample:
-    Please enter a non-negative integer: 4
-    24
-    ```
+What goes wrong if you try to calculate the product 
+of the first n natural numbers with this code?
+```python
+n = int(input("Please enter a number: "))
 
-4)  Complete the program below, which asks the user to input a number `max` and then prints all square numbers until `max`.
-    
-    ```python
-    n = int(input("Please enter a number: "))
+i = 1
+product = 0
+while i <= n:
+  product *= i
 
-    base = 1
-    while # Complete the rest.
-        print #...
-        base #...
-    ```
+print("The product of the first " + str(n) + " natural numbers is " + str(sum))
+```
 
-    ```
-    Sample:
-    Please enter a number: 100
-    1
-    4
-    9
-    16
-    25
-    36
-    49
-    64
-    81
-    100
-    ```
+We forgot to increment our `i`. We don't have an `i += 1` in our loop.
+This means that the loop will run with `i=1`, `i=1`, `i=1`, ... and not stop 
+until we interrupt the program.
 
-#### Medium:
+Everybody makes this mistake sometimes, 
+from the most casual of hobbyists
+to the highest paid of professionals. 
+**Keep this in mind if your program seems to "hang".**
 
-5)  Create a program, which repeatedly asks the user to input a number, until their number is greater than 9. A run of your program might look like:
-    ```
-    Please enter a number: 5
-    That number is too small!
-    Please enter a number: 9
-    That number is too small!
-    Please enter a number: 10
-    That's a good number!
-    ``` 
-6)  Create a program, which continuously prompts the user to input a first name and a last name, until the names they enter match yours.
+To interrupt a program that's currently hanging:
+- On Google Colab, just press the "stop" sign in the code's cell.
+- In Visual Studio Code or any other editor with a command line, 
+try pressing Ctrl-C.
 
-7) Modify the code you wrote for question 3, give an error message if user inputs a negative number, and asks the user to input again.
+### Worked Exercise 1. Digit Count
 
-    ```
-    Sample:
-    Please enter a non-negative integer: -99
-    Invalid number! Please enter again.
-    Please enter a non-negative integer: -3
-    Invalid number! Please enter again.
-    Please enter a non-negative integer: 4
-    24
-    ```
-#### Hard:
+Let's write a program that, when given an integer,
+tells us how many digits long that integer is.
 
-8)  (Math) Write a program, which calculates the average of numbers. The program terminates when -1 is inputted.
+```python
+n = int(input("Enter a number: "))
+
+length = 0
+while ________:
+    ________
+
+print("Your number is " + str(length) + " digits long")
+```
+
+The insight here is that the number of digits in a number
+is equal to the number of times it needs to be divided by 10 
+until it drops below 1.
+For example, 87 / 10 = 8.7 but 87 / 100 = 0.87 < 1;
+since we needed to divide 87 by 10 twice to put it below 1,
+we know that 87 has two digits.
+
+```python
+n = int(input("Enter a number: "))
+
+length = 0
+while n >= 1:
+    n /= 10
+    length += 1
+
+print("Your number is " + str(length) + " digits long")
+```
+
+Are we happy with this solution?
+
+Well... we're told that the user will give us an _integer_, 
+and integers can be negative.
+This solution doesn't handle negative numbers well,
+because no matter how many times you divide a negative number by 10,
+it stays negative, which means it stays less than 1.
+Thankfully we spotted that potential infinite loop, 
+or our code would have made someone's computer hang.
+
+Here's an adjustment that handles negative numbers
+by looping so long as n is at least 1 OR at most -1:
+
+```python
+n = int(input("Enter a number: "))
+
+length = 0
+while n >= 1 or n <= -1:
+    n /= 10
+    length += 1
+
+print("Your number is " + str(length) + " digits long")
+```
+
+### Exercise 1
+
+For each piece of code here,
+identify the difference between it and the previous code segment.
+Predict its result, and then run it.
+Is the output what you expected?
+
+  ```python
+  # a)
+  i = 8
+  while(i>0):
+    print(i)
+    i-=1
+  ```
+  ```python
+  # c)
+  i = 8
+  while(i>0):
+    i-=1
+    print(i)
+  ```
+  ```python
+  # d)
+  i = 8
+  while(i>=0):
+    i-=1
+    print(i)
+  ```
+  ```python
+  # e)
+  i = 8
+  while(i>0):
+    i-=3
+    print(i)
+  ```
+  ```python
+  # e)
+  i = 8
+  while(i>0):
+    i = 2 * i - 9
+    print(i)
+  ```
+
+### Exercise 2. High-Pass
+Create a program, which repeatedly asks the user to input a number until their number is greater than 9. A run of your program might look like:
+```
+Please enter a number: 5
+That number is too small!
+Please enter a number: 9
+That number is too small!
+Please enter a number: 10
+That's a good number!
+``` 
+
+### Exercise 3. Positive-Pass
+Earlier in the notes we saw this loop that calculates the product of the first n positive numbers:
+```python
+n = int(input("Enter a number: "))
+
+i = 1
+product = 0
+while i <= n:
+  product *= i
+```
+Modify the code to give an error message if user inputs a negative number, and asks the user to input again.
+
+```
+Sample:
+Please enter a non-negative integer: -99
+Invalid number! Please enter again.
+Please enter a non-negative integer: -3
+Invalid number! Please enter again.
+Please enter a non-negative integer: 4
+24 
+```
+
+### Exercise 4. Checkout
+
+This program represents a checkout machine.
+
+Write a program that lets the user input as many numbers as they like.
+Then, when they enter an empty string into the program,
+print back the sum of the numbers they've entered.
+```
+Add: 2
+Add: 10
+Add: 18
+Add: 70
+Add: 5000
+Add:
+Your total is: 5100
+```
+
+(In an actual checkout machine, 
+instead of the user entering prices into the till,
+the barcode scanner does that for them, of course.)
+
+### Exercise 5. Zeroing
+This is a program that finds use when calibrating some sensors,
+and also when companies comply with legal requests to delete sensitive data.
+
+Write a program that sets every entry in a list to 0.
+In other words, starting from this code:
+```python
+numbers = [1.5,-2.2,-0.3,0.6,8,-0.2] # actual numbers may vary
+
+# your code here
+
+print(numbers)
+```
+your program should output
+```
+[0, 0, 0, 0, 0, 0]
+```
+
+### Exercise 6. Cutoff (Hard)
+
+Given a list filled with words,
+write a program that slices off everything after the word "not". 
+For instance, given the list of words:
+
+```python
+words = ['slightly', 'greatly', 'passionately', 'madly', 'not', 'cookies', 'cream']
+```
+
+your program should print something along the lines of
+
+```bash
+['slightly', 'greatly', 'passionately', 'madly']
+```
+
+Here's some code that might be helpful:
+```python
+slice_index = 0
+while ____________:
+  slice_index += 1
+
+words = words[0:slice_index]
+```
+
+For top marks, make sure your code works when given a list of words
+that does NOT contain the word "not":
+```python
+words = ['doe', 'ray', 'me', 'far', 'sew']
+```
+should print
+```
+['doe', 'ray', 'me', 'far', 'sew']
+```
+
+### Exercise 7. Unlimited Echo (Hard)
+Write a program that lets the user shout as many times as they want.
+Then, when they stop shouting (by entering an empty string into the program),
+the program should shout everything they said back at them in reverse order:
+
+```
+Shout: it's fun
+Shout: to stay
+Shout: at the
+Shout: Y
+Shout: M
+Shout: C
+Shout: A
+Shout:
+A
+C
+M
+Y
+at the
+to stay
+it's fun
+```
+
+You'll want to use a **stack** for this, 
+i.e. a list that you only interact with by using `pop()` and `append()`.
+
+### Exercise 8. Average (Hard) 
+Write a program that calculates the average of numbers. 
+The program should terminate when the empty string is inputted.
 
   ```
   Please enter a number: 1
   Please enter a number: 3
   Please enter a number: 5
   Please enter a number: -1
-  The average was: 3.0
+  Please enter a number: 
+  The average was: 2.0
   ```
   <!-- No nested while and for loop exercises, maybe add some after we have introduced lists.  -->
 <!-- #### Expert: -->
 
 
-<!-- ### Exercise 7. Adding 1 (Hard)
-(a) Given a number represented by its digits,
+### Worked Exercise 2. Adding 1
+The problem: Given a number represented by its digits,
 write a program that adds 1 to that number.
 ```python
 number = [9,5,8,9,9] # representing the number 95899
@@ -254,16 +386,67 @@ number = [9,5,8,9,9] # representing the number 95899
 print(number) # you should get [9,5,9,0,0]
 ```
 
-*The algorithm itself is not difficult to code, 
-but it is a bit harder to see what the algorithm should be.* 
+Nine times out of ten, when we add 1 to a number represented like this,
+the only thing that changes is the smallest digit.
+The remaining one time out of ten is when the last digit is a 9.
+In this case, we then have to add 1 to the tens digit -
+which can propagate up through the number.
 
-(b) Given a number represented by its digits,
-write a program that adds 1 to **every digit of** that number.
+The program we're looking for will be something like
 ```python
-number = [9,5,8,9,9] # representing the number 95899
-# add 1 to every digit here...
-print(number) # you should get [1,0,7,1,1,0]
--->
+add_index = len(number) - 1 # the index of the last item in number
+while number[add_index] == 9: # if the current digit is a 9:
+  number[add_index] = 0 # add 1 to it, bringing the 9 to a 10
+  add_index -= 1 # carry the 1 to the higher place value
+
+number[add_index] += 1
+```
+
+Are we happy with this solution?
+
+Well... what if the number is all nines?
+```python
+number = [9,9,9,9,9]
+```
+In this case, our `add_index` will decrease from 4 to 3, 2, 1, 0;
+then, since number[0] is still 9, `add_index` will decrease to -1.
+Then, the next time through the loop, when Python tries to access number[-1],
+well... you'll have to read the answer to Session 3 Exercise 2 to find out :)
+
+All that to say, we need to check if `add_index` has gone below 0,
+and if it has, we add a 1 to the front of the number.
+In code, this looks like this:
+
+```python
+if add_index < 0: 
+  number.insert(0, 1) # add a 1 to the front of the number
+else:
+  number[add_index] += 1 
+```
+
+We also need to stop the loop if add_index goes into the negatives.
+This means we need to make the condition in our while loop 
+a bit more complicated:
+```python
+# stop the loop if number[add_index] != 9 OR if add_index < 0
+# in other words: run the loop while number[add_index] == 9 AND add_index >= 0
+while add_index >= 0 and number[add_index] == 9:
+  # etc...
+```
+
+```python
+add_index = len(number) - 1 
+while add_index >= 0 and number[add_index] == 9: 
+  number[add_index] = 0
+  add_index -= 1 
+
+if add_index < 0: # if the number is all nines:
+  number.insert(0, 1) # add a 1 to the front of the number
+else:
+  number[add_index] += 1 
+
+print(number)
+```
 
 **You can find all the [solutions here][solutions].**
 
