@@ -578,7 +578,7 @@ Whether you show the user their incorrect count every loop,
 or only once (just at the end), is up to you,
 and the format of the statement is also up to you. :)
 
-### Exercise 10. Finally
+### Exercise 10. Finally (Free Response)
 
 Read the following code and predict its result.
 
