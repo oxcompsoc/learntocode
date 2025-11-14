@@ -500,7 +500,7 @@ Inside the `try` block, Python *tries* to convert the user's input into an integ
 
 Usually, when Python panics, you get an error message on your screen. This is called **throwing an exception**. But because the error happened inside a `try` block, Python understands that this error was accounted for, and calmly moves on to the `except` block, where it prints "That was not an integer."
 
-### Worked Example
+### Worked Exercise 3: Enforce Integer Input
 
 Here's how we can use `try` to wait until the user inputs an integer.
 
