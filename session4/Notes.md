@@ -302,7 +302,7 @@ your program should output
 [0, 0, 0, 0, 0, 0]
 ```
 
-(b) (Open Ended)
+(b) (Free Response)
 You can also do this exercise with a for loop.
 Which one do you think fits better here? Explain.
 
@@ -387,6 +387,18 @@ The program should terminate when the empty string ("") is inputted.
 
 This exercise is quite similar to Exercise 4.
 
+**You can find all the [solutions here][solutions].**
+
+[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session4/src
+
+### Extension A. Completing the shopping list
+Return to your code from Session 3 Exercise 4 (the shopping list).
+Using a while loop, modify your program so that
+the user doens't have to enter the size of the shopping list in advance;
+instead, once they enter the empty string (""),
+the program should exit the loop 
+(and proceed to print out the items in the list as before).
+
 ### Worked Exercise 2. Adding 1
 The problem: Given a number represented by its digits,
 write a program that adds 1 to that number.
@@ -457,11 +469,6 @@ else:
 
 print(number)
 ```
-
-**You can find all the [solutions here][solutions].**
-
-[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session4/src
-
 
 ## Try
 
@@ -564,69 +571,81 @@ while type(user_input) == str:
     user_input = input("That was not an integer. Please try again.")
 ```
 
-### Exercise 9. Bad at instructions
+### Exercise 9. Bad at instructions (Free Response)
 Add a counter to the "enforce integer input" code to show the user how many times their input has been incorrect.
 
-#### Medium
-3. (Open Ended) Find out what the `finally` keyword does when used alongside a `try`/`except` block. Try to think of a situation where the `finally` keyword might be useful.
+Whether you show the user their incorrect count every loop,
+or only once (just at the end), is up to you,
+and the format of the statement is also up to you. :)
 
-4. Create a program that accepts user inputs until the user has inputted two integers.
-    ```
-    Input: 4
-    Input: score
-    Input: and
-    Input: 7
-    You have inputted the maximum allowed number of integers. Goodbye!
-    ```
+### Exercise 10. Finally
 
-5. Create a "pick from a list" block of code that only accepts an input from 1 to some number. (You can pick the number.)
-    ```bash
-    # Here the code is set to accept inputs from 1 to 5.
-    Please choose an option: 9
-    That is not an option. Please try again: wow
-    That is not an option. Please try again: 2
-    Option 2 selected!
-    ```
+Read the following code and predict its result.
 
+```python
+x = input("Enter a number: ")
+try:
+  print(1 + int(x))
+except:
+  print("That was not a number.")
+finally:
+  print("Goodbye!")
+```
 
-(c). Do you really need to enter the number n in the beginning? Wouldn't it be more convenient for a user to tell when the shopping list _ends_ instead? 
+Now run the code. Try inputting numbers and not-numbers.
+What happens? Is this what you expected?
 
-Make a program that does just that. Here's a sample run:
+Try to think of a situation where the `finally` keyword might be useful.
+(If there are any.)
 
-  ```
-  Welcome to the shopping list app!
-  Please enter item number 1: bread
-  Please enter item number 2: smoked salmon
-  Please enter item number 3: cherry tomatoes
-  Please enter item number 4: end
-  Your shopping list is:
-  bread
-  smoked salmon
-  cherry tomatoes
-  ```
+### Exercise 11. Your numbers are numbered 
+Create a program that accepts user inputs until the user has inputted two integers.
+```
+Input: 4
+Input: score
+Input: and
+Input: 7
+You have inputted the maximum allowed number of integers. Goodbye!
+```
 
-<!-- #### Hard
-6. Create a program that accepts two user inputs and makes sure that exactly one of them is an integer.
-    ```
-    The first input: 4
-    The second input: 6
-    That is too many integers. Please try again.
-    The first input: spoon
-    The second input: fork
-    That is too few integers. Please try again.
-    The first input: 42
-    The second input: life
-    Exactly one of these is an integer!
-    ```
+### Exercise 12. Pick from eight
+Create a "pick from a list" block of code that only accepts an input 
+that is a number from 1 to 8.
+```
+# Here the code is set to accept inputs from 1 to 5.
+Please choose an option: 9
+That is not an option. Please try again: wow
+That is not an option. Please try again: 2
+Option 2 selected!
+```
 
-7. Edit your program from question 4 so that it can accept user inputs until the user has inputted a number of integers that they input.
-    ```
-    Number of integers to be inputted: spoon
-    That is not an integer. Please try again: 3
-    Input: 1
-    Input: 2
-    Input: buckle my shoe
-    Input: 3
-    You have inputted the maximum allowed number of integers. Goodbye!
-    ```
-    (What will happen if the user inputs a negative number? or zero?) -->
+### Exercise 13. One of each
+Create a program that accepts two user inputs and makes sure that exactly one of them is an integer.
+```
+The first input: 4
+The second input: 6
+That is too many integers. Please try again.
+The first input: spoon
+The second input: fork
+That is too few integers. Please try again.
+The first input: 42
+The second input: life
+Exactly one of these is an integer!
+```
+
+### Exercise 14. You number your numbers (Hard)
+(a) Edit your program from Exercise 11 so that it can accept user inputs until the user has inputted a number of integers that they input.
+```
+Number of integers to be inputted: spoon
+That is not an integer. Please try again: 3
+Input: 1
+Input: 2
+Input: buckle my shoe
+Input: 3
+You have inputted the maximum allowed number of integers. Goodbye!
+```
+
+(b) What will happen if the user inputs a negative number? 
+What about zero? What would some reasonable behaviours for your program be?
+Should it ask them for another number, or immediately say goodbye?
+Explain your choice, and implement that change in your code.
