@@ -1,11 +1,15 @@
-t = int(input("Input a number: "))
-a = 0
-b = 1
-for i in range(t):
-    c = a + b # calculate new term
-    #shift the terms by 1
-    a = b
-    b = c
-    # Alternatively:
-    # a,b = b,a+b
-print("Term " + str(i) + " is " + str(a))
+numbers = [1.5,-2.2,-0.3,0.6,8,-0.2] # actual numbers may vary
+
+
+# (a): while loop
+i = 0
+while i < len(numbers):
+  numbers[i] = 0
+  i += 1
+
+# (b): for loop
+for i in range(len(numbers)):
+  numbers[i] = 0
+
+
+print(numbers)

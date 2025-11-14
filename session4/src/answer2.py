@@ -1,5 +1,7 @@
-n = int(input("Input a number: "))
-number = 1
-for i in range(n):
-    number*=2
-    print(number)
+number = int(input("Please enter a number: "))
+
+while number <= 9:
+    print("That number is too small!")
+    number = int(input("Please enter a number: "))
+
+print("That's a good number!")
