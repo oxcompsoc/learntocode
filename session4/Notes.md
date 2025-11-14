@@ -106,8 +106,8 @@ of the first n natural numbers with this code?
 ```python
 n = int(input("Please enter a number: "))
 
+product = 1
 i = 1
-product = 0
 while i <= n:
   product *= i
 
@@ -244,12 +244,14 @@ Earlier in the notes we saw this loop that calculates the product of the first n
 ```python
 n = int(input("Enter a number: "))
 
+product = 1
 i = 1
-product = 0
 while i <= n:
   product *= i
 ```
-Modify the code to give an error message if user inputs a negative number, and asks the user to input again.
+Modify the code to give an error message if user inputs a negative number, and asks the user to input again. 
+
+P.S. Don't brick your device!
 
 ```
 Sample:
@@ -266,7 +268,7 @@ Please enter a non-negative integer: 4
 This program represents a checkout machine.
 
 Write a program that lets the user input as many numbers as they like.
-Then, when they enter an empty string into the program,
+Then, when they enter an empty string ("") into the program,
 print back the sum of the numbers they've entered.
 ```
 Add: 2
@@ -300,6 +302,10 @@ your program should output
 [0, 0, 0, 0, 0, 0]
 ```
 
+(b) (Open Ended)
+You can also do this exercise with a for loop.
+Which one do you think fits better here? Explain.
+
 ### Exercise 6. Cutoff (Hard)
 
 Given a list filled with words,
@@ -312,7 +318,7 @@ words = ['slightly', 'greatly', 'passionately', 'madly', 'not', 'cookies', 'crea
 
 your program should print something along the lines of
 
-```bash
+```
 ['slightly', 'greatly', 'passionately', 'madly']
 ```
 
@@ -334,10 +340,12 @@ should print
 ```
 ['doe', 'ray', 'me', 'far', 'sew']
 ```
+<!-- Talk about this one! It's worth talking about! Evaluation order! -->
 
 ### Exercise 7. Unlimited Echo (Hard)
 Write a program that lets the user shout as many times as they want.
-Then, when they stop shouting (by entering an empty string into the program),
+Then, when they stop shouting 
+(by entering an empty string "" into the program),
 the program should shout everything they said back at them in reverse order:
 
 ```
@@ -358,12 +366,13 @@ to stay
 it's fun
 ```
 
-You'll want to use a **stack** for this, 
-i.e. a list that you only interact with by using `pop()` and `append()`.
+This exercise is quite similar to Exercise 4.
+
+(Hint: You'll want to collect the shouts into a list.)
 
 ### Exercise 8. Average (Hard) 
 Write a program that calculates the average of numbers. 
-The program should terminate when the empty string is inputted.
+The program should terminate when the empty string ("") is inputted.
 
   ```
   Please enter a number: 1
@@ -376,6 +385,7 @@ The program should terminate when the empty string is inputted.
   <!-- No nested while and for loop exercises, maybe add some after we have introduced lists.  -->
 <!-- #### Expert: -->
 
+This exercise is quite similar to Exercise 4.
 
 ### Worked Exercise 2. Adding 1
 The problem: Given a number represented by its digits,
@@ -493,105 +503,69 @@ We start with the code from before.
 user_input = input("Please input an integer.")
 
 try:
+  user_input = int(user_input)
+  print("That was an integer.")
+except:
+  print("That was not an integer.")
+```
+If the try block fails, we want to ask the user for another input,
+and enter the try block again.
+Sounds like a job for a while loop.
+
+```python
+user_input = input("Please input an integer.")
+
+while some_condition:
+  try:
     user_input = int(user_input)
     print("That was an integer.")
-except:
+  except:
     print("That was not an integer.")
 ```
 
-Now, in the except block, we want to ask the user for another input, and keep asking them until they get it right. In other words:
+What's the condition we want to set here?
+It's kind of hard to tell.
+We could use a variable to tell us whether we can exit the loop or not:
 
 ```python
 user_input = input("Please input an integer.")
 
-try:
+successful_conversion = False
+while not successful_conversion:
+  try:
     user_input = int(user_input)
     print("That was an integer.")
-except:
-    # while... the user's input is wrong
-    #   input... ask them for an input
-    #   try... converting the input
-    #   except...
+    successful_conversion = True
+  except:
+    print("That was not an integer.")
 ```
 
-It's hard to tell how to check that "the user's input is wrong" here. We could set a variable inside the `except` block:
+But that's kind of clunky, isn't it?
+Okay, how about this? Let's introducte a new function: `type()`.
+
+The `type` function behaves exactly as you would expect:
+
+```python
+type(5) == int
+type(5.0) == float
+type("5.0") == str
+type([5, 5.0]) == list
+```
+
+Using `type()`, we can complete our integer converter very cleanly.
 
 ```python
 user_input = input("Please input an integer.")
 
-try:
+while type(user_input) == str:
+  try:
     user_input = int(user_input)
-    print("That was an integer.")
-except:
-    user_input_is_wrong = True
-    while (user_input_is_wrong):
-        user_input_is_wrong = False
-        # input... ask them for an input
-        try:
-            # convert the input
-            user_input_is_wrong = False
-        except:
-            user_input_is_wrong = True
-```
-But then we run into the question of "How do we get the converted input value out of the try/except block?"
-
-The answer is to create a new variable outside the try/except block that we can write to at any time:
-
-```python
-user_integer = None
-user_input = input("Please input an integer.")
-
-try:
-    user_integer = int(user_input) # This line also changed!
-except:
-    user_input_is_wrong = True
-    while (user_input_is_wrong):
-        user_input_is_wrong = False
-        user_input = input("That was not an integer. Please try again.")
-        try:
-            user_integer = int(user_input)
-            user_input_is_wrong = False
-        except:
-            user_input_is_wrong = True
+  except:
+    user_input = input("That was not an integer. Please try again.")
 ```
 
-Actually, if the `user_integer` is definitely not going to be `None` if it gets correctly converted, we can use `while (user_integer == None)` in our while loop, which removes the need for the `user_input_is_wrong` variable as well!
-
-```python
-user_integer = None
-user_input = input("Please input an integer.")
-
-try:
-    user_integer = int(user_input) # This line also changed!
-except:
-    while (user_integer == None):
-        user_input = input("That was not an integer. Please try again.")
-        try:
-            user_integer = int(user_input)
-        except:
-            pass # Python complains if this block is empty, so we use the "pass" keyword, which means "do nothing".
-```
-
-Actually, we can remove the outer `try`/`except` block as well !!!
-
-```python
-user_integer = None
-user_input = input("Please input an integer.")
-
-while (user_integer == None):
-    try:
-        user_integer = int(user_input)
-    except:
-        user_input = input("That was not an integer. Please try again.")
-```
-
-(This exchanged a redundant line of code for a redundant check when the code runs, since `user_integer` is definitely going to be `None` when we first enter the `while` loop.)
-
-### Exercises
-#### Easy
-1. (Open Ended) Find out what the `else` keyword does when used alongside a `try`/`except` block. (Put it at the end!) Use this information to enhance the "enforce integer input" code above in any way you like.
-
-2. Add a counter to the "enforce integer input" code to show the user how many times their input has been incorrect.
+### Exercise 9. Bad at instructions
+Add a counter to the "enforce integer input" code to show the user how many times their input has been incorrect.
 
 #### Medium
 3. (Open Ended) Find out what the `finally` keyword does when used alongside a `try`/`except` block. Try to think of a situation where the `finally` keyword might be useful.
