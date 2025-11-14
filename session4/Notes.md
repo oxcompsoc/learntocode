@@ -544,7 +544,7 @@ while not successful_conversion:
     print("That was an integer.")
     successful_conversion = True
   except:
-    print("That was not an integer.")
+    user_input = print("That was not an integer. Please try again: ")
 ```
 
 But that's kind of clunky, isn't it?
@@ -568,7 +568,7 @@ while type(user_input) == str:
   try:
     user_input = int(user_input)
   except:
-    user_input = input("That was not an integer. Please try again.")
+    user_input = input("That was not an integer. Please try again: ")
 ```
 
 ### Exercise 9. Bad at instructions (Free Response)
@@ -609,10 +609,11 @@ You have inputted the maximum allowed number of integers. Goodbye!
 ```
 
 ### Exercise 12. Pick from eight
-Create a "pick from a list" block of code that only accepts an input 
-that is a number from 1 to 8.
+This code represents offering a number of options to the user.
+These might represent menu items, insurance plans, or anything in between.
+
+Create a block of code that only accepts an input that is a number from 1 to 8.
 ```
-# Here the code is set to accept inputs from 1 to 5.
 Please choose an option: 9
 That is not an option. Please try again: wow
 That is not an option. Please try again: 2
