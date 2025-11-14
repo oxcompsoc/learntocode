@@ -13,9 +13,9 @@ while i<8:
 print("**********")
 ```
 
-The idea with the while loop is very simple: the code in the body of the loop will be executed repeatedly, while the condition remains true; otherwise said: until the condition becomes false. In each iteration, i got incremented by 1, until it reaches 8 and the loop quits. Hence the loop is run 8 times.
+The idea with the while loop is very simple: the code in the body of the loop will be executed repeatedly, while the condition remains true - in other words, until the condition becomes false. In each iteration, i gets incremented by 1, until it reaches 8 and we exit the loop. Hence the loop is run 8 times.
 
-We can use while loops to do more things. Imagine we wanted to create a simple security program, which asks our user for a password, until they enter the correct one. One way to do this is:
+We can use while loops to do more things. Imagine we wanted to create a simple security program that asks our user for a password until they enter the correct one. One way to do this is:
 
 ```python
 SECRET_PASSWORD = "pass123"
@@ -32,9 +32,9 @@ print("Access granted.")
 
 In this case, while the user keeps entering the wrong password, the program will keep prompting them for a new one.
 
-Now, if the user enters the correct password on their first try, the body of the loop will not be executed.
+Now, if the user enters the correct password on their first try, the body of the loop will not be executed. So we can't use a for loop here, because we don't have any list to iterate down, nor do we know exactly how many times the body of the loop has to run.
 
-So, while loops tend to be more useful if the body of the loop has to loop an unknown number of times.
+In conclusion, while loops are used when the body of the loop has to loop an unknown number of times.
 
 ### Worked examples
 
