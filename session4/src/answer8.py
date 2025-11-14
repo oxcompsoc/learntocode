@@ -1,8 +1,11 @@
 sum = 0
-num = input("Add: ")
+count = 0
+num = input("Please enter a number: ")
 
 while num != "":
     sum += float(num)
-    num = input("Add: ")
+    count += 1
+    num = input("Please enter a number: ")
 
-print("Your total is: " + str(sum))
+avg = sum / count
+print("The average was: " + str(avg))
