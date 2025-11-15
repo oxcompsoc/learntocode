@@ -166,10 +166,8 @@ Are we happy with this solution?
 Well... we're told that the user will give us an _integer_, 
 and integers can be negative.
 This solution doesn't handle negative numbers well,
-because no matter how many times you divide a negative number by 10,
-it stays negative, which means it stays less than 1.
-Thankfully we spotted that potential infinite loop, 
-or our code would have made someone's computer hang.
+because negative numbers will always be less than 1,
+and so our program will say that every negative number is 0 digits long.
 
 Here's an adjustment that handles negative numbers
 by looping so long as n is at least 1 OR at most -1:
