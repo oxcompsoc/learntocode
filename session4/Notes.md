@@ -610,13 +610,26 @@ You have inputted the maximum allowed number of integers. Goodbye!
 This code represents offering a number of options to the user.
 These might represent menu items, insurance plans, or anything in between.
 
-Create a block of code that only accepts an input that is a number from 1 to 8.
+(a) Create a block of code that only accepts an input that is a number from 1 to 8.
 ```
 Please choose an option: 9
 That is not an option. Please try again: wow
 That is not an option. Please try again: 2
 Option 2 selected!
 ```
+
+(b) The previous section is completable without using `try`,
+because you can check individually that 
+the user has entered one of the strings in "1", "2", "3", etc.
+
+Perhaps when ordering a factory cake from a cake supplier,
+you need to specify the amount of vanilla extract to add.
+This can be anywhere from 0.5 teaspoons to 96 teaspoons.
+
+Adapt your block of code from part (a) 
+to accept any decimal number between 0.5 and 96.
+
+(You definitely need to use a `try` here.)
 
 ### Exercise 13. Graceful stopping (Free Response)
 Trying to cast something that isn't an `int` to an `int` (ValueError)
