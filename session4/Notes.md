@@ -618,19 +618,30 @@ That is not an option. Please try again: 2
 Option 2 selected!
 ```
 
-### Exercise 13. One of each
-Create a program that accepts two user inputs and makes sure that exactly one of them is an integer.
+### Exercise 13. Graceful stopping (Free Response)
+Trying to cast something that isn't an `int` to an `int` (ValueError)
+isn't the only way to throw an error in Python.
+You also get errors when you divide by 0 (ZeroDivisionError),
+access the nth element of a list that is shorter than n elements long (IndexError), 
+or try to get the `len()` of a number (TypeError), for example.
+
+Interestingly, Ctrl-C, which is what you press on the _keyboard_
+to _interrupt_ your code,
+is also treated as an error: a KeyboardInterrupt.
+
+Read the following code and predict its result.
+
+```python
+  print("Don't stop me now!")
+  try:
+    while True:
+      pass # program is having a good time
+  except:
+    print("i was having a ball :(")
 ```
-The first input: 4
-The second input: 6
-That is too many integers. Please try again.
-The first input: spoon
-The second input: fork
-That is too few integers. Please try again.
-The first input: 42
-The second input: life
-Exactly one of these is an integer!
-```
+
+Now run the code. What happens? Is this what you expected?
+Think of a situation where using a try/except like this would be useful.
 
 ### Exercise 14. You number your numbers (Hard)
 (a) Edit your program from Exercise 11 so that it can accept user inputs until the user has inputted a number of integers that they input.
