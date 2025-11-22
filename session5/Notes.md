@@ -81,7 +81,7 @@ def sum(xs):
 Write a function `product` that takes a list of numbers and returns the product of all the numbers in the list.
 
 ```python
-def product(xs)
+def product(xs):
     # return the product of all the elements in the list xs
 ```
 
