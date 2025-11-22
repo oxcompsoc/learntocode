@@ -498,21 +498,45 @@ Real-world programmers not only have to silly-proof their code from silly users 
 [exercise17]: https://github.com/oxcompsoc/learntocode/master/session5/exercise17.py
 
 ## A very funny joke
-Before we continue on to the exercises (there are a lot), here's a very funny joke that just about every Python programmer will enjoy.
+Here's a very funny joke. I assure you, it is very funny. Here it is: 
 
 `chr sum range ord min str not`
 
-A classic. Let's break it down.
-
-All of these words are the names of **builtin functions**. In other words, these are very common functions that Python helpfully defines for us by default. For instance, `not` is defined so that `not(True) == False` and `not(False) == True`. Similarly, `min([2,1,3])` is `1` and `sum([2,1,3])` is `6`, exactly as you'd expect.
+All of these words are the names of **builtin functions**. 
+In other words, these are very common functions 
+that Python helpfully defines for us by default. 
+For instance, `not` is defined so that `not(True) == False` and `not(False) == True`.
+Similarly, `min([2,1,3])` is `1` and `sum([2,1,3])` is `6`, exactly as you'd expect.
 
 So when we chain all of these functions together, calling `chr(sum(range(ord(min(str(not()))))))`, here's what happens:
 
 `not()`: What's not nothing? Python interprets nothing as `False`, which means that `not()` is `True`.\
 `str`: `True` as a string is `"True"`.\
-`min`: This treats `"True"` like a list of letters (`["T", "r", "u", "e"])` and takes the minimum letter. What's the minimum letter? The letter with the smallest [Unicode code](https://symbl.cc/en/unicode-table/). This turns out to be `"T"`.\
-`ord`: This translates `"T"` into its Unicode code, which is `84`. (If the entry in the table looks like 54, that's because it's in base 16. 54 in base 16 is equal to 84 in base 10.)\
-`range`: This creates a `range` object that represents the numbers from 0 inclusive to 84 exclusive.\
+`min`: This treats `"True"` like a list of letters (`["T", "r", "u", "e"])` 
+and takes the minimum letter. 
+What's the minimum letter? 
+The letter with the smallest [Unicode code](https://symbl.cc/en/unicode-table/). 
+This turns out to be `"T"`.\
+`ord`: This translates `"T"` into its Unicode code, which is `84`. 
+(If the entry in the table looks like 54, that's because it's in base 16. 
+54 in base 16 is equal to 84 in base 10.)\
+`range`: This creates a `range` object 
+that represents the numbers from 0 inclusive to 84 exclusive.\
 `sum`: This sums up the numbers from 0 to 83, yielding `3486`.\
-`chr`: Finally, this gives us the Unicode character with code `3486`. What character is that? Well, you'll have to `print(chr(sum(range(ord(min(str(not())))))))` to find out (or look it up at that website up there. Hint: 3486 in base 10 is equal to 0D9E in base 16) ;)
+`chr`: Finally, this gives us the Unicode character with code `3486`. 
+What character is that? 
+Well, you'll have to `print(chr(sum(range(ord(min(str(not())))))))` to find out 
+(or look it up at that website up there. 
 
+**Hint**: 3486 in base 10 is equal to 0D9E in base 16) ;)
+
+## More things to learn about!
+- As said above, "recursion" isn't part of this course, 
+but it's worth giving it a try yourself
+- When weird things happen to your arguments, 
+look into "call by reference" and "call by value"
+- It's generally a good idea to write tests FIRST, and write code AFTER,
+so that you're not just writing tests you already know will pass.
+It also makes sure you have a clear picture of what you want to code before you code it.
+This is called "test-driven development".
+- Did you like passing functions to other functions? Give "functional programming" a try!
