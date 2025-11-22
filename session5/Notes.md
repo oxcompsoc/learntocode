@@ -54,25 +54,6 @@ Back to the usefulness of functions - they let us do 4 useful things:
 
 A good rule of thumb is to keep functions below 200 lines of code. This includes the *main* function (i.e. the non-indented code). Anything larger should be split up into multiple functions.
 
-## A very funny joke
-Before we continue on to the exercises (there are a lot), here's a very funny joke that just about every Python programmer will enjoy.
-
-`chr sum range ord min str not`
-
-A classic. Let's break it down!
-
-All of these words are the names of **builtin functions**. In other words, these are very common functions that Python helpfully defines for us by default. For instance, `not` is defined so that `not(True) == False` and `not(False) == True`. Similarly, `min([2,1,3])` is `1` and `sum([2,1,3])` is `6`, exactly as you'd expect.
-
-So when we chain all of these functions together, calling `chr(sum(range(ord(min(str(not()))))))`, here's what happens:
-
-`not()`: What's not nothing? Python interprets nothing as `False`, which means that `not()` is `True`.\
-`str`: `True` as a string is `"True"`.\
-`min`: This treats `"True"` like a list of letters (`["T", "r", "u", "e"])` and takes the minimum letter. What's the minimum letter? The letter with the smallest [Unicode code](https://symbl.cc/en/unicode-table/). This turns out to be `"T"`.\
-`ord`: This translates `"T"` into its Unicode code, which is `84`. (If the entry in the table looks like 54, that's because it's in base 16. 54 in base 16 is equal to 84 in base 10.)\
-`range`: This creates a `range` object that represents the numbers from 0 inclusive to 84 exclusive.\
-`sum`: This sums up the numbers from 0 to 83, yielding `3486`.\
-`chr`: Finally, this gives us the Unicode character with code `3486`. What character is that? Well, you'll have to `print(chr(sum(range(ord(min(str(not())))))))` to find out (or look it up at that website up there. Hint: 3486 in base 10 is equal to 0D9E in base 16) ;)
-
 ## Exercises
 
 For today's session we have a large number of different exercises that you can choose from. These exercises are roughly ordered by difficulty. If you find an exercise easy, consider skipping a few. It is somewhat difficult to finish most of them by the end of the session so we'll begin the next session with some exercise time as well after the recap. 
@@ -104,11 +85,11 @@ def product(xs)
     # return the product of all the elements in the list xs
 ```
 
+Can you optimise this if you find a zero in the list?
+
 [Download Test Cases][exercise2]
 
-**Exercise (not part of the tests):** what should the product of the empty list be?
-
-**Exercise:** can you optimise this if you find a zero in the list?
+**(Free Response):** What should the product of the empty list be?
 
 ### Exercise 3: Mean of a list
 
@@ -130,9 +111,10 @@ def flatten(xs):
     # return a flatted copy of xs
 ```
 
-**Hint:** The code for this is *almost* exactly the same as one of the earlier exercises.
+Remember that the empty list is `[]`.
 
-**Hint:*** The empty list is `[]`
+The code for this is *almost* exactly the same as one of the earlier exercises.
+In fact, the codes are so similar, it might be worth investigating...
 
 [Download Test Cases][exercise4]
 
@@ -223,7 +205,7 @@ def rot(xs, n):
 [Download Test Cases][exercise10]
 
 ### Exercise 11: Map (Free Response)
-Read the following code. Try to figure out what it does.
+(a) Read the following code. Try to figure out what it does.
 
 ```python
 def map(f, xs: list) -> list:
@@ -239,12 +221,53 @@ print(map(add_1, [1,2,3,5]))
 ```
 
 Now run the code. What happens? Is this what you expected? 
+
+The main takeaway is that in Python,
+functions can be passed as arguments to other functions.
+This opens up the door to all kinds of shenanigans,
+and gives you a beautiful insight into the theoretical side of computation.
+
 The map function can be used to make your code extremely concise
 if you're frequently looping over lists. 
 
+(b) Read the following code, and think about how it relates to exercises 8 and 9.
+
+```python
+def filter(f, xs: list) -> list:
+  results = []
+  for x in xs:
+    if f(x):
+      results.append(x)
+  return results
+
+# Filtering to keep odd numbers
+def is_odd(x: int) -> bool:
+  return x % 2 == 1
+
+print(filter(is_odd, [1,2,3,4,5,6]))
+```
+
+(c) (Hard) Read the following code, and think about how it relates to exercises 1, 2 and 4.
+
+```python
+def fold(combine, base, xs: list) -> list:
+  result = base
+  for x in xs:
+    result = combine(result, x)
+  
+  return result
+
+# Folding with addition
+def add(x, y):
+  return x + y
+
+print(fold(add, 0, [1,2,3,4,5,6]))
+print(fold(add, [], [[1,2,3],[4,5,6]]))
+```
+
 ## Sorting lists
 
-For the second set of the exercises you'll need to be able to sort a list into
+For the next set of the exercises you'll need to be able to sort a list into
 ascending order. To do this in Python you need to use the `sorted` function:
 
 ```python
@@ -296,7 +319,7 @@ def search(xs, x):
 The program we are going to write will check only `log2(len(xs))` things,
 where `log2` is the base 2 logarithm. 
 Significantly better, as you can check for yourself on Desmos.
-Of course, the exchange is that you hvae to make sure your list stays sorted.
+Of course, the exchange is that you have to make sure your list stays sorted.
 
 ```python
 def bin_search(xs, x):
@@ -473,3 +496,23 @@ Real-world programmers not only have to silly-proof their code from silly users 
 [exercise15]: https://github.com/oxcompsoc/learntocode/master/session5/exercise15.py
 [exercise16]: https://github.com/oxcompsoc/learntocode/master/session5/exercise16.py
 [exercise17]: https://github.com/oxcompsoc/learntocode/master/session5/exercise17.py
+
+## A very funny joke
+Before we continue on to the exercises (there are a lot), here's a very funny joke that just about every Python programmer will enjoy.
+
+`chr sum range ord min str not`
+
+A classic. Let's break it down.
+
+All of these words are the names of **builtin functions**. In other words, these are very common functions that Python helpfully defines for us by default. For instance, `not` is defined so that `not(True) == False` and `not(False) == True`. Similarly, `min([2,1,3])` is `1` and `sum([2,1,3])` is `6`, exactly as you'd expect.
+
+So when we chain all of these functions together, calling `chr(sum(range(ord(min(str(not()))))))`, here's what happens:
+
+`not()`: What's not nothing? Python interprets nothing as `False`, which means that `not()` is `True`.\
+`str`: `True` as a string is `"True"`.\
+`min`: This treats `"True"` like a list of letters (`["T", "r", "u", "e"])` and takes the minimum letter. What's the minimum letter? The letter with the smallest [Unicode code](https://symbl.cc/en/unicode-table/). This turns out to be `"T"`.\
+`ord`: This translates `"T"` into its Unicode code, which is `84`. (If the entry in the table looks like 54, that's because it's in base 16. 54 in base 16 is equal to 84 in base 10.)\
+`range`: This creates a `range` object that represents the numbers from 0 inclusive to 84 exclusive.\
+`sum`: This sums up the numbers from 0 to 83, yielding `3486`.\
+`chr`: Finally, this gives us the Unicode character with code `3486`. What character is that? Well, you'll have to `print(chr(sum(range(ord(min(str(not())))))))` to find out (or look it up at that website up there. Hint: 3486 in base 10 is equal to 0D9E in base 16) ;)
+
