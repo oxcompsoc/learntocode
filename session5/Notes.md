@@ -54,25 +54,6 @@ Back to the usefulness of functions - they let us do 4 useful things:
 
 A good rule of thumb is to keep functions below 200 lines of code. This includes the *main* function (i.e. the non-indented code). Anything larger should be split up into multiple functions.
 
-## A very funny joke
-Before we continue on to the exercises (there are a lot), here's a very funny joke that just about every Python programmer will enjoy.
-
-`chr sum range ord min str not`
-
-A classic. Let's break it down!
-
-All of these words are the names of **builtin functions**. In other words, these are very common functions that Python helpfully defines for us by default. For instance, `not` is defined so that `not(True) == False` and `not(False) == True`. Similarly, `min([2,1,3])` is `1` and `sum([2,1,3])` is `6`, exactly as you'd expect.
-
-So when we chain all of these functions together, calling `chr(sum(range(ord(min(str(not()))))))`, here's what happens:
-
-`not()`: What's not nothing? Python interprets nothing as `False`, which means that `not()` is `True`.\
-`str`: `True` as a string is `"True"`.\
-`min`: This treats `"True"` like a list of letters (`["T", "r", "u", "e"])` and takes the minimum letter. What's the minimum letter? The letter with the smallest [Unicode code](https://symbl.cc/en/unicode-table/). This turns out to be `"T"`.\
-`ord`: This translates `"T"` into its Unicode code, which is `84`. (If the entry in the table looks like 54, that's because it's in base 16. 54 in base 16 is equal to 84 in base 10.)\
-`range`: This creates a `range` object that represents the numbers from 0 inclusive to 84 exclusive.\
-`sum`: This sums up the numbers from 0 to 83, yielding `3486`.\
-`chr`: Finally, this gives us the Unicode character with code `3486`. What character is that? Well, you'll have to `print(chr(sum(range(ord(min(str(not())))))))` to find out (or look it up at that website up there. Hint: 3486 in base 10 is equal to 0D9E in base 16) ;)
-
 ## Exercises
 
 For today's session we have a large number of different exercises that you can choose from. These exercises are roughly ordered by difficulty. If you find an exercise easy, consider skipping a few. It is somewhat difficult to finish most of them by the end of the session so we'll begin the next session with some exercise time as well after the recap. 
@@ -104,11 +85,11 @@ def product(xs)
     # return the product of all the elements in the list xs
 ```
 
+Can you optimise this if you find a zero in the list?
+
 [Download Test Cases][exercise2]
 
-**Exercise (not part of the tests):** what should the product of the empty list be?
-
-**Exercise:** can you optimise this if you find a zero in the list?
+**(Free Response):** What should the product of the empty list be?
 
 ### Exercise 3: Mean of a list
 
@@ -130,9 +111,10 @@ def flatten(xs):
     # return a flatted copy of xs
 ```
 
-**Hint:** The code for this is *almost* exactly the same as one of the earlier exercises.
+Remember that the empty list is `[]`.
 
-**Hint:*** The empty list is `[]`
+The code for this is *almost* exactly the same as one of the earlier exercises.
+In fact, the codes are so similar, it might be worth investigating...
 
 [Download Test Cases][exercise4]
 
@@ -209,7 +191,7 @@ string you can do `s[0]` where `s` is a string variable.
 
 [Download Test Cases][exercise9]
 
-### Exercise 10: Rotating a list
+### Exercise 10: Rotating a list (Hard)
 
 Given a list `xs` and an integer `n`, produce a list where each element is
 rotated around by `n`, i.e. `rot([1, 2, 3], 1) == [2, 3, 1]` and `rot([1, 2, 3,
@@ -222,9 +204,70 @@ def rot(xs, n):
 
 [Download Test Cases][exercise10]
 
+### Exercise 11: Map (Free Response)
+(a) Read the following code. Try to figure out what it does.
+
+```python
+def map(f, xs: list) -> list:
+  results = []
+  for x in xs:
+    results.append(f(x))
+  return results
+
+def add_1(n: int) -> int:
+  return n + 1
+
+print(map(add_1, [1,2,3,5]))
+```
+
+Now run the code. What happens? Is this what you expected? 
+
+The main takeaway is that in Python,
+functions can be passed as arguments to other functions.
+This opens up the door to all kinds of shenanigans,
+and gives you a beautiful insight into the theoretical side of computation.
+
+The map function can be used to make your code extremely concise
+if you're frequently looping over lists. 
+
+(b) Read the following code, and think about how it relates to exercises 8 and 9.
+
+```python
+def filter(f, xs: list) -> list:
+  results = []
+  for x in xs:
+    if f(x):
+      results.append(x)
+  return results
+
+# Filtering to keep odd numbers
+def is_odd(x: int) -> bool:
+  return x % 2 == 1
+
+print(filter(is_odd, [1,2,3,4,5,6]))
+```
+
+(c) (Hard) Read the following code, and think about how it relates to exercises 1, 2 and 4.
+
+```python
+def fold(combine, base, xs: list) -> list:
+  result = base
+  for x in xs:
+    result = combine(result, x)
+  
+  return result
+
+# Folding with addition
+def add(x, y):
+  return x + y
+
+print(fold(add, 0, [1,2,3,4,5,6]))
+print(fold(add, [], [[1,2,3],[4,5,6]]))
+```
+
 ## Sorting lists
 
-For the second set of the exercises you'll need to be able to sort a list into
+For the next set of the exercises you'll need to be able to sort a list into
 ascending order. To do this in Python you need to use the `sorted` function:
 
 ```python
@@ -235,53 +278,85 @@ nums = [13, 56, 26, 2, 12, 12, 2, 4]
 nums2 = sorted(nums) # == [2, 2, 4, 12, 12, 13, 26, 56]
 ```
 
-### Exercise 11: Removing duplicates
+### Exercise 12: Removing duplicates
 
 Given a list `xs`, return a new sorted list with all the duplicate elements
-removed.
+removed. 
 
 ```python
 def uniques(xs):
 	# return a list of all the unique elements
 ```
 
+**Hint:** Once you've sorted the list, 
+any duplicate elements will sit right next to each other, all in a chain.
+
 [Download Test Cases][exercise11]
 
-### Exercise 12: Binary search
+### Worked Exercise 1: Binary search (Hard)
 
-**Note:** This exercise is harder than the others.
-
-This exercise requires you to adapt the [binary search algorithm][binsearch]
-seen last week. Given a sorted list of strings, find the least index of an
-element with that value. One way we could do this is:
+Computer scientists care a lot about fast and efficient sorting algorithms:
+ways to take a list of items and sort them according to some order.
+Why? Well, if your list is unsorted, checking if something's in the list
+requires you to look at every item in the list.
+But if your list is sorted,
+then the number of items you need to look at to find an item,
+compared to the length of the list, can be extremely small.
 
 [binsearch]: https://github.com/oxcompsoc/learntocode/tree/master/session2#binary-search-algorithm
 
+Here's a simple search that checks everything in the list,
+requiring it to check `len(xs)` things.
+
 ```python
 def search(xs, x):
-    for i in range(0, len(xs)):
-        if xs[i] == x:
-            return i
-    return None
+  for i in range(0, len(xs)):
+    if xs[i] == x:
+      return i
+  return None
 ```
 
-However, this isn't particularly efficient. The binary search reduces the
-number of comparisons we have to do from `len(xs)` to `log2(len(xs))` where
-`log2` is the base 2 logarithm.
+The program we are going to write will check only `log2(len(xs))` things,
+where `log2` is the base 2 logarithm. 
+Significantly better, as you can check for yourself on Desmos.
+Of course, the exchange is that you have to make sure your list stays sorted.
 
 ```python
 def bin_search(xs, x):
-    # return the least index of an element equal to x in the sorted list xs
+    # code will go here
 ```
 
-**Note:** don't worry about what you return if the item isn't in the list.
+We can rule out half of the list at a time by checking the middle element.
+If the thing we're looking for is greater than the middle element,
+we can rule out the entire bottom half of the list.
+Conversely, if the thing we're looking for is less than the middle element,
+we can rule out the entire top half of the list.
+
+```python
+def bin_search(xs, x):
+  left = 0
+  right = len(xs) - 1
+
+  while left <= right:
+    mid = (left + right) // 2
+
+    if xs[mid] == x:
+      return mid
+
+    if xs[mid] < x:
+      left = mid + 1
+    else:
+      right = mid - 1
+
+  return left # which at this point is == right
+```
+
+**P.S:** don't worry about what you return if the item isn't in the list.
 Often when implementing binary search it is useful to return the index that an
 element *would* be at, *were* it in the list (i.e. so it could be inserted
 whilst keeping the list in sorted order).
 
-[Download Test Cases][exercise12]
-
-### Exercise 13: Merging lists
+### Exercise 13: Merging lists 
 
 Given two sorted lists, return a sorted list containing the contents of the two
 lists merged in order, i.e. `merge([0, 1, 1, 2, 3, 5, 8], [1, 2, 3, 4, 5, 6])
@@ -295,7 +370,7 @@ def merge(xs, ys):
 
 [Download Test Cases][exercise13]
 
-### Exercise 14: Merge sort
+### Exercise 14: Merge sort (Hard)
 
 [Merge sort][mergesort] is a common sorting algorithm, and you can implement it
 using the merge function from the previous exercise. The result of this
@@ -319,7 +394,7 @@ second_half = xs[(len(xs) // 2):]
 
 ## Mathematical exercises
 
-The remainder of the exercises are intended for maths students or those that
+The next three exercises are intended for maths students or those that
 have studied maths at some point (A-Level Core Maths should be enough).
 
 ### Exercise 15: Representing polynomials
@@ -348,15 +423,15 @@ different degrees.
 
 ```python
 def poly_sum(xs, ys):
-    # return the list representing the sum of the polynomials represented by the
-    # lists xs and ys
+  # return the list representing the sum of the polynomials represented by the
+  # lists xs and ys
 ```
 
 [Download Test Cases][exercise16]
 
 **Hint:** This is *exactly* the same as one of the earlier exercises.
 
-### Exercise 17: Multiplying polynomials
+### Exercise 17: Multiplying polynomials (Hard)
 
 Given two lists that represent a polynomial, return a new list representing the
 product of those two polynomials. For example, `(1 + x)(2 + x) = 2 + 3x + x^2`,
@@ -373,30 +448,32 @@ def poly_prod(xs, ys):
 **Hint:** you can create a list of `0`s of length `n` in Python with `[0] * n`.
 
 ### Exercise 18: Enforce choice, revisited
-This exercise will give you an idea of what real, professional programmers do. Think back to this block of code from session 3:
+This exercise will give you an idea of what real, professional programmers do. Think back to this block of code from session 4:
 
 ```python
-user_integer = None
 user_input = input("Please input an integer.")
 
-while (user_integer == None):
-    try:
-        user_integer = int(user_input)
-    except:
-        user_input = input("That was not an integer. Please try again.")
+successful_conversion = False
+while not successful_conversion:
+  try:
+    user_input = int(user_input)
+    # print("That was an integer.")
+    successful_conversion = True
+  except:
+    user_input = input("That was not an integer. Please try again: ")
 ```
 Complete the following code to turn the above code into a function that fits the given description.
 
 ```python
-def enforce_option_input(options, prompt, error_prompt) -> str:
-    """ 
-    The enforce_option_input function shows the user a list of strings and then forces the user to choose an option from the list, unless the list is empty, in which case the function immediately returns an empty string ("").
+def enforce_option_input(options: list, prompt: str, error_prompt: str) -> str:
+  """ 
+  The enforce_option_input function shows the user a list of strings and then forces the user to choose an option from the list, unless the list is empty, in which case the function immediately returns an empty string ("").
 
-    :param options: the list of strings that the user can pick from.
-    :param prompt: the prompt the user is shown
-    :param prompt: the error prompt the user is shown after giving an input that is not in the options list
-    """
-    # ... your code goes here
+  :param options: the list of strings that the user can pick from.
+  :param prompt: the prompt the user is shown
+  :param prompt: the error prompt the user is shown after giving an input that is not in the options list
+  """
+  # ... your code goes here
 ```
 (P.S. You will see that the function has some built-in protection so that a silly programmer doesn't put their users in an infinite loop by asking them to choose an option from an empty list. 
 
@@ -419,3 +496,47 @@ Real-world programmers not only have to silly-proof their code from silly users 
 [exercise15]: https://github.com/oxcompsoc/learntocode/master/session5/exercise15.py
 [exercise16]: https://github.com/oxcompsoc/learntocode/master/session5/exercise16.py
 [exercise17]: https://github.com/oxcompsoc/learntocode/master/session5/exercise17.py
+
+## A very funny joke
+Here's a very funny joke. I assure you, it is very funny. Here it is: 
+
+`chr sum range ord min str not`
+
+All of these words are the names of **builtin functions**. 
+In other words, these are very common functions 
+that Python helpfully defines for us by default. 
+For instance, `not` is defined so that `not(True) == False` and `not(False) == True`.
+Similarly, `min([2,1,3])` is `1` and `sum([2,1,3])` is `6`, exactly as you'd expect.
+
+So when we chain all of these functions together, calling `chr(sum(range(ord(min(str(not()))))))`, here's what happens:
+
+`not()`: What's not nothing? Python interprets nothing as `False`, which means that `not()` is `True`.\
+`str`: `True` as a string is `"True"`.\
+`min`: This treats `"True"` like a list of letters (`["T", "r", "u", "e"])` 
+and takes the minimum letter. 
+What's the minimum letter? 
+The letter with the smallest [Unicode code](https://symbl.cc/en/unicode-table/). 
+This turns out to be `"T"`.\
+`ord`: This translates `"T"` into its Unicode code, which is `84`. 
+(If the entry in the table looks like 54, that's because it's in base 16. 
+54 in base 16 is equal to 84 in base 10.)\
+`range`: This creates a `range` object 
+that represents the numbers from 0 inclusive to 84 exclusive.\
+`sum`: This sums up the numbers from 0 to 83, yielding `3486`.\
+`chr`: Finally, this gives us the Unicode character with code `3486`. 
+What character is that? 
+Well, you'll have to `print(chr(sum(range(ord(min(str(not())))))))` to find out 
+(or look it up at that website up there. 
+
+**Hint**: 3486 in base 10 is equal to 0D9E in base 16) ;)
+
+## More things to learn about!
+- As said above, "recursion" isn't part of this course, 
+but it's worth giving it a try yourself
+- When weird things happen to your arguments, 
+look into "call by reference" and "call by value"
+- It's generally a good idea to write tests FIRST, and write code AFTER,
+so that you're not just writing tests you already know will pass.
+It also makes sure you have a clear picture of what you want to code before you code it.
+This is called "test-driven development".
+- Did you like passing functions to other functions? Give "functional programming" a try!
