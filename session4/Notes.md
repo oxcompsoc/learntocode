@@ -544,7 +544,7 @@ while not successful_conversion:
     print("That was an integer.")
     successful_conversion = True
   except:
-    user_input = print("That was not an integer. Please try again: ")
+    user_input = input("That was not an integer. Please try again: ")
 ```
 
 But that's kind of clunky, isn't it?
