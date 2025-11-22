@@ -1,22 +1,16 @@
-def bin_search(xs, x):
-    # return the least index of an element equal to x in the sorted list xs
+def uniques(xs):
+    # return a list of all the unique elements
 
-def test(test_case_xs, test_case_x, expected):
-    actual = bin_search(test_case_xs, test_case_x)
+def test(test_case, expected):
+    actual = uniques(test_case)
     if actual == expected:
-        print("Passed test for " + test_case_x)
+        print("Passed test for " + str(test_case))
     else:
-        print("Didn't pass test for " + test_case_x)
+        print("Didn't pass test for " + str(test_case))
         print("The result was " + str(actual) + " but it should have been " + str(expected))
 
-test([], "x", 0)
-test(["code", "learn", "to"], "code", 0)
-test(["code", "learn", "to"], "learn", 1)
-test(["code", "learn", "to"], "to", 2)
-# https://www.quora.com/What-are-the-longest-sentences-that-can-be-formed-with-words-whose-starting-letters-are-in-alphabetic-order
-
-sentence = "A brownish cloud descends every Friday, growing, hovering impressively, jeopardously keeping low, moving nimbly over populated quarters, returning silently to unknown, violently wild xylogenic yttriferous zones."
-words = sentence.lower().split(" ")
-
-for i in range(0, len(words)):
-    test(words, words[i], i)
+test([], [])
+test([0, 0, 0, 1], [0, 1])
+test([1, 4, 5, 1, 5, 4], [1, 4, 5])
+test([10, 9, 8, 7, 6, 5, 4, 3, 2, 1], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+test([10, 10, 9, 9, 8, 7, 6, 5, 6, 5, 4, 3, 2, 1], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])

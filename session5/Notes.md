@@ -209,7 +209,7 @@ string you can do `s[0]` where `s` is a string variable.
 
 [Download Test Cases][exercise9]
 
-### Exercise 10: Rotating a list
+### Exercise 10: Rotating a list (Hard)
 
 Given a list `xs` and an integer `n`, produce a list where each element is
 rotated around by `n`, i.e. `rot([1, 2, 3], 1) == [2, 3, 1]` and `rot([1, 2, 3,
@@ -221,6 +221,26 @@ def rot(xs, n):
 ```
 
 [Download Test Cases][exercise10]
+
+### Exercise 11: Map (Free Response)
+Read the following code. Try to figure out what it does.
+
+```python
+def map(f, xs: list) -> list:
+  results = []
+  for x in xs:
+    results.append(f(x))
+  return results
+
+def add_1(n: int) -> int:
+  return n + 1
+
+print(map(add_1, [1,2,3,5]))
+```
+
+Now run the code. What happens? Is this what you expected? 
+The map function can be used to make your code extremely concise
+if you're frequently looping over lists. 
 
 ## Sorting lists
 
@@ -235,53 +255,85 @@ nums = [13, 56, 26, 2, 12, 12, 2, 4]
 nums2 = sorted(nums) # == [2, 2, 4, 12, 12, 13, 26, 56]
 ```
 
-### Exercise 11: Removing duplicates
+### Exercise 12: Removing duplicates
 
 Given a list `xs`, return a new sorted list with all the duplicate elements
-removed.
+removed. 
 
 ```python
 def uniques(xs):
 	# return a list of all the unique elements
 ```
 
+**Hint:** Once you've sorted the list, 
+any duplicate elements will sit right next to each other, all in a chain.
+
 [Download Test Cases][exercise11]
 
-### Exercise 12: Binary search
+### Worked Exercise 1: Binary search (Hard)
 
-**Note:** This exercise is harder than the others.
-
-This exercise requires you to adapt the [binary search algorithm][binsearch]
-seen last week. Given a sorted list of strings, find the least index of an
-element with that value. One way we could do this is:
+Computer scientists care a lot about fast and efficient sorting algorithms:
+ways to take a list of items and sort them according to some order.
+Why? Well, if your list is unsorted, checking if something's in the list
+requires you to look at every item in the list.
+But if your list is sorted,
+then the number of items you need to look at to find an item,
+compared to the length of the list, can be extremely small.
 
 [binsearch]: https://github.com/oxcompsoc/learntocode/tree/master/session2#binary-search-algorithm
 
+Here's a simple search that checks everything in the list,
+requiring it to check `len(xs)` things.
+
 ```python
 def search(xs, x):
-    for i in range(0, len(xs)):
-        if xs[i] == x:
-            return i
-    return None
+  for i in range(0, len(xs)):
+    if xs[i] == x:
+      return i
+  return None
 ```
 
-However, this isn't particularly efficient. The binary search reduces the
-number of comparisons we have to do from `len(xs)` to `log2(len(xs))` where
-`log2` is the base 2 logarithm.
+The program we are going to write will check only `log2(len(xs))` things,
+where `log2` is the base 2 logarithm. 
+Significantly better, as you can check for yourself on Desmos.
+Of course, the exchange is that you hvae to make sure your list stays sorted.
 
 ```python
 def bin_search(xs, x):
-    # return the least index of an element equal to x in the sorted list xs
+    # code will go here
 ```
 
-**Note:** don't worry about what you return if the item isn't in the list.
+We can rule out half of the list at a time by checking the middle element.
+If the thing we're looking for is greater than the middle element,
+we can rule out the entire bottom half of the list.
+Conversely, if the thing we're looking for is less than the middle element,
+we can rule out the entire top half of the list.
+
+```python
+def bin_search(xs, x):
+  left = 0
+  right = len(xs) - 1
+
+  while left <= right:
+    mid = (left + right) // 2
+
+    if xs[mid] == x:
+      return mid
+
+    if xs[mid] < x:
+      left = mid + 1
+    else:
+      right = mid - 1
+
+  return left # which at this point is == right
+```
+
+**P.S:** don't worry about what you return if the item isn't in the list.
 Often when implementing binary search it is useful to return the index that an
 element *would* be at, *were* it in the list (i.e. so it could be inserted
 whilst keeping the list in sorted order).
 
-[Download Test Cases][exercise12]
-
-### Exercise 13: Merging lists
+### Exercise 13: Merging lists 
 
 Given two sorted lists, return a sorted list containing the contents of the two
 lists merged in order, i.e. `merge([0, 1, 1, 2, 3, 5, 8], [1, 2, 3, 4, 5, 6])
@@ -295,7 +347,7 @@ def merge(xs, ys):
 
 [Download Test Cases][exercise13]
 
-### Exercise 14: Merge sort
+### Exercise 14: Merge sort (Hard)
 
 [Merge sort][mergesort] is a common sorting algorithm, and you can implement it
 using the merge function from the previous exercise. The result of this
@@ -319,7 +371,7 @@ second_half = xs[(len(xs) // 2):]
 
 ## Mathematical exercises
 
-The remainder of the exercises are intended for maths students or those that
+The next three exercises are intended for maths students or those that
 have studied maths at some point (A-Level Core Maths should be enough).
 
 ### Exercise 15: Representing polynomials
@@ -348,15 +400,15 @@ different degrees.
 
 ```python
 def poly_sum(xs, ys):
-    # return the list representing the sum of the polynomials represented by the
-    # lists xs and ys
+  # return the list representing the sum of the polynomials represented by the
+  # lists xs and ys
 ```
 
 [Download Test Cases][exercise16]
 
 **Hint:** This is *exactly* the same as one of the earlier exercises.
 
-### Exercise 17: Multiplying polynomials
+### Exercise 17: Multiplying polynomials (Hard)
 
 Given two lists that represent a polynomial, return a new list representing the
 product of those two polynomials. For example, `(1 + x)(2 + x) = 2 + 3x + x^2`,
@@ -373,30 +425,32 @@ def poly_prod(xs, ys):
 **Hint:** you can create a list of `0`s of length `n` in Python with `[0] * n`.
 
 ### Exercise 18: Enforce choice, revisited
-This exercise will give you an idea of what real, professional programmers do. Think back to this block of code from session 3:
+This exercise will give you an idea of what real, professional programmers do. Think back to this block of code from session 4:
 
 ```python
-user_integer = None
 user_input = input("Please input an integer.")
 
-while (user_integer == None):
-    try:
-        user_integer = int(user_input)
-    except:
-        user_input = input("That was not an integer. Please try again.")
+successful_conversion = False
+while not successful_conversion:
+  try:
+    user_input = int(user_input)
+    # print("That was an integer.")
+    successful_conversion = True
+  except:
+    user_input = input("That was not an integer. Please try again: ")
 ```
 Complete the following code to turn the above code into a function that fits the given description.
 
 ```python
-def enforce_option_input(options, prompt, error_prompt) -> str:
-    """ 
-    The enforce_option_input function shows the user a list of strings and then forces the user to choose an option from the list, unless the list is empty, in which case the function immediately returns an empty string ("").
+def enforce_option_input(options: list, prompt: str, error_prompt: str) -> str:
+  """ 
+  The enforce_option_input function shows the user a list of strings and then forces the user to choose an option from the list, unless the list is empty, in which case the function immediately returns an empty string ("").
 
-    :param options: the list of strings that the user can pick from.
-    :param prompt: the prompt the user is shown
-    :param prompt: the error prompt the user is shown after giving an input that is not in the options list
-    """
-    # ... your code goes here
+  :param options: the list of strings that the user can pick from.
+  :param prompt: the prompt the user is shown
+  :param prompt: the error prompt the user is shown after giving an input that is not in the options list
+  """
+  # ... your code goes here
 ```
 (P.S. You will see that the function has some built-in protection so that a silly programmer doesn't put their users in an infinite loop by asking them to choose an option from an empty list. 
 
