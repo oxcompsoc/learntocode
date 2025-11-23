@@ -72,7 +72,7 @@ Now that you have learnt the basics of Python, there are quite a lot you can do 
 
 [guessnotes]: https://github.com/oxcompsoc/learntocode/tree/master/guessthenumber
 
-2. [Here][guessnotes] is a tutorial for building a snake game in Python using PyGame. (Difficulty: 4/5)
+2. [Here][snakenotes] is a tutorial for building a snake game in Python using PyGame. (Difficulty: 4/5)
 
 [snakenotes]: https://github.com/oxcompsoc/learntocode/tree/master/snake_game
 
