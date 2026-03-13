@@ -32,37 +32,37 @@ and their solutions.
 | Session 6: Turtle Graphics | 7 | 30/11 | Work in progress | Work in progress | 
 
 
-[s0notes]: https://github.com/oxcompsoc/learntocode/tree/master/session0/README.md
-[s0pdf]: https://github.com/oxcompsoc/learntocode/tree/master/session0/Notes.pdf
+[s0notes]: session0/README.md
+[s0pdf]: session0/Notes.pdf
 
-[s1notes]: https://github.com/oxcompsoc/learntocode/tree/master/session1/README.md
-[s1pdf]: https://github.com/oxcompsoc/learntocode/tree/master/session1/Notes.pdf
-[s1slides]: https://github.com/oxcompsoc/learntocode/blob/master/session1/Slides.pdf
+[s1notes]: session1/README.md
+[s1pdf]: session1/Notes.pdf
+[s1slides]: session1/Slides.pdf
 [s1video]: https://youtu.be/yAzp_pRXVPg
 
-[s2notes]: https://github.com/oxcompsoc/learntocode/tree/master/session2/README.md
-[s2pdf]: https://github.com/oxcompsoc/learntocode/tree/master/session2/Notes.pdf
-[s2slides]: https://github.com/oxcompsoc/learntocode/blob/master/session2/slides.pdf
+[s2notes]: session2/README.md
+[s2pdf]: session2/Notes.pdf
+[s2slides]: session2/slides.pdf
 [s2video]: https://youtu.be/orWvOaR0p8E
 
-[s3notes]: https://github.com/oxcompsoc/learntocode/tree/master/session3/README.md
-[s3pdf]: https://github.com/oxcompsoc/learntocode/tree/master/session3/Notes.pdf
-[s3slides]: https://github.com/oxcompsoc/learntocode/blob/master/session3/slides.pdf
+[s3notes]: session3/README.md
+[s3pdf]: session3/Notes.pdf
+[s3slides]: session3/slides.pdf
 [s3video]: https://www.youtube.com/watch?v=TU1aisio7IU
 
-[s4notes]: https://github.com/oxcompsoc/learntocode/tree/master/session4/README.md
-[s4pdf]: https://github.com/oxcompsoc/learntocode/tree/master/session4/Notes.pdf
-[s4slides]: https://github.com/oxcompsoc/learntocode/blob/master/session4/slides.pdf
+[s4notes]: session4/README.md
+[s4pdf]: session4/Notes.pdf
+[s4slides]: session4/slides.pdf
 [s4video]: https://youtu.be/E-QXg8Gc-nU
 
-[s5notes]: https://github.com/oxcompsoc/learntocode/tree/master/session5/README.md
-[s5pdf]: https://github.com/oxcompsoc/learntocode/tree/master/session5/Notes.pdf
-[s5slides]: https://github.com/oxcompsoc/learntocode/blob/master/session5/slides.pdf
+[s5notes]: session5/README.md
+[s5pdf]: session5/Notes.pdf
+[s5slides]: session5/slides.pdf
 [s5video]: https://youtu.be/uDT3xMpaCKY
 
-[s6notes]: https://github.com/oxcompsoc/learntocode/tree/master/session6/README.md
-[s6pdf]: https://github.com/oxcompsoc/learntocode/tree/master/session6/Notes.pdf
-[s6slides]: https://github.com/oxcompsoc/learntocode/blob/master/session6/slides.pdf
+[s6notes]: session6/README.md
+[s6pdf]: session6/Notes.pdf
+[s6slides]: session6/slides.pdf
 
 ## Next steps
 
@@ -70,15 +70,15 @@ Now that you have learnt the basics of Python, there are quite a lot you can do 
 
 1. [Here][guessnotes] is a tutorial for building a number guessing game in Python. (Difficulty: 2/5)
 
-[guessnotes]: https://github.com/oxcompsoc/learntocode/tree/master/guessthenumber
+[guessnotes]: guessthenumber
 
 2. [Here][guessnotes] is a tutorial for building a snake game in Python using PyGame. (Difficulty: 4/5)
 
-[snakenotes]: https://github.com/oxcompsoc/learntocode/tree/master/snake_game
+[snakenotes]: snake_game
 
 3. [Here][mlnotes] is a tutorial for basic machine learning in Python. (with thanks to previous committee members in 2020) (Difficulty: 4/5)
 
-[mlnotes]: https://github.com/oxcompsoc/learntocode/tree/master/machine_learning
+[mlnotes]: machine_learning
 
 ## Running your own Learn to Code
 
@@ -86,4 +86,4 @@ You are more than welcome to use these materials to run your own version of Lear
 
 Please refer to [COPYING][copying] for more details on the license.
 
-[copying]: https://github.com/oxcompsoc/learntocode/tree/master/COPYING
+[copying]: COPYING

@@ -4,7 +4,7 @@ In the [first session][session1] we'll be studying the basics of **Python**, so
 it would be great if you could find a setup that works for you before the session 
 starts. Learn to Code sessions are all interactive, so please bring your laptop!
 
-[session1]: https://github.com/oxcompsoc/learntocode/tree/master/session1
+[session1]: ../session1
 
 ## What is Python?
 

@@ -5,7 +5,7 @@
 [bucky]: https://www.youtube.com/watch?v=HBxCHonP6Ro&list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_&index=7
 See [here][week1] for last week's content. 
 
-[week1]: https://github.com/oxcompsoc/learntocode/tree/master/session1
+[week1]: ../session1
 
 ## If statements
 
@@ -505,4 +505,4 @@ For highest marks, your program should output 1 star when n is 1, and no stars w
 
 **You can find all the [solutions here][solutions].**
 
-[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session2/src
+[solutions]: ../session2/src

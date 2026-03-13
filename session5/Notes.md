@@ -255,7 +255,7 @@ This exercise requires you to adapt the [binary search algorithm][binsearch]
 seen last week. Given a sorted list of strings, find the least index of an
 element with that value. One way we could do this is:
 
-[binsearch]: https://github.com/oxcompsoc/learntocode/tree/master/session2#binary-search-algorithm
+[binsearch]: ../session2#binary-search-algorithm
 
 ```python
 def search(xs, x):

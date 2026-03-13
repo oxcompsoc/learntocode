@@ -4,7 +4,7 @@ You can find the resources for last week's session [here][s4notes].
 
 In this week's session we are going to continue looking at dictionaries, a common Python data structure introduced at the end of last week's session. Once we've spent a little more time working through an exercise with dictionaries we'll move on to talking about *Object-Oriented Programming* or *OOP* - a way to structure data which is very useful when dealing with various when dealing with Python modules, i.e. the tools that you would use to do more practical things like data analysis and machine learning.
 
-[s4notes]: https://github.com/oxcompsoc/learntocode/tree/master/session4/README.md
+[s4notes]: ../../session4/README.md
 
 ## Dictionaries
 
@@ -80,7 +80,7 @@ Last week we introduced an [exercise][s4exercise] for counting which words
 appear in a piece of text. You can find the [solution here][s4solution].
 
 [dictS4]: https://github.com/oxcompsoc/learntocode/blob/master/session4/README.md#dictionaries
-[s4exercise]: https://github.com/oxcompsoc/learntocode/tree/master/session4#dictionary-exercise
+[s4exercise]: ../../session4#dictionary-exercise
 [s4solution]: https://github.com/oxcompsoc/learntocode/blob/master/session4/wc.py
 
 ## Object-Oriented Programming

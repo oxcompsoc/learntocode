@@ -99,7 +99,7 @@ if getShapeArea("rectangle", 5, 10) > getShapeArea("tringle", 5, 10): # typo int
 
 ```
 
-[s3notes]: https://github.com/oxcompsoc/learntocode/tree/master/session3
+[s3notes]: ../../session3
 
 ## Exercises
 
