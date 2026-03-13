@@ -303,7 +303,7 @@ But if your list is sorted,
 then the number of items you need to look at to find an item,
 compared to the length of the list, can be extremely small.
 
-[binsearch]: https://github.com/oxcompsoc/learntocode/tree/master/session2#binary-search-algorithm
+[binsearch]: ../session2#binary-search-algorithm
 
 Here's a simple search that checks everything in the list,
 requiring it to check `len(xs)` things.

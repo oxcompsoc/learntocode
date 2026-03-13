@@ -387,7 +387,7 @@ This exercise is quite similar to Exercise 4.
 
 **You can find all the [solutions here][solutions].**
 
-[solutions]: https://github.com/oxcompsoc/learntocode/tree/master/session4/src
+[solutions]: ../session4/src
 
 ### Extension A. Completing the shopping list
 Return to your code from Session 3 Exercise 4 (the shopping list).

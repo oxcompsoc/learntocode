@@ -6,7 +6,7 @@ The first thing that you’ll need to do is make sure you have Python installed 
 computer. You can find information on how to do that [here][install].
 
 [bucky]: https://www.youtube.com/watch?v=HBxCHonP6Ro&list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_&index=1
-[install]: https://github.com/oxcompsoc/learntocode/tree/master/session0
+[install]: ../session0
 
 Throughout these documents note that text in a `monospaced font` is Python code.
 
