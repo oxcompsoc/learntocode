@@ -10,7 +10,7 @@ Today we're taking our first step into showing the user more than just text with
 <!-- Explain what a library is at this point -->
 
 # Turtle Graphics
-Our recommended Python environments (Notebook and Replit) don't support Turtle Graphics, so if you don't have Python installed to your computer, we recommend using [Trinket](https://trinket.io/turtle) today.
+Our recommended Python environments (Notebook and Replit) don't support Turtle Graphics, so if you don't have Python installed to your computer, we recommend using [Coddy's Python turtle playground](https://coddy.tech/playground/turtle) today.
 
 A Turtle is like the tip of a pen. You can give it commands to raise it off the page, put it down on the page, change its color and its position, etc.
 
